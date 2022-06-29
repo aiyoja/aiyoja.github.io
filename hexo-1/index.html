@@ -4,23 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="markdown基本语法, ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+    <meta name="keywords" content="安装hexo和基本的使用, ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="目录
-一、前言
-二、Markdown基本语法
-2.1 标题
-2.2 加粗
-2.3 斜体
-2.4 高亮
-2.5 上标
-2.6 下标
-2.7 代码引用（&amp;gt;式）
-2.8 代码引用（```式）
-2.9 代码引入（`式）
-2.10 插入链接（链">
+    <meta name="description" content="搭建个人的博客，在自己的服务器上。用hexo的好处是，所有的博客可以写在markdown文件中，备份在本地，迁移起来很方便。
+个人服务器配置
+安装node，git
+curl -sL https://rpm.nodesource.com/se">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>markdown基本语法 | 矮油酱</title>
+    <title>安装hexo和基本的使用 | 矮油酱</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -341,13 +332,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        markdown基本语法
+                        安装hexo和基本的使用
                     </div>
                 </div>
             </div>
@@ -458,8 +449,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Markdown/" target="_blank">
-                            <span class="chip bg-color">Markdown</span>
+                        <a href="/tags/Hexo/" target="_blank">
+                            <span class="chip bg-color">Hexo</span>
                         </a>
                         
                     </div>
@@ -482,7 +473,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-24
+                    2022-06-23
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -496,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    740
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    2 分
                 </div>
                 
                 
@@ -519,209 +510,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h1><ul>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#一前言" target="_blank" rel="noopener">一、前言</a></li>
-<li>二、Markdown基本语法<ul>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-E5pcmm" target="_blank" rel="noopener">2.1 标题</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-AzkCjz" target="_blank" rel="noopener">2.2 加粗</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-HtMW8J" target="_blank" rel="noopener">2.3 斜体</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-zYsfQR" target="_blank" rel="noopener">2.4 高亮</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-mykKM2" target="_blank" rel="noopener">2.5 上标</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-ryDYZM" target="_blank" rel="noopener">2.6 下标</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-rE6FGX" target="_blank" rel="noopener">2.7 代码引用（&gt;式）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-KRazcW" target="_blank" rel="noopener">2.8 代码引用（```式）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-kjezaQ" target="_blank" rel="noopener">2.9 代码引入（`式）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-4xdcbr" target="_blank" rel="noopener">2.10 插入链接（链接显示）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-eayDT5" target="_blank" rel="noopener">2.11 插入链接（链接描述显示）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-tp735j" target="_blank" rel="noopener">2.12 插入图片（链接）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-tj85DE" target="_blank" rel="noopener">2.13 插入图片（图片路径）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-4SeY8P" target="_blank" rel="noopener">2.14 有序列表</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-NmGW8F" target="_blank" rel="noopener">2.15 无序列表</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-HNp5QF" target="_blank" rel="noopener">2.16 分割线</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-NYDi2p" target="_blank" rel="noopener">2.17 表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）：</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-DhWd2R" target="_blank" rel="noopener">2.18 数学公式（行内嵌）</a></li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-4rMY8J" target="_blank" rel="noopener">2.19 数学公式（块状）</a></li>
-</ul>
-</li>
-<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#三总结" target="_blank" rel="noopener">三、总结</a></li>
-</ul>
-<p>Python从入门到放弃完整教程目录：<a href="https://www.cnblogs.com/nickchen121/p/10718112.html" target="_blank" rel="noopener">https://www.cnblogs.com/nickchen121/p/10718112.html</a></p>
-<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><ul>
-<li><strong>由于有些语法无法在博客园展示，推荐使用Typora解锁全套，下载地址：<a href="https://www.typora.io/" target="_blank" rel="noopener">https://www.typora.io/</a></strong></li>
-<li><strong>推荐使用jupyter，使用方法：<a href="https://www.cnblogs.com/nickchen121/p/10722733.html" target="_blank" rel="noopener">https://www.cnblogs.com/nickchen121/p/10722733.html</a></strong></li>
-<li><strong>markdown数学公式大全，<a href="https://www.cnblogs.com/nickchen121/p/11746655.html" target="_blank" rel="noopener">https://www.cnblogs.com/nickchen121/p/11746655.html</a></strong></li>
-</ul>
-<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。 –摘自百度百科</p>
-<p>没想到一向不太靠谱的百度百科这次竟有了如此精辟的解释。之前项目一直使用<code>word</code>撰写文档，有比较大的弊病：</p>
-<ul>
-<li>只能对纯文本文件进行版本控制，而word是二进制格式</li>
-<li>格式繁杂，经常需要中断写作来控制格式</li>
-<li>代码与文档分离，给写文档造成更大的阻力</li>
-</ul>
-<p>而假如单纯的使用txt，就没有一点格式了，用html虽然既有格式又能加入版本控制，但是需要花费较多的时间在标签上，而且标签占了文档的较大百分比，不易阅读。</p>
-<p>所以，最终的解决方案就是 <strong>Markdown</strong> ，作为一种轻量级的标记语言，能在非常短的时间内掌握。而且不仅可以用于写文档，还可以写博客、写简书、做一些随手笔记。Markdown文件以.md结尾，可以导出为html和PDF（需要使用的工具支持）。它是一种语法（个人认为是简化版的html），但是和html不同的是，各种解析器对其会有不同的表现。比如我的IDEA Markdown插件会把分割线显示成一条细灰线，Cmd Markdown则是显示一条虚线。所以建议保持使用一种Markdown工具和尽量使用标准语法。</p>
-<h1 id="二、Markdown基本语法"><a href="#二、Markdown基本语法" class="headerlink" title="二、Markdown基本语法"></a>二、Markdown基本语法</h1><h2 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 一级标题</span>
-<span class="token comment" spellcheck="true">## 二级标题</span>
-<span class="token comment" spellcheck="true">### 三级标题</span>
-<span class="token comment" spellcheck="true">#### 四级标题</span>
-<span class="token comment" spellcheck="true">##### 五级标题</span>
-<span class="token comment" spellcheck="true">###### 最小只有六级标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<p>过于粗暴，不予以展示，你复制粘贴即知晓！！！</p>
-<h2 id="2-2-加粗"><a href="#2-2-加粗" class="headerlink" title="2.2 加粗"></a>2.2 加粗</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">**</span>我被加粗了<span class="token operator">**</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p><strong>我被加粗了</strong></p>
-<h2 id="2-3-斜体"><a href="#2-3-斜体" class="headerlink" title="2.3 斜体"></a>2.3 斜体</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">*</span>我倾斜了了<span class="token operator">*</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p><em>我倾斜了了</em></p>
-<h2 id="2-4-高亮"><a href="#2-4-高亮" class="headerlink" title="2.4 高亮"></a>2.4 高亮</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">==</span>我高亮了<span class="token operator">==</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p>我高亮了</p>
-<h2 id="2-5-上标"><a href="#2-5-上标" class="headerlink" title="2.5 上标"></a>2.5 上标</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token number">2</span><span class="token operator">^</span><span class="token number">2</span><span class="token operator">^</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p>22</p>
-<h2 id="2-6-下标"><a href="#2-6-下标" class="headerlink" title="2.6 下标"></a>2.6 下标</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python">H<span class="token operator">~</span><span class="token number">2</span><span class="token operator">~</span>o<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p>H2o</p>
-<h2 id="2-7-代码引用（-gt-式）"><a href="#2-7-代码引用（-gt-式）" class="headerlink" title="2.7 代码引用（&gt;式）"></a>2.7 代码引用（&gt;式）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">></span> hello markdown!<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<blockquote>
-<p>hello markdown!</p>
-</blockquote>
-<p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">></span> hello markdown!
-<span class="token operator">>></span> hello markdown!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<blockquote>
-<p>hello markdown!</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>hello markdown!</p>
-</blockquote>
-</blockquote>
-<h2 id="2-8-代码引用（-式）"><a href="#2-8-代码引用（-式）" class="headerlink" title="2.8 代码引用（```式）"></a>2.8 代码引用（```式）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 不要复制这一句话，并且去掉下面的反斜杠，谢谢！</span>
-\`\`\`python
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello nick'</span><span class="token punctuation">)</span>
-\`\`\`<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello nick'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="2-9-代码引入（-式）"><a href="#2-9-代码引入（-式）" class="headerlink" title="2.9 代码引入（`式）"></a>2.9 代码引入（`式）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 不要复制这一句话，并且去掉下面的反斜杠，谢谢！</span>
-\`<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'hello nick'</span><span class="token punctuation">)</span>\`<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<pre><code>print(&#39;hello nick&#39;)</code></pre><h2 id="2-10-插入链接（链接显示）"><a href="#2-10-插入链接（链接显示）" class="headerlink" title="2.10 插入链接（链接显示）"></a>2.10 插入链接（链接显示）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">&lt;</span>https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>cnblogs<span class="token punctuation">.</span>com<span class="token operator">/</span>nickchen121<span class="token operator">/</span>p<span class="token operator">/</span><span class="token number">10718112.</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p><a href="https://www.cnblogs.com/nickchen121/p/10718112.html" target="_blank" rel="noopener">https://www.cnblogs.com/nickchen121/p/10718112.html</a></p>
-<h2 id="2-11-插入链接（链接描述显示）"><a href="#2-11-插入链接（链接描述显示）" class="headerlink" title="2.11 插入链接（链接描述显示）"></a>2.11 插入链接（链接描述显示）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token punctuation">[</span>nickchen博客<span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>cnblogs<span class="token punctuation">.</span>com<span class="token operator">/</span>nickchen121<span class="token operator">/</span>p<span class="token operator">/</span><span class="token number">10718112.</span>html <span class="token string">"nickchen博客"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p>nickchen博客</p>
-<h2 id="2-12-插入图片（链接）"><a href="#2-12-插入图片（链接）" class="headerlink" title="2.12 插入图片（链接）"></a>2.12 插入图片（链接）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python">!<span class="token punctuation">[</span>数据类型总结<span class="token operator">-</span>搞笑结束<span class="token punctuation">.</span>jpg?x<span class="token operator">-</span>oss<span class="token operator">-</span>process<span class="token operator">=</span>style<span class="token operator">/</span>watermark<span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token punctuation">:</span><span class="token operator">//</span>imgmd<span class="token punctuation">.</span>oss<span class="token operator">-</span>cn<span class="token operator">-</span>shanghai<span class="token punctuation">.</span>aliyuncs<span class="token punctuation">.</span>com<span class="token operator">/</span>Python从入门到放弃<span class="token operator">/</span>数据类型总结<span class="token operator">-</span>搞笑结束<span class="token punctuation">.</span>jpg?x<span class="token operator">-</span>oss<span class="token operator">-</span>process<span class="token operator">=</span>style<span class="token operator">/</span>watermark <span class="token string">'描述信息'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p><a href="https://imgmd.oss-cn-shanghai.aliyuncs.com/Python从入门到放弃/数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark" target="_blank" rel="noopener"><img src="https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg?x-oss-process=style/watermark" alt="img"></a></p>
-<h2 id="2-13-插入图片（图片路径）"><a href="#2-13-插入图片（图片路径）" class="headerlink" title="2.13 插入图片（图片路径）"></a>2.13 插入图片（图片路径）</h2><ul>
-<li>绝对路径：.md文本同目录下图片的名字，如<code>数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark</code></li>
-<li>相对路径：图片在电脑中的路径地址，如<code>\Users\nick\mac\desktop\数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark</code></li>
-</ul>
-<p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python">!<span class="token punctuation">[</span>数据类型总结<span class="token operator">-</span>搞笑结束<span class="token punctuation">.</span>jpg?x<span class="token operator">-</span>oss<span class="token operator">-</span>process<span class="token operator">=</span>style<span class="token operator">/</span>watermark<span class="token punctuation">]</span><span class="token punctuation">(</span>数据类型总结<span class="token operator">-</span>搞笑结束<span class="token punctuation">.</span>jpg?x<span class="token operator">-</span>oss<span class="token operator">-</span>process<span class="token operator">=</span>style<span class="token operator">/</span>watermark <span class="token string">'描述信息'</span><span class="token punctuation">)</span>
-
-!<span class="token punctuation">[</span>数据类型总结<span class="token operator">-</span>搞笑结束<span class="token punctuation">.</span>jpg?x<span class="token operator">-</span>oss<span class="token operator">-</span>process<span class="token operator">=</span>style<span class="token operator">/</span>watermark<span class="token punctuation">]</span><span class="token punctuation">(</span>\Users\nick\mac\desktop\数据类型总结<span class="token operator">-</span>搞笑结束<span class="token punctuation">.</span>jpg?x<span class="token operator">-</span>oss<span class="token operator">-</span>process<span class="token operator">=</span>style<span class="token operator">/</span>watermark <span class="token string">'描述信息'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<p><img src="http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg" alt></p>
-<p><a href="https://www.cnblogs.com/nickchen121/p/\Users\nick\mac\desktop\数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark" target="_blank" rel="noopener">https://www.cnblogs.com/nickchen121/p/\Users\nick\mac\desktop\数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark</a>)</p>
-<h2 id="2-14-有序列表"><a href="#2-14-有序列表" class="headerlink" title="2.14 有序列表"></a>2.14 有序列表</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token number">1</span><span class="token punctuation">.</span> one
-<span class="token number">2</span><span class="token punctuation">.</span> two 
-<span class="token number">3</span><span class="token punctuation">.</span> three<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<ol>
-<li>one</li>
-<li>two</li>
-<li>three</li>
-</ol>
-<h2 id="2-15-无序列表"><a href="#2-15-无序列表" class="headerlink" title="2.15 无序列表"></a>2.15 无序列表</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">*</span> one
-<span class="token operator">*</span> two
-<span class="token operator">*</span> three<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<ul>
-<li>one</li>
-<li>two</li>
-<li>three</li>
-</ul>
-<h2 id="2-16-分割线"><a href="#2-16-分割线" class="headerlink" title="2.16 分割线"></a>2.16 分割线</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<hr>
-<h2 id="2-17-表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）："><a href="#2-17-表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）：" class="headerlink" title="2.17 表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）："></a>2.17 表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）：</h2><p>python</p>
-<pre class="line-numbers language-python"><code class="language-python">name <span class="token operator">|</span> age <span class="token operator">|</span> sex 
-<span class="token punctuation">:</span><span class="token operator">-</span><span class="token punctuation">:</span><span class="token operator">|</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token operator">|</span><span class="token operator">-</span><span class="token punctuation">:</span>
-tony<span class="token operator">|</span><span class="token number">20</span><span class="token operator">|</span>男
-lucy<span class="token operator">|</span><span class="token number">18</span><span class="token operator">|</span>女<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<table>
-<thead>
-<tr>
-<th align="center">name</th>
-<th align="left">age</th>
-<th align="right">sex</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">nick</td>
-<td align="left">19</td>
-<td align="right">男</td>
-</tr>
-<tr>
-<td align="center">jason</td>
-<td align="left">18</td>
-<td align="right">女</td>
-</tr>
-</tbody></table>
-<h2 id="2-18-数学公式（行内嵌）"><a href="#2-18-数学公式（行内嵌）" class="headerlink" title="2.18 数学公式（行内嵌）"></a>2.18 数学公式（行内嵌）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python">内嵌数学公式$\sum_<span class="token punctuation">{</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token operator">^</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">}</span>f<span class="token punctuation">(</span>i<span class="token punctuation">)</span>\<span class="token punctuation">,</span>\<span class="token punctuation">,</span>\text<span class="token punctuation">{</span>thanks<span class="token punctuation">}</span>$<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>效果：</p>
-<p>内嵌数学公式∑10i=1f(i)thanks∑i=110f(i)thanks</p>
-<h2 id="2-19-数学公式（块状）"><a href="#2-19-数学公式（块状）" class="headerlink" title="2.19 数学公式（块状）"></a>2.19 数学公式（块状）</h2><p>代码：</p>
-<p>python</p>
-<pre class="line-numbers language-python"><code class="language-python">$$
-\sum_<span class="token punctuation">{</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token operator">^</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">}</span>f<span class="token punctuation">(</span>i<span class="token punctuation">)</span>\<span class="token punctuation">,</span>\<span class="token punctuation">,</span>\text<span class="token punctuation">{</span>thanks<span class="token punctuation">}</span>
-$$
-PYTHON 复制 全屏<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>效果：</p>
-<p>∑i=110f(i)thanks∑i=110f(i)thanks</p>
-<h1 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h1><p>以上所述就是Markdown的基本标签，虽然不多，但是可以解决大部分情况。</p>
+                <p>搭建个人的博客，在自己的服务器上。用hexo的好处是，所有的博客可以写在markdown文件中，备份在本地，迁移起来很方便。</p>
+<p>个人服务器配置</p>
+<p>安装node，git</p>
+<p>curl -sL <a href="https://rpm.nodesource.com/setup_10.x" target="_blank" rel="noopener">https://rpm.nodesource.com/setup_10.x</a> | bash - yum install -y nodejs<br>通过这条命令安装node和npm</p>
+<p>git我的服务器已经有了。</p>
+<p>git –version<br>可以查看有没有安装git。我的输出git version 1.8.3.1</p>
+<p>使用npm安装Hexo<br>最好切换为taobao的源，下载的会快一些。</p>
+<p>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>验证是否切换成功：</p>
+<p>npm config get registry<br>输出淘宝源的地址<a href="https://registry.npm.taobao.org/，即切换成功。" target="_blank" rel="noopener">https://registry.npm.taobao.org/，即切换成功。</a></p>
+<p>安装Hexo</p>
+<p>npm install -g hexo-cli<br>验证是否安装成功：</p>
+<p>hexo version<br>输出版本信息，则安装成功。</p>
+<p>搭建博客<br>创建博客的目录hexo init 目录名。我就在当前目录下创建blog的文件夹作为博客的根目录。</p>
+<p>hexo init blog<br>进入刚刚的目录</p>
+<p>cd blog<br>安装</p>
+<p>npm install<br>第一次启动博客<br>生成静态页面</p>
+<p>hexo g<br>启动hexo博客</p>
+<p>hexo s<br>这时，访问<a href="http://ip:4000就可以看到hexo的默认主题了。" target="_blank" rel="noopener">http://ip:4000就可以看到hexo的默认主题了。</a></p>
+<p>如果要想要后台运行</p>
+<p>nohup hexo s &gt; blog.log 2&gt;&amp;1 &amp;<br>介绍几种发布博客的方式<br>直接将markdown文件复制到blog目录下的source/_posts文件夹中。即可看到博客<br>新建git或svn仓库，当本地提交markdown文件到仓库时，钩子将新增加的文件复制到source/_posts文件夹下。<br>通过hexo工具也可以新建博客hexo new 博客。具体参照官网<br>通过hexo-admin工具，通过浏览器就可以管理<br>安装hexo-admin通过浏览器管理发布博客<br>安装hexo-admin</p>
+<p>npm i hexo-admin –save<br>重启hexo</p>
+<p>hexo server -d<br>这时，通过<a href="http://ip:4000/admin即可管理博客。也可以在这个页面的setting中生成后台的用户名和密码。复制到_config.yml就会生效，重启博客后登录后台前就需要账号密码。" target="_blank" rel="noopener">http://ip:4000/admin即可管理博客。也可以在这个页面的setting中生成后台的用户名和密码。复制到_config.yml就会生效，重启博客后登录后台前就需要账号密码。</a></p>
+<p>域名<br>如参考的那位兄弟所说IP访问这么low b的访问方式，当然要优化一下。思路：通过NGINX做一个反向代理，将<a href="http://blog.hanjun.red这种二级域名代理到本机的localhost:4000。反向代理可以让自己的域名做更多的事情。" target="_blank" rel="noopener">http://blog.hanjun.red这种二级域名代理到本机的localhost:4000。反向代理可以让自己的域名做更多的事情。</a></p>
+<p>主题<br>安装主题<br>进入主题的目录blog/themes，克隆主题项目的地址</p>
+<p>cd ./themes</p>
+<p>git clone <a href="https://github.com/maochunguang/black-blue" target="_blank" rel="noopener">https://github.com/maochunguang/black-blue</a></p>
+<p>更换主题：进入根目录，更改配置文件_config.yml</p>
+<p>theme: black-blue<br>重新启动。</p>
+<p>更多的关于主题的配置，请参考具体每个主题的官方说明</p>
+<p>找了很久，推荐几个好看的。</p>
+<p>black-blue<br>预览地址</p>
+<p>GitHub 项目地址</p>
+<p>安装教程</p>
+<p>Diaspora（动漫大图）<br>预览地址</p>
+<p>GitHub 项目地址</p>
+<p>安装教程</p>
+<p>Melody<br>预览地址</p>
+<p>GitHub 项目地址</p>
+<p>安装教程</p>
+<p>岛<br>项目地址</p>
+<p>效果预览</p>
+<p>中文说明</p>
+<p>NexT<br>butterfly<br>Nexmoe</p>
 
             </div>
             <hr />
@@ -880,9 +711,9 @@ PYTHON 复制 全屏<span aria-hidden="true" class="line-numbers-rows"><span></s
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《markdown基本语法》
+                    《安装hexo和基本的使用》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/markdown-ji-ben-yu-fa/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/hexo-1/" property="cc:attributionName"
                rel="cc:attributionURL">
                 弶森
             </a> 采用
@@ -923,7 +754,7 @@ PYTHON 复制 全屏<span aria-hidden="true" class="line-numbers-rows"><span></s
         repo: 'godweiyang.github.io',
         owner: 'godweiyang',
         admin: "godweiyang",
-        id: 'markdown-ji-ben-yu-fa/',
+        id: 'hexo-1/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1210,90 +1041,31 @@ PYTHON 复制 全屏<span aria-hidden="true" class="line-numbers-rows"><span></s
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">
+                <a href="/article-title/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hexo博客主题之hexo-theme-matery的介绍">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hexo博客新建文章并发布">
                         
-                        <span class="card-title">Hexo博客主题之hexo-theme-matery的介绍</span>
+                        <span class="card-title">Hexo博客新建文章并发布</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            English Document | 演示示例 | QQ交流群:926552981
+                            Hexo博客新建文章并发布创建新文章根目录命令行输入hexo new &lt;模板&gt; &lt;文章名&gt;新建文章
+其中&lt;模板&gt;在scaffolds中，默认情况下有三个模板post、draft、page
 
-这是一个采用Material Design和响应式设计的 Hexo 博客主题。
 
-特性
-简单漂亮，文章内容美观易读
-Material Design 设计
 
+参数
+功能
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-23
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/教程/" class="post-category" target="_blank">
-                                    教程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/theme/" target="_blank">
-                        <span class="chip bg-color">theme</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/ru-he-yong-hexo-xin-jian-yi-pian-wen-zhang-bing-bian-ji-wen-zhang/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="如何用hexo新建一篇文章并编辑文章">
-                        
-                        <span class="card-title">如何用hexo新建一篇文章并编辑文章</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            如何用hexo新建一篇文章并编辑文章操作道具：hexo
-第一步：新建MarkDown文件使用CMD命令进入到你的blog
-cd blog
-新建文件
-hexo new "我的第一篇博客"
-提示新建完成，这个时候在bolg目录下的\source
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1317,8 +1089,57 @@ hexo new "我的第一篇博客"
                         <span class="chip bg-color">Markdown</span>
                     </a>
                     
-                    <a href="/tags/GitHub/" target="_blank">
-                        <span class="chip bg-color">GitHub</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/5w2h-godweiyang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="5W2H | 关于写博客的七点反思">
+                        
+                        <span class="card-title">5W2H | 关于写博客的七点反思</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+关注公众号【算法码上来】，每日算法干货马上就来！
+
+
+When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN 和博客园上面，当时写文章是为了记录 ACM 竞赛的题解，陆陆续续写了几十篇。但是最后还是没有坚持下去，主要还是
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/随笔/" class="post-category" target="_blank">
+                                    随笔
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/博客/" target="_blank">
+                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>
@@ -1473,7 +1294,7 @@ hexo new "我的第一篇博客"
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">17.7k</span>
+            <span class="white-color">19.7k</span>
             
 
             <br>

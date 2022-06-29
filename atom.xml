@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiyoja.github.io/"/>
-  <updated>2022-06-29T01:04:49.553Z</updated>
+  <updated>2022-06-29T08:31:43.805Z</updated>
   <id>http://aiyoja.github.io/</id>
   
   <author>
@@ -17,16 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2022062901</title>
+    <title>使用git分支保存hexo博客源码到github</title>
     <link href="http://aiyoja.github.io/2022062901/"/>
     <id>http://aiyoja.github.io/2022062901/</id>
     <published>2022-06-29T01:04:49.000Z</published>
-    <updated>2022-06-29T01:04:49.553Z</updated>
+    <updated>2022-06-29T08:31:43.805Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;p&gt;hexo是当前最火的静态博客框架，支持Markdown格式文章编辑并自动生成对应的静态网页，简单高效令人爱不释手。&lt;br&gt;使用hexo写博客的流程通常是，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通过&lt;code&gt;hexo new
+        
+      
+    
     </summary>
     
+      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://aiyoja.github.io/tags/Github/"/>
     
   </entry>
   
@@ -35,7 +51,7 @@
     <link href="http://aiyoja.github.io/2022062801/"/>
     <id>http://aiyoja.github.io/2022062801/</id>
     <published>2022-06-28T08:02:44.000Z</published>
-    <updated>2022-06-28T08:07:25.794Z</updated>
+    <updated>2022-06-29T08:33:28.571Z</updated>
     
     <summary type="html">
     
@@ -49,6 +65,8 @@
       
     
     </summary>
+    
+      <category term="语录" scheme="http://aiyoja.github.io/categories/%E8%AF%AD%E5%BD%95/"/>
     
     
   </entry>
@@ -80,7 +98,7 @@
     <link href="http://aiyoja.github.io/2022062701/"/>
     <id>http://aiyoja.github.io/2022062701/</id>
     <published>2022-06-27T10:10:51.000Z</published>
-    <updated>2022-06-28T08:27:57.562Z</updated>
+    <updated>2022-06-29T08:33:04.803Z</updated>
     
     <summary type="html">
     
@@ -99,15 +117,17 @@
     
     </summary>
     
+      <category term="语录" scheme="http://aiyoja.github.io/categories/%E8%AF%AD%E5%BD%95/"/>
+    
     
   </entry>
   
   <entry>
     <title>Hexo博客主题之hexo-theme-matery的介绍</title>
-    <link href="http://aiyoja.github.io/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
-    <id>http://aiyoja.github.io/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
+    <link href="http://aiyoja.github.io/hexo-theme/"/>
+    <id>http://aiyoja.github.io/hexo-theme/</id>
     <published>2022-06-24T10:44:29.000Z</published>
-    <updated>2022-06-24T10:46:55.348Z</updated>
+    <updated>2022-06-29T08:31:03.097Z</updated>
     
     <summary type="html">
     
@@ -126,14 +146,14 @@
     
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
     
-      <category term="theme" scheme="http://aiyoja.github.io/tags/theme/"/>
+      <category term="Theme" scheme="http://aiyoja.github.io/tags/Theme/"/>
     
   </entry>
   
   <entry>
     <title>markdown基本语法</title>
-    <link href="http://aiyoja.github.io/markdown-ji-ben-yu-fa/"/>
-    <id>http://aiyoja.github.io/markdown-ji-ben-yu-fa/</id>
+    <link href="http://aiyoja.github.io/markdown/"/>
+    <id>http://aiyoja.github.io/markdown/</id>
     <published>2022-06-24T09:43:04.000Z</published>
     <updated>2022-06-24T10:32:52.272Z</updated>
     
@@ -159,8 +179,8 @@
   
   <entry>
     <title>如何用hexo新建一篇文章并编辑文章</title>
-    <link href="http://aiyoja.github.io/ru-he-yong-hexo-xin-jian-yi-pian-wen-zhang-bing-bian-ji-wen-zhang/"/>
-    <id>http://aiyoja.github.io/ru-he-yong-hexo-xin-jian-yi-pian-wen-zhang-bing-bian-ji-wen-zhang/</id>
+    <link href="http://aiyoja.github.io/hexo-2/"/>
+    <id>http://aiyoja.github.io/hexo-2/</id>
     <published>2022-06-24T09:29:00.000Z</published>
     <updated>2022-06-24T10:35:45.012Z</updated>
     
@@ -189,8 +209,8 @@
   
   <entry>
     <title>Typora+PicGo+七牛云 个人博客发布方案</title>
-    <link href="http://aiyoja.github.io/typora-picgo-qi-niu-yun-ge-ren-bo-ke-fa-bu-fang-an/"/>
-    <id>http://aiyoja.github.io/typora-picgo-qi-niu-yun-ge-ren-bo-ke-fa-bu-fang-an/</id>
+    <link href="http://aiyoja.github.io/typora-picgo/"/>
+    <id>http://aiyoja.github.io/typora-picgo/</id>
     <published>2022-06-24T09:27:24.000Z</published>
     <updated>2022-06-24T10:39:45.184Z</updated>
     
@@ -247,8 +267,8 @@
   
   <entry>
     <title>安装hexo和基本的使用</title>
-    <link href="http://aiyoja.github.io/an-zhuang-hexo-he-ji-ben-de-shi-yong-1/"/>
-    <id>http://aiyoja.github.io/an-zhuang-hexo-he-ji-ben-de-shi-yong-1/</id>
+    <link href="http://aiyoja.github.io/hexo-1/"/>
+    <id>http://aiyoja.github.io/hexo-1/</id>
     <published>2022-06-23T02:56:00.000Z</published>
     <updated>2022-06-24T10:34:57.678Z</updated>
     
