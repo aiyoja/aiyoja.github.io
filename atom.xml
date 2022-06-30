@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiyoja.github.io/"/>
-  <updated>2022-06-29T08:31:43.805Z</updated>
+  <updated>2022-06-30T07:59:22.899Z</updated>
   <id>http://aiyoja.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://aiyoja.github.io/2022062901/"/>
     <id>http://aiyoja.github.io/2022062901/</id>
     <published>2022-06-29T01:04:49.000Z</published>
-    <updated>2022-06-29T08:31:43.805Z</updated>
+    <updated>2022-06-30T07:59:22.899Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,7 @@
     <link href="http://aiyoja.github.io/2022062801/"/>
     <id>http://aiyoja.github.io/2022062801/</id>
     <published>2022-06-28T08:02:44.000Z</published>
-    <updated>2022-06-29T08:33:28.571Z</updated>
+    <updated>2022-06-30T07:38:03.405Z</updated>
     
     <summary type="html">
     
@@ -68,6 +68,8 @@
     
       <category term="语录" scheme="http://aiyoja.github.io/categories/%E8%AF%AD%E5%BD%95/"/>
     
+    
+      <category term="娱乐" scheme="http://aiyoja.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
   </entry>
   
@@ -98,7 +100,7 @@
     <link href="http://aiyoja.github.io/2022062701/"/>
     <id>http://aiyoja.github.io/2022062701/</id>
     <published>2022-06-27T10:10:51.000Z</published>
-    <updated>2022-06-29T08:33:04.803Z</updated>
+    <updated>2022-06-30T07:40:11.421Z</updated>
     
     <summary type="html">
     
@@ -106,8 +108,7 @@
       
         
         
-          &lt;p&gt;&lt;em&gt;&lt;em&gt; 公平
-&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;strong&gt;公平&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;河南考生：教育太不公平&lt;/p&gt;
 &lt;p&gt;北京考生：教育很公平的&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;现实&lt;/strong&gt;&lt;/p&gt;
@@ -120,6 +121,8 @@
       <category term="语录" scheme="http://aiyoja.github.io/categories/%E8%AF%AD%E5%BD%95/"/>
     
     
+      <category term="娱乐" scheme="http://aiyoja.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
+    
   </entry>
   
   <entry>
@@ -127,7 +130,7 @@
     <link href="http://aiyoja.github.io/hexo-theme/"/>
     <id>http://aiyoja.github.io/hexo-theme/</id>
     <published>2022-06-24T10:44:29.000Z</published>
-    <updated>2022-06-29T08:31:03.097Z</updated>
+    <updated>2022-06-30T07:57:10.172Z</updated>
     
     <summary type="html">
     
@@ -212,7 +215,7 @@
     <link href="http://aiyoja.github.io/typora-picgo/"/>
     <id>http://aiyoja.github.io/typora-picgo/</id>
     <published>2022-06-24T09:27:24.000Z</published>
-    <updated>2022-06-24T10:39:45.184Z</updated>
+    <updated>2022-06-30T07:58:59.943Z</updated>
     
     <summary type="html">
     
