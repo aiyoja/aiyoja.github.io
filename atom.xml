@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiyoja.github.io/"/>
-  <updated>2022-06-30T09:26:49.580Z</updated>
+  <updated>2022-07-01T02:03:01.269Z</updated>
   <id>http://aiyoja.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>github博客搭建一文搞定</title>
+    <link href="http://aiyoja.github.io/2022063001/"/>
+    <id>http://aiyoja.github.io/2022063001/</id>
+    <published>2022-06-30T09:39:58.000Z</published>
+    <updated>2022-07-01T02:03:01.269Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;关注公众号【郴城信息】，免费资源干货马上就来！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://aiyoja.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用git分支保存hexo博客源码到github</title>
     <link href="http://aiyoja.github.io/2022062901/"/>
     <id>http://aiyoja.github.io/2022062901/</id>
     <published>2022-06-29T01:04:49.000Z</published>
-    <updated>2022-06-30T09:26:49.580Z</updated>
+    <updated>2022-07-01T02:21:15.275Z</updated>
     
     <summary type="html">
     
@@ -100,7 +129,7 @@
     <link href="http://aiyoja.github.io/2022062701/"/>
     <id>http://aiyoja.github.io/2022062701/</id>
     <published>2022-06-27T10:10:51.000Z</published>
-    <updated>2022-06-30T07:40:11.421Z</updated>
+    <updated>2022-07-01T01:44:33.834Z</updated>
     
     <summary type="html">
     
@@ -158,7 +187,7 @@
     <link href="http://aiyoja.github.io/markdown/"/>
     <id>http://aiyoja.github.io/markdown/</id>
     <published>2022-06-24T09:43:04.000Z</published>
-    <updated>2022-06-24T10:32:52.272Z</updated>
+    <updated>2022-07-01T01:51:39.567Z</updated>
     
     <summary type="html">
     
@@ -215,7 +244,7 @@
     <link href="http://aiyoja.github.io/typora-picgo/"/>
     <id>http://aiyoja.github.io/typora-picgo/</id>
     <published>2022-06-24T09:27:24.000Z</published>
-    <updated>2022-06-30T07:58:59.943Z</updated>
+    <updated>2022-07-01T01:53:55.875Z</updated>
     
     <summary type="html">
     
@@ -245,7 +274,7 @@
     <link href="http://aiyoja.github.io/article-title/"/>
     <id>http://aiyoja.github.io/article-title/</id>
     <published>2022-06-23T07:02:01.000Z</published>
-    <updated>2022-06-24T10:31:46.154Z</updated>
+    <updated>2022-07-01T01:49:31.670Z</updated>
     
     <summary type="html">
     
@@ -265,35 +294,6 @@
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
     
       <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装hexo和基本的使用</title>
-    <link href="http://aiyoja.github.io/hexo-1/"/>
-    <id>http://aiyoja.github.io/hexo-1/</id>
-    <published>2022-06-23T02:56:00.000Z</published>
-    <updated>2022-06-24T10:34:57.678Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;搭建个人的博客，在自己的服务器上。用hexo的好处是，所有的博客可以写在markdown文件中，备份在本地，迁移起来很方便。&lt;/p&gt;
-&lt;p&gt;个人服务器配置&lt;/p&gt;
-&lt;p&gt;安装node，git&lt;/p&gt;
-&lt;p&gt;curl -sL &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
     
   </entry>
   

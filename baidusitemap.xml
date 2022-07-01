@@ -2,15 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://aiyoja.github.io/2022062901/</loc>
-    <lastmod>2022-06-30</lastmod>
+    <lastmod>2022-07-01</lastmod>
+  </url>  <url>
+    <loc>http://aiyoja.github.io/2022063001/</loc>
+    <lastmod>2022-07-01</lastmod>
   </url>  <url>
     <loc>http://aiyoja.github.io/typora-picgo/</loc>
-    <lastmod>2022-06-30</lastmod>
+    <lastmod>2022-07-01</lastmod>
   </url>  <url>
-    <loc>http://aiyoja.github.io/hexo-theme/</loc>
-    <lastmod>2022-06-30</lastmod>
+    <loc>http://aiyoja.github.io/markdown/</loc>
+    <lastmod>2022-07-01</lastmod>
+  </url>  <url>
+    <loc>http://aiyoja.github.io/article-title/</loc>
+    <lastmod>2022-07-01</lastmod>
   </url>  <url>
     <loc>http://aiyoja.github.io/2022062701/</loc>
+    <lastmod>2022-07-01</lastmod>
+  </url>  <url>
+    <loc>http://aiyoja.github.io/hexo-theme/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>  <url>
     <loc>http://aiyoja.github.io/2022062801/</loc>
@@ -20,15 +29,6 @@
     <lastmod>2022-06-28</lastmod>
   </url>  <url>
     <loc>http://aiyoja.github.io/hexo-2/</loc>
-    <lastmod>2022-06-24</lastmod>
-  </url>  <url>
-    <loc>http://aiyoja.github.io/hexo-1/</loc>
-    <lastmod>2022-06-24</lastmod>
-  </url>  <url>
-    <loc>http://aiyoja.github.io/markdown/</loc>
-    <lastmod>2022-06-24</lastmod>
-  </url>  <url>
-    <loc>http://aiyoja.github.io/article-title/</loc>
     <lastmod>2022-06-24</lastmod>
   </url>  <url>
     <loc>http://aiyoja.github.io/hello-world/</loc>

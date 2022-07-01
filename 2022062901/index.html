@@ -331,7 +331,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -521,26 +521,26 @@
 </ol>
 <h3 id="一、困扰"><a href="#一、困扰" class="headerlink" title="一、困扰"></a>一、困扰</h3><p>然而，使用过hexo搭建个人博客的朋友们想必都会遇到博客源码保存的问题。即远程仓库只会保存hexo发布后的静态HTML文件，你的博客md源文件、主题配置等还在本地，一旦电脑磁盘坏了或者换了电脑，就无法在之前仓库的基础上继续写博客。针对此问题，有不少博主会在github上单独另起一个<strong>repository</strong>来专门保存博客源文件，每次发布完新文章，需要手动地将<code>source/post</code>下的md文件上传到源文件对应的<strong>repository</strong>，确实也能解决问题，但总归是麻烦。后来偶然看到聪明的网友借助git分支来巧妙地实现用同一个仓库保存静态网页和博客源码，自己试了下确实很赞，故总结之。</p>
 <h2 id="二、为什么要备份"><a href="#二、为什么要备份" class="headerlink" title="二、为什么要备份"></a>二、为什么要备份</h2><p>在<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fhappycodersunny.github.io%2F2022%2F05%2F09%2F%E3%80%90Hexo%E3%80%91Mac%20OS%E4%B8%8A%E4%BD%BF%E7%94%A8Hexo%20%2B%20Github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%2F" target="_blank" rel="noopener">这篇文章</a>中我们把<code>Hexo</code> 和 <code>Github</code>结合起来搭建了自己的个人博客，<code>hexo d</code>部署到<code>Github</code>的其实<code>Hexo</code>编译后的文件，这些文件是用来生成网页的，并不包含我们的源文件：</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-6ccd7b7b680883e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-6ccd7b7b680883e6.png" alt="img"></p>
 <p>20220511_01.png</p>
 <p>它其实上传到<code>Github</code> 的是在我们本地目录里的<code>.deploy_git</code>里面的内容：</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-e70cc28497993fd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-e70cc28497993fd7.png" alt="img"></p>
 <p>20220511_02.png</p>
 <p>我们的源文件比如相关<code>source</code>文件、配置文件等都是没有上传到<code>Github</code>上的，所以我们要利用<code>git</code>来做分支管理，对我们的源文件进行备份，这样我们就可以在另一台电脑上把源文件<code>clone</code>到本地安装相应的环境就可以继续写我们的博客了。<br> 好了，废话少说，我们直接来说如何进行博客源文件的备份。</p>
 <h2 id="Hexo博客备份"><a href="#Hexo博客备份" class="headerlink" title="Hexo博客备份"></a>Hexo博客备份</h2><h3 id="创建新分支"><a href="#创建新分支" class="headerlink" title="创建新分支"></a>创建新分支</h3><p>在<code>Github</code>上博客仓库下创建一个新的分支<code>hexo</code>，并且将这个分支设置为默认分支，具体操作如下：</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-61f52f7ed4251885.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-61f52f7ed4251885.png" alt="img"></p>
 <p>20220511_03.png</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-18cbfa4d2b1dac53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-18cbfa4d2b1dac53.png" alt="img"></p>
 <p>20220511_04.png</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-b13c0790e40c52ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-b13c0790e40c52ae.png" alt="img"></p>
 <p>20220511_05.png</p>
 <h3 id="克隆hexo分支"><a href="#克隆hexo分支" class="headerlink" title="克隆hexo分支"></a>克隆hexo分支</h3><p>在本地把我们刚建的分支<code>hexo</code>克隆到本地：</p>
 <pre><code># git clone -b &lt;远程指定分支&gt; &lt;远程仓库地址&gt; &lt;本地文件夹名&gt;</code></pre><pre><code>git clone -b hexo git@github.com:aiyoja/aiyoja.github.io.git ./blog</code></pre><p>以上格式成功了</p>
 <p><em>下面这个失败不知道原因</em></p>
-<pre><code>git clone https://github.com/aiyoja/aiyoja.github.io.git</code></pre><p><img src="https:////upload-images.jianshu.io/upload_images/1642508-e87f19cfc93ffa94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/824/format/webp" alt="img"></p>
+<pre><code>git clone https://github.com/aiyoja/aiyoja.github.io.git</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/1642508-e87f19cfc93ffa94.png" alt="img"></p>
 <p>20220511_06.png</p>
 <p> 把克隆下来的项目里面的<code>.git</code>文件复制到我们的Hexo博客目录下:</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-42e7569d97440356.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1196/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-42e7569d97440356.png" alt="img"></p>
 <p>20220511_07.png</p>
 <p><strong>注意</strong>：如果之前搭建博客的时候自己更换过主题文件的，请把主题文件里面的<code>.git</code>文件删除。</p>
 <h2 id="多机同步更新的前提：hexo分支"><a href="#多机同步更新的前提：hexo分支" class="headerlink" title="多机同步更新的前提：hexo分支"></a>多机同步更新的前提：hexo分支</h2><h2 id="必备文件"><a href="#必备文件" class="headerlink" title="必备文件"></a>必备文件</h2><p>Hexo博客系统中影响迁移的只有一部分文件和文件夹，所以只需要备份它们即可</p>
@@ -618,7 +618,7 @@ $ git push origin hexo  <span aria-hidden="true" class="line-numbers-rows"><span
 <span class="token function">git</span> commit -m <span class="token string">"Blog源文件备份"</span>
 <span class="token function">git</span> push origin hexo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>这时候我们会看到<code>Github</code>上的<code>hexo</code> 分支就有我们的源文件了。</p>
-<p><img src="https:////upload-images.jianshu.io/upload_images/1642508-4fb324fec7446605.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1642508-4fb324fec7446605.png" alt="img"></p>
 <p>20220511_08.png</p>
 <p> 如果你想要每次更改东西都希望备份到<code>hexo</code> 分支上，可以执行如下步骤：</p>
 <pre class="line-numbers language-csharp"><code class="language-csharp">hexo clean
@@ -1222,32 +1222,32 @@ $ hexo g -d12</code></pre><p>在GitHub上查看hexo分支如下图所示</p>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022062901/">
+                <a href="/2022063001/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="使用git分支保存hexo博客源码到github">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="github博客搭建一文搞定">
                         
-                        <span class="card-title">使用git分支保存hexo博客源码到github</span>
+                        <span class="card-title">github博客搭建一文搞定</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo是当前最火的静态博客框架，支持Markdown格式文章编辑并自动生成对应的静态网页，简单高效令人爱不释手。使用hexo写博客的流程通常是，
+                            关注公众号【郴城信息】，免费资源干货马上就来！
 
-通过hexo new post_name命令，会自动在source/_post目录下生成一
+关注我公众号：郴城信息，获取实时更新。有任何问题请加 QQ 技术交流群【群号：8698305】。如果觉得有用的话可以看心情打赏一杯奶茶，我会很开心哒。
+我的博客源代码地址大家可以直接素质二连
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1260,7 +1260,6 @@ $ hexo g -d12</code></pre><p>在GitHub上查看hexo分支如下图所示</p>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1287,7 +1286,7 @@ $ hexo g -d12</code></pre><p>在GitHub上查看hexo分支如下图所示</p>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="哎呦不错哦2">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="哎呦不错哦2">
                         
                         <span class="card-title">哎呦不错哦2</span>
                     </div>
@@ -1499,7 +1498,7 @@ $ hexo g -d12</code></pre><p>在GitHub上查看hexo分支如下图所示</p>
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">20.6k</span>
+            <span class="white-color">30.3k</span>
             
 
             <br>

@@ -1,3 +1,4 @@
+http://aiyoja.github.io/2022063001/
 http://aiyoja.github.io/2022062901/
 http://aiyoja.github.io/2022062801/
 http://aiyoja.github.io/hello-world/
@@ -7,5 +8,4 @@ http://aiyoja.github.io/markdown/
 http://aiyoja.github.io/hexo-2/
 http://aiyoja.github.io/typora-picgo/
 http://aiyoja.github.io/article-title/
-http://aiyoja.github.io/hexo-1/
 http://aiyoja.github.io/5w2h-godweiyang/

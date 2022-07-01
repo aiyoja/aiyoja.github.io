@@ -335,7 +335,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -578,19 +578,19 @@
 <p><strong>本文使用到的东西</strong><br>Hexo<br>win10电脑</p>
 <h4 id="1-新建文章"><a href="#1-新建文章" class="headerlink" title="1.新建文章"></a>1.新建文章</h4><p>1.新建文章很简单，一条命令即可。命令如下，执行命令成功会返回一个路径，就是文章的所在路径，删除文章也只要删除对应的文章文件即可。</p>
 <p><code>hexo new 文章文件名</code></p>
-<p><img src="https://s3.51cto.com/images/blog/202201/01000440_61cf2a18e022664901.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=" alt="Hexo博客发表文章、草稿、添加分类和标签_分类和标签"></p>
+<p><img src="https://s3.51cto.com/images/blog/202201/01000440_61cf2a18e022664901.png" alt="Hexo博客发表文章、草稿、添加分类和标签_分类和标签"></p>
 <p>2.新建草稿命令如下，草稿不会在博客上显示。在执行时加上 –draft 参数，或是把草稿中render_drafts参数设为true来预览草稿。</p>
 <p><code>hexo new draft 草稿文件名</code></p>
 <p>3.新建导航选项页界面，这里以描述如何写文章为主，想了解怎么添加顶部导航选项页界面的请看我另一篇文章，《hexo博客添加标签、分类、归档、关于等页面》</p>
 <p><code>hexo new page 导航选项页文件名</code></p>
 <p>4.新建文章只需要以上一条命令即可，你可以直接跳到2.发布草稿。如果想稍微深入一点点了解文章布局，就接着往下看1.1，其实我了解的并不多，只是给想了解布局原理的小白一个方向。</p>
 <h5 id="1-1阅读官方文档"><a href="#1-1阅读官方文档" class="headerlink" title="1.1阅读官方文档"></a>1.1阅读官方文档</h5><p>1.首先我们先阅读一下官方文档，hexo官方文档有简体中文模式，简直是我这种英语白痴的福音，废话不多说，开始正文。关于新建文章的官方文档如下图</p>
-<p><img src="https://s8.51cto.com/images/blog/202201/01000441_61cf2a190256e6461.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=" alt="img"></p>
+<p><img src="https://s8.51cto.com/images/blog/202201/01000441_61cf2a190256e6461.png" alt="img"></p>
 <p>官方文档中提供的新建文章的命令如下</p>
 <p><code>$ hexo new [layout] &lt;title&gt;</code></p>
 <p>其中[layout]为文章布局，而布局这种东西官方文档并没有告诉我们三种布局的不同之处，只说默认是“post”，三种布局存在于不同的路径下。还有刚刚我们说了draft布局表示发布草稿，我们对文章布局的了解到此为止。</p>
 <h5 id="1-2初步了解布局"><a href="#1-2初步了解布局" class="headerlink" title="1.2初步了解布局"></a>1.2初步了解布局</h5><p>第一点，布局是以主题为单位的，一套主题就有一套布局，这个不难理解，不同的主题布局肯定是不一样的。<br>在hexo默认主题中，存在post（文章详情页）、page（导航标签页）、archive（归档页）、index（首页）、category（类别页）以及tag（标签页）这几种布局和一个总的layout布局。<br>每个主题的布局文件在主题的layout文件夹下，不同主题后缀可能不同，有的是pug。</p>
-<p><img src="https://s5.51cto.com/images/blog/202201/01000441_61cf2a191e65732349.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=" alt="Hexo博客发表文章、草稿、添加分类和标签_Hexo_03"></p>
+<p><img src="https://s5.51cto.com/images/blog/202201/01000441_61cf2a191e65732349.png" alt="Hexo博客发表文章、草稿、添加分类和标签_Hexo_03"></p>
 <p>至于主题的代码我这里就不再深入赘述了，就是描述如何构建html模块的文件。</p>
 <h4 id="2-发布草稿"><a href="#2-发布草稿" class="headerlink" title="2.发布草稿"></a>2.发布草稿</h4><p>草稿是不会显示到博客上面的，有两张方法发布草稿为正式文章，<br>1、通过命令</p>
 <p><code>hexo publish 文章文件名</code></p>
@@ -598,7 +598,7 @@
 <h4 id="3-添加分类和标签"><a href="#3-添加分类和标签" class="headerlink" title="3.添加分类和标签"></a>3.添加分类和标签</h4><p>文章分类和标签在文章中添加，文章的参数列表如下：</p>
 <p>参数                   描述                                   默认值<br>layout               布局<br>title                   标题                                  文章的文件名<br>date                  建立日期                          文件建立日期<br>updated           更新日期                          文件更新日期<br>comments       开启文章的评论功能        true<br>tags                  标签（不适用于分页）<br>categories       分类（不适用于分页）<br>permalink        覆盖文章网址<br>keywords         仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）    </p>
 <p>在开头的“—”之间的内容为文章的参数，后面的才是文章正文。分类和标签在文章的参数，所以标签和分类是在文章中产生的，无法建立一个不属于任何文章的分类和标签。</p>
-<p><img src="https://s6.51cto.com/images/blog/202201/01000441_61cf2a192dab334519.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=" alt="Hexo博客发表文章、草稿、添加分类和标签_个人博客_04"></p>
+<p><img src="https://s6.51cto.com/images/blog/202201/01000441_61cf2a192dab334519.png" alt="Hexo博客发表文章、草稿、添加分类和标签_个人博客_04"></p>
 <h5 id="3-1添加分类"><a href="#3-1添加分类" class="headerlink" title="3.1添加分类"></a>3.1添加分类</h5><p>参数“categories”表示分类，一篇文章只能属于一个分类，如果添加了多个分类，则下一个分类为子分类。<br>添加分类的格式如下：</p>
 <p><code>categories:</code></p>
 <ul>
@@ -607,7 +607,7 @@
 <li><p><code>子分类</code></p>
 </li>
 <li><p><code>子子分类</code></p>
-<p><img src="https://s9.51cto.com/images/blog/202201/01000441_61cf2a193d17999717.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=" alt="Hexo博客发表文章、草稿、添加分类和标签_Hexo_05"></p>
+<p><img src="https://s9.51cto.com/images/blog/202201/01000441_61cf2a193d17999717.png" alt="Hexo博客发表文章、草稿、添加分类和标签_Hexo_05"></p>
 </li>
 </ul>
 <h5 id="3-2添加标签"><a href="#3-2添加标签" class="headerlink" title="3.2添加标签"></a>3.2添加标签</h5><p>参数“tags”表示标签，一篇文章可以有多个标签。<br>添加标签的格式如下：</p>
@@ -616,7 +616,7 @@
 <li><p><code>标签1</code></p>
 </li>
 <li><p><code>标签2</code></p>
-<p><img src="https://s6.51cto.com/images/blog/202201/01000441_61cf2a194c37320222.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=" alt="Hexo博客发表文章、草稿、添加分类和标签_个人博客_06"></p>
+<p><img src="https://s6.51cto.com/images/blog/202201/01000441_61cf2a194c37320222.png" alt="Hexo博客发表文章、草稿、添加分类和标签_个人博客_06"></p>
 </li>
 </ul>
 <h4 id="4-通过hexo-admin管理文章"><a href="#4-通过hexo-admin管理文章" class="headerlink" title="4.通过hexo-admin管理文章"></a>4.通过hexo-admin管理文章</h4><p>这是一个可视化写作文章的插件，同时也可以进行图片上传，但是使用上可能会出现一些问题，所以在这里不详细介绍，具体内容可以见我另外两篇文章：</p>
@@ -1116,7 +1116,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="Typora+PicGo+七牛云 个人博客发布方案">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="Typora+PicGo+七牛云 个人博客发布方案">
                         
                         <span class="card-title">Typora+PicGo+七牛云 个人博客发布方案</span>
                     </div>
@@ -1172,34 +1172,35 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/hexo-1/">
+                <a href="/5w2h-godweiyang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="安装hexo和基本的使用">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="5W2H | 关于写博客的七点反思">
                         
-                        <span class="card-title">安装hexo和基本的使用</span>
+                        <span class="card-title">5W2H | 关于写博客的七点反思</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搭建个人的博客，在自己的服务器上。用hexo的好处是，所有的博客可以写在markdown文件中，备份在本地，迁移起来很方便。
-个人服务器配置
-安装node，git
-curl -sL https://rpm.nodesource.com/se
+                            
+关注公众号【算法码上来】，每日算法干货马上就来！
+
+
+When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN 和博客园上面，当时写文章是为了记录 ACM 竞赛的题解，陆陆续续写了几十篇。但是最后还是没有坚持下去，主要还是
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/教程/" class="post-category" target="_blank">
-                                    教程
+                            <a href="/categories/随笔/" class="post-category" target="_blank">
+                                    随笔
                                 </a>
                             
                             
@@ -1209,8 +1210,8 @@ curl -sL https://rpm.nodesource.com/se
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/博客/" target="_blank">
+                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>
@@ -1365,7 +1366,7 @@ curl -sL https://rpm.nodesource.com/se
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">20.6k</span>
+            <span class="white-color">30.3k</span>
             
 
             <br>
