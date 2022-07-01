@@ -117,7 +117,7 @@ win10电脑
 
 `hexo new 文章文件名`
 
-![Hexo博客发表文章、草稿、添加分类和标签_分类和标签](https://s3.51cto.com/images/blog/202201/01000440_61cf2a18e022664901.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=)
+![Hexo博客发表文章、草稿、添加分类和标签_分类和标签](https://s3.51cto.com/images/blog/202201/01000440_61cf2a18e022664901.png)
 
 2.新建草稿命令如下，草稿不会在博客上显示。在执行时加上 --draft 参数，或是把草稿中render_drafts参数设为true来预览草稿。
 
@@ -133,7 +133,7 @@ win10电脑
 
 1.首先我们先阅读一下官方文档，hexo官方文档有简体中文模式，简直是我这种英语白痴的福音，废话不多说，开始正文。关于新建文章的官方文档如下图
 
-![img](https://s8.51cto.com/images/blog/202201/01000441_61cf2a190256e6461.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=)
+![img](https://s8.51cto.com/images/blog/202201/01000441_61cf2a190256e6461.png)
 
 官方文档中提供的新建文章的命令如下
 
@@ -147,7 +147,7 @@ win10电脑
 在hexo默认主题中，存在post（文章详情页）、page（导航标签页）、archive（归档页）、index（首页）、category（类别页）以及tag（标签页）这几种布局和一个总的layout布局。
 每个主题的布局文件在主题的layout文件夹下，不同主题后缀可能不同，有的是pug。
 
-![Hexo博客发表文章、草稿、添加分类和标签_Hexo_03](https://s5.51cto.com/images/blog/202201/01000441_61cf2a191e65732349.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=)
+![Hexo博客发表文章、草稿、添加分类和标签_Hexo_03](https://s5.51cto.com/images/blog/202201/01000441_61cf2a191e65732349.png)
 
 至于主题的代码我这里就不再深入赘述了，就是描述如何构建html模块的文件。
 
@@ -179,7 +179,7 @@ keywords	     仅用于 meta 标签和 Open Graph 的关键词（不推荐使用
 
 在开头的“—”之间的内容为文章的参数，后面的才是文章正文。分类和标签在文章的参数，所以标签和分类是在文章中产生的，无法建立一个不属于任何文章的分类和标签。
 
-![Hexo博客发表文章、草稿、添加分类和标签_个人博客_04](https://s6.51cto.com/images/blog/202201/01000441_61cf2a192dab334519.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=)
+![Hexo博客发表文章、草稿、添加分类和标签_个人博客_04](https://s6.51cto.com/images/blog/202201/01000441_61cf2a192dab334519.png)
 
 ##### 3.1添加分类
 
@@ -193,7 +193,7 @@ keywords	     仅用于 meta 标签和 Open Graph 的关键词（不推荐使用
 
 - `子子分类`
 
-  ![Hexo博客发表文章、草稿、添加分类和标签_Hexo_05](https://s9.51cto.com/images/blog/202201/01000441_61cf2a193d17999717.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=)
+  ![Hexo博客发表文章、草稿、添加分类和标签_Hexo_05](https://s9.51cto.com/images/blog/202201/01000441_61cf2a193d17999717.png)
 
 ##### 3.2添加标签
 
@@ -205,7 +205,7 @@ keywords	     仅用于 meta 标签和 Open Graph 的关键词（不推荐使用
 
 - `标签2`
 
-  ![Hexo博客发表文章、草稿、添加分类和标签_个人博客_06](https://s6.51cto.com/images/blog/202201/01000441_61cf2a194c37320222.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=)
+  ![Hexo博客发表文章、草稿、添加分类和标签_个人博客_06](https://s6.51cto.com/images/blog/202201/01000441_61cf2a194c37320222.png)
 
 #### 4.通过hexo-admin管理文章
 

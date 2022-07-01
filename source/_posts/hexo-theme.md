@@ -7,7 +7,7 @@ tags:
 categories: 教程
 ---
 
-[English Document](http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/README.md) | [演示示例](https://blinkfox.github.io/) | QQ交流群:`926552981`
+[English Document](http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/README.md) | [演示示例](https://blinkfox.github.io/) | QQ交流:`8698305`
 
 > 这是一个采用`Material Design`和响应式设计的 Hexo 博客主题。
 

@@ -1,6 +1,14 @@
 ---
 title: Typora+PicGo+七牛云 个人博客发布方案
 date: 2022-06-24 17:27:24
+author: 弶森
+top: false
+cover: true
+coverImg: 
+toc: true
+mathjax: true
+img:
+password:
 tags:
  - Hexo
  - Markdown
@@ -13,13 +21,9 @@ categories: 教程
 开篇
 天下没有免费的午餐，所以我们要尽情白嫖。
 
-
-
 注意：本篇推荐的是Typora+七牛云+PicGO。懂的都懂好用加免费这不嫖上一波嘿
 
 不废话了，开的很快，坐稳了~
-
-
 
 ### 为啥子需要图床呢？
 
@@ -106,11 +110,6 @@ categories: 教程
 
 然后就OK啦！！！
 
-
-
 https://slcp.top/article/read/46
 
 恭喜你，又卷死一堆人！！！
-————————————————
-版权声明：本文为CSDN博主「Slcp」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-https://blog.csdn.net/Sunshine_Mr_Sun/article/details/123205807

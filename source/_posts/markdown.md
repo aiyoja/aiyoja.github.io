@@ -280,7 +280,7 @@ python
 
 效果：
 
-[![img](https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg?x-oss-process=style/watermark)](https://imgmd.oss-cn-shanghai.aliyuncs.com/Python从入门到放弃/数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark)
+[![img](https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg)](https://imgmd.oss-cn-shanghai.aliyuncs.com/Python从入门到放弃/数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark)
 
 ## 2.13 插入图片（图片路径）
 
