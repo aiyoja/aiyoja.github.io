@@ -46,7 +46,7 @@ $(function () {
      * 修复样式.
      */
     let fixStyles = function () {
-        fixPostCardWidth('navContainer', 'articles');
+        fixPostCardWidth('navContainer');
         fixPostCardWidth('artDetail', 'prenext-posts');
         fixFooterPosition();
     };
@@ -127,15 +127,55 @@ $(function () {
     /*监听滚动条位置*/
     let $nav = $('#headNav');
     let $backTop = $('.top-scroll');
+    // 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
+    showOrHideNavBg($(window).scrollTop());
     $(window).scroll(function () {
         /* 回到顶部按钮根据滚动条的位置的显示和隐藏.*/
         let scroll = $(window).scrollTop();
-        if (scroll < 100) {
+        showOrHideNavBg(scroll);
+    });
+
+    function showOrHideNavBg(position) {
+        let showPosition = 100;
+        if (position < showPosition) {
             $nav.addClass('nav-transparent');
             $backTop.slideUp(300);
         } else {
             $nav.removeClass('nav-transparent');
             $backTop.slideDown(300);
         }
+    }
+
+    	
+	$(".nav-menu>li").hover(function(){
+		$(this).children('ul').stop(true,true).show();
+		 $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
+		
+	},function(){
+		$(this).children('ul').stop(true,true).hide();
+		$('.nav-item.nav-show').removeClass('nav-show');
+	})
+	
+    $('.m-nav-item>a').on('click',function(){
+            if ($(this).next('ul').css('display') == "none") {
+                $('.m-nav-item').children('ul').slideUp(300);
+                $(this).next('ul').slideDown(100);
+                $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
+            }else{
+                $(this).next('ul').slideUp(100);
+                $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
+            }
     });
+
+    // 初始化加载 tooltipped.
+    $('.tooltipped').tooltip();
 });
+
+
+//黑夜模式提醒开启功能
+setTimeout(function () {
+    if ((new Date().getHours() >= 19 || new Date().getHours() < 7) && !$('body').hasClass('DarkMode')) {
+        let toastHTML = '<span style="color:#97b8b2;border-radius: 10px;>' + '<i class="fa fa-bellaria-hidden="true"></i>晚上使用黑夜模式阅读能够减轻视觉疲劳。</span>'
+        M.toast({ html: toastHTML })
+    }
+}, 2000)

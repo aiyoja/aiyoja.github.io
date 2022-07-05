@@ -5,9 +5,6 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
-    <meta name="baidu-site-verification" content="fmlEuI34ir">
-    <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
-    <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
     <meta name="description" content="矮油酱">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,60 +13,73 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
     <title>矮油酱</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
     <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    <style type="text/css">
-        
-    </style>
 
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?ce84511d3df71640a9378a69f6293044";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
-    
-        <script>
-            (function(){
-                var bp = document.createElement('script');
-                var curProtocol = window.location.protocol.split(':')[0];
-                if (curProtocol === 'https') {
-                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-                }
-                else {
-                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                }
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(bp, s);
-            })();
-        </script>
-    
-
-    <script>
-        (function(){
-        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-    </script>
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
+
 <body>
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+    <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') 
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+
+<div class="stars-con">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>  
+</div>
+   
+  <script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+  </script>
+
+
+
 
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -84,78 +94,145 @@
             </div>
             
 
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
-<ul class="right">
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/" class="waves-effect waves-light">
-            
-            <i class="fa fa-home"></i>
-            
-            <span>首页</span>
-        </a>
-    </li>
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
     
-    <li class="hide-on-med-and-down">
-        <a href="/tags" class="waves-effect waves-light">
-            
-            <i class="fa fa-tags"></i>
-            
-            <span>标签</span>
-        </a>
-    </li>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/categories" class="waves-effect waves-light">
-            
-            <i class="fa fa-bookmark"></i>
-            
-            <span>分类</span>
-        </a>
-    </li>
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
     
-    <li class="hide-on-med-and-down">
-        <a href="/archives" class="waves-effect waves-light">
-            
-            <i class="fa fa-archive"></i>
-            
-            <span>归档</span>
-        </a>
-    </li>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/about" class="waves-effect waves-light">
-            
-            <i class="fa fa-user-circle-o"></i>
-            
-            <span>关于</span>
-        </a>
-    </li>
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
     
-    <li class="hide-on-med-and-down">
-        <a href="/friends" class="waves-effect waves-light">
-            
-            <i class="fa fa-address-book"></i>
-            
-            <span>友情链接</span>
-        </a>
-    </li>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/contact" class="waves-effect waves-light">
-            
-            <i class="fa fa-comments"></i>
-            
-            <span>留言板</span>
-        </a>
-    </li>
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
     
-    <li>
-        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
         </a>
-    </li>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
 </ul>
+
 
 <div id="mobile-nav" class="side-nav sidenav">
 
@@ -166,88 +243,156 @@
         <div class="logo-name">矮油酱</div>
         <div class="logo-desc">
             
-            资源分享 | 计算机科学与技术 | 自然语言处理
+            Never really desperate, only the lost of the soul.
             
         </div>
     </div>
 
-    
-
     <ul class="menu-list mobile-menu-list">
         
-        <li>
-            <a href="/" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-home"></i>
-                
-                首页
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/tags" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-tags"></i>
-                
-                标签
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/categories" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-bookmark"></i>
-                
-                分类
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/archives" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-archive"></i>
-                
-                归档
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/about" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-user-circle-o"></i>
-                
-                关于
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/friends" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-address-book"></i>
-                
-                友情链接
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/contact" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-comments"></i>
-                
-                留言板
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
         </li>
         
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/godweiyang/hexo-matery-modified" class="waves-effect waves-light" target="_blank">
-                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            <a href="https://github.com/aiyoja" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
     </ul>
 </div>
+
 
         </div>
 
@@ -297,7 +442,7 @@
     }
 </style>
 
-<a href="https://github.com/godweiyang/hexo-matery-modified" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/aiyoja" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -345,7 +490,7 @@
     }
 
     .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .4);
     }
 
     .carousel-control i {
@@ -358,41 +503,59 @@
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
-    <div id="prev-cover" class="left waves-effect carousel-control">
-        <i class="icon fa fa-angle-left"></i>
-    </div>
-    <div id="next-cover" class="right waves-effect carousel-control">
-        <i class="icon fa fa-angle-right"></i>
-    </div>
+        <div id="prev-cover" class="left waves-effect carousel-control">
+            <i class="icon fa fa-angle-left"></i>
+        </div>
+        <div id="next-cover" class="right waves-effect carousel-control">
+            <i class="icon fa fa-angle-right"></i>
+        </div>
     
 
-    <div class="carousel-item red white-text bg-cover about-cover">
+    <div class="carousel-item  white-text bg-cover about-cover">
         <div class="container">
             <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
-                <!-- 
-                    最是人间留不住
-                 -->
                 
-                    最是人间留不住
+                最是人间留不住
                 
             </div>
 
             <div class="description center-align">
                 
-                    资源分享 | 计算机科学与技术 | 自然语言处理
-                    <!-- <span id="jinrishici-sentence">正在加载今日诗词...</span> -->
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
                 
             </div>
         </div>
     </div>
 </div>
+
+
 <script>
-// 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
+
+
 
             <div class="cover-btns">
                 <a href="#indexCard" class="waves-effect waves-light btn">
@@ -400,169 +563,217 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 </a>
 
                 
-                <a href="http://cclv.tk" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa fa-github-alt"></i>cclv
-                </a>
+                    <a href="http://cclv.tk" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Cclv
+                    </a>
                 
             </div>
             <div class="cover-social-link">
     <a href="https://github.com/aiyoja" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
+        <i class="fab fa-github"></i>
     </a>
 
 
 
     <a href="mailto:jiefav@sina.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
+        <i class="fas fa-envelope-open"></i>
     </a>
 
 
 
-    <a href="https://zhihu.com/people/jiefav" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
-        <i class="fa fa-inverse">知</i>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=8698305" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 8698305" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
     </a>
 
 
 
-    <a href="http://wpa.qq.com/msgrd?v=3&uin=8698305&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
-    </a>
 
-
-
-    <a href="https://weibo.com/jiefav" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
-        <i class="fa fa-weibo"></i>
-    </a>
 
 
 
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
+        <i class="fas fa-rss"></i>
     </a>
+
 </div>
         </div>
     </div>
 
     
-    
+        
 
-    
-    
-    <div class="carousel-item amber white-text carousel-post bg-cover"
-            style="background-image: url('/medias/featureimages/22.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align">使用git分支保存hexo博客源码到github</div>
-                    <div class="description center-align">
-                    
-                        hexo是当前最火的静态博客框架，支持Markdown格式文章编辑并自动生成对应的静态网页，简单高效令人爱不释手。使用hexo写博客的流程通常是，
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/23.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">使用git分支保存hexo博客源码到github</div>
+                            <div class="description center-align">
+                                
+                                    hexo是当前最火的静态博客框架，支持Markdown格式文章编辑并自动生成对应的静态网页，简单高效令人爱不释手。使用hexo写博客的流程通常是，
 
 通过hexo new post_name命令，会自动在source/_post目录下生成一
-                    
-                    </div>
-                    <div class="cover-btns">
-                        <a href="/2022062901/" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                        </a>
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2022062901/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    
-    <div class="carousel-item amber white-text carousel-post bg-cover"
-            style="background-image: url('/medias/featureimages/6.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align">Typora+PicGo+七牛云 个人博客发布方案</div>
-                    <div class="description center-align">
-                    
-                        开篇开篇天下没有免费的午餐，所以我们要尽情白嫖。
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/8.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</div>
+                            <div class="description center-align">
+                                
+                                    
+All in one 一站式Hexo配置优化教程！
+
+本文很长，特别长，被拆分为6篇文章了，见文末。如果你遇到了什么问题，可以尝试搜索本文，你很可能有收获！ CtRL + F，还可以试试右上角菜单搜索功能。
+欢迎光临博主的独立博客 夜法之
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2022070401/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/7.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">Typora+PicGo+七牛云 个人博客发布方案</div>
+                            <div class="description center-align">
+                                
+                                    开篇开篇天下没有免费的午餐，所以我们要尽情白嫖。
 注意：本篇推荐的是Typora+七牛云+PicGO。懂的都懂好用加免费这不嫖上一波嘿
 不废话了，开的很快，坐稳了~
 为啥子需要图床呢？当我们使用相关工具编写好文章后，并将这图文并茂的文章上传
-                    
-                    </div>
-                    <div class="cover-btns">
-                        <a href="/typora-picgo/" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                        </a>
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/typora-picgo/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    
-    <div class="carousel-item amber white-text carousel-post bg-cover"
-            style="background-image: url('/medias/featureimages/4.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col s10 offset-s1">
-                    <div class="title center-align">github博客搭建一文搞定</div>
-                    <div class="description center-align">
-                    
-                        关注公众号【郴城信息】，免费资源干货马上就来！
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/3.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">github博客搭建一文搞定</div>
+                            <div class="description center-align">
+                                
+                                    关注公众号【郴城信息】，免费资源干货马上就来！
 
 关注我公众号：郴城信息，获取实时更新。有任何问题请加 QQ 技术交流群【群号：8698305】。如果觉得有用的话可以看心情打赏一杯奶茶，我会很开心哒。
 我的博客源代码地址大家可以直接素质二连
-                    
-                    </div>
-                    <div class="cover-btns">
-                        <a href="/2022063001/" class="waves-effect waves-light btn" target="_blank">
-                            <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                        </a>
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2022063001/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
+        
     
 </div>
 
 <script>
-$(function () {
-    let coverSlider = $('.carousel');
-    coverSlider.carousel({
-        duration: Number('120'),
-        fullWidth: true,
-        indicators: 'true' === 'true'
-    });
+    $(function () {
+        let coverSlider = $('.carousel');
 
-    let carouselIntervalId;
-    
-    // Loop to call the next cover article picture.
-    let autoCarousel = function() {
-        carouselIntervalId = setInterval(function () {
-            coverSlider.carousel('next');
-        }, 5000);
-    };
-    autoCarousel();
-    
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
 
-    let restartPlay = function () {
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
         
-        clearInterval(carouselIntervalId);
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
         autoCarousel();
         
-    };
 
-    
-    // prev and next cover post.
-    $('#prev-cover').click(function () {
-        coverSlider.carousel('prev');
-        restartPlay();
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
     });
-    $('#next-cover').click(function () {
-        coverSlider.carousel('next');
-        restartPlay();
-    });
-    
-});
 </script>
 
 
@@ -575,29 +786,26 @@ $(function () {
             <div class="card">
                 <div class="card-content">
                     
-                    <div class="dream">
+                        <div class="dream">
     
     <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;欢迎关注
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
     </div>
     
     <div class="row">
-        <!-- <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            我搬到谁的隔壁，谁成了我的邻居。鸣谢生命有你参与，笑纳我的邀请。
-        </div> -->
-        <div align="middle">
-            <img src="/medias/contact.jpg" width="80%" >
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
         </div>
-        
     </div>
-    
 </div>
-                    
 
                     
 
                     
 
+                    
+
+                    
                     <div id="recommend-sections" class="recommend">
                         
 
@@ -605,21 +813,25 @@ $(function () {
 
 
 
-<div class="title"><i class="fa fa-thumbs-o-up"></i>&nbsp;&nbsp;推荐文章</div>
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
 
 <div class="row">
 
     
     
     <div class="col s12" >
-        <div class="post-card" style="background-image: url('/medias/featureimages/7.jpg')">
+        
+            <div class="post-card" style="background-image: url('/medias/featureimages/8.jpg')">
+            
             <div class="post-body">
                 <div class="post-categories">
                     
-                    <a href="/categories/语录/" class="category" target="_blank">语录</a>
+                        
+                            <a href="/categories/语录/" class="category">语录</a>
+                        
                     
                 </div>
-                <a href="/2022062801/" target="_blank">
+                <a href="/2022062801/">
                     <h3 class="post-title">哎呦不错哦2</h3>
                 </a>
                 <p class="post-description">失败
@@ -627,9 +839,62 @@ $(function () {
 回到家发现空调没关。
 心态
 看到</p>
-                <a href="/2022062801/" target="_blank"
-                        class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)">
-                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                <a href="/2022062801/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('/medias/featureimages/8.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/教程/" class="category">教程</a>
+                        
+                    
+                </div>
+                <a href="/2022070401/">
+                    <h3 class="post-title">[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</h3>
+                </a>
+                <p class="post-description">
+All in one 一站式Hexo配置优化教程！
+
+本文很长，特别长，被拆分为6篇文章了，见文末。如果你遇到了什么问题，可以尝试搜索本文</p>
+                <a href="/2022070401/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('/medias/featureimages/2.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/教程/" class="category">教程</a>
+                        
+                    
+                </div>
+                <a href="/hello-world/">
+                    <h3 class="post-title">Matery主题自定义(一)黑夜模式</h3>
+                </a>
+                <p class="post-description">Matery主题自定义(一)黑夜模式黑夜模式
+作为一个前端学习者，自然懂得黑夜模式的重要性，可惜主题原生未提供，那就自己弄吧
+
+个人博客作为</p>
+                <a href="/hello-world/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
         </div>
@@ -640,6 +905,7 @@ $(function () {
 
 
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -652,13 +918,75 @@ $(function () {
     <article id="articles" class="container articles">
         <div class="row article-row">
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022063001/" target="_blank">
+                    <a href="/2022070401/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="github博客搭建一文搞定">
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程">
+                            
+                            <span class="card-title">[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+All in one 一站式Hexo配置优化教程！
+
+本文很长，特别长，被拆分为6篇文章了，见文末。如果你遇到了什么问题，可以尝试搜索本文，你很可能有收获！ CtRL + F，还可以试试右上角菜单搜索功能。
+欢迎光临博主的独立博客 夜法之
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/教程/" class="post-category">
+                                    教程
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="/tags/Markdown/">
+                            <span class="chip bg-color">Markdown</span>
+                        </a>
+                        
+                        <a href="/tags/matery/">
+                            <span class="chip bg-color">matery</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022063001/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="github博客搭建一文搞定">
                             
                             <span class="card-title">github博客搭建一文搞定</span>
                         </div>
@@ -667,7 +995,7 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            关注公众号【郴城信息】，免费资源干货马上就来！
+                                关注公众号【郴城信息】，免费资源干货马上就来！
 
 关注我公众号：郴城信息，获取实时更新。有任何问题请加 QQ 技术交流群【群号：8698305】。如果觉得有用的话可以看心情打赏一杯奶茶，我会很开心哒。
 我的博客源代码地址大家可以直接素质二连
@@ -675,13 +1003,13 @@ $(function () {
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-30
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -693,11 +1021,11 @@ $(function () {
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo/" target="_blank">
+                        <a href="/tags/Hexo/">
                             <span class="chip bg-color">Hexo</span>
                         </a>
                         
-                        <a href="/tags/Github/" target="_blank">
+                        <a href="/tags/Github/">
                             <span class="chip bg-color">Github</span>
                         </a>
                         
@@ -705,14 +1033,16 @@ $(function () {
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022062901/" target="_blank">
+                    <a href="/2022062901/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用git分支保存hexo博客源码到github">
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="使用git分支保存hexo博客源码到github">
                             
                             <span class="card-title">使用git分支保存hexo博客源码到github</span>
                         </div>
@@ -721,20 +1051,20 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            hexo是当前最火的静态博客框架，支持Markdown格式文章编辑并自动生成对应的静态网页，简单高效令人爱不释手。使用hexo写博客的流程通常是，
+                                hexo是当前最火的静态博客框架，支持Markdown格式文章编辑并自动生成对应的静态网页，简单高效令人爱不释手。使用hexo写博客的流程通常是，
 
 通过hexo new post_name命令，会自动在source/_post目录下生成一
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-29
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -746,11 +1076,11 @@ $(function () {
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo/" target="_blank">
+                        <a href="/tags/Hexo/">
                             <span class="chip bg-color">Hexo</span>
                         </a>
                         
-                        <a href="/tags/Github/" target="_blank">
+                        <a href="/tags/Github/">
                             <span class="chip bg-color">Github</span>
                         </a>
                         
@@ -758,14 +1088,16 @@ $(function () {
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022062801/" target="_blank">
+                    <a href="/2022062801/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="哎呦不错哦2">
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="哎呦不错哦2">
                             
                             <span class="card-title">哎呦不错哦2</span>
                         </div>
@@ -774,7 +1106,7 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            失败
+                                失败
 空调太费电了，为了省点电费去商场里赠空调，逛了一上午，喝奶茶花了 28，吃炸鸡花了 54，买衣服花了 560，逛超市花了 170。
 回到家发现空调没关。
 心态
@@ -786,13 +1118,13 @@ $(function () {
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-28
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/语录/" class="post-category" target="_blank">
+                                <a href="/categories/语录/" class="post-category">
                                     语录
                                 </a>
                                 
@@ -804,7 +1136,7 @@ $(function () {
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/娱乐/" target="_blank">
+                        <a href="/tags/娱乐/">
                             <span class="chip bg-color">娱乐</span>
                         </a>
                         
@@ -812,46 +1144,16 @@ $(function () {
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/hello-world/" target="_blank">
+                    <a href="/2022062701/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-28
-                            </span>
-                            <span class="publish-author">
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022062701/" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="哎呦不错哦1">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="哎呦不错哦1">
                             
                             <span class="card-title">哎呦不错哦1</span>
                         </div>
@@ -860,7 +1162,7 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            公平
+                                公平
 河南考生：教育太不公平
 北京考生：教育很公平的
 现实
@@ -869,13 +1171,13 @@ $(function () {
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-27
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/语录/" class="post-category" target="_blank">
+                                <a href="/categories/语录/" class="post-category">
                                     语录
                                 </a>
                                 
@@ -887,7 +1189,7 @@ $(function () {
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/娱乐/" target="_blank">
+                        <a href="/tags/娱乐/">
                             <span class="chip bg-color">娱乐</span>
                         </a>
                         
@@ -895,14 +1197,16 @@ $(function () {
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/hexo-theme/" target="_blank">
+                    <a href="/hexo-theme/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hexo博客主题之hexo-theme-matery的介绍">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hexo博客主题之hexo-theme-matery的介绍">
                             
                             <span class="card-title">Hexo博客主题之hexo-theme-matery的介绍</span>
                         </div>
@@ -911,7 +1215,7 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            English Document | 演示示例 | QQ交流:8698305
+                                English Document | 演示示例 | QQ交流:8698305
 
 这是一个采用Material Design和响应式设计的 Hexo 博客主题。
 
@@ -923,13 +1227,13 @@ Material Design 设计
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-24
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -941,11 +1245,11 @@ Material Design 设计
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo/" target="_blank">
+                        <a href="/tags/Hexo/">
                             <span class="chip bg-color">Hexo</span>
                         </a>
                         
-                        <a href="/tags/Theme/" target="_blank">
+                        <a href="/tags/Theme/">
                             <span class="chip bg-color">Theme</span>
                         </a>
                         
@@ -953,14 +1257,16 @@ Material Design 设计
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/markdown/" target="_blank">
+                    <a href="/markdown/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="markdown基本语法">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="markdown基本语法">
                             
                             <span class="card-title">markdown基本语法</span>
                         </div>
@@ -969,7 +1275,7 @@ Material Design 设计
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            目录
+                                目录
 一、前言
 二、Markdown基本语法
 2.1 标题
@@ -986,13 +1292,13 @@ Material Design 设计
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-24
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -1004,7 +1310,7 @@ Material Design 设计
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Markdown/" target="_blank">
+                        <a href="/tags/Markdown/">
                             <span class="chip bg-color">Markdown</span>
                         </a>
                         
@@ -1012,14 +1318,16 @@ Material Design 设计
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/hexo-2/" target="_blank">
+                    <a href="/hexo-2/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="如何用hexo新建一篇文章并编辑文章">
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="如何用hexo新建一篇文章并编辑文章">
                             
                             <span class="card-title">如何用hexo新建一篇文章并编辑文章</span>
                         </div>
@@ -1028,7 +1336,7 @@ Material Design 设计
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            如何用hexo新建一篇文章并编辑文章操作道具：hexo
+                                如何用hexo新建一篇文章并编辑文章操作道具：hexo
 第一步：新建MarkDown文件使用CMD命令进入到你的blog
 cd blog
 新建文件
@@ -1038,13 +1346,13 @@ hexo new "我的第一篇博客"
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-24
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -1056,15 +1364,15 @@ hexo new "我的第一篇博客"
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo/" target="_blank">
+                        <a href="/tags/Hexo/">
                             <span class="chip bg-color">Hexo</span>
                         </a>
                         
-                        <a href="/tags/Markdown/" target="_blank">
+                        <a href="/tags/Markdown/">
                             <span class="chip bg-color">Markdown</span>
                         </a>
                         
-                        <a href="/tags/GitHub/" target="_blank">
+                        <a href="/tags/GitHub/">
                             <span class="chip bg-color">GitHub</span>
                         </a>
                         
@@ -1072,14 +1380,16 @@ hexo new "我的第一篇博客"
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/typora-picgo/" target="_blank">
+                    <a href="/typora-picgo/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Typora+PicGo+七牛云 个人博客发布方案">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Typora+PicGo+七牛云 个人博客发布方案">
                             
                             <span class="card-title">Typora+PicGo+七牛云 个人博客发布方案</span>
                         </div>
@@ -1088,7 +1398,7 @@ hexo new "我的第一篇博客"
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            开篇开篇天下没有免费的午餐，所以我们要尽情白嫖。
+                                开篇开篇天下没有免费的午餐，所以我们要尽情白嫖。
 注意：本篇推荐的是Typora+七牛云+PicGO。懂的都懂好用加免费这不嫖上一波嘿
 不废话了，开的很快，坐稳了~
 为啥子需要图床呢？当我们使用相关工具编写好文章后，并将这图文并茂的文章上传
@@ -1096,13 +1406,13 @@ hexo new "我的第一篇博客"
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-24
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -1114,15 +1424,15 @@ hexo new "我的第一篇博客"
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo/" target="_blank">
+                        <a href="/tags/Hexo/">
                             <span class="chip bg-color">Hexo</span>
                         </a>
                         
-                        <a href="/tags/Markdown/" target="_blank">
+                        <a href="/tags/Markdown/">
                             <span class="chip bg-color">Markdown</span>
                         </a>
                         
-                        <a href="/tags/GitHub/" target="_blank">
+                        <a href="/tags/GitHub/">
                             <span class="chip bg-color">GitHub</span>
                         </a>
                         
@@ -1130,14 +1440,16 @@ hexo new "我的第一篇博客"
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/article-title/" target="_blank">
+                    <a href="/article-title/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Hexo博客新建文章并发布">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hexo博客新建文章并发布">
                             
                             <span class="card-title">Hexo博客新建文章并发布</span>
                         </div>
@@ -1146,7 +1458,7 @@ hexo new "我的第一篇博客"
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            Hexo博客新建文章并发布创建新文章根目录命令行输入hexo new &lt;模板&gt; &lt;文章名&gt;新建文章
+                                Hexo博客新建文章并发布创建新文章根目录命令行输入hexo new &lt;模板&gt; &lt;文章名&gt;新建文章
 其中&lt;模板&gt;在scaffolds中，默认情况下有三个模板post、draft、page
 
 
@@ -1157,13 +1469,13 @@ hexo new "我的第一篇博客"
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-23
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/教程/" class="post-category" target="_blank">
+                                <a href="/categories/教程/" class="post-category">
                                     教程
                                 </a>
                                 
@@ -1175,11 +1487,11 @@ hexo new "我的第一篇博客"
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo/" target="_blank">
+                        <a href="/tags/Hexo/">
                             <span class="chip bg-color">Hexo</span>
                         </a>
                         
-                        <a href="/tags/Markdown/" target="_blank">
+                        <a href="/tags/Markdown/">
                             <span class="chip bg-color">Markdown</span>
                         </a>
                         
@@ -1187,14 +1499,77 @@ hexo new "我的第一篇博客"
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/5w2h-godweiyang/" target="_blank">
+                    <a href="/hello-world/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="5W2H | 关于写博客的七点反思">
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Matery主题自定义(一)黑夜模式">
+                            
+                            <span class="card-title">Matery主题自定义(一)黑夜模式</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Matery主题自定义(一)黑夜模式黑夜模式
+作为一个前端学习者，自然懂得黑夜模式的重要性，可惜主题原生未提供，那就自己弄吧
+
+个人博客作为效果参考：https://dreamruins.gitee.io/
+设置基础样式参考其他优秀产品的黑
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/教程/" class="post-category">
+                                    教程
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="/tags/Markdown/">
+                            <span class="chip bg-color">Markdown</span>
+                        </a>
+                        
+                        <a href="/tags/matery/">
+                            <span class="chip bg-color">matery</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/5w2h-godweiyang/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="5W2H | 关于写博客的七点反思">
                             
                             <span class="card-title">5W2H | 关于写博客的七点反思</span>
                         </div>
@@ -1203,7 +1578,7 @@ hexo new "我的第一篇博客"
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            
+                                
 关注公众号【算法码上来】，每日算法干货马上就来！
 
 
@@ -1212,13 +1587,13 @@ When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN �
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-14
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/随笔/" class="post-category" target="_blank">
+                                <a href="/categories/随笔/" class="post-category">
                                     随笔
                                 </a>
                                 
@@ -1230,7 +1605,7 @@ When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN �
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/博客/" target="_blank">
+                        <a href="/tags/博客/">
                             <span class="chip bg-color">博客</span>
                         </a>
                         
@@ -1238,6 +1613,7 @@ When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN �
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
         </div>
     </article>
@@ -1245,137 +1621,146 @@ When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN �
 </main>
 
 
+
+
     <footer class="page-footer bg-color">
-    <div class="container row center-align">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='false'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2017-2020 aiyoja. 版权所有
-
+            Copyright&nbsp;&copy;
             
-            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">30.8k</span>
+                <span id="year">2019-2022</span>
             
-
-            <br>
-            <span id="sitetime"></span>
-
-            
-            
+            <a href="/about" target="_blank">弶森</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
-            <span id="busuanzi_container_site_pv" style='display:none'>
-                <i class="fa fa-heart-o"></i>
-                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">48.9k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
-            <span id="busuanzi_container_site_uv" style='display:none'>
-                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/aiyoja" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
+        <i class="fab fa-github"></i>
     </a>
 
 
 
     <a href="mailto:jiefav@sina.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
+        <i class="fas fa-envelope-open"></i>
     </a>
 
 
 
-    <a href="https://zhihu.com/people/jiefav" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
-        <i class="fa fa-inverse">知</i>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=8698305" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 8698305" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
     </a>
 
 
 
-    <a href="http://wpa.qq.com/msgrd?v=3&uin=8698305&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
-    </a>
 
-
-
-    <a href="https://weibo.com/jiefav" class="tooltipped" target="_blank" data-tooltip="关注我的微博" data-position="top" data-delay="50">
-        <i class="fa fa-weibo"></i>
-    </a>
 
 
 
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
+        <i class="fas fa-rss"></i>
     </a>
+
 </div>
     </div>
 </footer>
 
 <div class="progress-bar"></div>
 
-<!-- 不蒜子计数初始值纠正 -->
-<script>
-    $(document).ready(function () {
-
-        var int = setInterval(fixCount, 50);
-        var pvcountOffset = 80000;
-        var uvcountOffset = 20000;
-
-        function fixCount() {
-            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
-                clearInterval(int);
-            }
-            if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
-                clearInterval(int);
-            }
-        }
-    });
-</script>
-
-<script language=javascript>
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
-    siteTime();
-</script>
 
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
@@ -1383,19 +1768,107 @@ When？什么时候开始写的？第一次写博客是 2015 年了，在 CSDN �
     </div>
 </div>
 
-<script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
+
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fa fa-angle-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </a>
 </div>
-
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
@@ -1404,33 +1877,89 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
-    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
-    </script>
+    
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=查教程获取"></script>
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', '查教程获取');
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 
-
-
     
-    <script src="/libs/others/clicklove.js"></script>
+    <script src="/libs/others/clicklove.js" async="async"></script>
     
-
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
-    <!-- 雪花特效 -->
+    
+        <script src="//code.tidio.co/1xblibcar6lr8sqtpdqwusncvlj8xjwm.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
 </body>

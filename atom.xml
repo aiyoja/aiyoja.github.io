@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiyoja.github.io/"/>
-  <updated>2022-07-01T02:03:01.269Z</updated>
+  <updated>2022-07-05T03:44:46.318Z</updated>
   <id>http://aiyoja.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</title>
+    <link href="http://aiyoja.github.io/2022070401/"/>
+    <id>http://aiyoja.github.io/2022070401/</id>
+    <published>2022-07-04T02:37:48.000Z</published>
+    <updated>2022-07-05T03:44:46.318Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;All in one 一站式Hexo配置优化教程！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本文很长，特别长，被拆分为6篇文章了，见文末。如果你遇到了什么问题，可以尝试搜索本文，你很可能有收获！ &lt;code&gt;CtRL +
+        
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="hexo" scheme="http://aiyoja.github.io/tags/hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
+    
+      <category term="matery" scheme="http://aiyoja.github.io/tags/matery/"/>
+    
+  </entry>
   
   <entry>
     <title>github博客搭建一文搞定</title>
@@ -99,28 +132,6 @@
     
     
       <category term="娱乐" scheme="http://aiyoja.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://aiyoja.github.io/hello-world/"/>
-    <id>http://aiyoja.github.io/hello-world/</id>
-    <published>2022-06-28T03:32:40.699Z</published>
-    <updated>2022-06-23T00:54:17.880Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
   </entry>
   
@@ -294,6 +305,36 @@
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
     
       <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matery主题自定义(一)黑夜模式</title>
+    <link href="http://aiyoja.github.io/hello-world/"/>
+    <id>http://aiyoja.github.io/hello-world/</id>
+    <published>2022-05-04T02:37:48.000Z</published>
+    <updated>2022-07-05T03:43:47.620Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Matery主题自定义-一-黑夜模式&quot;&gt;&lt;a href=&quot;#Matery主题自定义-一-黑夜模式&quot; class=&quot;headerlink&quot; title=&quot;Matery主题自定义(一)黑夜模式&quot;&gt;&lt;/a&gt;Matery主题自定义(一)黑夜模式&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="hexo" scheme="http://aiyoja.github.io/tags/hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
+    
+      <category term="matery" scheme="http://aiyoja.github.io/tags/matery/"/>
     
   </entry>
   
