@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo常用命令</title>
+      <link href="/2022070501/"/>
+      <url>/2022070501/</url>
+      
+        <content type="html"><![CDATA[<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="指令说明"><a href="#指令说明" class="headerlink" title="指令说明"></a>指令说明</h3><p><code>hexo server</code> #启动本地服务器，用于预览主题。Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</p><p><code>hexo server -s</code> #以静态模式启动</p><p><code>hexo server -p 5000</code> #更改访问端口 (默认端口为 4000，’ctrl + c’关闭 server)</p><p><code>hexo server -i IP地址</code> #自定义 IP</p><p><code>hexo clean</code> #清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的 public 文件夹</p><p><code>hexo g</code> #生成静态网页 (执行 $ <code>hexo g</code>后会在站点根目录下生成 public 文件夹, hexo 会将”/blog/source/“ 下面的.md 后缀的文件编译为.html 后缀的文件,存放在”/blog/public/ “ 路径下)</p><p><code>hexo d</code> #自动生成网站静态文件，并将本地数据部署到设定的仓库(如 github)</p><p><code>hexo init</code> 文件夹名称 #初始化 XX 文件夹名称</p><p><code>npm update hexo -g</code>#升级</p><p><code>npm install hexo -g</code> #安装</p><p><code>node-v</code> #查看 node.js 版本号</p><p><code>npm -v</code> #查看 npm 版本号</p><p><code>git --version</code> #查看 git 版本号</p><p><code>hexo -v</code> #查看 hexo 版本号</p><h3 id="简写指令"><a href="#简写指令" class="headerlink" title="简写指令"></a>简写指令</h3><pre><code>hexo n &quot;我的第一篇文章&quot;` 等价于 `hexo new &quot;我的第一篇文章&quot;` 还等价于 `hexo new post &quot;我的第一篇文章&quot;hexo p` 等价于 `hexo publishhexo g` 等价于 `hexo generatehexo s`等价于 `hexo serverhexo d` 等价于 `hexo deployhexo g -d`等价于`hexo generate --deploy</code></pre><p>注: <code>hexo clean</code> 没有 简写, <code>git --version</code> 没有简写</p><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>1. 通过<code>hexo g -d</code>部署时报<code>Error: Spawn failed</code>错误:</strong></p><blockquote><p>这是由于 git 本地记录的提交版本号与 github 上不一致导致的，通过<code>git reset --hard commitCode</code>即可解决。</p></blockquote><ul><li>检查本地最近提交记录，获取最后一次提交记录的更新时间及标识，如<code>280a7fdd46fcfd7d34e652aec15523dcd247fac8</code></li></ul><p>bash</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> .deploy_git<span class="token function">cat</span> .git/logs/HEAD<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>获取 github pages 服务所关联分支的最近一次提交记录，获取更新时间及标识。地址一般为：<code>https://github.com/用户名/仓库名/commits/分支名</code>，如<code>https://github.com/lxl80/blog/commits/gh-pages</code></li><li>如果发现提交最新的提交时间/标识不一致，通过以下命令即可解决:</li></ul><p>bash</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> reset --hard f085038efdf79546c09641d37b2a2429c1ae8e60 <span class="token comment" spellcheck="true">#github上最新的提交标识</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h2><ul><li><a href="https://www.lixl.cn/2019/092856736.html" target="_blank" rel="noopener">基于Hexo的matery主题搭建博客并深度优化-悟尘记</a></li><li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo 官方文档</a></li><li><a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/" target="_blank" rel="noopener">闪烁之狐</a></li><li><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">hexo-theme-matery</a></li><li><a href="https://blog.sky03.cn/posts/42790.html#toc-heading-1" target="_blank" rel="noopener">Hexo 进阶之各种优化</a></li><li><a href="https://www.cnblogs.com/Timesi/p/9556236.html" target="_blank" rel="noopener">Leancloud+Valine打造Hexo个人博客极简评论系统</a></li><li><a href="https://blog.sky03.cn/posts/42790.html" target="_blank" rel="noopener">Hexo进阶之各种优化</a></li><li><a href="https://sitoi.cn/posts/15908.html" target="_blank" rel="noopener">自动部署篇</a></li><li><a href="https://www.cnblogs.com/luoshuitianyi/p/10333928.html" target="_blank" rel="noopener">Hexo搭建(VPS)</a></li><li><a href="https://boyinthesun.cn/post/error-live2d-busuanzi/" target="_blank" rel="noopener">解决live2d看板娘和busuanzi不蒜子计数冲突</a></li><li><a href="https://www.yanbinghu.com/2019/03/29/25951.html" target="_blank" rel="noopener">多个域名映射同一个github pages</a></li><li><a href="https://segmentfault.com/a/1190000016286007" target="_blank" rel="noopener">hexo博客简单支持PWA</a></li><li><a href="https://blog.imlete.cn/article/hexo-seo-autopush.html" target="_blank" rel="noopener">Hexo 每天自动提交网站url到搜索引擎</a></li><li><a href="https://yafine-blog.cn/posts/ebb2.html" target="_blank" rel="noopener">Hexo 博客订阅文章通知功能</a></li><li><a href="https://yafine-blog.cn/posts/3b98.html" target="_blank" rel="noopener">修改 matery 原有主题相册</a></li><li><a href="https://small-rose.github.io/posts/a53a9069.html" target="_blank" rel="noopener">Matery主题新手常见问题</a></li><li><a href="https://hunterx.xyz/hexo-gitlab-cicd-conf.html" target="_blank" rel="noopener">hexo-gitlab-cicd-conf</a></li><li><a href="https://jxyblog.top/article/2da64065.html" target="_blank" rel="noopener">更改hexo的主题为Matery,并进行初步的优化</a></li><li><a href="http://luckyzmj.cn/posts/17fd92ae.html" target="_blank" rel="noopener">Hexo之渲染绕过</a></li><li><a href="https://wiki.jikexueyuan.com/project/gulp-book/chapter4.html" target="_blank" rel="noopener">使用 gulp 压缩图片</a></li><li><a href="https://sunhwee.com/posts/6e8839eb.html" target="_blank" rel="noopener">Hexo+Github博客搭建完全教程</a> <a href="https://github.com/shw2018/hexo-blog-fly" target="_blank" rel="noopener">博客开源</a></li><li><a href="https://segmentfault.com/a/1190000021474516" target="_blank" rel="noopener">Hexo主题使用Valine-Admin管理评论和评论提醒</a></li><li><a href="https://m3df.xyz/2021/06/20/edd7462d/" target="_blank" rel="noopener">Hexo博客进阶：图片懒加载与代码压缩</a></li><li><a href="https://qvchuang.top/archives/d3c10307.html" target="_blank" rel="noopener">matery主题个性化定制</a></li><li><a href="https://crystalblog.xyz/" target="_blank" rel="noopener">crystalblog三部曲</a> <a href="https://crystalblog.xyz/2021082944649.html" target="_blank" rel="noopener">1</a> <a href="https://crystalblog.xyz/2021082917116.html" target="_blank" rel="noopener">2</a> <a href="https://crystalblog.xyz/2021082965135.html" target="_blank" rel="noopener">3</a></li><li><a href="http://www.luckyzmj.cn/posts/e3e08109.html" target="_blank" rel="noopener">个人博客搭建</a> <a href="https://github.com/LuckyZmj/LuckyBlog" target="_blank" rel="noopener">博客开源</a></li><li><a href="https://tellyouwhat.cn/p/pwa-your-blog-can-also-be-accessed-offline/" target="_blank" rel="noopener">PWA踩坑记-从零到一让你的博客也能离线访问</a></li><li><a href="https://www.islu.cn/posts/21369.html#" target="_blank" rel="noopener">Matery主题添加暗色模式</a> <a href="https://dreamruins.gitee.io/tutorials/1121281946.html" target="_blank" rel="noopener">黑夜模式</a> <a href="https://github.com/ialoe/hexo-themes-matery-pro" target="_blank" rel="noopener">开源代码hexo-themes-matery-pro</a></li><li><a href="https://www.islu.cn/posts/2687.html" target="_blank" rel="noopener">加载动画(吃豆豆)</a> <a href="https://dreamruins.gitee.io/tutorials/1793947201.html" target="_blank" rel="noopener">加载动画旋转方块</a></li><li><a href="https://www.voidking.com/dev-hexo-gulp/" target="_blank" rel="noopener">优化<code>search.xml</code>大小</a></li><li><a href="https://akilar.top/posts/5b8f515f/" target="_blank" rel="noopener">更好的Live2d Widget</a></li><li><a href="https://easyhexo.com/" target="_blank" rel="noopener">easyhexo</a></li><li><a href="https://guanqr.com/tech/website/introduction-and-basic-setting-of-waline/" target="_blank" rel="noopener">Waline 评论系统的介绍与基础配置</a></li><li><a href="https://www.zywvvd.com/notes/hexo/theme/fluid/fluid-github-login/fluid-github-login/" target="_blank" rel="noopener">Waline 添加 GitHub 社交登录</a></li><li><a href="https://www.zywvvd.com/notes/hexo/theme/fluid/fluid-update/fluid-update/" target="_blank" rel="noopener">随机视频背景切换</a> <a href="https://www.zywvvd.com/notes/hexo/theme/fluid/fluid-video-bg-fixed/fluid-video-bg-fixed/" target="_blank" rel="noopener">视频背景</a> <a href="https://github.com/zywvvd/hexo-theme-fluid" target="_blank" rel="noopener">hexo-theme-fluid</a></li></ul><h2 id="系列教程"><a href="#系列教程" class="headerlink" title="系列教程"></a><strong>系列教程</strong></h2><p><a href="https://blog.17lai.site/atom.xml" target="_blank" rel="noopener">全部文章RSS订阅</a></p><p><strong>Hexo系列</strong> <a href="https://blog.17lai.site/categories/hexo/atom.xml" target="_blank" rel="noopener"><strong>HexoRSS分类订阅</strong></a></p><p>[三万字教程]基于Hexo的matery主题搭建博客并深度优化完全一站式教程</p><ul><li><a href="https://blog.17lai.site/posts/40300608/" target="_blank" rel="noopener">Hexo Docker环境与Hexo基础配置篇</a></li><li><a href="https://blog.17lai.site/posts/4d8a0b22/" target="_blank" rel="noopener">hexo博客自定义修改篇</a></li><li><a href="https://blog.17lai.site/posts/9b056c86/" target="_blank" rel="noopener">hexo博客网络优化篇</a></li><li><a href="https://blog.17lai.site/posts/5311b619/" target="_blank" rel="noopener">hexo博客增强部署篇</a></li><li><a href="https://blog.17lai.site/posts/4a2050e2/" target="_blank" rel="noopener">hexo博客个性定制篇</a></li><li><a href="https://blog.17lai.site/posts/84b4059a/" target="_blank" rel="noopener">hexo博客常见问题篇</a></li><li><a href="https://blog.17lai.site/posts/cf0f47fd/" target="_blank" rel="noopener">Hexo Markdown以及各种插件功能测试</a></li></ul><blockquote><ul><li>markdown 各种其它语法插件</li><li>latex公式支持</li><li>mermaid图表</li><li>plant uml图表</li><li>URL卡片</li><li>bilibili卡片</li><li>github卡片</li><li>豆瓣卡片</li><li>插入音乐和视频</li><li>插入脑图</li></ul></blockquote><p><strong>笔记系列</strong> <a href="https://blog.17lai.site/categories/note/atom.xml" target="_blank" rel="noopener"><strong>Note分类RSS订阅</strong></a></p><ul><li><a href="https://blog.17lai.site/posts/a8535f26/" target="_blank" rel="noopener">完美笔记进化论</a></li></ul><blockquote><p>经历了很长时间，使用了各种各样的方案，最终选择了一种相对完美的方式。docker私有部署运行的joplin，使用markdown语法，github作为图床，picgo作为图像自动上传后端，pypora作为MD编辑器，Snipaste作为截图工具。后备gitlab ee selfhost备份，自建图床VPS多线负载均衡。cloudflare partner cdn加速，jsdelivr加速。</p><ul><li>pigo图床搭建与配置</li><li>Joplin教程</li><li>Snipaste截图工具</li><li>Typora 作为Markdown编辑器最强</li></ul></blockquote><ul><li><a href="https://blog.17lai.fun/posts/e6086437/" target="_blank" rel="noopener">Joplin入门指南&amp;实践方案</a></li></ul><blockquote><ul><li>Joplin和使用</li><li>Joplin同步与备份</li><li>Joplin导入与导出</li></ul></blockquote><ul><li><a href="https://blog.17lai.fun/posts/45f878cd/" target="_blank" rel="noopener">替代Evernote免费开源笔记Joplin-网盘同步笔记历史版本Markdown可视化</a></li></ul><blockquote><ul><li>Joplin安装使用，调用外部编辑器，网盘同步等等</li></ul></blockquote><ul><li><a href="https://blog.17lai.site/posts/92d347d6/" target="_blank" rel="noopener">Joplin 插件以及其Markdown语法。All in One!</a></li></ul><blockquote><ul><li>Joplin简明教程</li><li>markdown语法简明教程</li></ul></blockquote><ul><li><a href="https://blog.17lai.site/posts/e3ee7f8b/" target="_blank" rel="noopener">Joplin 插件使用推荐</a></li></ul><blockquote><ul><li>教你用各种插件打造一个强大的笔记工具。</li></ul></blockquote><ul><li><a href="https://blog.17lai.site/posts/1802a8a7/" target="_blank" rel="noopener">为知笔记私有化Docker部署</a></li></ul><blockquote><ul><li>如何部署自己私有的为知笔记。</li><li>其实博主更推荐私有部署joplin</li></ul></blockquote><p><strong>Gitbook使用系列</strong> <a href="https://blog.17lai.site/categories/gitbook/atom.xml" target="_blank" rel="noopener">Gitbook分类RSS订阅</a></p><ul><li><a href="https://blog.17lai.site/posts/7fe86002/" target="_blank" rel="noopener">GitBook+GitLab撰写发布技术文档-Part1:GitBook篇</a></li><li><a href="https://blog.17lai.site/posts/7790e989/" target="_blank" rel="noopener">GitBook+GitLab撰写发布技术文档-Part2:GitLab篇</a></li><li><a href="https://blog.17lai.site/posts/d6bad1e5/" target="_blank" rel="noopener">自己动手制作电子书的最佳方式（支持PDF、ePub、mobi等格式）</a></li></ul><p><strong>Gitlab 使用系列</strong> <a href="https://blog.17lai.site/categories/gitlab/atom.xml" target="_blank" rel="noopener"><strong>Gitlab RSS 分类订阅</strong></a></p><ul><li><a href="https://blog.17lai.site/posts/acc13b70/" target="_blank" rel="noopener"><strong>Gitlab的安装及使用教程完全版</strong></a></li><li><a href="https://blog.17lai.site/posts/29a820b3/" target="_blank" rel="noopener">破解Gitlab EE</a></li><li><a href="https://blog.17lai.site/posts/d08eb7b/" target="_blank" rel="noopener">Gitlab的安装及使用</a></li><li><a href="https://blog.17lai.site/posts/1879721e/" target="_blank" rel="noopener">CI/CD与Git Flow与GitLab</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</title>
       <link href="/2022070401/"/>
       <url>/2022070401/</url>
@@ -205,9 +232,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
             
             <tag> GitHub </tag>
             
@@ -234,9 +261,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
             
             <tag> GitHub </tag>
             
@@ -263,9 +290,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
             
         </tags>
       

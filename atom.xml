@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiyoja.github.io/"/>
-  <updated>2022-07-05T03:44:46.318Z</updated>
+  <updated>2022-07-05T07:57:00.631Z</updated>
   <id>http://aiyoja.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo常用命令</title>
+    <link href="http://aiyoja.github.io/2022070501/"/>
+    <id>http://aiyoja.github.io/2022070501/</id>
+    <published>2022-07-05T07:48:10.000Z</published>
+    <updated>2022-07-05T07:57:00.631Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;h3 id=&quot;指令说明&quot;&gt;&lt;a href=&quot;#指令说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="hexo" scheme="http://aiyoja.github.io/tags/hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</title>
@@ -242,9 +270,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
     
       <category term="GitHub" scheme="http://aiyoja.github.io/tags/GitHub/"/>
     
@@ -272,9 +300,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
     
       <category term="GitHub" scheme="http://aiyoja.github.io/tags/GitHub/"/>
     
@@ -302,9 +330,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
     
   </entry>
   
