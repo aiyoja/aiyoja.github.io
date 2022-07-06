@@ -240,8 +240,11 @@ mark {
     margin-bottom: 0;
 }
 
+/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. #4cbf30 10%, #0f9d58 90% */
+/* 导航栏颜色修改，透明度请调整opacity:数值*/
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 50%);
+    background-image: linear-gradient(to right, #4cbf30 0%, #D2691E 100%);
+    opacity: 0.7;
 }
 
 .text-color {
@@ -550,10 +553,11 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*如果想去掉banner图的颜色渐变效果，请将以下的css属性注释掉或者删除掉即可*/
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+} */
 
 .bg-cover:before,
 .bg-cover:after {
@@ -2446,7 +2450,7 @@ body.DarkMode .skillbar .skill-bar-percent {
     text-align: center;
     border-radius: 50%;
     position: fixed;
-    right: 15px;
+    right: 25px;
     bottom: 195px;
     margin-bottom: 0;
     z-index: 900;

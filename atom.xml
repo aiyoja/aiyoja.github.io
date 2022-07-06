@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aiyoja.github.io/"/>
-  <updated>2022-07-05T07:57:00.631Z</updated>
+  <updated>2022-07-06T08:41:49.659Z</updated>
   <id>http://aiyoja.github.io/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>matery主题个性化定制</title>
+    <link href="http://aiyoja.github.io/2022070602/"/>
+    <id>http://aiyoja.github.io/2022070602/</id>
+    <published>2022-07-06T08:38:16.000Z</published>
+    <updated>2022-07-06T08:41:49.659Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;☞-前言&quot;&gt;&lt;a href=&quot;#☞-前言&quot; class=&quot;headerlink&quot; title=&quot;☞==前言==&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://qvchuang.top/archives/d3c10307.html#前言&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Matery" scheme="http://aiyoja.github.io/tags/Matery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>极客湾移动芯片天梯图202205</title>
+    <link href="http://aiyoja.github.io/2022070601/"/>
+    <id>http://aiyoja.github.io/2022070601/</id>
+    <published>2022-07-06T02:47:19.000Z</published>
+    <updated>2022-07-06T03:12:08.976Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;极客湾移动芯片天梯图&quot;&gt;&lt;a href=&quot;#极客湾移动芯片天梯图&quot; class=&quot;headerlink&quot; title=&quot;极客湾移动芯片天梯图&quot;&gt;&lt;/a&gt;极客湾移动芯片天梯图&lt;/h1&gt;&lt;h2 id=&quot;1-综合性能&quot;&gt;&lt;a href=&quot;#1-综合性能&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/categories/Markdown/"/>
+    
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
+    
+      <category term="Typora" scheme="http://aiyoja.github.io/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo常用命令</title>
     <link href="http://aiyoja.github.io/2022070501/"/>
     <id>http://aiyoja.github.io/2022070501/</id>
     <published>2022-07-05T07:48:10.000Z</published>
-    <updated>2022-07-05T07:57:00.631Z</updated>
+    <updated>2022-07-06T01:41:03.542Z</updated>
     
     <summary type="html">
     
@@ -100,9 +156,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Github" scheme="http://aiyoja.github.io/tags/Github/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://aiyoja.github.io/tags/Github/"/>
     
   </entry>
   
@@ -130,9 +186,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Github" scheme="http://aiyoja.github.io/tags/Github/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://aiyoja.github.io/tags/Github/"/>
     
   </entry>
   
@@ -270,9 +326,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
     
       <category term="GitHub" scheme="http://aiyoja.github.io/tags/GitHub/"/>
     
@@ -300,9 +356,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
     
       <category term="GitHub" scheme="http://aiyoja.github.io/tags/GitHub/"/>
     
@@ -330,9 +386,9 @@
       <category term="教程" scheme="http://aiyoja.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://aiyoja.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://aiyoja.github.io/tags/Markdown/"/>
     
   </entry>
   
