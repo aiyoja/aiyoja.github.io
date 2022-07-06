@@ -7,8 +7,8 @@ cover: true
 coverImg: 
 toc: true
 mathjax: true
-img:
-password:
+img: 
+password: c04d6e34aab689c5c0e68eb51753c843e032efa7c16427f8642ee07ab946e981
 tags:
  - Hexo
  - Markdown

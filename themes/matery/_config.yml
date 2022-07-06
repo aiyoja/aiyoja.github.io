@@ -35,7 +35,7 @@ cover:
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
-  enable: false
+  enable: true
   showTitle: true
   title: 欢迎关注
   text: 我搬到谁的隔壁，谁成了我的邻居。鸣谢生命有你参与，笑纳我的邀请。
@@ -88,9 +88,9 @@ logo: /medias/logo.png
 # 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
 indexbtn:
   enable: true
-  name: Github
+  name: cclv
   icon: fa-github-alt
-  url: https://github.com/aiyoja
+  url: http://cclv.tk
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
@@ -240,12 +240,12 @@ postCalendar: true
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
   enable: true
-  owner: godweiyang
-  repo: godweiyang.github.io
+  owner: gaiyoja
+  repo: aiyoja.github.io
   oauth:
     clientId: 查教程获取
     clientSecret: 查教程获取
-  admin: godweiyang
+  admin: aiyoja
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
@@ -377,11 +377,10 @@ featureImages:
 - /medias/featureimages/21.jpg
 - /medias/featureimages/22.jpg
 - /medias/featureimages/23.jpg
-- /medias/featureimages/24.jpg
-- /medias/featureimages/25.jpg
-- /medias/featureimages/26.jpg
-- /medias/featureimages/27.jpg
-- /medias/featureimages/28.jpg
+#- /medias/featureimages/25.jpg
+#- /medias/featureimages/26.jpg
+#- /medias/featureimages/27.jpg
+#- /medias/featureimages/28.jpg
 
   # default configs that the default policy for every articles/posts
   # default 配置文章的默认转载规则
@@ -412,3 +411,125 @@ snow:
   enable: false
 
 baidu_push: true
+
+
+# DaoVoice online contact
+daovoice:
+  enable: false
+  app_id:
+
+# Tidio online contact
+tidio:
+  enable: false
+  public_key:
+
+# 腾讯兔小巢，见https://txc.qq.com/
+tuxiaochao:
+  enable: false
+  productId:
+#背景canvas-nest
+canvas_nest:
+  enable: false
+  color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
+  zIndex: -1 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
+  count: 99 # 线条的总数量, 默认: 99
+
+# 背景静止彩带.
+ribbon:
+  enable: false
+  size: 150 # 彩带大小, 默认: 90.
+  alpha: 0.6 # 彩带透明度 (0 ~ 1), 默认: 0.6.
+  zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1.
+  clickChange: false  # 设置是否每次点击都更换彩带.
+
+# 背景动态彩带.
+ribbon_dynamic:
+  enable: false
+
+# sharejs文章分享模块.
+# 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
+sharejs:
+  enable: true
+  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
+
+# addthis文章分享模块.
+addthis:
+  enable: false
+  pubid:  # 前往https://www.addthis.com/获取
+
+# 打字效果副标题.
+# 如果有符号 ‘ ，请在 ’ 前面加上 \
+subtitle:
+  enable: true
+  loop: true # 是否循环
+  showCursor: true # 是否显示光标
+  startDelay: 300 # 开始延迟
+  typeSpeed: 100 # 打字速度
+  backSpeed: 50 # 删除速度
+  sub1: 从来没有真正的绝境, 只有心灵的迷途
+  sub2: Never really desperate, only the lost of the soul
+
+# 手机二级菜单.
+navMenu:
+  mleft: false # 二级侧栏子菜单是否对齐左边
+  bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
+
+# 网页预加载.
+instantpage:
+  enable: true
+
+# banner 是否每日切换.
+# 若为 false, 则 banner 默认为 /medias/banner/0.jpg
+banner:
+  enable: true
+
+#ICP备案信息尾部显示
+icp:
+  enable: false
+  url: # 备案链接
+  text: # 备案信息
+
+# CDN访问加速 
+# 第一次使用本功能，一定要先配置url，再`hexo cl && hexo g && hexo d`部署到GitHub的仓库，注意！必须是GitHub的仓库！
+# 如果必须要使用国内的coding或者gitee，可以采用双部署，同时将网站部署到两个仓库（其中一个必须是GitHub的仓库）
+# URL配置规则（例子如下）： https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名
+# 如果想关闭此功能，将 url地址 注释或删除即可！
+#
+# 注：配置了此项，就代表着本地调试的时候，网站依然会去GitHub请求资源（原来的资源），本地调试的时候记得将 此项配置 注释或者删除掉
+# 更多关于访问速度优化，请查看：https://blog.sky03.cn/posts/42790.html
+# 注：jsdelivr可以自动帮你生成.min版的js和css，所以你在上面设置js及css路径中可以直接写.min.xxx
+jsDelivr:
+  url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
+  
+# 网站背景图
+background:
+  enable: false
+  url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
+
+# 说说 https://artitalk.js.org/
+artitalk:
+  enable: false
+  appId: # xxxxx
+  appKey: # xxxxxx
+
+# 哔哔功能配置
+# 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content
+# 点击刚刚创建的content Class，点击添加列并创建名称为content的列，类型为String，注意列注释也要填写（随意填）
+# 记录appid，masterkey，api域名
+# 输入:hexo new page bb
+# hexo就在source文件夹下创建了bb/index.md。
+# 修改index.md的frontmater下的layout为bb：
+# ---
+# title: 黑石说
+# layout: bb
+# ---
+# 里面的文字可以自己随意加，会显示在哔哔的上方。
+# 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
+# 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
+bbtime:
+ enable: false
+ appId: # 你的appId
+ appKey: # 你的appKey
+ serverURLs: # https://你的api

@@ -5,7 +5,7 @@
 # Site
 title: 矮油酱
 subtitle: 最是人间留不住
-description: 资源分享 | 计算机科学与技术 | 自然语言处理
+description: 朱颜辞镜花辞树   #'朱颜辞镜花辞树' #资源分享 | 计算机科学与技术 | 自然语言处理
 keywords: "ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享"
 author: 弶森
 language: zh-CN
@@ -87,7 +87,7 @@ sitemap:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 12
+  per_page: 6
   order_by: -date
   
 # Category & Tag
@@ -110,7 +110,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: matery
+theme: hexo-theme-matery #matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
