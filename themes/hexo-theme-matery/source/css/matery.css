@@ -554,10 +554,10 @@ header .go-back i {
 }
 
 /*如果想去掉banner图的颜色渐变效果，请将以下的css属性注释掉或者删除掉即可*/
-/*.bg-cover:after {
+.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-} */
+}
 
 .bg-cover:before,
 .bg-cover:after {
