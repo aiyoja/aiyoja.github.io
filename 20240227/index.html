@@ -1,0 +1,1720 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="旅游热词, ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+    <meta name="description" content="郴州旅游">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>旅游热词 | 矮油酱</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+    <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') 
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+
+<div class="stars-con">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>  
+</div>
+   
+  <script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+  </script>
+
+
+
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">矮油酱</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">矮油酱</div>
+        <div class="logo-desc">
+            
+            朱颜辞镜花辞树
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/aiyoja" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/aiyoja" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">旅游热词</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                            <a href="/tags/攻略/">
+                                <span class="chip bg-color">攻略</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/旅游/" class="post-category">
+                                旅游
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-02-27
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    15 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>关键词收集</p>
+<p>假日，清明、五一、端午、国庆，</p>
+<p>旅游头脑风暴的关键词主要包括以下几个方面：</p>
+<ol>
+<li>旅游地点：包括各种旅游目的地的名称，如海滨、山峰、城市等。</li>
+<li>新产品和服务：涉及旅游业中新推出的产品或服务，以及可能的新颖概念。</li>
+<li>旅游活动：指游客可以参与的各种活动，如徒步、潜水、烹饪课程等。</li>
+<li>当地特色：涵盖了当地的文化、历史遗迹、传统美食等特色元素。</li>
+<li>摄影和录像：关于旅游期间的拍摄活动，如人物肖像、自然风光等。</li>
+<li>休闲和娱乐：包括户外活动、体育活动、音乐会等非正式娱乐形式。</li>
+<li>购物：提及当地特色的商品购买机会，或者大型购物的体验。</li>
+<li>交通：涉及到到达目的地的不同方式，如乘船、飞机、自驾等。</li>
+<li>住宿：描述不同的住宿选择，如酒店、民宿、露营地等。</li>
+<li>社交媒体营销：利用社交媒体平台推广旅游产品的策略。</li>
+<li>旅游保险：提供旅游相关保险服务的公司或产品。</li>
+<li>安全和促销：与旅游相关的安全措施和促销手段。</li>
+</ol>
+<p>旅游引流推广可以通过多种方式进行，以下是一些有效的策略：</p>
+<ul>
+<li><p>新闻媒体宣传。利用报纸、杂志、期刊、电视、广播节目、户外广告牌和互联网媒体进行宣传，分析受众的消费习惯和广告成本，选择合适的宣传内容和渠道。1</p>
+</li>
+<li><p>主题活动和营销。通过举办特别活动，如文化交流、艺术展览、摄影大赛等，吸引游客并加强景区与外界的联系。12</p>
+</li>
+<li><p>新媒体宣传。利用<a href="https://www.baidu.com/s?tn=39042058_40_oem_dg&wd=微博&usm=5&ie=utf-8&rsv_pq=a1939cfb008305b4&oq=旅游引流推广怎么做&rsv_t=33ab0F5GvmL%2BUktdXjX7lmlaxAO27VVQuqzb5d%2F1Sib0PWSb4t6CvCE8CFpFP9EiZsevezKYWo6A&sa=re_dqa_zy&icon=1" target="_blank" rel="noopener">微博<em></em></a>、<a href="https://www.baidu.com/s?tn=39042058_40_oem_dg&wd=微信&usm=5&ie=utf-8&rsv_pq=a1939cfb008305b4&oq=旅游引流推广怎么做&rsv_t=a7d94cOanobayeIWP45kTiVO9aJmDGkND4VJb%2FmTzElL2oi49p1zy5gcZ08YgwBQrPhy1SdTklkO&sa=re_dqa_zy&icon=1" target="_blank" rel="noopener">微信<em></em></a>等社交媒体平台进行推广，发布旅游攻略、产品介绍等内容，同时建立官方网站发布最新动态和游客须知。234</p>
+</li>
+<li><p>搜索引擎优化（SEO）。通过优化旅游产品网站，提高网上排名，增加网站访问量和产品的曝光率。356</p>
+</li>
+<li><p>多域联合推广。与其他旅游相关行业的公司如航空公司、酒店、旅游景区等合作，共同推广旅游产品。3</p>
+</li>
+<li><p>利用<a href="https://www.baidu.com/s?tn=39042058_40_oem_dg&wd=高德&usm=5&ie=utf-8&rsv_pq=a1939cfb008305b4&oq=旅游引流推广怎么做&rsv_t=73edy%2BExOiQCOmY0Cg%2BaoxNx%2Bte4TWlsnTutQAK5WqcdCiU%2BpbSHGqPiGkAx4NFf%2FxrXF%2BNkV3Ec&sa=re_dqa_zy&icon=1" target="_blank" rel="noopener">高德<em></em></a>和<a href="https://www.baidu.com/s?tn=39042058_40_oem_dg&wd=百度地图&usm=5&ie=utf-8&rsv_pq=a1939cfb008305b4&oq=旅游引流推广怎么做&rsv_t=73edy%2BExOiQCOmY0Cg%2BaoxNx%2Bte4TWlsnTutQAK5WqcdCiU%2BpbSHGqPiGkAx4NFf%2FxrXF%2BNkV3Ec&sa=re_dqa_zy&icon=1" target="_blank" rel="noopener">百度地图<em></em></a>推广。通过定位和联系电话，吸引客户或联系客户。</p>
+</li>
+<li><p><a href="https://www.baidu.com/s?tn=39042058_40_oem_dg&wd=社群营销&usm=5&ie=utf-8&rsv_pq=a1939cfb008305b4&oq=旅游引流推广怎么做&rsv_t=73edy%2BExOiQCOmY0Cg%2BaoxNx%2Bte4TWlsnTutQAK5WqcdCiU%2BpbSHGqPiGkAx4NFf%2FxrXF%2BNkV3Ec&sa=re_dqa_zy&icon=1" target="_blank" rel="noopener">社群营销<em></em></a>和分销模式。通过发布游客感兴趣的内容，培养忠诚用户，或通过用户分享信息并推荐新游客获得佣金。5</p>
+</li>
+<li><p>付费精准网络营销。利用大数据技术锁定精准目标人群，进行线上广告投放。</p>
+</li>
+<li><p>吸引新媒体人。通过举办<a href="https://www.baidu.com/s?tn=39042058_40_oem_dg&wd=网红达人展会&usm=5&ie=utf-8&rsv_pq=a1939cfb008305b4&oq=旅游引流推广怎么做&rsv_t=d82b7kCf8gQJOi9J3HjYMT3PvIWI9SEyfxM9sVqcrEYdEvmNlJjLslWX4sNyzSxfrQNAiNbUguJu&sa=re_dqa_zy&icon=1" target="_blank" rel="noopener">网红达人展会<em></em></a>、鼓励爱好者成为自发新媒体人或让当地居民成为自觉新媒体人，传播旅游信息。4</p>
+</li>
+</ul>
+<p>通过这些策略，可以有效提升旅游目的地的知名度和吸引力，吸引更多游客。</p>
+<p>旅游引流八种推广形式<br>哈喽！好久不见宝子们！咱们这期分享的是：旅游引流八种推广形式</p>
+<p>1.整合网络平台<br>通过整合各种网络推广平台，如新浪微博、微信公众号、QQ空间、贴吧、论坛等，做好宣传推广，吸引潜在客户了解景区，提高其知名度，带来更多的游客。</p>
+<p>2.利用搜索引擎推广<br>通过SEO或SEM的推广方式，提高网站的搜索排名，让更多的人能够搜索到景区，并增加景区品牌的知名度，吸引更多的游客。</p>
+<p>3.同城活动合作<br>与同城的机构、企业、社区及旅游组织和文艺团体合作，开展促销活动、主题游等，扩大景区影响力，吸引游客，提高景区知名度。</p>
+<p>4.旅游展会展示<br>在各种旅游展会上，展示景区的亮点、特色、产品等，与多家旅行社建立合作关系，提高景区知名度，吸引更多游客。</p>
+<p>5.旅游节庆宣传<br>利用各种节庆、季节变化等时机，开展特别活动、主题宣传、媒体报道等，增加景区曝光率，吸引游客。</p>
+<p>6.内外联动推广<br>与周边景区、酒店、餐饮等相关产业联动，共同推广，互相促进，提高景区知名度，吸引更多的游客。</p>
+<p>7.品牌营销推广<br>通过精美的宣传资料、营销文案等方式，将景区品牌推广到全国、乃至世界范围，打造景区品牌形象，吸引更多的游客。</p>
+<p>8.社交媒体营销<br>通过社交媒体平台，加强与游客的互动，分享游客的照片、点评等，提高游客满意度，吸引更多的游客。</p>
+<p>2023年的旅游热词包括但不限于特种兵旅游、反向旅游、集章、打卡旅游、“进淄赶烤”美食游、围炉煮茶仪式游、城市漫游(Citywalk)、村超村BA、45度躺平、沉浸式、研学旅游、避暑、避冷、康养旅游、自驾出游、旅居结合的休闲度假游等。此外，海岛游、吃烧烤、音乐节、亲子游、寺庙游等也是五一出行热门关键词。其中，“City walk”意为“城市漫步”，是一种以徒步探索城市的休闲出行模式，是一种慢节奏、沉浸式的城市漫步，是一种体验城市文化的独特方式。</p>
+<p><strong>一、关于旅行风景文案</strong></p>
+<p>1.1 有趣的人生，一半是家常里短，一半是山川湖海。</p>
+<p>1.2 要看遍山河日落， 要不虚此生。</p>
+<p>1.3 你透过车窗看风景，山川湖泊也在看你。</p>
+<p>1.4 如果你不出去走走，你就会以为这是全世界。</p>
+<p>1.5 三月桃花、两人一马，明日天涯。</p>
+<p>1.6 看看日出，看看晚霞，吹吹风，都会过去的。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-81b78ba42798fb8e49d7a98363e5f98f_720w.webp" alt="img"></p>
+<p>1.7 这一路都是风景，我就不为你翻山越岭了。</p>
+<p>1.8 你不知道的远方，都是值得一去的天堂。</p>
+<p>1.9 云朵偷喝了屋顶的酒，于是脸红变成的晚霞。</p>
+<p>1.10 想过1000句描述旅行风景的文案，都不及自己按一次快门的瞬间。</p>
+<p>1.11 把鸡毛蒜皮，换成风和日丽。</p>
+<p>1.12 面朝大海，春暖花开。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-dd61fa5e1ea1d44691214894e5a8bf6c_720w.webp" alt="img"></p>
+<p>1.13 一个人拥有此生此世是不够的，他还应该拥有诗意的世界。</p>
+<p>1.14 只想在一个有花有海、安静缓慢的地方，晒着太阳无所事事。</p>
+<p>1.15 胡杨树：活着千年不死，死后千年不倒，倒下千年不腐。</p>
+<p>1.16 我就是想停下来，看看这个世界。</p>
+<p>1.17 光怪陆离都经历，山川湖海放心里。</p>
+<p>1.18 被好风景收买。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-65efdcf41805202c4f07c3bc54cfad9e_720w.webp" alt="img"></p>
+<p>1.19 我在人间贩卖风景。</p>
+<p>1.20 山河远阔，人间烟火。</p>
+<p>1.21 我要看遍不同经纬度城市的日落。</p>
+<p>1.22 迷失在地图上的每一道风和日丽。</p>
+<p>1.23 路人穿街过河，好景只有片刻。</p>
+<p>1.24 狗和田野沉醉一整个夏天。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-d7765644e614ac92674290d7ba04e4a5_720w.webp" alt="img"></p>
+<p>1.25 看庭前花开花落，望天空云卷云舒。</p>
+<p>1.26 开始探索地球的奥秘啦。</p>
+<p>1.27 你所不知道的远方，都是值得一去的天堂。</p>
+<p>1.28 三水一程，三生有幸。</p>
+<p>1.29 时光会走远，影像会长存。</p>
+<p>1.30 旅行时收藏下的风景是最好的财富。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-9c2ed2091254d538dc60ed4e101531c2_720w.webp" alt="img"></p>
+<p>1.31 最重要的不是风景，而是脚下的路。</p>
+<p>1.32 这是落日弥漫的橘，天边透亮的星。</p>
+<p>1.32 想要未知的疯狂，想要声色的张扬，想要最好的时光在最美的地方。</p>
+<p>1.33 时间很匆忙，别错过日落与夕阳。</p>
+<p>1.34 村庄留不住你，你不去看世界，世界也懒得理你。</p>
+<p>1.35 去看海吧，海可以治愈一切。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-b267df59dc45efc5657503904ae9c8e6_720w.webp" alt="img"></p>
+<p>1.36 带上最合适自己的笑容，一路美到世界的尽头。</p>
+<p>1.37 总有一片海，适合我去看看。</p>
+<p>1.38 穿过人山人海，去看星辰大海。</p>
+<p>1.39 世界那么大，我想去看看。</p>
+<p>1.40 去拥抱陌生，去拥抱惊喜，所有的不期而遇都在路上。</p>
+<p>1.41 趁阳光正好，趁微风不噪，趁繁花还未开至荼蘼，来一场说走就走的旅行。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-9ac3b6c223d5e594e5d6dda1cb208f0b_720w.webp" alt="img"></p>
+<p>1.42 生活不止眼前的苟且，还有诗意的远方。</p>
+<p>1.43 最美的事莫过于亲身抵达。</p>
+<p>1.44 去看日月星辰，去看山川湖海，去看世间万象，去看人间百态。</p>
+<p>1.45 看看蓝天，拥抱大海，享受阳光。</p>
+<p>1.46 我的背包已装满晴朗，出发去山顶看日出。</p>
+<p>1.47 掬一捧蓝天，蓝得纯粹蓝得深邃。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-a8c87ae066fd80d72f437f3a7117206e_720w.webp" alt="img"></p>
+<p>1.48 一个人时穿山越岭，两个人时穿过四季。</p>
+<p>1.49 每个人心中，都会有一个古镇情怀，流水江南，烟笼人家。</p>
+<p>1.50 在这里，内心的震动无以言表，突然就流泪了。</p>
+<p>1.51 去没人的岛，摸鲨鱼的角。</p>
+<p>1.52 美丽的东西大都具有侵略性，不是入了眼就是醉了心。</p>
+<p>1.53 星空给予万种安宁，雪山治愈万种心碎。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-5b15c1304a68e276c72ddf4e5e5564bc_720w.webp" alt="img"></p>
+<p>1.54 流浪在拉萨的街头，我是世间最美的情郎。</p>
+<p>1.55 浩瀚星空，余晖落日，海浪和沙。</p>
+<p>1.56 窗外是海的调色盘，海风寄来温柔的明信片。</p>
+<p>1.57 做一个世界的水手，游遍所有的港口。</p>
+<p>1.58 成为空气，山泉，融进绿色的土地，去消弭人和自然的距离。</p>
+<p>1.59 注定要去地方，多晚都有光。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-0ba8564d80385ce5e6984b9b4b27aa20_720w.webp" alt="img"></p>
+<p>1.60 换个地方看看人间烟火。</p>
+<p>1.61 用脚步去丈量世界，用眼睛去记录风景。</p>
+<p>1.62 看云卷云舒，望潮起潮落。</p>
+<p>1.63 从山顶倾泻而下的瀑布，好似一匹漂亮的绸缎从半空中飘落下来。</p>
+<p>1.64 把眼睛留给风光，把体重留给美食。</p>
+<p>1.65 在草地上谈天论地，聊聊心中的原野。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-a34b5648b07a8bd0a2ee49530f88b218_720w.webp" alt="img"></p>
+<p>1.66 喀纳斯的蓝色，让月薪3万的设计师也黯蓝失色。</p>
+<p>1.67 请保持对生活的热爱，奔赴下一场山海。</p>
+<p>1.68 想看日出，想看日落，想看世间每一处角落。</p>
+<p>1.69 在云路过的驿站里，在星经过的旅途中，遇见最美的景致。</p>
+<p>1.70 风景人事在路上，欢喜触动在心里。</p>
+<p>1.71 从我待腻的地方，去到别人待腻的地方看看。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-bfe843da17f8351b4ca56b7ae9528b77_720w.webp" alt="img"></p>
+<p>1.72 看惯了人山人海，想看一回真正的大海。</p>
+<p>1.73 当遇见大海，就不会在意池塘的是非了。</p>
+<p><strong>二、关于旅行爱情文案</strong></p>
+<p>2.1 我走过你走过的路，也到过你说的远方。</p>
+<p>2.2 愿你我，带着最简单的行李和童真的自己，流浪全世界。</p>
+<p>2.3 总会相逢的，就想山川河流，就像万河归海。</p>
+<p>2.4 我在人间贩卖黄昏，只为收集世间温柔去见你。</p>
+<p>2.5 你的眼里有光，照亮旅行的远方。</p>
+<p>2.6 我从远方赶来，赴你一面之约。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-8f1b5b5d3c16003780d821c5fab4e1a3_720w.webp" alt="img"></p>
+<p>2.7 往心里装一些阳光和花海，再多装一些少女心。</p>
+<p>2.8 捕捉一刹那的流星，坐在最高的山顶上，听音乐、看日出。</p>
+<p>2.9 邂逅旅行是在一个又一个的拐角，你又遇到了谁。</p>
+<p>2.10 看海看多了想见人，见人见多了想看海。</p>
+<p>2.11 一起吃饭，一起旅行，一起胖。</p>
+<p>2.12 星光万顷，你向南向北向东向西，而我只向你。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-b7396f149b1f1cdd4bd571a36ed59a93_720w.webp" alt="img"></p>
+<p>2.13 我带着你，你带着钱，我们愉快的出发旅行。</p>
+<p>2.14 你来人间一趟，要和喜欢的人去看看日出日落。</p>
+<p>2.15 整个夏天想和你环游世界，心怀浪漫宇宙，也珍惜人间日常。</p>
+<p>2.16 见山是山、见水是水、见你是全世界。</p>
+<p>2.17 我们在冬天录下一起踩雪的声音，留到明年夏天慢慢听。</p>
+<p>2.18 今夜我们不关心人类，我们只看星星。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-1694f5ff79fdc2b23958aa4ab798216d_720w.webp" alt="img"></p>
+<p>2.19 这里有生机勃勃的朝阳， 有诱人沉醉的黄昏，还有一个亭亭玉立的她。</p>
+<p>2.20 如果你在看，我就是你的风景。</p>
+<p>2.21 零碎的岛屿会找到海，就像我会遇见你。</p>
+<p>2.22 背包、相机、目的地，下一站不告诉你。</p>
+<p>2.23 只有你才配得上我这一路颠沛流离。</p>
+<p>2.24 要走过多少路，看过多少风景，碰到多少人，才能遇见你。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-8db92519665ac236cc92694e40048646_720w.webp" alt="img"></p>
+<p>2.25 这世界最美好的事情，就是傍晚吹来的风和你灿烂的笑容。</p>
+<p>2.26 如果每人都是一颗小星星，那旅行就是脱离轨道，和别的星星相遇。</p>
+<p>2.27 三月桃花，两人一马，明日天涯。</p>
+<p>2.28 清风，夏目，远山，与你。</p>
+<p>2.29 私奔吗？在太阳下山之前。</p>
+<p>2.30 在她还相信童话的年龄，带她是看童话世界。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-3e647fe01f65eaf48d97b4d1535dbe0f_720w.webp" alt="img"></p>
+<p>2.31 天气很好，一起去追风。</p>
+<p>2.32 从城市出发，我奔向你而来。</p>
+<p>2.33 一个背包，一张车票，一台相机，一个会拍照的爱人。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-2adc121afc039fbcf2a67d65a9490c83_720w.webp" alt="img"></p>
+<p><strong>三、关于旅行心情、感悟文案</strong></p>
+<p>3.1 要么旅行、要么读书，身体和灵魂必须有一个在路上。</p>
+<p>3.2 找不到答案的时候，就去看一看这世界。</p>
+<p>3.3 最好的时光在路上，一路向阳。</p>
+<p>3.4 一生中至少要有2次冲动，一次为奋不顾身的爱情，一次为说走就走的旅行。</p>
+<p>3.5 旅行的对平淡生活的一次越狱。</p>
+<p>3.6 有些事情现在不做，一辈子都不会做了。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-8d8eb6cef6aa3ef54ed890e6811c7f2e_720w.webp" alt="img"></p>
+<p>3.7 旅行，是因为我决定了要去，并不是因为对风景的兴趣。</p>
+<p>3.8 旅行不是济世良药，虽然解不了生活的毒，但是化得了生活的苦。</p>
+<p>3.9 人间烟火气，最抚凡人心。</p>
+<p>3.10 旅行只不过是为了迷失自己，然后发现自己。</p>
+<p>3.11 一个是行走范围，就是他的全世界。</p>
+<p>3.12 人生最好的旅行，就是在一个陌生的地方，发现一种久违的感动。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-9d4913020fd467ce5aef00176a937f77_720w.webp" alt="img"></p>
+<p>2.13 只有一个人旅行时，才听得到自己的声音，它会告诉你，这世界比想象中的宽阔。</p>
+<p>2.14 旅行之于我，就是梦想照进现实的一种可能，我们必须适时地让自己走出去。</p>
+<p>2.15 旅行是一种溶剂，融化了尘封的盖子，如烟的温情就升腾起来了。</p>
+<p>2.16 旅行的好处在于可以暂时远离日常生活，还不必承担平日里的琐碎的责任。</p>
+<p>2.17 就算过几天就得回去，依旧上班、心烦，可是我对世界有了新的看法。</p>
+<p>2.18 一生很短，你要大胆。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-7ed15d38bc4cabba17cc3cb129c13367_720w.webp" alt="img"></p>
+<p>2.19 揣着一口袋的开心满载而归。</p>
+<p>2.20 人生得意须尽欢，胡吃海喝需尽兴。</p>
+<p>2.21 世界是一本书，若不到处走走，你看到的总是同一页内容。</p>
+<p>2.22 说走就走，是人生最华丽的奢侈，也是最灿烂的自由。</p>
+<p>2.23 放慢脚步，感受生活慢节奏。</p>
+<p>3.24 皱巴巴的生活需要适时的熨贴一下。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-411f1b1d8a1e6f97d599273da492b627_720w.webp" alt="img"></p>
+<p>3.25 哪有那么多来日方长，现在就要出发。</p>
+<p>3.26 旅行，能让你遇到更好的自己。</p>
+<p>3.27 说走就走的旅行，要么缘由幸福和稳定，要么祸起无力和逃避。</p>
+<p>3.28 假如生活欺骗了你，不如一路向西去大理。</p>
+<p>3.29 去哪里不重要，最重要的是去啊。</p>
+<p>3.30 因为有梦，所以勇敢出发，选择出发，便只顾风雨兼程。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-c91c1785921810c28c8f997e95d672a8_720w.webp" alt="img"></p>
+<p>3.31 旅途愉快，停在哪站都不算太坏。</p>
+<p>3.32 遇见美食，邂逅美景，认识新朋友，也许这就是旅行的意义。</p>
+<p>3.33 除了这一生， 我们又没有别的时间，能走多远，就走多远。</p>
+<p>3.34 听说每个人的心里，都住着一直想旅行的小恶魔。</p>
+<p>3.35 我们去看看秋天的世界吧，体会那一地的飘零和不舍的凄美。</p>
+<p>3.36 旅行要学会随遇而安，淡然一点，走走停停。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-4b8ddfab0c76cfae41fd1277e3fe2c0c_720w.webp" alt="img"></p>
+<p>3.37 有时候我们不大胆一次，就不会清楚这个世界有多精彩。</p>
+<p>3.38 旅行是消除无知和仇恨的最好方法。</p>
+<p>3.39 有一些穿高跟鞋走不到的路，有一些写字楼里永远遇不见的人。</p>
+<p>3.40 身体能去的地方，请不要让心遗憾。</p>
+<p>3.41 金钱决定旅行的长度，眼界决定旅行的高度，心灵决定旅行的深度。</p>
+<p>3.42 年轻要任性，外出要尽兴。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-44fe0c2aab47b64ab25f6a2e6219e749_720w.webp" alt="img"></p>
+<p>3.43 治愈不开心最好的方式就是出去走走。</p>
+<p>3.44 渺小的生命，因旅行而遇见诸多的奇遇。</p>
+<p>3.45 保持年轻最简单的方式，就是背起行囊。</p>
+<p>3.46 在路上你会忘记自己的年龄，在路上你会忘记昨天的烦恼。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-1c8ec25dbeaed4908ae7aae5274d5c5e_720w.webp" alt="img"></p>
+<p>3.47 心存阳光，必有诗和远方。</p>
+<p>3.48 抱着一颗消遣的心，走了一段修行的路。</p>
+<p>3.49 愿你我即可朝九晚五，即可浪迹天涯。</p>
+<p>3.50 世界上有不绝的风景，我有不老的心情。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">弶森</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://aiyoja.github.io/20240227/">http://aiyoja.github.io/20240227/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">弶森</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                                <a href="/tags/攻略/">
+                                    <span class="chip bg-color">攻略</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'aiyoja.github.io',
+        owner: 'aiyoja',
+        admin: "aiyoja",
+        id: '2024-02-27T09-40-53',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/20240227/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="旅游热词">
+                        
+                        <span class="card-title">旅游热词</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            郴州旅游
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/旅游/" class="post-category">
+                                    旅游
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/攻略/">
+                        <span class="chip bg-color">攻略</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/20240202/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="张家界旅游攻略">
+                        
+                        <span class="card-title">张家界旅游攻略</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/旅游/" class="post-category">
+                                    旅游
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/travel/">
+                        <span class="chip bg-color">travel</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <a href="/about" target="_blank">弶森</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/aiyoja" target="_blank">jfMatery</a>
+            <br>
+
+            <span id="sitetime"></span>
+
+            <br>
+
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">109k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv" style='display:none'>
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv" style='display:none'>
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/aiyoja" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jiefav@sina.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=8698305" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 8698305" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+        var pvcountOffset = 80000;  // 初始化首次数据
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int); // 停止检测
+            }
+        }
+    });
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

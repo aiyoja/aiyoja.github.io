@@ -1,0 +1,1662 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="hexo blog迁移致麒麟Linux的环境配置, ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+    <meta name="description" content="
+迁移致麒麟Linux的环境配置一、安装nodejs1、查看Linux版本
+node -v2、安装默认的nodejs      http://archive.kylinos.cn/kylin/KYLIN-ALLdeb http://arch">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>hexo blog迁移致麒麟Linux的环境配置 | 矮油酱</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+     <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+    <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') 
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+
+<div class="stars-con">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>  
+</div>
+   
+  <script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+  </script>
+
+
+
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">矮油酱</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">矮油酱</div>
+        <div class="logo-desc">
+            
+            朱颜辞镜花辞树
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/aiyoja" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/aiyoja" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo blog迁移致麒麟Linux的环境配置</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-08-19
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <hr>
+<h1 id="迁移致麒麟Linux的环境配置"><a href="#迁移致麒麟Linux的环境配置" class="headerlink" title="迁移致麒麟Linux的环境配置"></a>迁移致麒麟Linux的环境配置</h1><h2 id="一、安装nodejs"><a href="#一、安装nodejs" class="headerlink" title="一、安装nodejs"></a>一、安装nodejs</h2><p>1、查看Linux版本</p>
+<pre><code>node -v</code></pre><p>2、安装默认的nodejs      <a href="http://archive.kylinos.cn/kylin/KYLIN-ALLdeb" target="_blank" rel="noopener">http://archive.kylinos.cn/kylin/KYLIN-ALLdeb</a> <a href="http://archive.kylinos.cn/kylin/KYLIN-ALL10.1-2203-updates" target="_blank" rel="noopener">http://archive.kylinos.cn/kylin/KYLIN-ALL10.1-2203-updates</a> main restricted universe multiverse</p>
+<pre><code>sudo apt install nodejs-legacy</code></pre><p>3、卸载nodejs  </p>
+<p>使用</p>
+<pre><code>sudo apt autoremove</code></pre><p>来卸载它(它们)</p>
+<p>4、由于版本较低直接 <a href="https://nodejs.org/zh-cn/download" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download</a> 下载合适版本<a href="https://nodejs.org/dist/v18.16.0/node-v18.16.0-darwin-arm64.tar.gz" target="_blank" rel="noopener">https://nodejs.org/dist/v18.16.0/node-v18.16.0-darwin-arm64.tar.gz</a></p>
+<p>5、安装包的下载</p>
+<p>下载需要注意的是，最开始我是下载的最新版本的node，但是目前最新版本的我试过很多次都会失败，这里建议还是安装14.15.1版本，也算是比较稳定了。<br>附上地址：</p>
+<pre><code>https://nodejs.org/en/blog/release/v14.15.1/</code></pre><p>6、保存文件</p>
+<p><img src="http://pic.wya1.com/blog/0377cb02efcf4712821c15e99474f215.jpg" alt></p>
+<p>打开所在文件夹</p>
+<p><img src="http://pic.wya1.com/blog/3b15cadb6bb14f7584f5223200354147.jpg" alt></p>
+<p>右键，解压到此处</p>
+<p><img src="http://pic.wya1.com/blog/107cf5a9bd104f95a3d9b0beac15c257.jpg" alt></p>
+<p>在空白处打开终端</p>
+<p><img src="http://pic.wya1.com/blog/6e1498de772f4917b3a5d2f8cfda1aa9.jpg" alt></p>
+<p>7、切换到root，将node-v14.15.1-linux-arm64移动到/opt目录</p>
+<pre><code>ll | grep node
+sudo mkdir -p /opt
+sudo mv node-v14.15.1-linux-arm64 /opt/
+</code></pre><p><img src="http://pic.wya1.com/blog/d41cebe4421c4b179c3a7e53601538e4.jpg" alt></p>
+<p>8、配置环境变量/etc/profile</p>
+<pre><code>sudo vim /etc/profile</code></pre><p>添加一段<br>要用到vim相关编辑命令a、:wq等,_这里提供一个vim操作的参考_&gt; <a href="https://blog.csdn.net/Haikuotiankong11111/article/details/98681859" target="_blank" rel="noopener">https://blog.csdn.net/Haikuotiankong11111/article/details/98681859</a></p>
+<pre><code>export PATH=$PATH:/opt/node-v14.15.1-linux-arm64/bin</code></pre><p><img src="https://img-blog.csdnimg.cn/d613dbc858a443c995466cb5c1927d1b.png" alt="在这里插入图片描述"></p>
+<p>9、保存后，执行刷新指令</p>
+<pre><code>source /etc/profile</code></pre><p>10、查看安装的版本信息</p>
+<pre><code>node -v
+npm -v</code></pre><p><img src="http://pic.wya1.com/blog/8a19788b42f343408d65450a6fb709cf.jpg" alt></p>
+<p>参考文献</p>
+<p><a href="https://blog.csdn.net/qq_44230067/article/details/125671995" target="_blank" rel="noopener">https://blog.csdn.net/qq_44230067/article/details/125671995</a></p>
+<p><a href="http://blog.wya1.com/article/636697030/details/21566" target="_blank" rel="noopener">http://blog.wya1.com/article/636697030/details/21566</a></p>
+<h2 id="二、Nodejs降低或切换使用的版本-nvm"><a href="#二、Nodejs降低或切换使用的版本-nvm" class="headerlink" title="二、Nodejs降低或切换使用的版本-nvm"></a><a href="https://www.cnblogs.com/JourneyOfFlower/p/15049226.html" target="_blank" rel="noopener">二、Nodejs降低或切换使用的版本-nvm</a></h2><p>在我们的日常开发中经常会遇到这种情况：手上有好几个项目，每个项目的需求不同，进而不同项目必须依赖不同版的 NodeJS 运行环境。如果没有一个合适的工具，这个问题将非常棘手。</p>
+<p><a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> 应运而生，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果需要管理 Windows 下的 node，官方推荐使用 <a href="https://github.com/hakobera/nvmw" target="_blank" rel="noopener">nvmw</a> 或 <a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="noopener">nvm-windows</a>。不过，nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系。但下面介绍的所有命令，都可以在 nvm-windows 中运行。</p>
+<hr>
+<h3 id="nvm-与-n-的区别"><a href="#nvm-与-n-的区别" class="headerlink" title="nvm 与 n 的区别"></a>nvm 与 n 的区别</h3><p>node 版本管理工具还有一个是 TJ大神的 <a href="https://github.com/tj/n" target="_blank" rel="noopener">n</a> 命令，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 n 命令相比 nvm 更加局限。</p>
+<p>由于 npm 安装的模块路径均为 /usr/local/lib/node_modules，当使用 n 切换不同的 node 版本时，实际上会共用全局的 node/npm 目录。 因此不能很好的满足『按不同 node 版本使用不同全局 node 模块』的需求。</p>
+<hr>
+<h3 id="卸载全局安装的-node-npm"><a href="#卸载全局安装的-node-npm" class="headerlink" title="卸载全局安装的 node/npm"></a>卸载全局安装的 node/npm</h3><p>在官网下载的 node 安装包，运行后会自动安装在全局目录，使用过程中经常会遇到一些<strong>权限问题</strong>，所以推荐按照以下方法卸载全局安装的 node/npm。</p>
+<p>首先，打开你 Finder，按 shift+command+G，打开前往文件夹的窗口，分别输入下列目录进去之后删除 node 和 node_modules 相关的文件和文件夹:</p>
+<ul>
+<li>打开 /usr/local/lib，删除 node 和 node_modules 相关的文件和文件夹</li>
+<li>打开 /usr/local/include，删除 node 和 node_modules 相关的文件和文件夹</li>
+<li>如果你是使用的 brew install node 安装的 NodeJS，那么你还需要在终端中执行 brew uninstall node 命令来卸载</li>
+<li>检查你的个人主文件夹下面的所有的 local、lib 以及 include 文件夹，并且删除所有与 node 和 node_modules 相关的文件以及文件夹</li>
+<li>打开 /usr/local/bin 并删除 node 可执行文件</li>
+</ul>
+<p>你可能还需要在你的终端中输入一些额外的指令：</p>
+<p><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<pre><code>sudo rm /usr/local/bin/npm
+sudo rm /usr/local/share/man/man1/node.1
+sudo rm /usr/local/lib/dtrace/node.d
+sudo rm -rf ~/.npm
+sudo rm -rf ~/.node-gyp
+sudo rm /opt/local/bin/node
+sudo rm /opt/local/include/node
+sudo rm -rf /opt/local/lib/node_modules</code></pre><p><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<hr>
+<h3 id="Windows-安装"><a href="#Windows-安装" class="headerlink" title="Windows 安装"></a>Windows 安装</h3><p>首先最重要的是：一定要卸载已安装的 NodeJS，否则会发生冲突。然后下载 <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener">nvm-windows</a> 最新安装包，直接安装即可。</p>
+<p><a href="https://blog.csdn.net/weixin_44582077/article/details/110237056" target="_blank" rel="noopener">windows中如何将已安装的nodejs高版本降级为低版本_Spring_zhan的博客</a></p>
+<hr>
+<h3 id="OS-X-Linux-安装"><a href="#OS-X-Linux-安装" class="headerlink" title="OS X/Linux 安装"></a>OS X/Linux 安装</h3><p>与 Windows 不同，我们并不一定要先卸载原有的 NodeJS。当然我们推荐还是先卸载掉比较好。另外，你还需要 C++ 编译器，Linux 发行版一般不用担心，像 Ubuntu 都可以直接用 build-essential 套件，OS X 的话，可以用 X-Code 的命令行工具。运行这个命令即可：</p>
+<p>xcode-select–install</p>
+<p>在 Linux 中：（如果是 Debian 发行版）</p>
+<pre><code>sudo apt-get install build-essential</code></pre><p>然后我们可以使用</p>
+<pre><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash</code></pre><p>或者</p>
+<pre><code>wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash</code></pre><p>从远程下载 install.sh 脚本并执行。注意这个版本年数字 v0.33.0 会随着项目开发而变化。随时通过<a href="https://github.com/creationix/nvm#install-script" target="_blank" rel="noopener">官方最新安装命令</a>来检查最新安装版本是有好处的。</p>
+<p>然后执行：</p>
+<pre><code>source ~/.bashrc</code></pre><hr>
+<h3 id="安装多版本-node-npm"><a href="#安装多版本-node-npm" class="headerlink" title="安装多版本 node/npm"></a>安装多版本 node/npm</h3><p>你可以通过以下命令来列出远程服务器上所有的可用版本：</p>
+<pre><code>nvm ls-remote</code></pre><p>Windows 的话，就是：</p>
+<pre><code>nvm ls available</code></pre><p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723171020683-1158787398.png" alt></p>
+<p>例如，我们要安装12.22.1版本，可以用如下命令：</p>
+<pre><code>nvm install 12.22.1</code></pre><p>nvm 遵守<a href="http://semver.org/lang/zh-CN/" target="_blank" rel="noopener">语义化版本</a>命名规则。例如，你想安装最新的 12.22 系列的最新的一个版本的话，可以运行：</p>
+<pre><code>nvm install 12.22</code></pre><p>nvm 会寻找 12.22.x 中最高的版本来安装。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723174058212-1708267689.png" alt></p>
+<p> 如上所示，在nvm安装位置 加上以下代码</p>
+<p> <img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175043826-852296007.png" alt></p>
+<p> 参考：<a href="https://juejin.cn/post/6844904138325639176" target="_blank" rel="noopener">https://juejin.cn/post/6844904138325639176</a></p>
+<p>完成安装 呼~</p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175426105-204393251.png" alt></p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175833106-707953242.png" alt></p>
+<p>可以通过删除以下两个文件夹来删除不需要的版本</p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723173337793-2144135843.png" alt></p>
+<p> <img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723173352375-1536943860.png" alt> </p>
+<hr>
+<h3 id="在不同版本间切换"><a href="#在不同版本间切换" class="headerlink" title="在不同版本间切换"></a>在不同版本间切换</h3><p>每当我们安装了一个新版本 Node 后，全局环境会自动把这个新版本设置为默认。</p>
+<p>nvm 提供了 nvm use 命令。这个命令的使用方法和 install 命令类似。</p>
+<p>例如，切换到 4.2.2：</p>
+<pre><code>nvm use4.2.2</code></pre><p>切换到最新的 4.2.x：</p>
+<pre><code>nvm use4.2</code></pre><p>切换到 iojs：</p>
+<pre><code>nvm use iojs-v3.2.0</code></pre><p>切换到最新版：</p>
+<pre><code>nvm use node</code></pre><p>每次执行切换的时候，系统都会把 node 的可执行文件链接放到特定版本的文件上。</p>
+<p>我们还可以用 nvm 给不同的版本号设置别名：</p>
+<pre><code>nvm alias awesome-version 4.2.2</code></pre><p>我们给 4.2.2 这个版本号起了一个名字叫做 awesome-version，然后我们可以运行：</p>
+<pre><code>nvm use awesome-version</code></pre><p>下面这个命令可以取消别名：</p>
+<pre><code>nvm unalias awesome-version</code></pre><p>另外，你还可以设置 default 这个特殊别名：</p>
+<pre><code>nvm aliasdefault node</code></pre><hr>
+<h3 id="列出已安装实例"><a href="#列出已安装实例" class="headerlink" title="列出已安装实例"></a>列出已安装实例</h3><pre><code>nvm ls</code></pre><p><img src="https://www.runoob.com/wp-content/uploads/2018/04/nvm-ls.png" alt></p>
+<p>上面绿色箭头是当前正在使用的版本，下面列出的还有设置过的别名。</p>
+<hr>
+<h3 id="在项目中使用不同版本的-Node"><a href="#在项目中使用不同版本的-Node" class="headerlink" title="在项目中使用不同版本的 Node"></a>在项目中使用不同版本的 Node</h3><p>我们可以通过创建项目目录中的 .nvmrc 文件来指定要使用的 Node 版本。之后在项目目录中执行 nvm use 即可。.nvmrc 文件内容只需要遵守上文提到的语义化版本规则即可。另外还有个工具叫做 <a href="https://github.com/wbyoung/avn" target="_blank" rel="noopener">avn</a>，可以自动化这个过程。</p>
+<hr>
+<h3 id="在多环境中，npm该如何使用呢？"><a href="#在多环境中，npm该如何使用呢？" class="headerlink" title="在多环境中，npm该如何使用呢？"></a>在多环境中，npm该如何使用呢？</h3><p>每个版本的 Node 都会自带一个不同版本的 npm，可以用 npm -v 来查看 npm 的版本。全局安装的 npm 包并不会在不同的 Node 环境中共享，因为这会引起兼容问题。它们被放在了不同版本的目录下，例如 ~/.nvm/versions/node/<version>/lib/node_modules</version> 这样的目录。这刚好也省去我们在 Linux 中使用 sudo 的功夫了。因为这是用户的主文件夹，并不会引起权限问题。</p>
+<p>但问题来了，我们安装过的 npm 包，都要重新再装一次？幸运的是，我们有个办法来解决我们的问题，运行下面这个命令，可以从特定版本导入到我们将要安装的新版本 Node：</p>
+<pre><code>nvm install v5.0.0--reinstall-packages-from=4.2</code></pre><hr>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><p>直接运行特定版本的 Node</p>
+<pre><code>nvm run 4.2.2--version</code></pre><p>在当前终端的子进程中运行特定版本的 Node</p>
+<pre><code>nvm exec4.2.2 node --version</code></pre><p>确认某个版本Node的路径</p>
+<pre><code>nvm which 4.2.2</code></pre><p>安装 Node 的其他实现，例如 iojs（一个基于 ES6 的 Node 实现，现在已经和 Node 合并）</p>
+<pre><code>nvm install iojs-v3.2.0</code></pre><p>快捷命令：</p>
+<p>安装最新版 Node</p>
+<pre><code>nvm install node</code></pre><p>安装最新版 iojs</p>
+<pre><code>nvm install iojs </code></pre><p>安装最新<strong>不稳定</strong>版本的 Node</p>
+<pre><code>nvm install unstable</code></pre><p>2.未验证的另一种办法：</p>
+<p><a href="https://www.4spaces.org/1122.html" target="_blank" rel="noopener">https://www.4spaces.org/1122.html</a></p>
+<h2 id="三、git安装"><a href="#三、git安装" class="headerlink" title="三、git安装"></a>三、git安装</h2><p>为了把本地的网页文件上传到github上面去，我们需要用到分布式版本控制工具————Git<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">[下载地址]</a>。</p>
+<p>安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功。</p>
+<h2 id="四、Linux下使用hexo搭建个人博客并托管到github"><a href="#四、Linux下使用hexo搭建个人博客并托管到github" class="headerlink" title="四、Linux下使用hexo搭建个人博客并托管到github"></a>四、Linux下使用hexo搭建个人博客并托管到github</h2><p>(<a href="https://www.jianshu.com/u/5c7b85ab9023" target="_blank" rel="noopener">https://www.jianshu.com/u/5c7b85ab9023</a>)</p>
+<h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h3><pre class="line-numbers language-undefined"><code class="language-undefined">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>npm的源在国外，没翻墙的话速度会很慢，可以改成国内的淘宝源，或者cnpmjs源，二选一即可</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">npm config set registry https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>registry<span class="token punctuation">.</span>npm<span class="token punctuation">.</span>taobao<span class="token punctuation">.</span>org
+npm config set registry https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>r<span class="token punctuation">.</span>cnpmjs<span class="token punctuation">.</span>org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这样就成功安装了，下面我们来发布第一篇博客：<br>新建一个目录blog(名字任选)，进入这个目录后执行初始化代码：</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin">hexo <span class="token keyword">init</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样，hexo会帮你在blog目录下生成相应的各种文件<br>然后执行这俩条指令，发布本地博客</p>
+<pre class="line-numbers language-undefined"><code class="language-undefined">hexo g
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如果成功的话，就可以在本地的<a href="https://link.jianshu.com/?t=localhost:4000" target="_blank" rel="noopener">localhost:4000</a>看到自己的博客了!（主题不同，没关系）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-67593a97c54188fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1025/format/webp" alt></p>
+<p>本地发布成功</p>
+<p>当然这只是在本地发布成功，要想其他人能访问，你可以挂到自己的服务器上，或者托管到github上，这里主要说第二种，github会给你一个免费的地址。</p>
+<h3 id="2-部署到github"><a href="#2-部署到github" class="headerlink" title="2.部署到github"></a>2.部署到github</h3><p>首先去github注册一个账号，然后新建一个仓库</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-0d23ac371b5c4302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/473/format/webp" alt></p>
+<p>新建仓库</p>
+<p>这里的仓库名请注意，一定是 你的注册名.github.io</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-45dfd7682fffbb8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/425/format/webp" alt></p>
+<p>仓库名</p>
+<p>仓库建好之后，执行这两条命令</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp">git config <span class="token operator">--</span><span class="token keyword">global</span> user<span class="token punctuation">.</span>name <span class="token string">"github注册名"</span>
+git config <span class="token operator">--</span><span class="token keyword">global</span> user<span class="token punctuation">.</span>eamil <span class="token string">"github注册邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>为了能在本地免密连接github，还需要配ssh<br>检查是否已安装ssh,如果没有则安装<br>生成ssh公钥</p>
+<pre class="line-numbers language-bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你注册github时用的邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>之后一路回车，成功生成ssh秘钥<br>将公钥添加到github<br>打开github，找到账户里面添加SSH，把~/.ssh/idrsa.pub的内容复制到key里面。这样就可以本地免密连接github了。</p>
+<p>回到 github, 依次点击：头像 -&gt; Settings -&gt; SSH and GPG keys -&gt; New SSH key -&gt; 把刚刚复制的内容粘贴到 Key 处 -&gt; Add SSH key ：</p>
+<p>回到 Shell，执行命令</p>
+<pre><code>ssh -T git@github.com</code></pre><p>查看是否成功。</p>
+<p>接下来就是修改配置文件了，我们进到blog目录，编辑comfig.yml文件，里面有两部分需要改</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-bd67bd97dfa96beb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/942/format/webp" alt></p>
+<p>更改url</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-2f7892c29b48b973.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/506/format/webp" alt></p>
+<p>更改deploy</p>
+<p>然后就是</p>
+<pre><code>hexo g
+hexo d</code></pre><p>之后就能访问你的博客了！一般是https://你的用户名<a href="https://link.jianshu.com/?t=http://.github.io/" target="_blank" rel="noopener">.github.io/</a></p>
+<p>原文链接：<a href="https://blog.csdn.net/Elford/article/details/123624282" target="_blank" rel="noopener">https://blog.csdn.net/Elford/article/details/123624282</a></p>
+<h2 id="五、更换电脑后hexo-d-同步blog出错问题的解决"><a href="#五、更换电脑后hexo-d-同步blog出错问题的解决" class="headerlink" title="五、更换电脑后hexo d 同步blog出错问题的解决"></a>五、更换电脑后hexo d 同步blog出错问题的解决</h2><h3 id="1-错误提示-TypeError-ERR-INVALID-ARG-TYPE-The-“mode”-argument-must-be-integer-Received-an-instance-of-Object"><a href="#1-错误提示-TypeError-ERR-INVALID-ARG-TYPE-The-“mode”-argument-must-be-integer-Received-an-instance-of-Object" class="headerlink" title="1.错误提示:TypeError [ERR_INVALID_ARG_TYPE]: The “mode” argument must be integer. Received an instance of Object"></a>1.错误提示:TypeError [ERR_INVALID_ARG_TYPE]: The “mode” argument must be integer. Received an instance of Object</h3><p>原因：<br>经查阅，由于node版本太高引起的。目前hexo不支持高版本，只能通过降级解决问题。</p>
+<p>解决方式有以下几种<br>1降级node版本至  12.8.0         </p>
+<p><a href="https://www.cnblogs.com/JourneyOfFlower/p/15049226.html" target="_blank" rel="noopener">https://www.cnblogs.com/JourneyOfFlower/p/15049226.html</a></p>
+<h3 id="2-解决GitHub报错You’re-using-an-RSA-key-with-SHA-1-which-is-no-longer-allowed-Please-use-a-newer-client"><a href="#2-解决GitHub报错You’re-using-an-RSA-key-with-SHA-1-which-is-no-longer-allowed-Please-use-a-newer-client" class="headerlink" title="2.解决GitHub报错You’re using an RSA key with SHA-1, which is no longer allowed. Please use a newer client"></a>2.解决GitHub报错You’re using an RSA key with <a href="https://so.csdn.net/so/search?q=SHA-1&spm=1001.2101.3001.7020" target="_blank" rel="noopener">SHA-1</a>, which is no longer allowed. Please use a newer client</h3><p>原来是 GitHub 在 2022 年 3 月 15 日之后将不再支持 RSA 算法生成的密钥，原因是 RSA 不够安全，而笔者之前一直是使用如下命令生成密钥对的：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>  可以看出，在上述命令中，实际上使用的是 RSA 算法来生成的密钥，现在只要更改加密算法即可，可以选择 ed25519。</p>
+<p>生成密钥对修正事项 1：使用 Git 生成密钥对<br>  如果喜欢使用 Git 生成密钥对，现在需要输入以下生成密钥对。然后一直按 ENTER 即可：</p>
+<pre><code>ssh-keygen -t 加密算法 -C &quot;邮箱&quot;</code></pre><p>  其中，上面的 邮箱 要改为自己需要设置的相应值，且双引号不能丢。这里，加密算法可以使用 ed25519。即：</p>
+<pre><code>ssh-keygen -t ed25519 -C &quot;jiefav@sina.com&quot;</code></pre><p>  可见，上面的命令生成了密钥对，并将其保存在了文件夹 C:\Users\Windows 用户名.ssh 中。打开该文件夹，可以看到两个文件：id_加密算法名、id_加密算法名.pub。第一个文件是私钥，第二个文件是公钥。这两个文件其实都是文本文件，都可以文本方式打开。公钥需要提供给远程平台（这里为 GitHub），因此需要复制其中的内容。这里，需要复制的公钥的内容为全文。<br>————————————————<br>版权声明：本文为CSDN博主「暗诺星刻」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/wangpaiblog/article/details/124416005" target="_blank" rel="noopener">https://blog.csdn.net/wangpaiblog/article/details/124416005</a></p>
+<h3 id="3-【Hexo】-Error-Spawn-failed-at-ChildProcess"><a href="#3-【Hexo】-Error-Spawn-failed-at-ChildProcess" class="headerlink" title="3.【Hexo】 Error:Spawn failed at ChildProcess"></a>3.【Hexo】 Error:Spawn failed at ChildProcess</h3><p><code>hexo d -g</code>执行后报错：Spawn failed</p>
+<pre><code>error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054  
+fatal: the remote end hung up unexpectedly  
+fatal: the remote end hung up unexpectedly  
+Everything up-to-date  
+FATAL Something&#39;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html  
+Error: Spawn failed  
+    at ChildProcess.&lt;anonymous&gt; (D:\OtherFiles\blog\myblog\node_modules\hexo-util\lib\spawn.js:51:21)  
+    at ChildProcess.emit (events.js:203:13)  
+    at ChildProcess.cp.emit (D:\OtherFiles\blog\myblog\node_modules\cross-spawn\lib\enoent.js:34:29)  
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)  </code></pre><p>在.git文件夹下打开config配置文件，在[core]中添加上下面两句话：  </p>
+<pre><code>autocrlf = false  
+safecrlf = false</code></pre><p>成功。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">弶森</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://aiyoja.github.io/20220819/">http://aiyoja.github.io/20220819/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">弶森</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'aiyoja.github.io',
+        owner: 'aiyoja',
+        admin: "aiyoja",
+        id: '2022-08-19T14-43-38',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/20221107/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="御璟财务2022公示">
+                        
+                        <span class="card-title">御璟财务2022公示</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/Obsidian/">
+                        <span class="chip bg-color">Obsidian</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/20220818/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="终日忙碌的工作，其实并没有意义">
+                        
+                        <span class="card-title">终日忙碌的工作，其实并没有意义</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/随笔/" class="post-category">
+                                    随笔
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <a href="/about" target="_blank">弶森</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/aiyoja" target="_blank">jfMatery</a>
+            <br>
+
+            <span id="sitetime"></span>
+
+            <br>
+
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">109k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv" style='display:none'>
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv" style='display:none'>
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/aiyoja" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jiefav@sina.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=8698305" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 8698305" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+        var pvcountOffset = 80000;  // 初始化首次数据
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int); // 停止检测
+            }
+        }
+    });
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+</a>
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
