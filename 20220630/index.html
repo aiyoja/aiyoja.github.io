@@ -1,0 +1,1339 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="关注公众号【郴城信息】，免费资源干货马上就来！  关注我公众号：郴城信息，获取实时更新。有任何问题请加 QQ 技术交流群【群号：8698305】。如果觉得有用的话可以看心情打赏一杯奶茶，我会很开心哒。 我的博客源代码地址大家可以直接素质二连，star&amp;fork我的博客源代码：https:&#x2F;&#x2F;github.com&#x2F;aiyoja&#x2F;matery，然后改改配置就可以写文章啦。 前言作为一个业余爱好">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github博客搭建一文搞定">
+<meta property="og:url" content="http://aiyoja.github.io/20220630/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="关注公众号【郴城信息】，免费资源干货马上就来！  关注我公众号：郴城信息，获取实时更新。有任何问题请加 QQ 技术交流群【群号：8698305】。如果觉得有用的话可以看心情打赏一杯奶茶，我会很开心哒。 我的博客源代码地址大家可以直接素质二连，star&amp;fork我的博客源代码：https:&#x2F;&#x2F;github.com&#x2F;aiyoja&#x2F;matery，然后改改配置就可以写文章啦。 前言作为一个业余爱好">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/1.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/2.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/3.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/4.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/7.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/8.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/5.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/6.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/21.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/15.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/16.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/9.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/10.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/11.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/12.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/13.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/14.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/17.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/18.jpg">
+<meta property="og:image" content="https://godweiyang.com/2018/04/13/hexo-blog/19.jpg">
+<meta property="article:published_time" content="2022-06-30T09:39:58.000Z">
+<meta property="article:modified_time" content="2022-07-01T02:03:00.000Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>github博客搭建一文搞定 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="github博客搭建一文搞定"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-06-30 17:39" pubdate>
+          2022年6月30日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          88 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">github博客搭建一文搞定</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>关注公众号【郴城信息】，免费资源干货马上就来！</p>
+<p><img src="http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>关注我公众号：郴城信息，获取实时更新。有任何问题请加 QQ 技术交流群【群号：8698305】。如果觉得有用的话可以看心情打赏一杯奶茶，我会很开心哒。</p>
+<p>我的博客源代码地址<br>大家可以直接素质二连，star&amp;fork我的博客源代码：<a href="https://github.com/aiyoja/matery%EF%BC%8C%E7%84%B6%E5%90%8E%E6%94%B9%E6%94%B9%E9%85%8D%E7%BD%AE%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%86%99%E6%96%87%E7%AB%A0%E5%95%A6%E3%80%82">https://github.com/aiyoja/matery，然后改改配置就可以写文章啦。</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为一个业余爱好者，看到一些宸汐缘大佬github玩的风生水起，甭提有多羡慕了，<br>幸亏Baidu这个老师，于是抱着学习的心态，到处寻找blog搭建的各种教程。<br>感谢这个分享的时代，随便一搜，网上都是各种0基础玩转github的教程、心得，为使这种优良传统继续延续，<br>这里分享本人github blog 零基础假设历程，同时分享那些踩过的坑，望后浪不用死在沙滩上。<br>废话不多说，如果你也羡慕那些大佬精美的github blog，同时囊中羞涩，主要还是不懂技术，什么眼花缭乱的主机服务器租赁，什么各种域名注册，什么备案审核，什么源码选择，什么美化优化，一套流程下来，估计没几个小白能拿下的，不是中途放弃就是望而却步，而且你如我一样，梦想很遥远，现实很骨感，各种代码一码黑，那就来吧，我们手把手开始。</p>
+<h1 id="blog搭建思路"><a href="#blog搭建思路" class="headerlink" title="blog搭建思路"></a>blog搭建思路</h1><p>一个blog要能在网上运营且能被别人访问，无疑离不开这么几个要素，存放程序的主机，适合的网站源码，合适的域名，如果以上皆有你可以到此为止了，不要浪费折腾时间，除非你本就爱折腾。<br>有人问，目前写blog的平台多了去了，微博、腾讯一大堆，是的，诚然不错，如果你想自由度很高，更加´_&gt;&#96;酷炫屌炸天  OK<br>继续看下去，这里只说我觉得优点，</p>
+<p>1.纯免费，这个难道不香？</p>
+<p>2.服务器，域名一步到位。</p>
+<p>3.主要是炫酷，能玩转github让你在宸汐缘行列倍有面子。<br>基于以上，你也要认真看完</p>
+<p>首先要了解一下我们搭建博客要用到的框架。Hexo是高效的静态站点生成框架，它基于Node.js。通过Hexo，你可以直接使用Markdown语法来撰写博客。相信很多小伙伴写工程都写过README.md文件吧，对，就是这个格式的！写完后只需两三条命令即可将生成的网页上传到你的github上，然后别人就可以看到你的网页啦。是不是很简单？你无需关心网页源代码的具体细节，你只需要用心写好你的博客内容就行。</p>
+<h1 id="github注册与仓库设置"><a href="#github注册与仓库设置" class="headerlink" title="github注册与仓库设置"></a>github注册与仓库设置</h1><p>接下来就去注册一个github账号，用来存放我们的网站。大多数小伙伴应该都有了吧，作为一个合格的程序猿（媛）还是要有一个的。</p>
+<p>打开<a href="https://github.com/%EF%BC%8C%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%EF%BC%8C%E5%A6%82%E4%B8%8B%E6%89%80%E7%A4%BA%EF%BC%9A">https://github.com/，新建一个项目，如下所示：</a></p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/1.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>然后如下图所示，输入自己的项目名字，后面一定要加<code>.github.io</code>后缀，README初始化也要勾上。<strong>名称一定要和你的github名字完全一样，比如你github名字叫<code>abc</code>，那么仓库名字一定要是<code>abc.github.io</code>。</strong></p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/2.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>然后项目就建成了，点击<code>Settings</code>，向下拉到最后有个<code>GitHub Pages</code>，点击<code>Choose a theme</code>选择一个主题。然后等一会儿，再回到<code>GitHub Pages</code>，会变成下面这样：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/3.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>点击那个链接，就会出现自己的网页啦，效果如下：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/4.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>绑定域名现在默认的域名还是<code>xxx.github.io</code>，是不是很没有牌面？想不想也像我一样弄一个专属域名呢，首先你得购买一个域名，xx云都能买，看你个人喜好了。</p>
+<p>以我的百度云为例，如下图所示，添加两条解析记录：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/7.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>然后打开你的github博客项目，点击<code>settings</code>，拉到下面<code>Custom domain</code>处，填上你自己的域名，保存：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/8.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>这时候你的项目根目录应该会出现一个名为<code>CNAME</code>的文件了。如果没有的话，打开你本地博客<code>/source</code>目录，我的是<code>D:\study\program\blog\source</code>，新建<code>CNAME</code>文件，注意没有后缀。然后在里面写上你的域名，保存。最后运行<code>hexo g</code>、<code>hexo d</code>上传到github。</p>
+<h1 id="本地环境搭建"><a href="#本地环境搭建" class="headerlink" title="本地环境搭建"></a>本地环境搭建</h1><h2 id="nodjs安装"><a href="#nodjs安装" class="headerlink" title="nodjs安装"></a>nodjs安装</h2><p>首先下载稳定版<a href="https://nodejs.org/dist/v9.11.1/node-v9.11.1-x64.msi">Node.js</a>，我这里给的是64位的。</p>
+<p>安装选项全部默认，一路点击<code>Next</code>。</p>
+<p>最后安装好之后，按<code>Win+R</code>打开命令提示符，输入<code>node -v</code>和<code>npm -v</code>，如果出现版本号，那么就安装成功了。</p>
+<h1 id="添加国内镜像源"><a href="#添加国内镜像源" class="headerlink" title="添加国内镜像源"></a>添加国内镜像源</h1><p>如果没有梯子的话，可以使用阿里的国内镜像进行加速。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npm.taobao.org<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h2 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h2><p>为了把本地的网页文件上传到github上面去，我们需要用到分布式版本控制工具————Git[<a href="https://git-scm.com/download/win">下载地址]</a>。</p>
+<p>安装选项还是全部默认，只不过最后一步添加路径时选择<code>Use Git from the Windows Command Prompt</code>，这样我们就可以直接在命令提示符里打开git了。</p>
+<p>安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功。</p>
+<h2 id="npm等命令支持安装"><a href="#npm等命令支持安装" class="headerlink" title="npm等命令支持安装"></a>npm等命令支持安装</h2><p><strong>安装node，git</strong></p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">curl</span> -<span class="hljs-built_in">sL</span> https:<span class="hljs-comment">//rpm.nodesource.com/setup_10.x | bash - yum install -y nodejs</span><br></code></pre></td></tr></table></figure>
+
+<p>通过这条命令安装node和npm</p>
+<p>git我的服务器已经有了。</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git <span class="hljs-comment">--version</span><br></code></pre></td></tr></table></figure>
+
+<p>可以查看有没有安装git。我的输出<code>git version 1.8.3.1</code></p>
+<p><strong>使用npm安装Hexo</strong></p>
+<p>最好切换为taobao的源，下载的会快一些。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">npm config set registry https:<span class="hljs-comment">//registry.npm.taobao.org</span><br></code></pre></td></tr></table></figure>
+
+<p>验证是否切换成功：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">npm<span class="hljs-built_in"> config </span><span class="hljs-built_in">get</span> registry<br></code></pre></td></tr></table></figure>
+
+<p>输出淘宝源的地址<code>https://registry.npm.taobao.org/</code>，即切换成功。</p>
+<p><strong>安装Hexo</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">npm install -g hexo-<span class="hljs-keyword">cli</span><br></code></pre></td></tr></table></figure>
+
+<p>验证是否安装成功：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">hexo <span class="hljs-built_in">version</span><br></code></pre></td></tr></table></figure>
+
+<p>输出版本信息，则安装成功。</p>
+<p><strong>搭建博客</strong></p>
+<p>创建博客的目录<code>hexo init 目录名</code>。我就在当前目录下创建blog的文件夹作为博客的根目录。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> blog<br></code></pre></td></tr></table></figure>
+
+<p>进入刚刚的目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> blog<br></code></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>第一次启动博客</strong></p>
+<p>生成静态页面</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br></code></pre></td></tr></table></figure>
+
+<p>启动hexo博客</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span><br></code></pre></td></tr></table></figure>
+
+<p>这时，访问<a href="http://ip:4000就可以看到hexo的默认主题了。">http://ip:4000就可以看到hexo的默认主题了。</a></p>
+<blockquote>
+<p>如果要想要后台运行</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">nohup hexo s &gt; blog.<span class="hljs-built_in">log</span> <span class="hljs-number">2</span>&gt;<span class="hljs-meta">&amp;1 &amp; </span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>介绍几种发布博客的方式</strong></p>
+<ol>
+<li>直接将markdown文件复制到blog目录下的source&#x2F;_posts文件夹中。即可看到博客</li>
+<li>新建git或svn仓库，当本地提交markdown文件到仓库时，钩子将新增加的文件复制到source&#x2F;_posts文件夹下。</li>
+<li>通过hexo工具也可以新建博客<code>hexo new 博客</code>。具体参照官网</li>
+<li>通过hexo-admin工具，通过浏览器就可以管理</li>
+</ol>
+<p><strong>安装hexo-admin通过浏览器管理发布博客</strong></p>
+<p>安装hexo-admin</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">npm <span class="hljs-selector-tag">i</span> hexo-admin <span class="hljs-attr">--save</span><br></code></pre></td></tr></table></figure>
+
+<p>重启hexo</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">hexo <span class="hljs-keyword">server</span> -d<br></code></pre></td></tr></table></figure>
+
+<p>这时，通过<a href="http://ip:4000/admin%E5%8D%B3%E5%8F%AF%E7%AE%A1%E7%90%86%E5%8D%9A%E5%AE%A2%E3%80%82%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%BF%99%E4%B8%AA%E9%A1%B5%E9%9D%A2%E7%9A%84setting%E4%B8%AD%E7%94%9F%E6%88%90%E5%90%8E%E5%8F%B0%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E3%80%82%E5%A4%8D%E5%88%B6%E5%88%B0_config.yml%E5%B0%B1%E4%BC%9A%E7%94%9F%E6%95%88%EF%BC%8C%E9%87%8D%E5%90%AF%E5%8D%9A%E5%AE%A2%E5%90%8E%E7%99%BB%E5%BD%95%E5%90%8E%E5%8F%B0%E5%89%8D%E5%B0%B1%E9%9C%80%E8%A6%81%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E3%80%82">http://ip:4000/admin即可管理博客。也可以在这个页面的setting中生成后台的用户名和密码。复制到_config.yml就会生效，重启博客后登录后台前就需要账号密码。</a></p>
+<p><strong>域名</strong></p>
+<p>如参考的那位兄弟所说<code>IP访问这么low b的访问方式，当然要优化一下</code>。思路：通过NGINX做一个反向代理，将<a href="http://blog.hanjun.red这种二级域名代理到本机的localhost:4000。反向代理可以让自己的域名做更多的事情。">http://blog.hanjun.red这种二级域名代理到本机的localhost:4000。反向代理可以让自己的域名做更多的事情。</a></p>
+<p><strong>主题</strong></p>
+<p><strong>安装主题</strong></p>
+<p>进入主题的目录blog&#x2F;themes，克隆主题项目的地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ./themes<br>git <span class="hljs-built_in">clone</span> https://github.com/maochunguang/black-blue<br></code></pre></td></tr></table></figure>
+
+<p>更换主题：进入根目录，更改配置文件<code>_config.yml</code></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> black-blue<br></code></pre></td></tr></table></figure>
+
+<p>重新启动。</p>
+<p>更多的关于主题的配置，请参考具体每个主题的官方说明</p>
+<hr>
+<p>找了很久，推荐几个好看的。</p>
+<p>black-blue</p>
+<p><a href="https://geeksblog.cc/">预览地址</a></p>
+<p><a href="https://github.com/maochunguang/black-blue">GitHub 项目地址</a></p>
+<p><a href="https://github.com/maochunguang/black-blue">安装教程</a></p>
+<p>Diaspora（动漫大图）</p>
+<p><a href="http://fech.in/">预览地址</a></p>
+<p><a href="https://github.com/Fechin/hexo-theme-diaspora">GitHub 项目地址</a></p>
+<p><a href="https://github.com/Fechin/hexo-theme-diaspora">安装教程</a></p>
+<p>Melody</p>
+<p><a href="https://molunerfinn.com/">预览地址</a></p>
+<p><a href="https://github.com/Molunerfinn/hexo-theme-melody">GitHub 项目地址</a></p>
+<p><a href="https://github.com/Molunerfinn/hexo-theme-melody">安装教程</a></p>
+<p>岛</p>
+<p><a href="https://github.com/Shen-Yu/hexo-theme-ayer">项目地址</a></p>
+<p><a href="https://shen-yu.gitee.io/">效果预览</a></p>
+<p><a href="https://shen-yu.gitee.io/2019/ayer/">中文说明</a></p>
+<p>NexT</p>
+<p>butterfly</p>
+<p>Nexmoe</p>
+<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>在合适的地方新建一个文件夹，用来存放自己的博客文件，比如我的博客文件都存放在<code>D:\study\program\blog</code>目录下。</p>
+<p>在该目录下右键点击<code>Git Bash Here</code>，打开git的控制台窗口，以后我们所有的操作都在git控制台进行，就不要用Windows自带的控制台了。</p>
+<p>定位到该目录下，输入<code>npm i hexo-cli -g</code>安装Hexo。会有几个报错，无视它就行。</p>
+<p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
+<p>然后就要初始化我们的网站，输入<code>hexo init</code>初始化文件夹，接着输入<code>npm install</code>安装必备的组件。</p>
+<p>这样本地的网站配置也弄好啦，输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，然后浏览器打开<a href="http://localhost:4000/%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%88%91%E4%BB%AC%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%95%A6%EF%BC%8C%E6%95%88%E6%9E%9C%E5%A6%82%E4%B8%8B%EF%BC%9A">http://localhost:4000/，就可以看到我们的博客啦，效果如下：</a></p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/5.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>按<code>ctrl+c</code>关闭本地服务器。</p>
+<h1 id="hexo连接Github与本地"><a href="#hexo连接Github与本地" class="headerlink" title="hexo连接Github与本地"></a>hexo连接Github与本地</h1><p>首先右键打开git bash，然后输入下面命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;godweiyang&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;792321264@qq.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p>用户名和邮箱根据你注册github的信息自行修改。</p>
+<p>然后生成密钥SSH key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;792321264@qq.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p>打开<a href="http://github.com/">github</a>，在头像下面点击<code>settings</code>，再点击<code>SSH and GPG keys</code>，新建一个SSH，名字随便。</p>
+<p>git bash中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_rsa.pub<br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p>将输出的内容复制到框中，点击确定保存。</p>
+<p>输入<code>ssh -T git@github.com</code>，如果如下图所示，出现你的用户名，那就成功了。</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/6.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>打开博客根目录下的<code>_config.yml</code>文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。</p>
+<p>修改最后一行的配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">deploy:<br>  <span class="hljs-built_in">type</span>: git<br>  repository: git@github.com:aiyoja/aiyoja.github.io.git<br>  branch: master<br></code></pre></td></tr></table></figure>
+
+
+
+<p>repository修改为你自己的github项目地址，具体位置在本人Git仓库选项ssh下。</p>
+<p>回到你的git bash中，</p>
+<p><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code></p>
+<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
+<p>可以用以下两条，检查一下你有没有输对</p>
+<p><code>git config user.name</code><br><code>git config user.email</code></p>
+<p>然后创建SSH,一路回车</p>
+<p><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p>
+<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
+<p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。</p>
+<p>在gitbash中，查看是否成功</p>
+<h1 id="hexo基本使用"><a href="#hexo基本使用" class="headerlink" title="hexo基本使用"></a>hexo基本使用</h1><p>首先在博客根目录下右键打开git bash，安装一个扩展<code>npm i hexo-deployer-git</code>。</p>
+<p>然后输入<code>hexo new post &quot;article title&quot;</code>，新建一篇文章。</p>
+<p>然后打开<code>D:\study\program\blog\source\_posts</code>的目录，可以发现下面多了一个文件夹和一个<code>.md</code>文件，一个用来存放你的图片等数据，另一个就是你的文章文件啦。</p>
+<p>编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，最后输入<code>hexo d</code>上传到github上。这时打开你的github.io主页就能看到发布的文章啦。</p>
+<h1 id="模板更换"><a href="#模板更换" class="headerlink" title="模板更换"></a>模板更换</h1><p>备份博客源文件<br>有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
+<p>首先在github博客仓库下新建一个分支hexo，然后git clone到本地，把.git文件夹拿出来，放在博客根目录下。</p>
+<p>然后git checkout hexo切换到hexo分支，然后git add .，然后git commit -m “xxx”，最后git push origin hexo提交就行了。</p>
+<p>当然我新建了一个仓库存放了源文件，具体效果可以看我的博客源文件仓库：<a href="https://github.com/godweiyang/hexo-matery-modified%E3%80%82%E5%A4%A7%E5%AE%B6%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%85%88%E7%94%A8%E4%B8%8B%E6%96%87hexo%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%E5%AE%89%E8%A3%85%E5%AE%8Chexo%EF%BC%8C%E7%84%B6%E5%90%8E%E7%9B%B4%E6%8E%A5git">https://github.com/godweiyang/hexo-matery-modified。大家也可以先用下文hexo安装方法安装完hexo，然后直接git</a> clone <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a>:godweiyang&#x2F;hexo-matery-modified.git克隆我的所有源文件，然后这是我修改完的基本没bug的定制化的博客，就可以直接拿来用啦。</p>
+<p>我这个源文件和原来的主题没有什么区别，只是我把插件都安装完了，有些小bug也修复了，所以拿来就能直接用，方便大家。</p>
+<p>博客源代码下载<br>如果大家不想这么麻烦的装一堆东西，然后还要自己修改bug，那么只需要做好上面的准备工作，然后下载我的源代码，改改个人配置就行了。</p>
+<p>源码地址：<a href="https://github.com/godweiyang/hexo-matery-modified%E3%80%82%E5%A4%A7%E5%AE%B6%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E4%B8%8B%E6%9D%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%BD%93%E7%84%B6%E7%8E%AF%E5%A2%83%E8%A6%81%E5%85%88%E6%90%AD%E5%A5%BD%E3%80%82">https://github.com/godweiyang/hexo-matery-modified。大家可以直接下载下来使用，修改个人配置信息即可，当然环境要先搭好。</a></p>
+<p>如果大家下载好了源代码，就可以直接使用了，基本可以跳过文章后面的部分了！喜欢的记得star并fork哦！</p>
+<h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><h1 id="文章发布选择"><a href="#文章发布选择" class="headerlink" title="文章发布选择"></a>文章发布选择</h1><h1 id="Tyler-pigco-七牛云-发布方式"><a href="#Tyler-pigco-七牛云-发布方式" class="headerlink" title="Tyler+pigco+七牛云    发布方式"></a>Tyler+pigco+七牛云    发布方式</h1><h1 id="平时常用命令"><a href="#平时常用命令" class="headerlink" title="平时常用命令"></a>平时常用命令</h1><p>hexo g # 生成博客网页文件<br>hexo s # 本地预览博客<br>hexo d # 上传网页文件到github</p>
+<p>为了减小源码的体积，我将插件目录node_modules进行了压缩，大家下载完后需要解压。另外添加水印需要的字体文件我也删除了，大家可以直接从电脑自带的字体库中拷贝。</p>
+<p>首先运行git clone <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;</a>:godweiyang&#x2F;hexo-matery-modified.git将所有文件下载到本地。<br>解压node_modules.zip，然后删除node_modules.zip和.git文件夹。<br>还缺一个字体（为图片添加水印需要用到），去C:\Windows\Fonts下找到STSong Regular，复制到hexo-matery-modified文件夹下。<br>快速搭建<br>如果你不想自己从头开始慢慢自定义主题的话，可以直接下载我的修改好的主题，然后稍微修改几个地方就好了：</p>
+<p>根目录配置文件_config.yml和主题目录配置文件_config.yml中修改个人信息。<br>根目录配置文件中修改deploy一栏的repository。<br>根目录配置文件中修改baidu_url_submit一栏的token。<br>主题配置文件中修改gitalk一栏，修改方法见正文。<br>当然前提是个性化设置章节之前的环境还是需要配置好！</p>
+<h1 id="个性化设置（matery主题）"><a href="#个性化设置（matery主题）" class="headerlink" title="个性化设置（matery主题）"></a>个性化设置（matery主题）</h1><p>这两天花时间将我的博客换了一个主题，现在这个主题看着更加的炫（zhuang）酷（bi），并且响应式更友好，点起来就很舒服，功能也多很多。</p>
+<p>主题的原地址在这里：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a>，它的文档写得也非常的详细，还有中英文两个版本，作者回复也很及时。效果图如下，可以看出非常合我的口味：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/21.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>但是我自己使用起来还是遇到了好几个问题，经过两天的不懈摸鱼，终于基本解决了，这里分享一下。</p>
+<p>首先先按照文档教程安装一遍主题，然后是可以正常打开的，如果你是一般使用的话，基本没啥问题了。但是我是重度强迫症，一点小毛病就看着难受，下面列举一下我遇到的问题以及解决方法。</p>
+<h2 id="文章头设置"><a href="#文章头设置" class="headerlink" title="文章头设置"></a>文章头设置</h2><p>首先为了新建文章方便，建议将<code>/scaffolds/post.md</code>修改为如下代码：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs json">---<br>title<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#123;</span> title <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">&#125;</span><br>date<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#123;</span> date <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">&#125;</span><br>top<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>cover<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>password<span class="hljs-punctuation">:</span><br>toc<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>mathjax<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>summary<span class="hljs-punctuation">:</span><br>tags<span class="hljs-punctuation">:</span><br>categories<span class="hljs-punctuation">:</span><br>---<br></code></pre></td></tr></table></figure>
+
+
+
+<p>这样新建文章后不用你自己补充了，修改信息就行。</p>
+<p><strong>Front-matter 选项详解</strong></p>
+<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置选项</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left"><code>Markdown</code> 的文件标题</td>
+<td align="left">文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">文件创建时的日期时间</td>
+<td align="left">发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td align="left">author</td>
+<td align="left">根 <code>_config.yml</code> 中的 <code>author</code></td>
+<td align="left">文章作者</td>
+</tr>
+<tr>
+<td align="left">img</td>
+<td align="left"><code>featureImages</code> 中的某个值</td>
+<td align="left">文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
+</tr>
+<tr>
+<td align="left">top</td>
+<td align="left"><code>true</code></td>
+<td align="left">推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td align="left">cover</td>
+<td align="left"><code>false</code></td>
+<td align="left"><code>v1.0.2</code>版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td align="left">coverImg</td>
+<td align="left">无</td>
+<td align="left"><code>v1.0.2</code>版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td align="left">password</td>
+<td align="left">无</td>
+<td align="left">文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 <code>password</code> 的值，该值必须是用 <code>SHA256</code> 加密后的密码，防止被他人识破。前提是在主题的 <code>config.yml</code> 中激活了 <code>verifyPassword</code> 选项</td>
+</tr>
+<tr>
+<td align="left">toc</td>
+<td align="left"><code>true</code></td>
+<td align="left">是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 <code>config.yml</code> 中激活了 <code>toc</code> 选项</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td align="left"><code>false</code></td>
+<td align="left">是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td align="left">summary</td>
+<td align="left">无</td>
+<td align="left">文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left">无</td>
+<td align="left">文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">无</td>
+<td align="left">文章标签，一篇文章可以多个标签</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意</strong>:</p>
+<ol>
+<li>如果 <code>img</code> 属性不填写的话，文章特色图会根据文章标题的 <code>hashcode</code> 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图<strong>各有特色</strong>。</li>
+<li><code>date</code> 的值尽量保证每篇文章是唯一的，因为本主题中 <code>Gitalk</code> 和 <code>Gitment</code> 识别 <code>id</code> 是通过 <code>date</code> 的值来作为唯一标识的。</li>
+<li>如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 <code>_config.yml</code> 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：<a href="http://tool.oschina.net/encrypt?type=2">开源中国在线工具</a>、<a href="http://encode.chahuo.com/">chahuo</a>、<a href="http://tool.chinaz.com/tools/hash.aspx">站长工具</a>。</li>
+</ol>
+</blockquote>
+<p>以下为文章的 <code>Front-matter</code> 示例。</p>
+<p><strong>最简示例</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">typora-vue-theme主题介绍</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2018-09-07 09:25:00</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>最全示例</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">typora-vue-theme主题介绍</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2018-09-07 09:25:00</span><br><span class="hljs-attr">author:</span> <span class="hljs-string">赵奇</span><br><span class="hljs-attr">img:</span> <span class="hljs-string">/source/images/xxx.jpg</span><br><span class="hljs-attr">top:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">cover:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">coverImg:</span> <span class="hljs-string">/images/1.jpg</span><br><span class="hljs-attr">password:</span> <span class="hljs-string">8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</span><br><span class="hljs-attr">toc:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">mathjax:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">summary:</span> <span class="hljs-string">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</span><br><span class="hljs-attr">categories:</span> <span class="hljs-string">Markdown</span><br><span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Typora</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Markdown</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h2><p>原来的主题没有404页面，加一个也不是什么难事。首先在<code>/source/</code>目录下新建一个<code>404.md</code>，内容如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json">---<br>title<span class="hljs-punctuation">:</span> <span class="hljs-number">404</span><br>date<span class="hljs-punctuation">:</span> <span class="hljs-number">2019</span><span class="hljs-number">-07</span><span class="hljs-number">-19</span> <span class="hljs-number">16</span><span class="hljs-punctuation">:</span><span class="hljs-number">41</span><span class="hljs-punctuation">:</span><span class="hljs-number">10</span><br>type<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;404&quot;</span><br>layout<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;404&quot;</span><br>description<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;你来到了没有知识的荒原 :(&quot;</span><br>---<br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p>然后在<code>/themes/matery/layout/</code>目录下新建一个<code>404.ejs</code>文件，内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span><br><span class="language-css">    <span class="hljs-comment">/* don&#x27;t remove. */</span></span><br><span class="language-css">    <span class="hljs-selector-class">.about-cover</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">height</span>: <span class="hljs-number">75vh</span>;</span><br><span class="language-css">    &#125;</span><br><span class="language-css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-cover pd-header about-cover&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col s10 offset-s1 m8 offset-m2 l8 offset-l2&quot;</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;brand&quot;</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title center-align&quot;</span>&gt;</span><br>                        404<br>                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;description center-align&quot;</span>&gt;</span><br>                        &lt;%= page.description %&gt;<br>                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">// 每天切换 banner 图.  Switch banner image every day.</span></span><br><span class="language-javascript">    $(<span class="hljs-string">&#x27;.bg-cover&#x27;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&#x27;background-image&#x27;</span>, <span class="hljs-string">&#x27;url(/medias/banner/&#x27;</span> + <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>().<span class="hljs-title function_">getDay</span>() + <span class="hljs-string">&#x27;.jpg)&#x27;</span>);</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<h2 id="“关于”页面增加简历（可选）"><a href="#“关于”页面增加简历（可选）" class="headerlink" title="“关于”页面增加简历（可选）"></a>“关于”页面增加简历（可选）</h2><p>修改<code>/themes/matery/layout/about.ejs</code>，找到<code>&lt;div class=&quot;card&quot;&gt;</code>标签，然后找到它对应的<code>&lt;/div&gt;</code>标签，接在后面新增一个card，语句如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-content&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-content article-card-content&quot;</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title center-align&quot;</span> <span class="hljs-attr">data-aos</span>=<span class="hljs-string">&quot;zoom-in-up&quot;</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-address-book&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-symbol">&amp;nbsp;</span>&lt;%- __(&#x27;myCV&#x27;) %&gt;<br>                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;articleContent&quot;</span> <span class="hljs-attr">data-aos</span>=<span class="hljs-string">&quot;fade-up&quot;</span>&gt;</span><br>                    &lt;%- page.content %&gt;<br>                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>这样就会多出一张card，然后可以在<code>/source/about/index.md</code>下面写上你的简历了，当然这里的位置随你自己设置，你也可以把简历作为第一个card。</p>
+<h2 id="解决mathjax与代码高亮的冲突"><a href="#解决mathjax与代码高亮的冲突" class="headerlink" title="解决mathjax与代码高亮的冲突"></a>解决mathjax与代码高亮的冲突</h2><p>如果你按照教程安装了代码高亮插件<code>hexo-prism-plugin</code>，单独使用是没有问题的，但如果你又使用了mathjax，并且按照网上教程，安装<code>kramed</code>插件并修改了js文件里的正则表达式（为了解决markdown和mathjax的语法冲突），好了，那你的代码就无法高亮了。解决方法很简单，别用<code>kramed</code>插件了，还用原来自带的<code>marked</code>插件，直接改它的正则表达式就行了，改法如下：</p>
+<p>打开<code>D:\study\program\blog\node_modules\marked\lib\marked.js</code><br><code>escape:</code>处替换成：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">escape<span class="hljs-punctuation">:</span> /^\\(<span class="hljs-punctuation">[</span>`*\<span class="hljs-punctuation">[</span>\<span class="hljs-punctuation">]</span>()#$+\-.!_&gt;<span class="hljs-punctuation">]</span>)/<span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p><code>em:</code>处替换成：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">em<span class="hljs-punctuation">:</span> /^\*((?<span class="hljs-punctuation">:</span>\*\*|<span class="hljs-punctuation">[</span>\s\S<span class="hljs-punctuation">]</span>)+?)\*(?!\*)/<span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p>这时在文章里写数学公式基本没有问题了，但是要注意：<br><strong>数学公式中如果出现了连续两个{，中间一定要加空格！</strong></p>
+<h2 id="增加建站时间"><a href="#增加建站时间" class="headerlink" title="增加建站时间"></a>增加建站时间</h2><p>修改<code>/themes/matery/layout/_partial/footer.ejs</code>文件，在最后加上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;script language=javascript&gt;<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">siteTime</span>(<span class="hljs-params"></span>) &#123;<br>        <span class="hljs-variable language_">window</span>.<span class="hljs-built_in">setTimeout</span>(<span class="hljs-string">&quot;siteTime()&quot;</span>, <span class="hljs-number">1000</span>);<br>        <span class="hljs-keyword">var</span> seconds = <span class="hljs-number">1000</span>;<br>        <span class="hljs-keyword">var</span> minutes = seconds * <span class="hljs-number">60</span>;<br>        <span class="hljs-keyword">var</span> hours = minutes * <span class="hljs-number">60</span>;<br>        <span class="hljs-keyword">var</span> days = hours * <span class="hljs-number">24</span>;<br>        <span class="hljs-keyword">var</span> years = days * <span class="hljs-number">365</span>;<br>        <span class="hljs-keyword">var</span> today = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>        <span class="hljs-keyword">var</span> todayYear = today.<span class="hljs-title function_">getFullYear</span>();<br>        <span class="hljs-keyword">var</span> todayMonth = today.<span class="hljs-title function_">getMonth</span>() + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">var</span> todayDate = today.<span class="hljs-title function_">getDate</span>();<br>        <span class="hljs-keyword">var</span> todayHour = today.<span class="hljs-title function_">getHours</span>();<br>        <span class="hljs-keyword">var</span> todayMinute = today.<span class="hljs-title function_">getMinutes</span>();<br>        <span class="hljs-keyword">var</span> todaySecond = today.<span class="hljs-title function_">getSeconds</span>();<br>        <span class="hljs-comment">/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span><br><span class="hljs-comment">        year - 作为date对象的年份，为4位年份值</span><br><span class="hljs-comment">        month - 0-11之间的整数，做为date对象的月份</span><br><span class="hljs-comment">        day - 1-31之间的整数，做为date对象的天数</span><br><span class="hljs-comment">        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span><br><span class="hljs-comment">        minutes - 0-59之间的整数，做为date对象的分钟数</span><br><span class="hljs-comment">        seconds - 0-59之间的整数，做为date对象的秒数</span><br><span class="hljs-comment">        microseconds - 0-999之间的整数，做为date对象的毫秒数 */</span><br>        <span class="hljs-keyword">var</span> t1 = <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">UTC</span>(<span class="hljs-number">2017</span>, <span class="hljs-number">09</span>, <span class="hljs-number">11</span>, <span class="hljs-number">00</span>, <span class="hljs-number">00</span>, <span class="hljs-number">00</span>); <span class="hljs-comment">//北京时间2018-2-13 00:00:00</span><br>        <span class="hljs-keyword">var</span> t2 = <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">UTC</span>(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);<br>        <span class="hljs-keyword">var</span> diff = t2 - t1;<br>        <span class="hljs-keyword">var</span> diffYears = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(diff / years);<br>        <span class="hljs-keyword">var</span> diffDays = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((diff / days) - diffYears * <span class="hljs-number">365</span>);<br>        <span class="hljs-keyword">var</span> diffHours = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((diff - (diffYears * <span class="hljs-number">365</span> + diffDays) * days) / hours);<br>        <span class="hljs-keyword">var</span> diffMinutes = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((diff - (diffYears * <span class="hljs-number">365</span> + diffDays) * days - diffHours * hours) / minutes);<br>        <span class="hljs-keyword">var</span> diffSeconds = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>((diff - (diffYears * <span class="hljs-number">365</span> + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);<br>        <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;sitetime&quot;</span>).<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;本站已运行 &quot;</span> +diffYears+<span class="hljs-string">&quot; 年 &quot;</span>+diffDays + <span class="hljs-string">&quot; 天 &quot;</span> + diffHours + <span class="hljs-string">&quot; 小时 &quot;</span> + diffMinutes + <span class="hljs-string">&quot; 分钟 &quot;</span> + diffSeconds + <span class="hljs-string">&quot; 秒&quot;</span>;<br>    &#125;<span class="hljs-comment">/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/</span><br>    <span class="hljs-title function_">siteTime</span>();<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+
+<p>Js</p>
+<p>然后在合适的地方（比如copyright声明后面）加上下面的代码就行了：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;sitetime&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<h2 id="修改不蒜子初始化计数"><a href="#修改不蒜子初始化计数" class="headerlink" title="修改不蒜子初始化计数"></a>修改不蒜子初始化计数</h2><p>因为不蒜子至今未开放注册，所以没办法在官网修改初始化，只能自己动手了。和上一条一样，在<code>/themes/matery/layout/_partial/footer.ejs</code>文件最后加上：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;script&gt;<br>    $(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br><br>        <span class="hljs-keyword">var</span> int = <span class="hljs-built_in">setInterval</span>(fixCount, <span class="hljs-number">50</span>);  <span class="hljs-comment">// 50ms周期检测函数</span><br>        <span class="hljs-keyword">var</span> pvcountOffset = <span class="hljs-number">80000</span>;  <span class="hljs-comment">// 初始化首次数据</span><br>        <span class="hljs-keyword">var</span> uvcountOffset = <span class="hljs-number">20000</span>;<br><br>        <span class="hljs-keyword">function</span> <span class="hljs-title function_">fixCount</span>(<span class="hljs-params"></span>) &#123;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span>).<span class="hljs-property">style</span>.<span class="hljs-property">display</span> != <span class="hljs-string">&quot;none&quot;</span>) &#123;<br>                $(<span class="hljs-string">&quot;#busuanzi_value_site_pv&quot;</span>).<span class="hljs-title function_">html</span>(<span class="hljs-built_in">parseInt</span>($(<span class="hljs-string">&quot;#busuanzi_value_site_pv&quot;</span>).<span class="hljs-title function_">html</span>()) + pvcountOffset);<br>                <span class="hljs-built_in">clearInterval</span>(int);<br>            &#125;<br>            <span class="hljs-keyword">if</span> ($(<span class="hljs-string">&quot;#busuanzi_container_site_pv&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;display&quot;</span>) != <span class="hljs-string">&quot;none&quot;</span>) &#123;<br>                $(<span class="hljs-string">&quot;#busuanzi_value_site_uv&quot;</span>).<span class="hljs-title function_">html</span>(<span class="hljs-built_in">parseInt</span>($(<span class="hljs-string">&quot;#busuanzi_value_site_uv&quot;</span>).<span class="hljs-title function_">html</span>()) + uvcountOffset); <span class="hljs-comment">// 加上初始数据 </span><br>                <span class="hljs-built_in">clearInterval</span>(int); <span class="hljs-comment">// 停止检测</span><br>            &#125;<br>        &#125;<br>    &#125;);<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+
+<p>Js</p>
+<p>然后把上面几行有段代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalTraffic) &#123; %&gt;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-heart-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><br>        本站总访问量 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;white-color&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&lt;% &#125; %&gt;<br>&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalNumberOfvisitors) &#123; %&gt;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_uv&quot;</span>&gt;</span><br>        人次,<span class="hljs-symbol">&amp;nbsp;</span>访客数 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_uv&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;white-color&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 人.<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>修改为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html">&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalTraffic) &#123; %&gt;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_pv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&#x27;display:none&#x27;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-heart-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><br>        本站总访问量 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_pv&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;white-color&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&lt;% &#125; %&gt;<br>&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.totalNumberOfvisitors) &#123; %&gt;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_container_site_uv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&#x27;display:none&#x27;</span>&gt;</span><br>        人次,<span class="hljs-symbol">&amp;nbsp;</span>访客数 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;busuanzi_value_site_uv&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;white-color&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> 人.<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>其实就是增加了两个<code>style=&#39;display:none&#39;</code>而已。</p>
+<h2 id="添加动漫人物"><a href="#添加动漫人物" class="headerlink" title="添加动漫人物"></a>添加动漫人物</h2><p>其实三步就行了，不用像网上有些教程那么复杂。</p>
+<p><strong>第一步：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-helper-live2d<br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p><strong>第二步：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install live2d-widget-model-shizuku<br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p><strong>第三步：</strong><br>在根目录配置文件中添加如下代码：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs json">live2d<span class="hljs-punctuation">:</span><br>  enable<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>  scriptFrom<span class="hljs-punctuation">:</span> local<br>  pluginRootPath<span class="hljs-punctuation">:</span> live2dw/<br>  pluginJsPath<span class="hljs-punctuation">:</span> lib/<br>  pluginModelPath<span class="hljs-punctuation">:</span> assets/<br>  tagMode<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>  log<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>  model<span class="hljs-punctuation">:</span><br>    use<span class="hljs-punctuation">:</span> live2d-widget-model-shizuku<br>  display<span class="hljs-punctuation">:</span><br>    position<span class="hljs-punctuation">:</span> right<br>    width<span class="hljs-punctuation">:</span> <span class="hljs-number">150</span><br>    height<span class="hljs-punctuation">:</span> <span class="hljs-number">300</span><br>  mobile<span class="hljs-punctuation">:</span><br>    show<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>  react<span class="hljs-punctuation">:</span><br>    opacity<span class="hljs-punctuation">:</span> <span class="hljs-number">0.7</span><br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p>然后<code>hexo g</code>再<code>hexo s</code>就能预览出效果了，但是有个注意的地方，我发现<strong>这个动漫人物最好不要和不蒜子同时使用</strong>，不然不蒜子会显示不出来。</p>
+<h2 id="图片添加水印"><a href="#图片添加水印" class="headerlink" title="图片添加水印"></a>图片添加水印</h2><p>为了防止别人抄袭你文章，可以把所有的图片都加上水印，方法很简单。</p>
+<p>首先在博客根目录下新建一个<code>watermark.py</code>，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span><br><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">import</span> glob<br><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image<br><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> ImageDraw<br><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> ImageFont<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">watermark</span>(<span class="hljs-params">post_name</span>):<br>    <span class="hljs-keyword">if</span> post_name == <span class="hljs-string">&#x27;all&#x27;</span>:<br>        post_name = <span class="hljs-string">&#x27;*&#x27;</span><br>    dir_name = <span class="hljs-string">&#x27;source/_posts/&#x27;</span> + post_name + <span class="hljs-string">&#x27;/*&#x27;</span><br>    <span class="hljs-keyword">for</span> files <span class="hljs-keyword">in</span> glob.glob(dir_name):<br>        im = Image.<span class="hljs-built_in">open</span>(files)<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(im.getbands()) &lt; <span class="hljs-number">3</span>:<br>            im = im.convert(<span class="hljs-string">&#x27;RGB&#x27;</span>)<br>            <span class="hljs-built_in">print</span>(files)<br>        font = ImageFont.truetype(<span class="hljs-string">&#x27;STSONG.TTF&#x27;</span>, <span class="hljs-built_in">max</span>(<span class="hljs-number">30</span>, <span class="hljs-built_in">int</span>(im.size[<span class="hljs-number">1</span>] / <span class="hljs-number">20</span>)))<br>        draw = ImageDraw.Draw(im)<br>        draw.text((im.size[<span class="hljs-number">0</span>] / <span class="hljs-number">2</span>, im.size[<span class="hljs-number">1</span>] / <span class="hljs-number">2</span>),<br>                  <span class="hljs-string">u&#x27;@yourname&#x27;</span>, fill=(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>), font=font)<br>        im.save(files)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(sys.argv) == <span class="hljs-number">2</span>:<br>        watermark(sys.argv[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;[usage] &lt;input&gt;&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>Python</p>
+<p>字体也放根目录下，自己找字体。然后每次写完一篇文章可以运行<code>python3 watermark.py postname</code>添加水印，如果第一次运行要给所有文章添加水印，可以运行<code>python3 watermark.py all</code>。</p>
+<h2 id="添加网易云音乐BGM"><a href="#添加网易云音乐BGM" class="headerlink" title="添加网易云音乐BGM"></a>添加网易云音乐BGM</h2><p>写文章的时候，想插入一段BGM怎么办？</p>
+<p>首先打开网易云网页版，找到想听的歌曲，然后点击生成外链：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/15.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>复制如下代码：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/16.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>粘贴到文章里就行了，为了美观，设置一下居中，具体代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">&quot;middle&quot;</span>&gt;</span>这里粘贴刚刚复制的代码<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<h2 id="添加评论插件"><a href="#添加评论插件" class="headerlink" title="添加评论插件"></a>添加评论插件</h2><p>主题已经自带了gitalk插件了，所以你只需要去github官网配置好就行了。</p>
+<p>首先打开<a href="https://github.com/settings/applications/new">github</a>申请一个应用，要填四个东西：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">Application name //应用名称，随便填<br>Homepage URL //填自己的博客地址<br>Application description //应用描述，随便填<br>Authorization callback URL //填自己的博客地址<br></code></pre></td></tr></table></figure>
+
+<p>Txt</p>
+<p>然后点击注册，会出现两个字符串<code>Client ID</code>和<code>Client Secret</code>，这个要复制出来。</p>
+<p>然后去主题的配置文件<code>_config.yml</code>下修改<code>gitalk</code>那里：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs txt">gitalk:<br>  enable: true<br>  owner: 你的github用户名<br>  repo: 你的github用户名.github.io<br>  oauth:<br>    clientId: 粘贴刚刚注册完显示的字符串<br>    clientSecret: 粘贴刚刚注册完显示的字符串<br>  admin: 你的github用户名<br></code></pre></td></tr></table></figure>
+
+<p>Txt</p>
+<p>以后写文章的时候，只要在文章页面登陆过github，就会自动创建评论框，<strong>记得每次写完文章后打开博客文章页面一下</strong>。</p>
+<h2 id="添加百度统计和谷歌统计代码"><a href="#添加百度统计和谷歌统计代码" class="headerlink" title="添加百度统计和谷歌统计代码"></a>添加百度统计和谷歌统计代码</h2><p>首先打开<a href="https://ziyuan.baidu.com/site/index">百度站长平台</a>，然后点击添加网站，输入网址并选择领域。</p>
+<p>接下来要验证网站所有权，有三种方式，推荐采用HTML标签验证，最简单，将代码复制出来。</p>
+<p>打开<code>themes/matery/layout/_partial/head.ejs</code>，修改下面两行：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;baidu-site-verification&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;xxx&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;google-site-verification&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;xxx&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>其中<code>content</code>内容改成你自己刚刚复制出来的就行了。</p>
+<h2 id="修复代码块行号不显示bug"><a href="#修复代码块行号不显示bug" class="headerlink" title="修复代码块行号不显示bug"></a>修复代码块行号不显示bug</h2><p>修改<code>themes/matery/source/css/matery.css</code>第95行左右的<code>pre</code>和<code>code</code>两段改为如下代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs css">pre &#123;<br>    <span class="hljs-comment">/* padding: 1.5rem !important; */</span><br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span> <span class="hljs-number">1.5rem</span> <span class="hljs-number">3.3rem</span> <span class="hljs-meta">!important</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#272822</span>;<br>    <span class="hljs-attribute">overflow</span>: auto;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.35rem</span>;<br>    <span class="hljs-attribute">tab-size</span>: <span class="hljs-number">4</span>;<br>&#125;<br><br><span class="hljs-selector-tag">code</span> &#123;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">1px</span> <span class="hljs-number">5px</span>;<br>    <span class="hljs-attribute">font-family</span>: Inconsolata, Monaco, Consolas, <span class="hljs-string">&#x27;Courier New&#x27;</span>, Courier, monospace;<br>    <span class="hljs-comment">/* font-size: 0.91rem; */</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#e96900</span>;<br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f8f8f8</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Css</p>
+<p>然后在根目录的<code>_config.yml</code>中设置<code>prism_plugin.line_number</code>为<code>true</code>。</p>
+<h2 id="优化文章url路径"><a href="#优化文章url路径" class="headerlink" title="优化文章url路径"></a>优化文章url路径</h2><p>有教程认为，将博客目录结构改为如下，就能减少层级，有利于搜索引擎的SEO。其实不然，网站内容的层级是按照从首页开始点击几次能到达你的文章来算的，所以你改不改都是两层就到达了，不在首页的也可以通过<code>index-archives-post</code>到达，跟文章url长度没有任何关系，所以如下操作作废，你想改也行，不改也行。但是建议已经建站一段时间的同学千万别改，不然会产生很多死链，并且评论issue全部会清空，很麻烦。</p>
+<p><del>seo搜索引擎优化认为，网站的最佳结构是用户从首页点击三次就可以到达任何一个页面，但是我们使用hexo编译的站点打开文章的url是：<code>sitename/year/mounth/day/title</code>四层的结构，这样的url结构很不利于seo，爬虫就会经常爬不到我们的文章，于是，我们可以将url直接改成<code>sitename/title</code>的形式，并且title最好是用英文，在根目录的<code>_config.yml</code>文件下修改permalink如下：</del></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text"># permalink: :year/:month/:day/:title/<br>permalink: :title/<br></code></pre></td></tr></table></figure>
+
+<p>Text</p>
+<h2 id="添加雪花特效"><a href="#添加雪花特效" class="headerlink" title="添加雪花特效"></a>添加雪花特效</h2><p>首先在<code>themes/matery/source/libs/others</code>下新建文件<code>snow.js</code>，并插入如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/*样式一*/</span><br>(<span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>)&#123;<br>    $.fn.<span class="hljs-property">snow</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>)&#123;<br>    <span class="hljs-keyword">var</span> $flake = $(<span class="hljs-string">&#x27;&lt;div id=&quot;snowbox&quot; /&gt;&#x27;</span>).<span class="hljs-title function_">css</span>(&#123;<span class="hljs-string">&#x27;position&#x27;</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,<span class="hljs-string">&#x27;z-index&#x27;</span>:<span class="hljs-string">&#x27;9999&#x27;</span>, <span class="hljs-string">&#x27;top&#x27;</span>: <span class="hljs-string">&#x27;-50px&#x27;</span>&#125;).<span class="hljs-title function_">html</span>(<span class="hljs-string">&#x27;&amp;#10052;&#x27;</span>),<br>    documentHeight  = $(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">height</span>(),<br>    documentWidth   = $(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">width</span>(),<br>    defaults = &#123;<br>        minSize     : <span class="hljs-number">10</span>,<br>        maxSize     : <span class="hljs-number">20</span>,<br>        newOn       : <span class="hljs-number">1000</span>,<br>        flakeColor  : <span class="hljs-string">&quot;#AFDAEF&quot;</span> <span class="hljs-comment">/* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */</span><br>    &#125;,<br>    options = $.<span class="hljs-title function_">extend</span>(&#123;&#125;, defaults, options);<br>    <span class="hljs-keyword">var</span> interval= <span class="hljs-built_in">setInterval</span>( <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">var</span> startPositionLeft = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * documentWidth - <span class="hljs-number">100</span>,<br>    startOpacity = <span class="hljs-number">0.5</span> + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>(),<br>    sizeFlake = options.<span class="hljs-property">minSize</span> + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * options.<span class="hljs-property">maxSize</span>,<br>    endPositionTop = documentHeight - <span class="hljs-number">200</span>,<br>    endPositionLeft = startPositionLeft - <span class="hljs-number">500</span> + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-number">500</span>,<br>    durationFall = documentHeight * <span class="hljs-number">10</span> + <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-number">5000</span>;<br>    $flake.<span class="hljs-title function_">clone</span>().<span class="hljs-title function_">appendTo</span>(<span class="hljs-string">&#x27;body&#x27;</span>).<span class="hljs-title function_">css</span>(&#123;<br>        <span class="hljs-attr">left</span>: startPositionLeft,<br>        <span class="hljs-attr">opacity</span>: startOpacity,<br>        <span class="hljs-string">&#x27;font-size&#x27;</span>: sizeFlake,<br>        <span class="hljs-attr">color</span>: options.<span class="hljs-property">flakeColor</span><br>    &#125;).<span class="hljs-title function_">animate</span>(&#123;<br>        <span class="hljs-attr">top</span>: endPositionTop,<br>        <span class="hljs-attr">left</span>: endPositionLeft,<br>        <span class="hljs-attr">opacity</span>: <span class="hljs-number">0.2</span><br>    &#125;,durationFall,<span class="hljs-string">&#x27;linear&#x27;</span>,<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>        $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">remove</span>()<br>    &#125;);<br>    &#125;, options.<span class="hljs-property">newOn</span>);<br>    &#125;;<br>&#125;)(jQuery);<br>$(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $.fn.<span class="hljs-title function_">snow</span>(&#123; <br>        <span class="hljs-attr">minSize</span>: <span class="hljs-number">5</span>, <span class="hljs-comment">/* 定义雪花最小尺寸 */</span><br>        <span class="hljs-attr">maxSize</span>: <span class="hljs-number">50</span>,<span class="hljs-comment">/* 定义雪花最大尺寸 */</span><br>        <span class="hljs-attr">newOn</span>: <span class="hljs-number">300</span>  <span class="hljs-comment">/* 定义密集程度，数字越小越密集 */</span><br>    &#125;);<br>&#125;);<br><span class="hljs-comment">/*样式二*/</span><br><span class="hljs-comment">/* 控制下雪 */</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">snowFall</span>(<span class="hljs-params">snow</span>) &#123;<br>    <span class="hljs-comment">/* 可配置属性 */</span><br>    snow = snow || &#123;&#125;;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxFlake</span> = snow.<span class="hljs-property">maxFlake</span> || <span class="hljs-number">200</span>;   <span class="hljs-comment">/* 最多片数 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">flakeSize</span> = snow.<span class="hljs-property">flakeSize</span> || <span class="hljs-number">10</span>;  <span class="hljs-comment">/* 雪花形状 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">fallSpeed</span> = snow.<span class="hljs-property">fallSpeed</span> || <span class="hljs-number">1</span>;   <span class="hljs-comment">/* 坠落速度 */</span><br>&#125;<br><span class="hljs-comment">/* 兼容写法 */</span><br>requestAnimationFrame = <span class="hljs-variable language_">window</span>.<span class="hljs-property">requestAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">mozRequestAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">webkitRequestAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">msRequestAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">oRequestAnimationFrame</span> ||<br>    <span class="hljs-keyword">function</span>(<span class="hljs-params">callback</span>) &#123; <span class="hljs-built_in">setTimeout</span>(callback, <span class="hljs-number">1000</span> / <span class="hljs-number">60</span>); &#125;;<br><br>cancelAnimationFrame = <span class="hljs-variable language_">window</span>.<span class="hljs-property">cancelAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">mozCancelAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">webkitCancelAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">msCancelAnimationFrame</span> ||<br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">oCancelAnimationFrame</span>;<br><span class="hljs-comment">/* 开始下雪 */</span><br>snowFall.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">start</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-comment">/* 创建画布 */</span><br>    snowCanvas.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>);<br>    <span class="hljs-comment">/* 创建雪花形状 */</span><br>    createFlakes.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>);<br>    <span class="hljs-comment">/* 画雪 */</span><br>    drawSnow.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>)<br>&#125;<br><span class="hljs-comment">/* 创建画布 */</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">snowCanvas</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">/* 添加Dom结点 */</span><br>    <span class="hljs-keyword">var</span> snowcanvas = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;canvas&quot;</span>);<br>    snowcanvas.<span class="hljs-property">id</span> = <span class="hljs-string">&quot;snowfall&quot;</span>;<br>    snowcanvas.<span class="hljs-property">width</span> = <span class="hljs-variable language_">window</span>.<span class="hljs-property">innerWidth</span>;<br>    snowcanvas.<span class="hljs-property">height</span> = <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">clientHeight</span>;<br>    snowcanvas.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">&quot;style&quot;</span>, <span class="hljs-string">&quot;position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;&quot;</span>);<br>    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByTagName</span>(<span class="hljs-string">&quot;body&quot;</span>)[<span class="hljs-number">0</span>].<span class="hljs-title function_">appendChild</span>(snowcanvas);<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">canvas</span> = snowcanvas;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">ctx</span> = snowcanvas.<span class="hljs-title function_">getContext</span>(<span class="hljs-string">&quot;2d&quot;</span>);<br>    <span class="hljs-comment">/* 窗口大小改变的处理 */</span><br>    <span class="hljs-variable language_">window</span>.<span class="hljs-property">onresize</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>        snowcanvas.<span class="hljs-property">width</span> = <span class="hljs-variable language_">window</span>.<span class="hljs-property">innerWidth</span>;<br>        <span class="hljs-comment">/* snowcanvas.height = window.innerHeight */</span><br>    &#125;<br>&#125;<br><span class="hljs-comment">/* 雪运动对象 */</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">flakeMove</span>(<span class="hljs-params">canvasWidth, canvasHeight, flakeSize, fallSpeed</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * canvasWidth);   <span class="hljs-comment">/* x坐标 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * canvasHeight);  <span class="hljs-comment">/* y坐标 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">size</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * flakeSize + <span class="hljs-number">2</span>;          <span class="hljs-comment">/* 形状 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxSize</span> = flakeSize;                           <span class="hljs-comment">/* 最大形状 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">speed</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-number">1</span> + fallSpeed;         <span class="hljs-comment">/* 坠落速度 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">fallSpeed</span> = fallSpeed;                         <span class="hljs-comment">/* 坠落速度 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">velY</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">speed</span>;                             <span class="hljs-comment">/* Y方向速度 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">velX</span> = <span class="hljs-number">0</span>;                                      <span class="hljs-comment">/* X方向速度 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">stepSize</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() / <span class="hljs-number">30</span>;                 <span class="hljs-comment">/* 步长 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">step</span> = <span class="hljs-number">0</span>                                       <span class="hljs-comment">/* 步数 */</span><br>&#125;<br>flakeMove.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">update</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> x = <span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span>,<br>        y = <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span>;<br>    <span class="hljs-comment">/* 左右摆动(余弦) */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">velX</span> *= <span class="hljs-number">0.98</span>;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">velY</span> &lt;= <span class="hljs-variable language_">this</span>.<span class="hljs-property">speed</span>) &#123;<br>        <span class="hljs-variable language_">this</span>.<span class="hljs-property">velY</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">speed</span><br>    &#125;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">velX</span> += <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">cos</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">step</span> += <span class="hljs-number">.05</span>) * <span class="hljs-variable language_">this</span>.<span class="hljs-property">stepSize</span>;<br><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span> += <span class="hljs-variable language_">this</span>.<span class="hljs-property">velY</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span> += <span class="hljs-variable language_">this</span>.<span class="hljs-property">velX</span>;<br>    <span class="hljs-comment">/* 飞出边界的处理 */</span><br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span> &gt;= canvas.<span class="hljs-property">width</span> || <span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span> &lt;= <span class="hljs-number">0</span> || <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span> &gt;= canvas.<span class="hljs-property">height</span> || <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span> &lt;= <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">reset</span>(canvas.<span class="hljs-property">width</span>, canvas.<span class="hljs-property">height</span>)<br>    &#125;<br>&#125;;<br><span class="hljs-comment">/* 飞出边界-放置最顶端继续坠落 */</span><br>flakeMove.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">reset</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">width, height</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * width);<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span> = <span class="hljs-number">0</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">size</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxSize</span> + <span class="hljs-number">2</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">speed</span> = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-number">1</span> + <span class="hljs-variable language_">this</span>.<span class="hljs-property">fallSpeed</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">velY</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">speed</span>;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">velX</span> = <span class="hljs-number">0</span>;<br>&#125;;<br><span class="hljs-comment">// 渲染雪花-随机形状（此处可修改雪花颜色！！！）</span><br>flakeMove.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">render</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">ctx</span>) &#123;<br>    <span class="hljs-keyword">var</span> snowFlake = ctx.<span class="hljs-title function_">createRadialGradient</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span>, <span class="hljs-number">0</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">size</span>);<br>    snowFlake.<span class="hljs-title function_">addColorStop</span>(<span class="hljs-number">0</span>, <span class="hljs-string">&quot;rgba(255, 255, 255, 0.9)&quot;</span>);  <span class="hljs-comment">/* 此处是雪花颜色，默认是白色 */</span><br>    snowFlake.<span class="hljs-title function_">addColorStop</span>(<span class="hljs-number">.5</span>, <span class="hljs-string">&quot;rgba(255, 255, 255, 0.5)&quot;</span>); <span class="hljs-comment">/* 若要改为其他颜色，请自行查 */</span><br>    snowFlake.<span class="hljs-title function_">addColorStop</span>(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;rgba(255, 255, 255, 0)&quot;</span>);    <span class="hljs-comment">/* 找16进制的RGB 颜色代码。 */</span><br>    ctx.<span class="hljs-title function_">save</span>();<br>    ctx.<span class="hljs-property">fillStyle</span> = snowFlake;<br>    ctx.<span class="hljs-title function_">beginPath</span>();<br>    ctx.<span class="hljs-title function_">arc</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">x</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">y</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">size</span>, <span class="hljs-number">0</span>, <span class="hljs-title class_">Math</span>.<span class="hljs-property">PI</span> * <span class="hljs-number">2</span>);<br>    ctx.<span class="hljs-title function_">fill</span>();<br>    ctx.<span class="hljs-title function_">restore</span>();<br>&#125;;<br><span class="hljs-comment">/* 创建雪花-定义形状 */</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">createFlakes</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> maxFlake = <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxFlake</span>,<br>        flakes = <span class="hljs-variable language_">this</span>.<span class="hljs-property">flakes</span> = [],<br>        canvas = <span class="hljs-variable language_">this</span>.<span class="hljs-property">canvas</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; maxFlake; i++) &#123;<br>        flakes.<span class="hljs-title function_">push</span>(<span class="hljs-keyword">new</span> <span class="hljs-title function_">flakeMove</span>(canvas.<span class="hljs-property">width</span>, canvas.<span class="hljs-property">height</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">flakeSize</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">fallSpeed</span>))<br>    &#125;<br>&#125;<br><span class="hljs-comment">/* 画雪 */</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">drawSnow</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">var</span> maxFlake = <span class="hljs-variable language_">this</span>.<span class="hljs-property">maxFlake</span>,<br>        flakes = <span class="hljs-variable language_">this</span>.<span class="hljs-property">flakes</span>;<br>    ctx = <span class="hljs-variable language_">this</span>.<span class="hljs-property">ctx</span>, canvas = <span class="hljs-variable language_">this</span>.<span class="hljs-property">canvas</span>, that = <span class="hljs-variable language_">this</span>;<br>    <span class="hljs-comment">/* 清空雪花 */</span><br>    ctx.<span class="hljs-title function_">clearRect</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, canvas.<span class="hljs-property">width</span>, canvas.<span class="hljs-property">height</span>);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> e = <span class="hljs-number">0</span>; e &lt; maxFlake; e++) &#123;<br>        flakes[e].<span class="hljs-title function_">update</span>();<br>        flakes[e].<span class="hljs-title function_">render</span>(ctx);<br>    &#125;<br>    <span class="hljs-comment">/*  一帧一帧的画 */</span><br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">loop</span> = <span class="hljs-title function_">requestAnimationFrame</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>        drawSnow.<span class="hljs-title function_">apply</span>(that);<br>    &#125;);<br>&#125;<br><span class="hljs-comment">/* 调用及控制方法 */</span><br><span class="hljs-keyword">var</span> snow = <span class="hljs-keyword">new</span> <span class="hljs-title function_">snowFall</span>(&#123;<span class="hljs-attr">maxFlake</span>:<span class="hljs-number">60</span>&#125;);<br>snow.<span class="hljs-title function_">start</span>();<br></code></pre></td></tr></table></figure>
+
+<p>Js</p>
+<p>然后在主题配置文件里<code>libs.js</code>里添加一行<code>snow: /libs/others/snow.js</code>。</p>
+<p>在<code>themes/matery/layout/layout.ejs</code>里添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 雪花特效 --&gt;</span><br>&lt;% if (theme.snow.enable) &#123; %&gt;<br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;%- theme.libs.js.snow %&gt;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>&lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>最后在主题配置文件最后添加：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt"># 雪花特效<br>snow:<br>  enable: true<br></code></pre></td></tr></table></figure>
+
+<p>Txt</p>
+<blockquote>
+<p>这个特效和动漫一样，有点花里胡哨，并且可能会造成卡顿，所以我并没有开启，还是给大家一个最干净的阅读体验吧。</p>
+</blockquote>
+<h2 id="动态标签栏"><a href="#动态标签栏" class="headerlink" title="动态标签栏"></a>动态标签栏</h2><p>在<code>theme/matery/layout/layout.ejs</code>下添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"> <span class="hljs-keyword">var</span> <span class="hljs-title class_">OriginTitile</span> = <span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span>, st; <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;visibilitychange&quot;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123; <span class="hljs-variable language_">document</span>.<span class="hljs-property">hidden</span> ? (<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span> = <span class="hljs-string">&quot;Σ(っ °Д °;)っ喔哟，崩溃啦！&quot;</span>, <span class="hljs-built_in">clearTimeout</span>(st)) : (<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span> = <span class="hljs-string">&quot;φ(゜▽゜*)♪咦，又好了！&quot;</span>, st = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123; <span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span> = <span class="hljs-title class_">OriginTitile</span> &#125;, <span class="hljs-number">3e3</span>)) &#125;)</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<h1 id="常见问题及解答（FAQ）"><a href="#常见问题及解答（FAQ）" class="headerlink" title="常见问题及解答（FAQ）"></a>常见问题及解答（FAQ）</h1><p>这个章节主要更新许多同学在搭建博客的过程中咨询我的一些问题。</p>
+<h2 id="为什么本地生成完ssh-key之后没有-ssh文件夹？"><a href="#为什么本地生成完ssh-key之后没有-ssh文件夹？" class="headerlink" title="为什么本地生成完ssh key之后没有.ssh文件夹？"></a>为什么本地生成完ssh key之后没有.ssh文件夹？</h2><p>这是我没有想到会遇到的问题，但是很多人还是遇到了，主要问题就是在输入完<code>ssh-keygen -t rsa -C &quot;792321264@qq.com&quot;</code>之后，很多同学没有按照提示继续输入，而是就这么结束了，然后报错了也没有发现。正确做法是按照提示，一路按回车就行了。</p>
+<h2 id="为什么代码块显示有问题？"><a href="#为什么代码块显示有问题？" class="headerlink" title="为什么代码块显示有问题？"></a>为什么代码块显示有问题？</h2><p>代码要显示正确，要注意以下几个点：</p>
+<ul>
+<li><p>根目录<code>_config.yml</code>文件下的<code>highlight</code>中的<code>line_number</code>要设置为<code>false</code>，因为行号有bug，当然如果你按照上面教程修复了bug，就可以改成<code>true</code>。</p>
+</li>
+<li><p>不要按照网上教程安装<code>kramed</code>插件，已经装了的卸载掉。</p>
+</li>
+<li><p>修改</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">node_modules<span class="hljs-regexp">/marked/</span>lib/marked.js<br></code></pre></td></tr></table></figure>
+
+<p>文件中的</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">escape</span><br></code></pre></td></tr></table></figure>
+
+<p>和</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">em</span><br></code></pre></td></tr></table></figure>
+
+<p>两行（在538行左右），改成下面：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs json">escape<span class="hljs-punctuation">:</span> /^\\(<span class="hljs-punctuation">[</span>`*\<span class="hljs-punctuation">[</span>\<span class="hljs-punctuation">]</span>()#$+\-.!_&gt;<span class="hljs-punctuation">]</span>)/<span class="hljs-punctuation">,</span><br>em<span class="hljs-punctuation">:</span> /^\*((?<span class="hljs-punctuation">:</span>\*\*|<span class="hljs-punctuation">[</span>\s\S<span class="hljs-punctuation">]</span>)+?)\*(?!\*)/<span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+</li>
+</ul>
+<h2 id="为什么博客本地预览没问题，push到github上就显示不正常？"><a href="#为什么博客本地预览没问题，push到github上就显示不正常？" class="headerlink" title="为什么博客本地预览没问题，push到github上就显示不正常？"></a>为什么博客本地预览没问题，push到github上就显示不正常？</h2><p>这个问题可能原因有很多，我暂时列举遇到的情况：</p>
+<ul>
+<li>github博客的仓库名称一定要和你的github名字完全一样，比如你github名字叫<code>abc</code>，那么仓库名字一定要是<code>abc.github.io</code>。这是大多数人会犯的错误，会导致显示不正常。</li>
+</ul>
+<h2 id="更换主题之后，配置文件是修改根目录下的还是主题目录下的？"><a href="#更换主题之后，配置文件是修改根目录下的还是主题目录下的？" class="headerlink" title="更换主题之后，配置文件是修改根目录下的还是主题目录下的？"></a>更换主题之后，配置文件是修改根目录下的还是主题目录下的？</h2><p>这个其实都要修改，一般也不会出现重复的属性。具体使用哪个，要看主题的源代码，如果是<code>config.xxx</code>那就是用的根目录配置文件，如果是<code>theme.xxx</code>那就用的是主题目录的配置文件。</p>
+<h2 id="在哪建立github分支？"><a href="#在哪建立github分支？" class="headerlink" title="在哪建立github分支？"></a>在哪建立github分支？</h2><p>点击仓库的<code>settings-branches</code>，右边点击<code>add new branch</code>即可。</p>
+<h1 id="个性化设置（beantech主题，已停更）"><a href="#个性化设置（beantech主题，已停更）" class="headerlink" title="个性化设置（beantech主题，已停更）"></a>个性化设置（beantech主题，已停更）</h1><p><strong>下面的个性化设置主要针对的是我之前使用的<code>beantech</code>主题，当然如果你想用我现在博客这个主题，可以不看这部分。这部分已经停止更新，今后我只会更新<code>matery</code>主题的各种配置。</strong></p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>网上大多数主题都是github排名第一的<code>Next</code>主题，但是我个人不是很喜欢，我更喜欢<code>beantech</code>主题，地址在<a href="https://github.com/YenYuHsuan/hexo-theme-beantech">传送门</a>。</p>
+<p>首先要注意的是，<strong>这个github项目不仅包含了主题文件，还包含了hexo的各种文件</strong>。</p>
+<p>所以首先下载下来这个项目，然后推荐将下图所有文件全部替换你原本博客根目录下的文件：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/9.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>当然一般的主题和这个主题有点不一样，只含有主题文件夹，所以把整个文件夹丢到<code>theme</code>下就行了。</p>
+<p>然后运行<code>hexo clean</code>清空所有生成的网页缓存，<code>hexo g</code>、<code>hexo d</code>。这时候新的主题网页就生成好了，博客根目录的情况应该大致如下：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/10.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="博客目录构成介绍"><a href="#博客目录构成介绍" class="headerlink" title="博客目录构成介绍"></a>博客目录构成介绍</h2><p>从上图可以看出，博客的目录结构如下：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs md"><span class="hljs-bullet">-</span> node<span class="hljs-emphasis">_modules</span><br><span class="hljs-emphasis">- public</span><br><span class="hljs-emphasis">- scaffolds</span><br><span class="hljs-emphasis">- source</span><br><span class="hljs-emphasis">    - _</span>posts<br><span class="hljs-bullet">    -</span> about<br><span class="hljs-bullet">    -</span> archive<br><span class="hljs-bullet">    -</span> img<br><span class="hljs-bullet">    -</span> tags<br><span class="hljs-bullet">-</span> themes<br></code></pre></td></tr></table></figure>
+
+<p>Md</p>
+<p><code>node_modules</code>是node.js各种库的目录，<code>public</code>是生成的网页文件目录，<code>scaffolds</code>里面就三个文件，存储着新文章和新页面的初始设置，<code>source</code>是我们最常用到的一个目录，里面存放着文章、各类页面、图像等文件，<code>themes</code>存放着主题文件，一般也用不到。</p>
+<p>我们平时写文章只需要关注<code>source/_posts</code>这个文件夹就行了。</p>
+<p>网站图片都保存在<code>D:\study\program\blog\source\img</code>目录下，可以修改成自己的图片。</p>
+<h2 id="修复文档分类bug"><a href="#修复文档分类bug" class="headerlink" title="修复文档分类bug"></a>修复文档分类bug</h2><p>这个主题文档分类功能有个bug，一直没有得到解决，直到最近，我才发现是源文件的单词拼错了。。。</p>
+<p>打开<code>D:\study\program\blog\scaffolds\post.md</code>，单词<code>catagories</code>改为<code>categories</code>。</p>
+<h2 id="添加畅言评论插件"><a href="#添加畅言评论插件" class="headerlink" title="添加畅言评论插件"></a>添加畅言评论插件</h2><p>主题自带了多说评论插件，但是多说已经关闭了，所以我换成了畅言评论插件。</p>
+<p>首先你得注册一个畅言账号，<a href="http://changyan.kuaizhan.com/">地址</a>。<br>然后打开如下页面，复制该段代码：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/11.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>打开<code>D:\study\program\blog\themes\beantech\layout\post.ejs</code>，将代码粘贴到如下位置：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/12.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>然后重新生成一下网页，可以看到效果图如下：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/13.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>更多插件例如热评话题之类的，可以自行在畅言后台找到代码添加。</p>
+<h2 id="添加图片放大功能"><a href="#添加图片放大功能" class="headerlink" title="添加图片放大功能"></a>添加图片放大功能</h2><p>首先下载<code>zooming.js</code>文件<a href="https://github.com/godweiyang/godweiyang.github.io/blob/master/js/zooming.js">地址</a>，保存在<code>D:\study\program\blog\themes\beantech\source\js</code>目录下。</p>
+<p>打开<code>D:\study\program\blog\themes\beantech\layout\post.ejs</code>，在最下方粘贴如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/js/zooming.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>然后文章里的图片就可以单击全屏啦。</p>
+<h2 id="添加数学公式显示"><a href="#添加数学公式显示" class="headerlink" title="添加数学公式显示"></a>添加数学公式显示</h2><p>打开<code>D:\study\program\blog\themes\beantech\layout\post.ejs</code>，在最下方粘贴如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>由于markdown语法与mathjax语法存在冲突，所以还需要修改源文件。</p>
+<p>打开<code>D:\study\program\blog\node_modules\marked\lib\marked.js</code><br><code>escape:</code>处替换成：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">escape<span class="hljs-punctuation">:</span> /^$<span class="hljs-punctuation">[</span>`*\<span class="hljs-punctuation">[</span>\<span class="hljs-punctuation">]</span>()#$+\-.!_&gt;<span class="hljs-punctuation">]</span>)/<br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p><code>em:</code>处替换成：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">em<span class="hljs-punctuation">:</span> /^\*((?<span class="hljs-punctuation">:</span>\*\*|<span class="hljs-punctuation">[</span>\s\S<span class="hljs-punctuation">]</span>)+?)\*(?!\*)/<br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p>这时在文章里写数学公式基本没有问题了，但是要注意：<br><strong>数学公式中如果出现了连续两个{，中间一定要加空格！</strong></p>
+<p>举个例子:<br>行内公式：y&#x3D;f(x)y&#x3D;f(x)<br>代码：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-built_in">$</span>y = f(x)<span class="hljs-built_in">$</span><br></code></pre></td></tr></table></figure>
+
+<p>Latex</p>
+<p>行间公式：</p>
+<p>y&#x3D;fg1(x)y&#x3D;fg1(x)</p>
+<p>代码：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\\</span>[y = &#123;f<span class="hljs-built_in">_</span>&#123; &#123;g<span class="hljs-built_in">_</span>1&#125;&#125;&#125;(x)<span class="hljs-keyword">\\</span>]<br></code></pre></td></tr></table></figure>
+
+<p>Latex</p>
+<p><strong>注意上面花括号之间有空格！</strong></p>
+<h2 id="添加留言板"><a href="#添加留言板" class="headerlink" title="添加留言板"></a>添加留言板</h2><p>在<code>D:\study\program\blog\themes\beantech\layout</code>中新建<code>bbs.ejs</code>，文件内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html">---<br>layout: page<br>---<br><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span><br><span class="language-css">    <span class="hljs-selector-tag">header</span><span class="hljs-selector-class">.intro-header</span>&#123;</span><br><span class="language-css">        <span class="hljs-attribute">background-position</span>: right; </span><br><span class="language-css">    &#125;</span><br><span class="language-css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><span class="hljs-comment">&lt;!-- Chinese Version --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;zh post-container&quot;</span>&gt;</span><br>    &lt;%- page.content %&gt;<br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>然后在<code>D:\study\program\blog\source</code>中新建<code>\bbs</code>文件夹，里面在新建<code>index.md</code>文件，内容如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json">---<br>layout<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;bbs&quot;</span><br>title<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;BBS&quot;</span><br>date<span class="hljs-punctuation">:</span> <span class="hljs-number">2017</span><span class="hljs-number">-09</span><span class="hljs-number">-19</span> <span class="hljs-number">12</span><span class="hljs-punctuation">:</span><span class="hljs-number">48</span><span class="hljs-punctuation">:</span><span class="hljs-number">33</span><br>description<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;欢迎交换友链，一起交流学习！&quot;</span><br>header-img<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;img/header_img/home-bg-2-dark.png&quot;</span><br>comments<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br>---<br>此处替换为你的畅言评论代码~~~<br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<h2 id="添加置顶功能"><a href="#添加置顶功能" class="headerlink" title="添加置顶功能"></a>添加置顶功能</h2><p>运行如下两条命令安装置顶插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm uninstall hexo-generator-index --save<br>npm install hexo-generator-index-pin-top --save<br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p>然后打开<code>D:\study\program\blog\themes\beantech\layout\index.ejs</code>，在如下位置添加代码：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/14.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html">&lt;% if (post.top) &#123;%&gt;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-thumb-tack&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;7D26CD&quot;</span>&gt;</span>置顶<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&lt;%&#125;%&gt;&lt; code&gt;&lt;/%&#125;%&gt;<span class="hljs-tag">&lt;&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>然后在你想置顶的文章md文件里，添加如下配置选项：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">top<span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<h2 id="添加访客人数统计和字数统计"><a href="#添加访客人数统计和字数统计" class="headerlink" title="添加访客人数统计和字数统计"></a>添加访客人数统计和字数统计</h2><p>我们使用一个国外的流量统计网站：<a href="https://godweiyang.com/2018/04/13/hexo-blog/gostats.com">gostats.com</a>，首先注册一下。</p>
+<p>然后自己添加网站地址，过程就不详细说了，然后点击<code>Get counter code</code>，选择一个自己喜欢的风格。<br>如下图所示，选择一个样式，选择<code>HTML</code>，生成代码：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/17.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>复制这段代码到<code>D:\study\program\blog\themes\beantech\layout\_partial\footer.ejs</code>，具体位置如下：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/18.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>默认的代码和我图中不一样，因为我不想点击图片跳转到它统计网站的链接，可以模仿我的自行修改。</p>
+<p>字数统计首先安装插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm i --save hexo-wordcount<br></code></pre></td></tr></table></figure>
+
+<p>Bash</p>
+<p>然后打开<code>D:\study\program\blog\themes\beantech\layout\_partial\footer.ejs</code>，添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post-count&quot;</span>&gt;</span>&lt;%= totalcount(site) %&gt; words altogether<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>Html</p>
+<p>具体位置见上图。</p>
+<h2 id="文章属性配置"><a href="#文章属性配置" class="headerlink" title="文章属性配置"></a>文章属性配置</h2><p>首先解释一下文章开头的属性配置，如下图所示：</p>
+<p><img src="https://godweiyang.com/2018/04/13/hexo-blog/19.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json">title<span class="hljs-punctuation">:</span> 文章标题<br>catalog<span class="hljs-punctuation">:</span> 是否显示段落目录<br>date<span class="hljs-punctuation">:</span> 文章日期<br>subtitle<span class="hljs-punctuation">:</span> 子标题<br>header-img<span class="hljs-punctuation">:</span> 顶部背景图片<br>top<span class="hljs-punctuation">:</span> 是否置顶<br>tags<span class="hljs-punctuation">:</span> 标签<br>categories<span class="hljs-punctuation">:</span> 分类<br></code></pre></td></tr></table></figure>
+
+<p>Json</p>
+<p>每次写文章修改每个值就行了。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/Github/" class="print-no-link">#Github</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>github博客搭建一文搞定</div>
+      <div>http://aiyoja.github.io/20220630/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年6月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/20220704/" title="[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/20220629/" title="使用git分支保存hexo博客源码到github">
+                        <span class="hidden-mobile">使用git分支保存hexo博客源码到github</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

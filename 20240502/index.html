@@ -1,0 +1,970 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="注：随着主题版本升级，主题文件内容可能有变动，请谨慎参考。  快速到达指南：  版权声明优化 添加运行时间 关于页添加评论 自定义字体 评论样式美化  前言在茫茫 Hexo 主题中，一眼选中了 Material Design 风格的 Fluid 主题。老实说基本功能已经完全够用了，可以骨子里那股折腾劲儿又来了，看着自己的网站总觉得哪儿哪儿不顺心。于是有了此贴，专门用来记录笔者自定义 Fluid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo&#39;s Fluid 主题私人定制">
+<meta property="og:url" content="http://aiyoja.github.io/20240502/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="注：随着主题版本升级，主题文件内容可能有变动，请谨慎参考。  快速到达指南：  版权声明优化 添加运行时间 关于页添加评论 自定义字体 评论样式美化  前言在茫茫 Hexo 主题中，一眼选中了 Material Design 风格的 Fluid 主题。老实说基本功能已经完全够用了，可以骨子里那股折腾劲儿又来了，看着自己的网站总觉得哪儿哪儿不顺心。于是有了此贴，专门用来记录笔者自定义 Fluid">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120027886.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120027886.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812000800.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812002839.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812002927.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003002.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202003812003531.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120403506.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120403517.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003717.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003237.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003422.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826181808.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826181457.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826184334.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200905103fff918.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/2020090510kk4055.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826200147.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200926161913.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200926161840.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/202009261dd62549.png">
+<meta property="article:published_time" content="2024-04-24T09:58:22.000Z">
+<meta property="article:modified_time" content="2024-05-09T05:26:40.719Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120027886.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Hexo&#39;s Fluid 主题私人定制 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Hexo&#39;s Fluid 主题私人定制"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-24 17:58" pubdate>
+          2024年4月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Hexo&#39;s Fluid 主题私人定制</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>注：随着主题版本升级，主题文件内容可能有变动，请谨慎参考。</p>
+</blockquote>
+<p>快速到达指南：</p>
+<ul>
+<li><a href="http://localhost:4000/posts/40222.html#%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E%E4%BC%98%E5%8C%96">版权声明优化</a></li>
+<li><a href="http://localhost:4000/posts/40222.html#%E6%B7%BB%E5%8A%A0%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4">添加运行时间</a></li>
+<li><a href="http://localhost:4000/posts/40222.html#%E5%85%B3%E4%BA%8E%E9%A1%B5%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA">关于页添加评论</a></li>
+<li><a href="http://localhost:4000/posts/40222.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93">自定义字体</a></li>
+<li><a href="http://erenship.com/posts/40222.html#%E8%AF%84%E8%AE%BA%E6%A0%B7%E5%BC%8F%E7%BE%8E%E5%8C%96">评论样式美化</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在茫茫 Hexo 主题中，一眼选中了 Material Design 风格的 <a href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid 主题</a>。老实说基本功能已经完全够用了，可以骨子里那股折腾劲儿又来了，看着自己的网站总觉得哪儿哪儿不顺心。于是有了此贴，专门用来记录笔者自定义 Fluid 主题的过程，以便日后查阅，同时也供相同主题版本的朋友参考。</p>
+<h2 id="版权声明优化"><a href="#版权声明优化" class="headerlink" title="版权声明优化"></a>版权声明优化</h2><p>目的：修改文章页底部版权声明内容，实现显示 “本文作者”、“本文地址”、“版权声明” 的内容。</p>
+<p>目前 Fluid 版本（v1.8.1）中文章末尾版权声明仅设置显示为：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120027886.png" srcset="/img/loading.gif" lazyload></p>
+<p>[<img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120027886.png" srcset="/img/loading.gif" lazyload></p>
+<p>而看到许多博客文章末尾都有完整的文章信息，例如“本文作者”，“本文地址”，“版权声明”等。</p>
+<p>在 Next 等主题中自带文章末尾可以添加“文章链接”，只需要在 <code>_config.yml</code> 中 <code>enable</code> 相应模块即可，效果如下图所示。</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812000800.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812000800.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_13-41-30"></a></p>
+<p>Snipaste_2020-08-08_13-41-30</p>
+<p>而在 Fluid 主题中则需要用户对相应配置文件进行修改。</p>
+<p>在网上搜寻方法时发现 <a href="https://github.com/julydate">七夏浅笑</a> 针对 Fluid 主题修改的版本实现了版权声明处的文章链接显示。因为都是使用 Fluid 主题，所以想着对方应该能够解答自己的疑惑所以通过邮件进行了联系。很快得到了大佬答复：</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812002839.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812002839.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_14-04-18"></a></p>
+<p>Snipaste_2020-08-08_14-04-18</p>
+<p>根据大佬的提示（还贴心地标出代码位置，小姐姐很 nice 了），并结合网上相应对版权声明修改的资料进行了操作。</p>
+<p><strong>步骤</strong></p>
+<ol>
+<li><p>打开 <code>themes\fluid\layout</code> 中的 <code>post.ejs</code> 文件；</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812002927.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812002927.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_14-10-26"></a></p>
+</li>
+<li><p>找到以下内容进行修改；</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003002.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003002.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_14-15-44"></a></p>
+<p>将红色部分替换为以下代码：</p>
+<figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bnf">   <span class="hljs-attribute">&lt;% if(theme.post.copyright.enable &amp;&amp; theme.post.copyright.content &amp;&amp; page.copyright !== false) &#123; %&gt;</span><span class="hljs-attribute">&lt;p class=&quot;note note-warning&quot;&gt;</span><br><span class="hljs-attribute">&lt;strong&gt;</span>本文作者: <span class="hljs-attribute">&lt;/strong&gt;</span><span class="hljs-attribute">&lt;a href=&quot;&lt;%- url_for() %&gt;</span>&quot;&gt;<span class="hljs-attribute">&lt;%- theme.about.name || config.author || config.title %&gt;</span><span class="hljs-attribute">&lt;/a&gt;</span> <span class="hljs-attribute">&lt;br&gt;</span><br><span class="hljs-attribute">&lt;strong&gt;</span>本文链接: <span class="hljs-attribute">&lt;/strong&gt;</span><span class="hljs-attribute">&lt;a href=&quot;&lt;%- full_url_for(page.path) %&gt;</span>&quot;&gt;<span class="hljs-attribute">&lt;%- 		  full_url_for(page.path) %&gt;</span><span class="hljs-attribute">&lt;/a&gt;</span> <span class="hljs-attribute">&lt;br&gt;</span><br><span class="hljs-attribute">&lt;strong&gt;</span>版权声明: <span class="hljs-attribute">&lt;/strong&gt;</span><span class="hljs-attribute">&lt;%- theme.post.copyright.content %&gt;</span><br>   <span class="hljs-attribute">&lt;/p&gt;</span><br>   <span class="hljs-attribute">&lt;% &#125; %&gt;</span><br><br>BNF<br></code></pre></td></tr></table></figure>
+
+<p>替换结果：</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202003812003531.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202003812003531.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_14-18-01"></a></p>
+</li>
+<li><p>保存文件，cmd <code>hexo clean</code> <code>hexo s</code> 查看效果；</p>
+</li>
+</ol>
+<p>实现目标：版权声明处添加“本文链接”并能自动生成文章链接。</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120403506.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120403506.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_14-22-34"></a></p>
+<p>Snipaste_2020-08-08_14-22-34</p>
+<ol>
+<li>cmd <code>hexo g -d</code> 部署博客。Bingo！</li>
+</ol>
+<p><strong>修改 Tag 颜色</strong></p>
+<ol>
+<li><p>根据 <a href="https://hexo.fluid-dev.com/docs/guide/#tag-%E6%8F%92%E4%BB%B6">官方文档 </a>了解到 Tag 相应的语法；</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120403517.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/202008120403517.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_14-48-24"></a></p>
+</li>
+<li><p>如果要修改 Tag 颜色只需要修改 <code>&lt;p class=&quot;note note-warning&quot;&gt;</code> 即可。</p>
+</li>
+</ol>
+<p><strong>错误做法</strong></p>
+<ol>
+<li><p>修改主题配置文件 <code>config.yml</code></p>
+<p>一开始笔者以为只需要简单的修改主题配置文件 <code>_config.yml</code> 里面版权声明处，但在“本文链接”无法正常生成链接。即使在“本文链接”后面加上代码仍然失败。</p>
+</li>
+</ol>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs gcode">&lt;a href=<span class="hljs-string">&quot;&lt;%- full_url_for(page.path) %&gt;&quot;</span>&gt;&lt;<span class="hljs-meta">%</span>- full_url_for<span class="hljs-comment">(page.path)</span> <span class="hljs-meta">%</span>&gt;&lt;/a&gt;<br><br>GCODE<br></code></pre></td></tr></table></figure>
+
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003717.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003717.png" srcset="/img/loading.gif" lazyload alt="微信图片_20200807203239"></a></p>
+<p>微信图片_20200807203239</p>
+<p> <code>hexo s</code> <code>hexo g</code> 生成结果如下图：</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003237.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003237.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-08_13-57-16"></a></p>
+<p>Snipaste_2020-08-08_13-57-16</p>
+<ol start="2">
+<li>单纯复制修改主题的代码</li>
+</ol>
+<p>前面谈到有位小姐姐修改的 <a href="https://www.erenship.com/posts/40222.html">Fluid主题</a> 能实现我的目标，我寻思着直接找她改动的代码不就行了吗。于是直接就把相应位置的代码给 copy 了过来，结果造成了页面错误。</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003422.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200812003422.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-07_23-39-01"></a></p>
+<p>Snipaste_2020-08-07_23-39-01</p>
+<p>最后进行修改调试，才恢复正常。</p>
+<h2 id="添加运行时间"><a href="#添加运行时间" class="headerlink" title="添加运行时间"></a>添加运行时间</h2><p>目的：在站点页面页脚处实时显示网站运行时间 &amp; 自定义页脚信息。</p>
+<p><strong>步骤</strong></p>
+<ol>
+<li><p>打开文件夹 <code>\themes\fluid\layout\_partial</code> 下的 <code>footer.ejs</code> 文件。</p>
+</li>
+<li><p>在任意处添加如下代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;timeDate&quot;</span>&gt;</span>载入天数...<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;times&quot;</span>&gt;</span>载入时分秒...<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">  <span class="hljs-keyword">var</span> now = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();</span><br><span class="language-javascript">  <span class="hljs-keyword">function</span> <span class="hljs-title function_">createtime</span>(<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">      <span class="hljs-keyword">var</span> grt= <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&quot;07/02/2020 00:00:00&quot;</span>);<span class="hljs-comment">//此处修改你的建站时间或者网站上线时间</span></span><br><span class="language-javascript">      now.<span class="hljs-title function_">setTime</span>(now.<span class="hljs-title function_">getTime</span>()+<span class="hljs-number">250</span>);</span><br><span class="language-javascript">      days = (now - grt ) / <span class="hljs-number">1000</span> / <span class="hljs-number">60</span> / <span class="hljs-number">60</span> / <span class="hljs-number">24</span>;</span><br><span class="language-javascript">      dnum = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(days);</span><br><span class="language-javascript">      hours = (now - grt ) / <span class="hljs-number">1000</span> / <span class="hljs-number">60</span> / <span class="hljs-number">60</span> - (<span class="hljs-number">24</span> * dnum);</span><br><span class="language-javascript">      hnum = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(hours);</span><br><span class="language-javascript">      <span class="hljs-keyword">if</span>(<span class="hljs-title class_">String</span>(hnum).<span class="hljs-property">length</span> ==<span class="hljs-number">1</span> )&#123;</span><br><span class="language-javascript">          hnum = <span class="hljs-string">&quot;0&quot;</span> + hnum;</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript">      minutes = (now - grt ) / <span class="hljs-number">1000</span> /<span class="hljs-number">60</span> - (<span class="hljs-number">24</span> * <span class="hljs-number">60</span> * dnum) - (<span class="hljs-number">60</span> * hnum);</span><br><span class="language-javascript">      mnum = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(minutes);</span><br><span class="language-javascript">      <span class="hljs-keyword">if</span>(<span class="hljs-title class_">String</span>(mnum).<span class="hljs-property">length</span> ==<span class="hljs-number">1</span> )&#123;</span><br><span class="language-javascript">                mnum = <span class="hljs-string">&quot;0&quot;</span> + mnum;</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript">      seconds = (now - grt ) / <span class="hljs-number">1000</span> - (<span class="hljs-number">24</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * dnum) - (<span class="hljs-number">60</span> * <span class="hljs-number">60</span> * hnum) - (<span class="hljs-number">60</span> * mnum);</span><br><span class="language-javascript">      snum = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(seconds);</span><br><span class="language-javascript">      <span class="hljs-keyword">if</span>(<span class="hljs-title class_">String</span>(snum).<span class="hljs-property">length</span> ==<span class="hljs-number">1</span> )&#123;</span><br><span class="language-javascript">                snum = <span class="hljs-string">&quot;0&quot;</span> + snum;</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript">      <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;timeDate&quot;</span>).<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;🚀 for&amp;nbsp&quot;</span>+dnum+<span class="hljs-string">&quot;&amp;nbspdays&quot;</span>;  <span class="hljs-comment">//此次自定义显示内容</span></span><br><span class="language-javascript">      <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;times&quot;</span>).<span class="hljs-property">innerHTML</span> = hnum + <span class="hljs-string">&quot;&amp;nbsphr&amp;nbsp&quot;</span> + mnum + <span class="hljs-string">&quot;&amp;nbspmin&amp;nbsp&quot;</span> + snum + <span class="hljs-string">&quot;&amp;nbspsec&quot;</span>;</span><br><span class="language-javascript">  &#125;  <span class="hljs-comment">//此次自定义显示内容</span></span><br><span class="language-javascript">  <span class="hljs-built_in">setInterval</span>(<span class="hljs-string">&quot;createtime()&quot;</span>,<span class="hljs-number">250</span>);</span><br><span class="language-javascript">  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br>XML<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在标注处修改你自己的建站时间，同时自定义显示内容。例如笔者自定义的内容就是 “🚀 for 55 days 18 hr 09 min 37 sec”。</p>
+</li>
+<li><p>（可选）修改字体样式和大小：<a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826181808.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826181808.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-26_18-17-54"></a></p>
+</li>
+<li><p>修改页脚信息，只需将 <code>footer.ejs</code> 中对应位置改为你想显示的内容即可。例如笔者的代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-center py-1&quot;</span>&gt;</span>   <br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Copyright © 2020<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://erenspace.cool/&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;nofollow noopener&quot;</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Eren‘s Spaceship<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br>XML<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>实现效果：</p>
+</li>
+</ol>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826181457.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826181457.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-26_18-14-44"></a></p>
+<p>Snipaste_2020-08-26_18-14-44</p>
+<h2 id="关于页添加评论"><a href="#关于页添加评论" class="headerlink" title="关于页添加评论"></a>关于页添加评论</h2><p>目的：在关于页添加评论功能，以实现更好的博客互动。</p>
+<p>本文以 Valine 评论系统作为示范。</p>
+<p><strong>步骤</strong></p>
+<ol>
+<li><p>打开之前自行创建的关于页 <code>.md</code> 文件：<a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826184334.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826184334.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-26_18-43-02"></a></p>
+</li>
+<li><p>在你想要的位置添加 Valine 评论系统的代码。你可在别处 CCS 文件找到你对应的 Valine 评论系统代码，也可以直接复制以下代码（复制用纯文本，这样才是 HTML 代码，否则系统会以为是文章内容代码）。<strong>注意将 app_id 和 app_key 换成你自己的。</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;vcomments&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">   <span class="hljs-keyword">function</span> <span class="hljs-title function_">loadValine</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">     <span class="hljs-title function_">addScript</span>(<span class="hljs-string">&#x27;https://cdn.staticfile.org/valine/1.4.14/Valine.min.js&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">       <span class="hljs-keyword">new</span> <span class="hljs-title class_">Valine</span>(&#123;</span><br><span class="language-javascript">         <span class="hljs-attr">el</span>: <span class="hljs-string">&quot;#vcomments&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">app_id</span>: <span class="hljs-string">&quot;填写在 Leancloud 中的数据&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">app_key</span>: <span class="hljs-string">&quot;填写在 Leancloud 中的数据&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">placeholder</span>: <span class="hljs-string">&quot;留下点什么叭... ᶘ ᵒᴥᵒᶅ（自行修改）&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">path</span>: <span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">pathname</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">avatar</span>: <span class="hljs-string">&quot;monsterid&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">meta</span>: [<span class="hljs-string">&quot;nick&quot;</span>,<span class="hljs-string">&quot;mail&quot;</span>,<span class="hljs-string">&quot;link&quot;</span>],</span><br><span class="language-javascript">         <span class="hljs-attr">pageSize</span>: <span class="hljs-string">&quot;10&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">lang</span>: <span class="hljs-string">&quot;zh-CN&quot;</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">highlight</span>: <span class="hljs-literal">false</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">recordIP</span>: <span class="hljs-literal">false</span>,</span><br><span class="language-javascript">         <span class="hljs-attr">serverURLs</span>: <span class="hljs-string">&quot;&quot;</span>,</span><br><span class="language-javascript">       &#125;);</span><br><span class="language-javascript">     &#125;);</span><br><span class="language-javascript">   &#125;</span><br><span class="language-javascript">   <span class="hljs-title function_">createObserver</span>(loadValine, <span class="hljs-string">&#x27;vcomments&#x27;</span>);</span><br><span class="language-javascript"> </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://valine.js.org&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;nofollow noopener noopener&quot;</span>&gt;</span>comments<br>     powered by Valine.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span><br><br>XML<br></code></pre></td></tr></table></figure>
+
+<p>实现效果参考：<a href="https://erenship.com/about/">https://erenship.com/about/</a></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>由于在使用覆盖方式升级 Fluid 主题到 1.8.3 后关于页评论板块消失。更新添加评论方法。</p>
+<p>打开 <code>\themes\fluid\layout</code> 文件下的 <code>about.ejs</code> 文件，在文件末尾添加以下评论代码即可。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs xquery">&lt;% <span class="hljs-keyword">if</span>(theme.valine.appid &amp;&amp; theme.valine.appkey)&#123; %&gt;<br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;vcomments&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">    <span class="hljs-keyword">function</span> <span class="hljs-title function_">loadValine</span>(<span class="hljs-params"></span>) </span></span><span class="language-xquery">&#123;</span><br><span class="language-xquery">      addScript(<span class="hljs-string">&#x27;&lt;%= url_join(theme.static_prefix.valine, &#x27;</span>Valine<span class="hljs-built_in">.min</span>.js<span class="hljs-string">&#x27;) %&gt;&#x27;</span>, <span class="hljs-keyword">function</span> () &#123;</span><br><span class="language-xquery">        new Valine(&#123;</span><br><span class="language-xquery">          el: <span class="hljs-string">&quot;#vcomments&quot;</span>,</span><br><span class="language-xquery">          app_id: <span class="hljs-string">&quot;&lt;%= theme.valine.appid %&gt;&quot;</span>,</span><br><span class="language-xquery">          app_key: <span class="hljs-string">&quot;&lt;%= theme.valine.appkey %&gt;&quot;</span>,</span><br><span class="language-xquery">          placeholder: <span class="hljs-string">&quot;&lt;%= theme.valine.placeholder %&gt;&quot;</span>,</span><br><span class="language-xquery">         <span class="hljs-built_in"> path</span>: &lt;%= theme.valine<span class="hljs-built_in">.path</span> %&gt;,</span><br><span class="language-xquery">          avatar: <span class="hljs-string">&quot;&lt;%= theme.valine.avatar %&gt;&quot;</span>,</span><br><span class="language-xquery">          meta: &lt;<span class="hljs-meta">%-</span> JSON.stringify(theme.valine.meta || []) %&gt;,</span><br><span class="language-xquery">          pageSize: <span class="hljs-string">&quot;&lt;%= theme.valine.pageSize %&gt;&quot;</span>,</span><br><span class="language-xquery">         <span class="hljs-built_in"> lang</span>: <span class="hljs-string">&quot;&lt;%= theme.valine.lang %&gt;&quot;</span>,</span><br><span class="language-xquery">          highlight: &lt;%= theme.valine.highlight %&gt;,</span><br><span class="language-xquery">          recordIP: &lt;%= theme.valine.recordIP %&gt;,</span><br><span class="language-xquery">          serverURLs: <span class="hljs-string">&quot;&lt;%= theme.valine.serverURLs %&gt;&quot;</span>,</span><br><span class="language-xquery">        &#125;</span><span class="language-xml"><span class="language-javascript">);</span></span><br><span class="language-javascript"><span class="language-xml">      &#125;);</span></span><br><span class="language-javascript"><span class="language-xml">    &#125;</span></span><br><span class="language-javascript"><span class="language-xml">    <span class="hljs-title function_">waitElementVisible</span>(<span class="hljs-string">&#x27;vcomments&#x27;</span>, loadValine);</span></span><br><span class="language-javascript"><span class="language-xml">  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br>  <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>Please enable JavaScript to view the </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://valine.js.org&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;nofollow noopener&quot;</span>&gt;</span>comments</span><br><span class="language-xml">      powered by Valine.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span></span><br>&lt;% &#125; %&gt;<br><br>XQUERY<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="自定义字体"><a href="#自定义字体" class="headerlink" title="自定义字体"></a>自定义字体</h2><p>目的：在网站中引入自定义字体；</p>
+<p>本教程以引入思源宋体为例。</p>
+<p>如需引入本地字体，可使用 <a href="http://font-spider.org/">字蛛（font-spider）</a> 对字体文件进行压缩，但由于未知原因笔者使用字蛛压缩失败。故而使用在线托管字体网址进行字体引用。</p>
+<p>字体，作为影响网页美观的重要因素。我们常常需要个性化字体来突显网站的风格。但由于中文字体不同于英文字体只需覆盖 26 个字母 ，中文字体包由于包含大量中文字库，其文件大小通常有几兆甚至十几兆。这给网页浏览来带极大的流量负担，拖慢加载速度，影响用户体验。</p>
+<p>在 <a href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%A8%E5%B1%80%E5%AD%97%E4%BD%93">Fluid 官方文档</a> 中也建议使用系统自带字体。</p>
+<blockquote>
+<p>需要注意：</p>
+<ul>
+<li>最好使用系统自带的字体，否则需要通过<a href="https://hexo.fluid-dev.com/docs/guide/#%E8%87%AA%E5%AE%9A%E4%B9%89-js-css-html">自定义功能</a>额外引入 <code>@font-face</code>，字体一般较大，不建议引入；</li>
+<li>应当至少添加一个通用的字体族名（如 serif，具体见上方链接文章）。</li>
+</ul>
+</blockquote>
+<p>但是，这怎么能止住我们追求美的脚步呢？</p>
+<h3 id="引入字体"><a href="#引入字体" class="headerlink" title="引入字体"></a>引入字体</h3><p>2018 年在 Google Fonts 上已经托管了思源宋体，所以我们可以直接通过托管引入到我们的博客中。打开 <a href="https://fonts.google.com/">Google Fonts</a>，搜索思源宋体的英文名：<code>Noto Serif SC</code>，在列表中选择我们个人觉得合适的字体样式，点击右侧的 <code>Select this style</code>，注意此处可根据自己需要选择多个样式。关于字体引用概念和前期准备工作请参考以下教程，在 <strong>本地设置</strong> 中会针对 Fluid 主题的自定义操作进行讲解。</p>
+<p>参考教程：<a href="https://bestzuo.cn/posts/notoserifsc.html">https://bestzuo.cn/posts/notoserifsc.html</a></p>
+<h3 id="本地设置"><a href="#本地设置" class="headerlink" title="本地设置"></a>本地设置</h3><ol>
+<li><p>在按照上述教程将 代码复制好之后，打开 <code>\themes\fluid\layout\_partial</code> 目录下的 <code>head.ejs</code> 文件，将引入链接添加进文档中。</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200905103fff918.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200905103fff918.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-09-05_10-37-29"></a></p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/2020090510kk4055.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/2020090510kk4055.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-09-05_10-40-47"></a></p>
+</li>
+<li><p>将字体英文名称添加到 <code>\themes\fluid\source\css\variables\</code> 目录下的 <code>base.styl</code> 文件中，具体位置为 <code>font-family:</code> 。例如笔者引入的字体位思源宋体，其英文名称为 “Noto Serif SC”。</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826200147.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo/img/20200826200147.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-08-26_20-01-37"></a></p>
+</li>
+</ol>
+<p>至此，我们就完成了自定义字体引入。你可以执行部署命令来检查是否成功引入。</p>
+<h2 id="评论样式美化"><a href="#评论样式美化" class="headerlink" title="评论样式美化"></a>评论样式美化</h2><p>目的：展现评论者身份标识</p>
+<p>由于当前版本的 Valine 不能实现评论者身份标识的功能，所以我们需要使用魔改版的 Valine。</p>
+<ul>
+<li><p>打开 <code>\themes\fluid\layout\_partial\comments</code> 中的 <code>valine.ejs</code> 文件，替换红标处内容为<code>https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js</code></p>
+</li>
+<li><p>新增以下内容。</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">master:</span> <span class="hljs-string">&quot;&lt;%= theme.valine.master%&gt;&quot;</span>,<br><span class="hljs-symbol">friends:</span> <span class="hljs-string">&quot;&lt;%= theme.valine.friends%&gt;&quot;</span>,<br><span class="hljs-symbol">tagMeta:</span> [<span class="hljs-string">&quot;博主&quot;</span>,<span class="hljs-string">&quot;友人&quot;</span>,<span class="hljs-string">&quot;访客&quot;</span>],<br><br>AVRASM<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200926161913.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200926161913.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-09-26_16-10-32"></a></p>
+<p>Snipaste_2020-09-26_16-10-32</p>
+<ul>
+<li>打开主题配置文件 <code>\MyBlog\source\_data</code> 在 valine 评论系统处新增</li>
+</ul>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">master:</span> b20c2cxxxxd422dc29ec7a5a3bd66f2ad <span class="hljs-meta"># 你邮箱的md5加密(百度md5在线加密)</span><br><span class="hljs-symbol">friends:</span> a9126a74dxxxx638def0b16025,<span class="hljs-number">0173939</span>xxxxx32a8cffc288b046dc <span class="hljs-meta"># 好友邮箱的md5加密</span><br><br>AVRASM<br></code></pre></td></tr></table></figure>
+
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200926161840.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/20200926161840.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-09-26_16-15-02"></a></p>
+<p>Snipaste_2020-09-26_16-15-02</p>
+<ul>
+<li><code>hexo s</code> , <code>hexo g -d</code> 重新部署便能看到效果。</li>
+<li>若想在关于页也实现这样的效果，则对应地在<code>about.ejs</code> 里更新相关代码。</li>
+</ul>
+<p> 效果图：</p>
+<p><a href="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/202009261dd62549.png"><img src="https://cdn.jsdelivr.net/gh/erenlu/PicGo//img/202009261dd62549.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2020-09-26_16-21-34"></a></p>
+<p>Snipaste_2020-09-26_16-21-34</p>
+<p>生命在于折腾。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://hexo.fluid-dev.com/docs/guide/#%E4%B8%BB%E9%A2%98%E7%AE%80%E4%BB%8B">Fluid配置文档</a></li>
+<li><a href="https://github.com/qixa/hexo-theme-fluid-mod">Hexo Fluid 主题 UI 修改版</a></li>
+<li><a href="https://largesse.12306.recipes/posts/3c2a5351.html">Hexo Fluid主题 添加自定义字体</a></li>
+<li><a href="https://bestzuo.cn/posts/notoserifsc.html#%E4%BD%BF%E7%94%A8%E6%80%9D%E6%BA%90%E5%AE%8B%E4%BD%93">博客网站字体设置：思源宋体</a></li>
+<li><a href="https://bestzuo.cn/posts/763113948.html">博客Valine评论样式美化</a></li>
+<li><a href="https://lovelijunyi.gitee.io/posts/e52c.html">Valine评论系统详解</a></li>
+</ul>
+<hr>
+<p><a href="https://www.erenship.com/categories/DIY-Pie/">DIY Pie</a></p>
+<p> <a href="https://www.erenship.com/tags/Hexo/">#Hexo</a> <a href="https://www.erenship.com/tags/Fluid/">#Fluid</a> <a href="https://www.erenship.com/tags/Blog/">#Blog</a></p>
+<p>Hexo’s Fluid 主题私人定制（持续更新）</p>
+<p><a href="https://erenship.com/posts/40222.html">https://erenship.com/posts/40222.html</a></p>
+<p>Author</p>
+<p>Eren</p>
+<p>Posted on</p>
+<p>August 8, 2020</p>
+<p>Licensed under</p>
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> </a><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> </a><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">  </a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Hexo&#39;s Fluid 主题私人定制</div>
+      <div>http://aiyoja.github.io/20240502/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/product%2093556/" title="携程93556产品表">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">携程93556产品表</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/20240501/" title="基于gitee+hexo搭建个人博客">
+                        <span class="hidden-mobile">基于gitee+hexo搭建个人博客</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,905 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="☞&#x3D;&#x3D;前言&#x3D;&#x3D; 之前用的yilia主题，最近换了matery主题，也折腾的许多东西，抽空把一些自己个性化定制的内容整理一下，整理内容是官方文档里没有的，官方文档链接贴在下方，有需要个性化修改的可以来参考此篇文章，仅代表个人审美，有瑕疵的地方还请指出，谢谢！  先贴出matery主题的官方文档 ☞个性化定制修改☞添加404页面步骤：在你的博客根目录source">
+<meta property="og:type" content="article">
+<meta property="og:title" content="matery主题个性化定制">
+<meta property="og:url" content="http://aiyoja.github.io/20220707/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="☞&#x3D;&#x3D;前言&#x3D;&#x3D; 之前用的yilia主题，最近换了matery主题，也折腾的许多东西，抽空把一些自己个性化定制的内容整理一下，整理内容是官方文档里没有的，官方文档链接贴在下方，有需要个性化修改的可以来参考此篇文章，仅代表个人审美，有瑕疵的地方还请指出，谢谢！  先贴出matery主题的官方文档 ☞个性化定制修改☞添加404页面步骤：在你的博客根目录source">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-06T08:38:16.000Z">
+<meta property="article:modified_time" content="2022-07-06T08:41:48.000Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Matery">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>matery主题个性化定制 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="matery主题个性化定制"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-06 16:38" pubdate>
+          2022年7月6日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          32 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">matery主题个性化定制</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="☞-前言"><a href="#☞-前言" class="headerlink" title="☞&#x3D;&#x3D;前言&#x3D;&#x3D;"></a><a href="https://qvchuang.top/archives/d3c10307.html#%E5%89%8D%E8%A8%80">☞</a>&#x3D;&#x3D;前言&#x3D;&#x3D;</h3><blockquote>
+<p>之前用的yilia主题，最近换了matery主题，也折腾的许多东西，抽空把一些自己个性化定制的内容整理一下，整理内容是官方文档里没有的，官方文档链接贴在下方，有需要个性化修改的可以来参考此篇文章，仅代表个人审美，有瑕疵的地方还请指出，谢谢！</p>
+</blockquote>
+<p>先贴出<a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"><strong>matery主题</strong></a>的官方文档</p>
+<h3 id="☞个性化定制修改"><a href="#☞个性化定制修改" class="headerlink" title="☞个性化定制修改"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-fbeee2-color-000-%E4%B8%AA%E6%80%A7%E5%8C%96%E5%AE%9A%E5%88%B6%E4%BF%AE%E6%94%B9-div">☞</a>个性化定制修改</h3><h4 id="☞添加404页面"><a href="#☞添加404页面" class="headerlink" title="☞添加404页面"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E6%B7%BB%E5%8A%A0404%E9%A1%B5%E9%9D%A2-div">☞</a>添加404页面</h4><p>步骤：在你的博客根目录source里新建一个404.md，内容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-number">404</span><br><span class="hljs-attr">date:</span> <br><span class="hljs-attr">type:</span> <span class="hljs-string">&quot;404&quot;</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">&quot;404&quot;</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Oops～，你来到了没有知识的荒原！ :(&quot;</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+<p>然后在&#x2F;themes&#x2F;matery&#x2F;layout&#x2F;目录下新建一个404.ejs文件，内容如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span><br><span class="language-css">    <span class="hljs-comment">/* don&#x27;t remove. */</span></span><br><span class="language-css">    <span class="hljs-selector-class">.about-cover</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">height</span>: <span class="hljs-number">75vh</span>;</span><br><span class="language-css">    &#125;</span><br><span class="language-css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-cover pd-header about-cover&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col s10 offset-s1 m8 offset-m2 l8 offset-l2&quot;</span>&gt;</span><br>                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;brand&quot;</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title center-align&quot;</span>&gt;</span><br>                        404<br>                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;description center-align&quot;</span>&gt;</span><br>                        &lt;%= page.description %&gt;<br>                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-comment">// 每天切换 banner 图.  Switch banner image every day.</span></span><br><span class="language-javascript">    $(<span class="hljs-string">&#x27;.bg-cover&#x27;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&#x27;background-image&#x27;</span>, <span class="hljs-string">&#x27;url(/medias/banner/&#x27;</span> + <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>().<span class="hljs-title function_">getDay</span>() + <span class="hljs-string">&#x27;.jpg)&#x27;</span>);</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="☞修改首页轮播图高度"><a href="#☞修改首页轮播图高度" class="headerlink" title="☞修改首页轮播图高度"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E4%BF%AE%E6%94%B9%E9%A6%96%E9%A1%B5%E8%BD%AE%E6%92%AD%E5%9B%BE%E9%AB%98%E5%BA%A6-div">☞</a>修改首页轮播图高度</h4><p>打开themes&#x2F;matery&#x2F;source&#x2F;libs&#x2F;materialize&#x2F;materialize.min.css文件(<code>ctrl+f</code>搜索<code>.carousel.carousel-slider .carousel-item</code>)修改style属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">height</span>:<span class="hljs-number">50%</span>;<span class="hljs-attribute">min-height</span>:<span class="hljs-number">550px</span>;<br></code></pre></td></tr></table></figure>
+
+<p>打开themes&#x2F;matery&#x2F;source&#x2F;css&#x2F;matery.css文件(<code>ctrl+f</code>搜索<code>.index-card</code>)修改style属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">410px</span>;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>根据自己的实际情况调整，可以浏览器F12调整好再做修改<br>这里只是告诉你要在哪里改css参数，参数根据自己喜好修改</p>
+</blockquote>
+<p>修改后首页的一行小图标：github 、email 、qq 、rss订阅对手机全面屏幕不是太适配，懒得调整css了，索性就把这一行删掉了：</p>
+<p>打开themes&#x2F;matery&#x2F;layout&#x2F;_partial&#x2F;index-cover.ejs文件(<code>ctrl+f</code>搜索<code>cover-social-link</code>)第82行</p>
+<p>然后直接删除这行代码，这行图标就消失了</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">&lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;cover-social-link&quot;</span>&gt;&lt;%- partial(<span class="hljs-string">&#x27;_partial/social-link&#x27;</span>) %&gt;&lt;/<span class="hljs-keyword">div</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞分类页和标签页合并"><a href="#☞分类页和标签页合并" class="headerlink" title="☞分类页和标签页合并"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%88%86%E7%B1%BB%E9%A1%B5%E5%92%8C%E6%A0%87%E7%AD%BE%E9%A1%B5%E5%90%88%E5%B9%B6-div">☞</a>分类页和标签页合并</h4><p>首先在主题的配置文件_config.yml中找到menu项，注释掉Tags</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">Tags:</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"> url: /tags</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"> icon: fa-tags</span><br></code></pre></td></tr></table></figure>
+
+<p>打开layout&#x2F;tags.ejs把第5行（文章标签）<strong>复制</strong>粘贴到layout&#x2F;categories.ejs中去，这里只复制了文章标签内容，下面的词云未复制，可以根据自己需要</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">&lt;<span class="hljs-meta">%</span>- partial<span class="hljs-comment">(&#x27;_widget/tag-cloud&#x27;)</span> <span class="hljs-meta">%</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>打开layout&#x2F;about.ejs把第46行（文章统计图）<strong>剪切</strong>粘贴到layout&#x2F;categories.ejs中去，这里只把文章统计图位置换到了分类页面去，其他的可以根据自己需要自由转移</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">&lt;<span class="hljs-meta">%</span>- partial<span class="hljs-comment">(&#x27;_widget/post-charts&#x27;)</span> <span class="hljs-meta">%</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>下面是整理后的categories.ejs文档内容</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs csharp">&lt;%- <span class="hljs-keyword">partial</span>(<span class="hljs-string">&#x27;_partial/bg-cover&#x27;</span>) %&gt;<br><br>&lt;main <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;<br><br>    &lt;%- <span class="hljs-keyword">partial</span>(<span class="hljs-string">&#x27;_widget/category-cloud&#x27;</span>) %&gt;<br><br>    &lt;%- <span class="hljs-keyword">partial</span>(<span class="hljs-string">&#x27;_widget/tag-cloud&#x27;</span>) %&gt;<br><br>    &lt;% <span class="hljs-keyword">if</span> (site.categories &amp;&amp; site.categories.length &gt; <span class="hljs-number">0</span>) &#123; %&gt;<br>    &lt;%- <span class="hljs-keyword">partial</span>(<span class="hljs-string">&#x27;_widget/category-radar&#x27;</span>) %&gt;<br>    &lt;% &#125; %&gt;<br><br>    &lt;%- <span class="hljs-keyword">partial</span>(<span class="hljs-string">&#x27;_widget/post-charts&#x27;</span>) %&gt;<br><br><br>&lt;/main&gt;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞“关于”页面增加简历"><a href="#☞“关于”页面增加简历" class="headerlink" title="☞“关于”页面增加简历"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%85%B3%E4%BA%8E-%E9%A1%B5%E9%9D%A2%E5%A2%9E%E5%8A%A0%E7%AE%80%E5%8E%86-div">☞</a>“关于”页面增加简历</h4><p>打开&#x2F;themes&#x2F;matery&#x2F;layout&#x2F;about.ejs，找到<code>&lt;div class=&quot;card&quot;&gt;</code>标签，然后找到它对应的标签，接在后面新增一个card，语句如下：</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs erb"><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card&quot;</span>&gt;</span></span><br><span class="language-xml">  		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-content&quot;</span>&gt;</span></span><br><span class="language-xml">      		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-content article-card-content&quot;</span>&gt;</span></span><br><span class="language-xml">              		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title center-align&quot;</span> <span class="hljs-attr">data-aos</span>=<span class="hljs-string">&quot;zoom-in-up&quot;</span>&gt;</span></span><br><span class="language-xml">                  		<span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-address-book&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-symbol">&amp;nbsp;</span>&lt;%-</span><span class="language-ruby"> __(<span class="hljs-string">&#x27;我的简历&#x27;</span>) </span><span class="language-xml">%&gt;</span><br><span class="language-xml">              		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">              		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;articleContent&quot;</span> <span class="hljs-attr">data-aos</span>=<span class="hljs-string">&quot;fade-up&quot;</span>&gt;</span></span><br><span class="language-xml">                  		&lt;%-</span><span class="language-ruby"> page.content </span><span class="language-xml">%&gt;</span><br><span class="language-xml">              		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">  		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<p>注意粘贴的位置和空格要正确，这里的位置随你自己设置，你也可以把简历作为第一个card</p>
+<p>然后在&#x2F;source&#x2F;about&#x2F;index.md下面写上你的简历了（就像写博客一样）</p>
+<h4 id="☞添加视听页面"><a href="#☞添加视听页面" class="headerlink" title="☞添加视听页面"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E6%B7%BB%E5%8A%A0%E8%A7%86%E5%90%AC%E9%A1%B5%E9%9D%A2-div">☞</a>添加视听页面</h4><p>步骤：在你的博客根目录source里新建music&#x2F;index.md</p>
+<p>编辑你刚刚新建的页面文件&#x2F;source&#x2F;music&#x2F;index.md ,至少需要以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">视听</span><br><span class="hljs-attr">date:</span> <br><span class="hljs-attr">type:</span> <span class="hljs-string">&quot;music&quot;</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">&quot;music&quot;</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+<p>然后在&#x2F;themes&#x2F;matery&#x2F;layout&#x2F;目录下新建一个music.ejs文件，博主是把首页的我的梦想、音乐、视频内容剪切粘贴过来的，步骤如下：</p>
+<p>打开&#x2F;themes&#x2F;matery&#x2F;layout&#x2F;index.md复制以下内容到music.ejs文件：</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs axapta">&lt;main <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;<br><br>    &lt;% <span class="hljs-keyword">if</span> (page.current === <span class="hljs-number">1</span>) &#123; %&gt;<br>    &lt;<span class="hljs-keyword">div</span> id=<span class="hljs-string">&quot;indexCard&quot;</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;index-card&quot;</span>&gt;<br>        &lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;container &quot;</span>&gt;<br>            &lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;card&quot;</span>&gt;<br>                &lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;card-content&quot;</span>&gt;<br>                    &lt;% <span class="hljs-keyword">if</span> (theme.dream.enable) &#123; %&gt;<br>                        &lt;%- partial(<span class="hljs-string">&#x27;_widget/dream&#x27;</span>) %&gt;<br>                    &lt;% &#125; %&gt;<br><br>                    &lt;% <span class="hljs-keyword">if</span> (theme.music.enable &amp;&amp; site.data &amp;&amp; site.data.musics) &#123; %&gt;<br>                        &lt;%- partial(<span class="hljs-string">&#x27;_widget/music&#x27;</span>) %&gt;<br>                    &lt;% &#125; %&gt;<br><br>                    &lt;% <span class="hljs-keyword">if</span> (theme.video.enable) &#123; %&gt;<br>                        &lt;%- partial(<span class="hljs-string">&#x27;_widget/video&#x27;</span>) %&gt;<br>                    &lt;% &#125; %&gt;<br><br>                    &lt;<span class="hljs-keyword">div</span> id=<span class="hljs-string">&quot;recommend-sections&quot;</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">&quot;recommend&quot;</span>&gt;<br>                        &lt;%- partial(<span class="hljs-string">&#x27;_widget/recommend&#x27;</span>) %&gt;<br>                    &lt;/<span class="hljs-keyword">div</span>&gt;<br>                &lt;/<span class="hljs-keyword">div</span>&gt;<br>            &lt;/<span class="hljs-keyword">div</span>&gt;<br>        &lt;/<span class="hljs-keyword">div</span>&gt;<br>    &lt;/<span class="hljs-keyword">div</span>&gt;<br>    &lt;% &#125; %&gt;<br></code></pre></td></tr></table></figure>
+
+<p><strong>下面比较绕了：</strong></p>
+<p>上面步骤操作完之后：</p>
+<p>删除index.ejs文件中的代码(我的梦想、音乐、视频，可以根据自己爱好选择)如下：</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs gcode">&lt;<span class="hljs-meta">%</span> <span class="hljs-keyword">if</span> <span class="hljs-comment">(theme.dream.enable)</span> &#123; <span class="hljs-meta">%</span>&gt;<br>    &lt;<span class="hljs-meta">%</span>- partial<span class="hljs-comment">(&#x27;_widget/dream&#x27;)</span> <span class="hljs-meta">%</span>&gt;<br>&lt;<span class="hljs-meta">%</span> &#125; <span class="hljs-meta">%</span>&gt;<br><br>&lt;<span class="hljs-meta">%</span> <span class="hljs-keyword">if</span> <span class="hljs-comment">(theme.music.enable &amp;&amp; site.data &amp;&amp; site.data.musics)</span> &#123; <span class="hljs-meta">%</span>&gt;<br>    &lt;<span class="hljs-meta">%</span>- partial<span class="hljs-comment">(&#x27;_widget/music&#x27;)</span> <span class="hljs-meta">%</span>&gt;<br>&lt;<span class="hljs-meta">%</span> &#125; <span class="hljs-meta">%</span>&gt;<br>					<br>&lt;<span class="hljs-meta">%</span> <span class="hljs-keyword">if</span> <span class="hljs-comment">(theme.video.enable)</span> &#123; <span class="hljs-meta">%</span>&gt;<br>    &lt;<span class="hljs-meta">%</span>- partial<span class="hljs-comment">(&#x27;_widget/video&#x27;)</span> <span class="hljs-meta">%</span>&gt;<br>&lt;<span class="hljs-meta">%</span> &#125; <span class="hljs-meta">%</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>删除music.ejs文件中的代码（文章置顶）如下：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;recommend-sections&quot;</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">&quot;recommend&quot;</span>&gt;<br>    &lt;%- partial(&#x27;_widget/recommend&#x27;) %&gt;<br>&lt;/<span class="hljs-keyword">div</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>再在主题配置文件<code>menu</code>中增加</p>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">视听</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">url</span><span class="hljs-punctuation">:</span> <span class="hljs-string">/music</span><br>    <span class="hljs-attribute">icon</span><span class="hljs-punctuation">:</span> <span class="hljs-string">fa fa-music</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="☞最后贴出修改后完整的music-ejs文件代码"><a href="#☞最后贴出修改后完整的music-ejs文件代码" class="headerlink" title="☞最后贴出修改后完整的music.ejs文件代码"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecf3-color-000-%E6%9C%80%E5%90%8E%E8%B4%B4%E5%87%BA%E4%BF%AE%E6%94%B9%E5%90%8E%E5%AE%8C%E6%95%B4%E7%9A%84music-ejs%E6%96%87%E4%BB%B6%E4%BB%A3%E7%A0%81-div">☞</a>最后贴出修改后完整的music.ejs文件代码</h5><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs xquery">&lt;<span class="hljs-meta">%-</span> partial(<span class="hljs-string">&#x27;_partial/bg-cover&#x27;</span>) %&gt;<br><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span></span><br><span class="language-xml"></span><br><span class="language-xml">    </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;indexCard&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;index-card&quot;</span>&gt;</span></span><br><span class="language-xml">        </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container &quot;</span>&gt;</span></span><br><span class="language-xml">            </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card&quot;</span>&gt;</span></span><br><span class="language-xml">                </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-content&quot;</span>&gt;</span></span><br><span class="language-xml">                    &lt;% if (theme.dream.enable) </span><span class="language-xquery">&#123; %&gt;</span><br><span class="language-xquery">                        &lt;<span class="hljs-meta">%-</span> partial(<span class="hljs-string">&#x27;_widget/dream&#x27;</span>) %&gt;</span><br><span class="language-xquery">                    &lt;% &#125;</span><span class="language-xml"> %&gt;</span><br><span class="language-xml"></span><br><span class="language-xml">                    &lt;% if (theme.music.enable &amp;&amp; site.data &amp;&amp; site.data.musics) </span><span class="language-xquery">&#123; %&gt;</span><br><span class="language-xquery">                        &lt;<span class="hljs-meta">%-</span> partial(<span class="hljs-string">&#x27;_widget/music&#x27;</span>) %&gt;</span><br><span class="language-xquery">                    &lt;% &#125;</span><span class="language-xml"> %&gt;</span><br><span class="language-xml"></span><br><span class="language-xml">                    &lt;% if (theme.video.enable) </span><span class="language-xquery">&#123; %&gt;</span><br><span class="language-xquery">                        &lt;<span class="hljs-meta">%-</span> partial(<span class="hljs-string">&#x27;_widget/video&#x27;</span>) %&gt;</span><br><span class="language-xquery">                    &lt;% &#125;</span><span class="language-xml"> %&gt;</span><br><span class="language-xml"></span><br><span class="language-xml">                    </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;recommend-sections&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;recommend&quot;</span>&gt;</span></span><br><span class="language-xml">                        </span><br><span class="language-xml">                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml">                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="language-xml"></span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<h4 id="☞修改导航栏颜色"><a href="#☞修改导航栏颜色" class="headerlink" title="☞修改导航栏颜色"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E4%BF%AE%E6%94%B9%E5%AF%BC%E8%88%AA%E6%A0%8F%E9%A2%9C%E8%89%B2-div">☞</a>修改导航栏颜色</h4><p>打开themes&#x2F;matery&#x2F;source&#x2F;css&#x2F;matery.css文件(165行):修改自己想要的颜色</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.bg-color</span> &#123;<br>    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">linear-gradient</span>(to right, <span class="hljs-number">#2eab9f</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#EE82EE</span> <span class="hljs-number">100%</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞修改导航栏右上角github角标颜色"><a href="#☞修改导航栏右上角github角标颜色" class="headerlink" title="☞修改导航栏右上角github角标颜色"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E4%BF%AE%E6%94%B9%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8F%B3%E4%B8%8A%E8%A7%92github%E8%A7%92%E6%A0%87%E9%A2%9C%E8%89%B2-div">☞</a>修改导航栏右上角github角标颜色</h4><p>打开themes&#x2F;matery&#x2F;layout&#x2F;_partial&#x2F;github-link.ejs文件(第十五行)修改color属性就可以随心所欲的改变github角标的颜色</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.github-corner</span> svg &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#F062A7</span>;<br>    fill: <span class="hljs-number">#fff</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">64px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">64px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞去掉首页banner轮播图的背景颜色"><a href="#☞去掉首页banner轮播图的背景颜色" class="headerlink" title="☞去掉首页banner轮播图的背景颜色"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%8E%BB%E6%8E%89%E9%A6%96%E9%A1%B5banner%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2-div">☞</a>去掉首页banner轮播图的背景颜色</h4><p>打开themes&#x2F;matery&#x2F;source&#x2F;css&#x2F;matery.css文件(367行，也可以快速搜索<code>.bg-cover:after</code>进行定位):</p>
+<p>然后注释掉这两行css</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-class">.bg-cover</span><span class="hljs-selector-pseudo">:after</span> &#123;<br><span class="hljs-comment">/*  -webkit-animation: rainbow 60s infinite;</span><br><span class="hljs-comment">    animation: rainbow 60s infinite;*/</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞给博客增加动态标签"><a href="#☞给博客增加动态标签" class="headerlink" title="☞给博客增加动态标签"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE-div">☞</a>给博客增加动态标签</h4><p>实现方式:</p>
+<p>打开博客路径themes&#x2F;matery&#x2F;layout&#x2F;layout.ejs</p>
+<p>在前添加如下代码即可</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"><span class="hljs-keyword">var</span> <span class="hljs-title class_">OriginTitile</span>=<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span>,st;<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;visibilitychange&quot;</span>,<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<span class="hljs-variable language_">document</span>.<span class="hljs-property">hidden</span>?(<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span>=<span class="hljs-string">&quot;看不见我🙈~看不见我🙈~&quot;</span>,<span class="hljs-built_in">clearTimeout</span>(st)):(<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span>=<span class="hljs-string">&quot;(๑•̀ㅂ•́) ✧被发现了～&quot;</span>,st=<span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<span class="hljs-variable language_">document</span>.<span class="hljs-property">title</span>=<span class="hljs-title class_">OriginTitile</span>&#125;,<span class="hljs-number">3e3</span>))&#125;)</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="☞valine评论显示问题"><a href="#☞valine评论显示问题" class="headerlink" title="☞valine评论显示问题"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-valine%E8%AF%84%E8%AE%BA%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98-div">☞</a>valine评论显示问题</h4><p>打开themes&#x2F;matery&#x2F;layout&#x2F;_partial&#x2F;valine.ejs文件(<code>ctrl+f</code>搜索<code>.v .vlist .vcard</code>)第238行</p>
+<p>修改padding-top:为2.5rem就OK了</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.v</span> <span class="hljs-selector-class">.vlist</span> <span class="hljs-selector-class">.vcard</span> &#123;<br><span class="hljs-attribute">padding-top</span>: <span class="hljs-number">2.5rem</span>;<br><span class="hljs-attribute">position</span>: relative;<br><span class="hljs-attribute">display</span>: block;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞图片懒加载"><a href="#☞图片懒加载" class="headerlink" title="☞图片懒加载"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD-div">☞</a>图片懒加载</h4><p>修改&#x2F;themes&#x2F;matery&#x2F;source&#x2F;js中的matery.js文件：</p>
+<p>第103行，后面加上最后一段代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript">      $(<span class="hljs-string">&#x27;#articleContent, #myGallery&#x27;</span>).<span class="hljs-title function_">lightGallery</span>(&#123;<br>          <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.img-item&#x27;</span>,<br>          <span class="hljs-comment">// 启用字幕</span><br>          <span class="hljs-attr">subHtmlSelectorRelative</span>: <span class="hljs-literal">true</span><br>      &#125;);<br><br>      $(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">find</span>(<span class="hljs-string">&#x27;img[data-original]&#x27;</span>).<span class="hljs-title function_">each</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  		$(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">parent</span>().<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;href&quot;</span>, $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;data-original&quot;</span>));<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/Troy-Yang/hexo-lazyload-image">再装个插件</a></p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">$ npm install hexo-lazyload-<span class="hljs-built_in">image</span> --<span class="hljs-built_in">save</span><br></code></pre></td></tr></table></figure>
+
+<p>在博客根目录配置.yml文件加入对应字段，如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">lazyload:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span> <br>  <span class="hljs-comment">#如果为真，则只有文章或页面中的图像支持延迟加载。</span><br>  <span class="hljs-comment">#如果为假，整个网站的图像将使用惰性加载，包括来自主题的图像，但不包括来自CSS样式的背景图像。</span><br>  <span class="hljs-attr">onlypost:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">loadingImg:</span> <span class="hljs-string">/loading.gif</span><br></code></pre></td></tr></table></figure>
+
+<p>这里的loading.gif我放在了&#x2F;themes&#x2F;matery&#x2F;source目录上</p>
+<p>这样就可以实现图片懒加载</p>
+<h4 id="☞增加动态诗词"><a href="#☞增加动态诗词" class="headerlink" title="☞增加动态诗词"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%A2%9E%E5%8A%A0%E5%8A%A8%E6%80%81%E8%AF%97%E8%AF%8D-div">☞</a>增加动态诗词</h4><p>我们采用<a href="https://www.jinrishici.com/">今日诗词</a>的每日一句：</p>
+<p>首先在&#x2F;themes&#x2F;hexo-theme-matery&#x2F;layout&#x2F;_partial&#x2F;head.ejs增加代码：</p>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+<p>然后打开&#x2F;themes&#x2F;hexo-theme-matery&#x2F;layout&#x2F;_partial&#x2F;bg-cover-content.ejs</p>
+<p>把<code>&lt;%= config.description %&gt;</code>改为<code>&lt;%- &#39;&lt;span id=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt;&#39; %&gt;</code></p>
+<p>如果要弃用动态诗词，直接改回原文件即可。</p>
+<h4 id="☞添加相册"><a href="#☞添加相册" class="headerlink" title="☞添加相册"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C-div">☞</a>添加相册</h4><p><a href="https://liyangzone.com/2019/07/22/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E7%9B%B8%E5%86%8C/">参考教程</a></p>
+<p><a href="https://sunhwee.com/posts/1788dd4a.html">相册图床</a> 可以参考此篇</p>
+<h4 id="☞增加天气插件"><a href="#☞增加天气插件" class="headerlink" title="☞增加天气插件"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6-div">☞</a>增加天气插件</h4><p>中国天气网：<a href="https://cj.weather.com.cn/plugin/pc">https://cj.weather.com.cn/plugin/pc</a></p>
+<p>选择自定义插件—&gt;自定义样式——&gt;生成代码，然后会生成一段代码，复制粘贴到 themes&#x2F;matery&#x2F;layout&#x2F;layout.ejs即可</p>
+<h4 id="☞网页特效分享"><a href="#☞网页特效分享" class="headerlink" title="☞网页特效分享"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E7%BD%91%E9%A1%B5%E7%89%B9%E6%95%88%E5%88%86%E4%BA%AB-div">☞</a>网页特效分享</h4><p><a href="https://qvchuang.top/js/xingxing.js">鼠标跟随特效</a></p>
+<p><a href="https://qvchuang.top/js/xuehua.js">雪花特效</a></p>
+<p><a href="https://qvchuang.top/js/sakura.js">樱花特效</a></p>
+<p><a href="https://qvchuang.top/js/wenzi.js">鼠标点击文字特效</a></p>
+<p><a href="https://qvchuang.top/js/ribbon.min.js">背景动态彩带</a></p>
+<p>在 themes&#x2F;matery&#x2F;source&#x2F;js 新建相应的js文件，复制粘贴，引入 themes&#x2F;matery&#x2F;layout&#x2F;layout.ejs 即可</p>
+<p>示例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"><span class="hljs-comment">//只在桌面版网页启用特效</span></span><br><span class="language-javascript"><span class="hljs-keyword">var</span> windowWidth = $(<span class="hljs-variable language_">window</span>).<span class="hljs-title function_">width</span>();</span><br><span class="language-javascript"><span class="hljs-keyword">if</span> (windowWidth &gt; <span class="hljs-number">768</span>) &#123;</span><br><span class="language-javascript">    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">write</span>(<span class="hljs-string">&#x27;&lt;script type=&quot;text/javascript&quot; src=&quot;/js/xuehuapiaoluo.js&quot;&gt;&lt;\/script&gt;&#x27;</span>);</span><br><span class="language-javascript">&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>也可以直接引用 <code>&lt;script src=&quot;/js/xuehuapiaoluo.js&quot;&gt;&lt;/script&gt;</code></p>
+<h4 id="☞屏蔽网页源码（单纯的屏蔽鼠标右键和键盘事件）"><a href="#☞屏蔽网页源码（单纯的屏蔽鼠标右键和键盘事件）" class="headerlink" title="☞屏蔽网页源码（单纯的屏蔽鼠标右键和键盘事件）"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%B1%8F%E8%94%BD%E7%BD%91%E9%A1%B5%E6%BA%90%E7%A0%81-%E5%8D%95%E7%BA%AF%E7%9A%84%E5%B1%8F%E8%94%BD%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E5%92%8C%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6-div">☞</a>屏蔽网页源码（单纯的屏蔽鼠标右键和键盘事件）</h4><p>在 themes&#x2F;matery&#x2F;layout&#x2F;layout.ejs 添加如下代码</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">        <span class="hljs-variable language_">window</span>.<span class="hljs-property">onload</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">            <span class="hljs-comment">//屏蔽键盘事件</span></span><br><span class="language-javascript">            <span class="hljs-variable language_">document</span>.<span class="hljs-property">onkeydown</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">                <span class="hljs-keyword">var</span> e = <span class="hljs-variable language_">window</span>.<span class="hljs-property">event</span> || <span class="hljs-variable language_">arguments</span>[<span class="hljs-number">0</span>];</span><br><span class="language-javascript">                <span class="hljs-comment">//F12</span></span><br><span class="language-javascript">                <span class="hljs-keyword">if</span>(e.<span class="hljs-property">keyCode</span> == <span class="hljs-number">123</span>)&#123;</span><br><span class="language-javascript">                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="language-javascript">                <span class="hljs-comment">//Ctrl+Shift+I</span></span><br><span class="language-javascript">                &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>((e.<span class="hljs-property">ctrlKey</span>) &amp;&amp; (e.<span class="hljs-property">shiftKey</span>) &amp;&amp; (e.<span class="hljs-property">keyCode</span> == <span class="hljs-number">73</span>))&#123;</span><br><span class="language-javascript">                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="language-javascript">                <span class="hljs-comment">//Shift+F10</span></span><br><span class="language-javascript">                &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>((e.<span class="hljs-property">shiftKey</span>) &amp;&amp; (e.<span class="hljs-property">keyCode</span> == <span class="hljs-number">121</span>))&#123;</span><br><span class="language-javascript">                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="language-javascript">                <span class="hljs-comment">//Ctrl+U</span></span><br><span class="language-javascript">                &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>((e.<span class="hljs-property">ctrlKey</span>) &amp;&amp; (e.<span class="hljs-property">keyCode</span> == <span class="hljs-number">85</span>))&#123;</span><br><span class="language-javascript">                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="language-javascript">                &#125;</span><br><span class="language-javascript">            &#125;;</span><br><span class="language-javascript">            <span class="hljs-comment">//屏蔽鼠标右键</span></span><br><span class="language-javascript">            <span class="hljs-variable language_">document</span>.<span class="hljs-property">oncontextmenu</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="language-javascript">            &#125;</span><br><span class="language-javascript">        &#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="☞添加Tidio在线客服"><a href="#☞添加Tidio在线客服" class="headerlink" title="☞添加Tidio在线客服"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E6%B7%BB%E5%8A%A0tidio%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D-div">☞</a>添加Tidio在线客服</h4><p><a href="https://www.zzshe.com/Blog/87.html">参考教程</a></p>
+<h4 id="☞网站预加载js脚本"><a href="#☞网站预加载js脚本" class="headerlink" title="☞网站预加载js脚本"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E7%BD%91%E7%AB%99%E9%A2%84%E5%8A%A0%E8%BD%BDjs%E8%84%9A%E6%9C%AC-div">☞</a>网站预加载js脚本</h4><p><a href="https://sunhwee.com/posts/376fa98c.html">尊重原创，点击查看</a></p>
+<h4 id="☞归档页自定义"><a href="#☞归档页自定义" class="headerlink" title="☞归档页自定义"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E5%BD%92%E6%A1%A3%E9%A1%B5%E8%87%AA%E5%AE%9A%E4%B9%89-div">☞</a>归档页自定义</h4><p><strong>样式</strong></p>
+<p>添加到 <code>themes\hexo-theme-matery-master\source\my.css</code> 或者其他css随意</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/*归档页自定义样式*/</span><br><span class="hljs-selector-class">.archive-container</span>&#123;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;<br>  -webkit-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;<br>  -moz-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;<br>&#125;<br><span class="hljs-selector-class">.archive</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-child</span>) &#123;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">3rem</span>;<br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.articles</span> &#123;<br>  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#dbdbdb</span>;<br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.article</span> &#123;<br>  <span class="hljs-attribute">border-top</span>: none;<br>  <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">1px</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.4rem</span> <span class="hljs-number">1.5rem</span>;<br>  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">2px</span> solid transparent;<br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.article</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">border-left-color</span>: <span class="hljs-number">#0f9d58</span> ;<br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.article</span> <span class="hljs-selector-tag">time</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">9rem</span>;<br>  <span class="hljs-attribute">color</span>: deeppink;<br>  <span class="hljs-comment">/* color: darkgray; */</span><br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.article</span> <span class="hljs-selector-tag">h6</span> &#123;<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.article</span> <span class="hljs-selector-tag">h6</span> <span class="hljs-selector-tag">a</span> &#123;<br>  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;<br>  <span class="hljs-attribute">color</span>: inherit;<br>  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> dashed transparent;<br>&#125;<br><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.article</span> <span class="hljs-selector-tag">h6</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#0f9d58</span>;<br>&#125;<br><br><br><span class="hljs-selector-class">.hbe-input-container</span>&#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">80%</span>;<br>  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;<br>  <span class="hljs-attribute">position</span>: relative;<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">100px</span> auto;<br>&#125;<br><br><span class="hljs-selector-class">.hbe-input-container</span>  <span class="hljs-selector-class">.btn-decrypt</span>&#123;<br>  <span class="hljs-attribute">display</span>: inline-block;<br>  <span class="hljs-attribute">vertical-align</span>: top;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">32px</span>;<br>  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">32px</span>;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#3f90ff</span>;<br>  <span class="hljs-attribute">text-align</span>: center;<br>  -webkit-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;<br>  -moz-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;<br>&#125;<br><span class="hljs-selector-class">.about-cover</span> &#123;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">50vh</span>;<br>&#125;<br><span class="hljs-selector-class">.desc-content</span>&#123;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">50px</span>;<br>&#125;<br><span class="hljs-keyword">@media</span> <span class="hljs-keyword">only</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">601px</span>) &#123;<br>  <span class="hljs-selector-class">.desc-content</span> &#123;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">15px</span>;<br>  &#125;<br>&#125;<br><br><span class="hljs-selector-class">.v</span> <span class="hljs-selector-class">.vlist</span> <span class="hljs-selector-class">.vcard</span> &#123;<br>  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">2.5em</span> <span class="hljs-meta">!important</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>修改<code>themes\hexo-theme-matery-master\layout\archive.ejs</code>为以下代码：</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs arcade">&lt;%- partial(<span class="hljs-string">&#x27;_partial/bg-cover&#x27;</span>) %&gt;<br><br>&lt;section class=<span class="hljs-string">&quot;section&quot;</span>&gt;<br><br>    &lt;%- partial(<span class="hljs-string">&#x27;_widget/post-calendar&#x27;</span>) %&gt;<br><br>    &lt;div class=<span class="hljs-string">&quot;container archive-container&quot;</span>&gt;<br>        &lt;% const groups = &#123;&#125;;<br>        const years = [];<br>        page.posts.each(<span class="hljs-function"><span class="hljs-params">post</span> =&gt;</span> &#123;<br>            const <span class="hljs-built_in">year</span> = post.<span class="hljs-built_in">date</span>.<span class="hljs-built_in">year</span>();<br>            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">typeof</span>(groups[<span class="hljs-built_in">year</span>]) === <span class="hljs-string">&#x27;undefined&#x27;</span>) &#123;<br>                groups[<span class="hljs-built_in">year</span>] = [];<br>                years.<span class="hljs-built_in">push</span>(<span class="hljs-built_in">year</span>);<br>            &#125;<br>            groups[<span class="hljs-built_in">year</span>].<span class="hljs-built_in">push</span>(post);<br>        &#125;);<br>        years.<span class="hljs-built_in">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a); %&gt;<br>        &lt;% <span class="hljs-keyword">for</span> (let <span class="hljs-built_in">year</span> of years) &#123; %&gt;<br>            &lt;div class=<span class="hljs-string">&quot;archive&quot;</span>&gt;<br>                &lt;h4 class=<span class="hljs-string">&quot;archive-year&quot;</span> id=<span class="hljs-string">&quot;&lt;%= year %&gt;&quot;</span>&gt;&lt;%= <span class="hljs-built_in">year</span> %&gt;&lt;/h4&gt;<br>                &lt;div class=<span class="hljs-string">&quot;articles&quot;</span>&gt;<br>                    &lt;% <span class="hljs-keyword">for</span> (let post of groups[<span class="hljs-built_in">year</span>].<span class="hljs-built_in">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b.<span class="hljs-built_in">date</span>.diff(a.<span class="hljs-built_in">date</span>))) &#123; %&gt;<br>                        &lt;div class=<span class="hljs-string">&quot;article content&gt;&quot;</span>&gt;<br>                            &lt;time class=<span class="hljs-string">&quot;is-text-small&quot;</span> datetime=<span class="hljs-string">&quot;&lt;%= date_xml(post.date) %&gt;&quot;</span> itemprop=<span class="hljs-string">&quot;datePublished&quot;</span> &gt;<br>                                &lt;%= <span class="hljs-built_in">date</span>(post.<span class="hljs-built_in">date</span>, <span class="hljs-string">&#x27;MM-D&#x27;</span>) %&gt; &lt;/time&gt;<br>                            &lt;h6 class=<span class="hljs-string">&quot;is-6&quot;</span>&gt;&lt;a href=<span class="hljs-string">&quot;&lt;%= url_for(post.link ? post.link : post.path) %&gt;&quot;</span>&gt;&lt;%= post.title %&gt;&lt;<span class="hljs-regexp">/a&gt;&lt;/</span>h6&gt;<br>                        &lt;/div&gt;<br>                    &lt;% &#125; %&gt;<br>                &lt;/div&gt;<br>            &lt;/div&gt;<br>        &lt;% &#125; %&gt;<br>    &lt;/div&gt;<br>    &lt;div&gt;&amp;nbsp;&lt;/div&gt;<br>        &lt;% <span class="hljs-keyword">if</span> (page.total &gt; <span class="hljs-number">1</span>) &#123; %&gt;<br>            &lt;%- partial(<span class="hljs-string">&#x27;_partial/paging&#x27;</span>) %&gt;<br>        &lt;% &#125; %&gt;<br><br>&lt;/section&gt;<br></code></pre></td></tr></table></figure>
+
+<h4 id="☞添加在线聊天室"><a href="#☞添加在线聊天室" class="headerlink" title="☞添加在线聊天室"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E6%B7%BB%E5%8A%A0%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%AE%A4-div">☞</a>添加在线聊天室</h4><p>打开<a href="https://www.xianliao.me/">闲聊么</a></p>
+<p>注册登陆后把相关代码插入<code>themes\hexo-theme-matery-master\layout\_partial\footer.ejs</code>即可</p>
+<h4 id="☞添加灯笼"><a href="#☞添加灯笼" class="headerlink" title="☞添加灯笼"></a><a href="https://qvchuang.top/archives/d3c10307.html#div-style-background-dfecd5-color-000-%E6%B7%BB%E5%8A%A0%E7%81%AF%E7%AC%BC-div">☞</a>添加灯笼</h4><p>在footer.ejs里面添加以下代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 灯笼1 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-box&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;xian&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-a&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-b&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-t&quot;</span>&gt;</span>春节<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shui shui-a&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shui-c&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shui-b&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br> <br><span class="hljs-comment">&lt;!-- 灯笼2 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-box1&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;xian&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-a&quot;</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-b&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;deng-t&quot;</span>&gt;</span>快乐<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shui shui-a&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shui-c&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;shui-b&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>然后在matery.css里面添加下面样式就行了:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.deng-box</span> &#123;<br>    <span class="hljs-attribute">position</span>: fixed;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">20px</span>;<br>    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">999</span>;<br>&#125;<br><span class="hljs-selector-class">.deng-box1</span> &#123;<br>    <span class="hljs-attribute">position</span>: fixed;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">20px</span>;<br>    <span class="hljs-attribute">right</span>: <span class="hljs-number">10px</span>;<br>    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">999</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.deng-box1</span> <span class="hljs-selector-class">.deng</span> &#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">50px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#d8000f</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">216</span>, <span class="hljs-number">0</span>, <span class="hljs-number">15</span>, <span class="hljs-number">0.8</span>);<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;<br>    -webkit-<span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> -<span class="hljs-number">100px</span>;<br>    -webkit-<span class="hljs-attribute">animation</span>: swing <span class="hljs-number">5s</span> infinite ease-in-out;<br>    <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">30px</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">252</span>, <span class="hljs-number">144</span>, <span class="hljs-number">61</span>, <span class="hljs-number">1</span>);<br>&#125;<br> <br><span class="hljs-selector-class">.deng</span> &#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">50px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#d8000f</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">216</span>, <span class="hljs-number">0</span>, <span class="hljs-number">15</span>, <span class="hljs-number">0.8</span>);<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;<br>    -webkit-<span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> -<span class="hljs-number">100px</span>;<br>    -webkit-<span class="hljs-attribute">animation</span>: swing <span class="hljs-number">3s</span> infinite ease-in-out;<br>    <span class="hljs-attribute">box-shadow</span>: -<span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">50px</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">250</span>, <span class="hljs-number">108</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);<br>&#125;<br> <br><span class="hljs-selector-class">.deng-a</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#d8000f</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">216</span>, <span class="hljs-number">0</span>, <span class="hljs-number">15</span>, <span class="hljs-number">0.1</span>);<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">12px</span> <span class="hljs-number">8px</span> <span class="hljs-number">8px</span> <span class="hljs-number">8px</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#dc8f03</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.deng-b</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">45px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#d8000f</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">216</span>, <span class="hljs-number">0</span>, <span class="hljs-number">15</span>, <span class="hljs-number">0.1</span>);<br>    <span class="hljs-attribute">margin</span>: -<span class="hljs-number">4px</span> <span class="hljs-number">8px</span> <span class="hljs-number">8px</span> <span class="hljs-number">26px</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#dc8f03</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.xian</span> &#123;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">top</span>: -<span class="hljs-number">65px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">60px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">2px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">65px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#dc8f03</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.shui-a</span> &#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">5px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;<br>    <span class="hljs-attribute">margin</span>: -<span class="hljs-number">5px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">59px</span>;<br>    -webkit-<span class="hljs-attribute">animation</span>: swing <span class="hljs-number">4s</span> infinite ease-in-out;<br>    -webkit-<span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">50%</span> -<span class="hljs-number">45px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffa500</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.shui-b</span> &#123;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">14px</span>;<br>    <span class="hljs-attribute">left</span>: -<span class="hljs-number">2px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">10px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#dc8f03</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.shui-c</span> &#123;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">top</span>: <span class="hljs-number">18px</span>;<br>    <span class="hljs-attribute">left</span>: -<span class="hljs-number">2px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">35px</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffa500</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span>;<br>&#125;<br> <br><span class="hljs-selector-class">.deng</span><span class="hljs-selector-pseudo">:before</span> &#123;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">top</span>: -<span class="hljs-number">7px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">29px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>;<br>    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot; &quot;</span>;<br>    <span class="hljs-attribute">display</span>: block;<br>    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">999</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#dc8f03</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffa500</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(to right, <span class="hljs-number">#dc8f03</span>, <span class="hljs-number">#ffa500</span>, <span class="hljs-number">#dc8f03</span>, <span class="hljs-number">#ffa500</span>, <span class="hljs-number">#dc8f03</span>);<br>&#125;<br> <br><span class="hljs-selector-class">.deng</span><span class="hljs-selector-pseudo">:after</span> &#123;<br>    <span class="hljs-attribute">position</span>: absolute;<br>    <span class="hljs-attribute">bottom</span>: -<span class="hljs-number">7px</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">10px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">12px</span>;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>;<br>    <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot; &quot;</span>;<br>    <span class="hljs-attribute">display</span>: block;<br>    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">20px</span>;<br>    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span>;<br>    <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#dc8f03</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffa500</span>;<br>    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(to right, <span class="hljs-number">#dc8f03</span>, <span class="hljs-number">#ffa500</span>, <span class="hljs-number">#dc8f03</span>, <span class="hljs-number">#ffa500</span>, <span class="hljs-number">#dc8f03</span>);<br>&#125;<br> <br><span class="hljs-selector-class">.deng-t</span> &#123;<br>    <span class="hljs-attribute">font-family</span>: 华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#dc8f03</span>;<br>    <span class="hljs-attribute">font-weight</span>: bold;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">85px</span>;<br>    <span class="hljs-attribute">text-align</span>: center;<br>&#125;<br> <br><span class="hljs-selector-class">.night</span> <span class="hljs-selector-class">.deng-t</span>, <br><span class="hljs-selector-class">.night</span> <span class="hljs-selector-class">.deng-box</span>, <br><span class="hljs-selector-class">.night</span> <span class="hljs-selector-class">.deng-box1</span> &#123;<br>    <span class="hljs-attribute">background</span>: transparent <span class="hljs-meta">!important</span>;<br>&#125;<br> <br><span class="hljs-keyword">@-moz-keyframes</span> swing &#123;<br>    <span class="hljs-number">0%</span> &#123;<br>        -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">10deg</span>)<br>    &#125;<br> <br>    <span class="hljs-number">50%</span> &#123;<br>        -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">10deg</span>)<br>    &#125;<br> <br>    <span class="hljs-number">100%</span> &#123;<br>        -moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">10deg</span>)<br>    &#125;<br>&#125;<br> <br><span class="hljs-keyword">@-webkit-keyframes</span> swing &#123;<br>    <span class="hljs-number">0%</span> &#123;<br>        -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">10deg</span>)<br>    &#125;<br> <br>    <span class="hljs-number">50%</span> &#123;<br>        -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">10deg</span>)<br>    &#125;<br> <br>    <span class="hljs-number">100%</span> &#123;<br>        -webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">10deg</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>未完待续</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/Matery/" class="print-no-link">#Matery</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>matery主题个性化定制</div>
+      <div>http://aiyoja.github.io/20220707/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/20220708/" title="腾格尔对《孤勇者》下手了">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">腾格尔对《孤勇者》下手了</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/20220706/" title="极客湾移动芯片天梯图202205">
+                        <span class="hidden-mobile">极客湾移动芯片天梯图202205</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

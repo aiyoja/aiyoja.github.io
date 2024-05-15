@@ -1,0 +1,949 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="gitee准备注册好gitee git安装与配置#下载git默认安装，配置在之前下载的目录下，右键，选择【Git Bash Here】 配置用户#12git config --global user.name &quot;username&quot; &#x2F;&#x2F;（ &quot;username&quot; 注册的手机号码，）配置邮箱git config --global user.email &amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于gitee+hexo搭建个人博客">
+<meta property="og:url" content="http://aiyoja.github.io/20240501/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="gitee准备注册好gitee git安装与配置#下载git默认安装，配置在之前下载的目录下，右键，选择【Git Bash Here】 配置用户#12git config --global user.name &quot;username&quot; &#x2F;&#x2F;（ &quot;username&quot; 注册的手机号码，）配置邮箱git config --global user.email &amp;quot">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/30efb3050cd34b96b8ac3e2ae8ff71c6.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e4734c9462ef4f87b0870a47c8b31884.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/b3416a14abde431d97cd72e25c0ead8b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7d4f8baad1c042819d0b2eb43ccc5234.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a947ac35b199403199ae0b6b7f0ef45f.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/1104383d1df04952b36fce177a194dba.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/c5219b28f91d4fefb720dcbb13fea829.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/4ea98664a6b547e7ad59f1c3d82f3894.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a3118439d0e9416c94e8bc67168d46d9.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f61b731703f44d538351ae8db4b3e06d.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/cd134c8c68af46faada50ae9032610bb.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f95274ec6d3145fd9763b4f006300cd2.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/681b0165ee094cf8a76a3cab28584349.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/4fbd89e819f54b56bb0240ef0dbcfd80.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/ce410396713249a9b5da848d3711a009.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/14ce17e7b8c54082b3fe0d165033eabf.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/4be47825625147da84b3b848056bf3db.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fd0e48e7ef80456fa278c3de1ff827fb.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/b2fdf663c9ed49e9a61bc3eb965a7e5e.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e817db54ebcd451b84138826b1587785.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/b2feabb4f89f4bdf8de00f13c4364308.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/41febb5e2eb74785a36d4694c80422d8.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/d60d0dcaf58241a79390732e0e81f0fd.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a4155b3104a747488362308c2b8c0051.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fc865c0e557146efb55767f21cba23c0.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/0f74c92482704bde9b598e09649bf28c.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/951359cfd3614ee481b1bad10abdadc5.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/282772904ca846e89ce92ef5cce19325.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/947dc04a397f46bc9e50cf87098a2cd9.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/b8b83f02503a4a10aa87b67ff7ec1ed3.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7d7504b147934f748f50089ad623fc25.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/d1fe1b4a336b4d3e8aa06c593ab1b3f4.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/de29d352b7d340c1a15148a10504ff72.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/0377cda67a85425c932f6d5c95c178be.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/cb419a0b37d1490c922441f4b081250e.png">
+<meta property="article:published_time" content="2024-04-24T09:58:06.000Z">
+<meta property="article:modified_time" content="2024-05-08T01:49:44.135Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/30efb3050cd34b96b8ac3e2ae8ff71c6.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>基于gitee+hexo搭建个人博客 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="基于gitee+hexo搭建个人博客"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-24 17:58" pubdate>
+          2024年4月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">基于gitee+hexo搭建个人博客</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="gitee准备"><a href="#gitee准备" class="headerlink" title="gitee准备"></a>gitee准备</h1><p>注册好gitee</p>
+<h2 id="git安装与配置"><a href="#git安装与配置" class="headerlink" title="git安装与配置#"></a>git安装与配置<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1243586888">#</a></h2><p>下载<a href="https://git-scm.com/">git</a>默认安装，配置<br>在之前下载的目录下，右键，选择【Git Bash Here】<br><img src="https://img-blog.csdnimg.cn/30efb3050cd34b96b8ac3e2ae8ff71c6.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h3 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户#"></a>配置用户<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3544855023">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">git config --global user.name <span class="hljs-string">&quot;username&quot;</span> <span class="hljs-comment">//（ &quot;username&quot; 注册的手机号码，）配置邮箱</span><br>git config --global user.email <span class="hljs-string">&quot;username@email.com&quot;</span> / /(<span class="hljs-string">&quot;username@email.com&quot;</span> 绑定的邮箱）<br></code></pre></td></tr></table></figure>
+
+<p>执行以上命令 行后 ， 使用<code>git config --global --list</code> 命令查看配置是 否 成功，如 图所示：如果成功，会显示所配置的用户名和邮箱<img src="https://img-blog.csdnimg.cn/e4734c9462ef4f87b0870a47c8b31884.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h3 id="生成SSH"><a href="#生成SSH" class="headerlink" title="生成SSH#"></a>生成SSH<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2285395707">#</a></h3><p>继续输入：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">ssh<span class="hljs-literal">-keygen</span> <span class="hljs-literal">-t</span> rsa<br></code></pre></td></tr></table></figure>
+
+<p>连敲三次回车查看是否有.ssh 文件夹产生有以下两个文件：<br><img src="https://img-blog.csdnimg.cn/b3416a14abde431d97cd72e25c0ead8b.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>将 ssh 件夹 的 公钥（ id_rsa.pub）复制 到 Gitee 管理平台 ，在 Gitee 的 人 户的设置找到如下 ，如 所示：<br>可以通过 git 命令复制文件：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">clip &lt; ~/.ssh/id_rsa.put<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/7d4f8baad1c042819d0b2eb43ccc5234.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>输入密码之后，测试一下 是否 成功，在 Git Bush 命令框 继续 入以下命令，回车：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">ssh -T git@gitee.com<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/a947ac35b199403199ae0b6b7f0ef45f.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>第一次连接时， 确认并添加主机到本机 SSH 可信列表， 输入 yes 自动在.ssh 件夹内生 known_hosts 件， 即可连接成功。<br><img src="https://img-blog.csdnimg.cn/1104383d1df04952b36fce177a194dba.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h3 id="配置远程仓库"><a href="#配置远程仓库" class="headerlink" title="配置远程仓库#"></a>配置远程仓库<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#174889314">#</a></h3><p>在gitee中新建仓库<br>新建好仓库之后再本地建一个新的空白文件夹<br><img src="https://img-blog.csdnimg.cn/c5219b28f91d4fefb720dcbb13fea829.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>进入当前目录下<img src="https://img-blog.csdnimg.cn/4ea98664a6b547e7ad59f1c3d82f3894.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/a3118439d0e9416c94e8bc67168d46d9.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>始化为Git 本地仓库</p>
+<p>在电脑 中新建一 空白 件夹， 使用以下命令进行初始化：</p>
+<p>初始化</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">git init .<br></code></pre></td></tr></table></figure>
+
+<p>使用命名查看本地仓库 git 是否配置过远程仓库</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">git remote -v<br></code></pre></td></tr></table></figure>
+
+<p>若没有绑定，绑定远程仓库，使用以下命名：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">git remote add origin 你的仓库地址.git<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/f61b731703f44d538351ae8db4b3e06d.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>连接提示测试：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">git push -u origin <span class="hljs-string">&quot;master&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>如果远程仓库不是空白的，会报这个错要使用命令 <code>git pull --rebase origin master</code> 将远程仓库同步到本地再连接<br><img src="https://img-blog.csdnimg.cn/cd134c8c68af46faada50ae9032610bb.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>连接成功，git配置就好了<br><img src="https://img-blog.csdnimg.cn/f95274ec6d3145fd9763b4f006300cd2.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h2 id="Git-命令总结"><a href="#Git-命令总结" class="headerlink" title="Git 命令总结#"></a>Git 命令总结<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3232396411">#</a></h2><h3 id="1、新建代码库"><a href="#1、新建代码库" class="headerlink" title="1、新建代码库#"></a>1、新建代码库<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3062863076">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"># 在当前目录新建一个Git代码库<br>$ git init<br><br># 新建一个目录，将其初始化为Git代码库<br>$ git init [project-name]<br><br># 下载一个项目和它的整个代码历史<br>$ git clone [url]<br></code></pre></td></tr></table></figure>
+
+<h3 id="2、配置"><a href="#2、配置" class="headerlink" title="2、配置#"></a>2、配置<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1117240619">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"># 显示当前的Git配置<br>$ git config --<span class="hljs-built_in">list</span><br><br># 编辑Git配置文件<br>$ git config -e [--global]<br><br># 设置提交代码时的用户信息<br>$ git config [--global] user.name <span class="hljs-string">&quot;[name]&quot;</span><br>$ git config [--global] user.email <span class="hljs-string">&quot;[email address]&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3、增加-删除文件"><a href="#3、增加-删除文件" class="headerlink" title="3、增加&#x2F;删除文件#"></a>3、增加&#x2F;删除文件<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1210055937">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs c"># 删除文件<br>$ git rm -r --cached 文件/文件夹名称<br><br># 删除之后直接提交到远程仓库<br>$ git commit -m <span class="hljs-string">&quot;提交信息&quot;</span><br>$ git push<br><br># 定位到 C盘<br>$ cd C:<br><br># 显示当前目录<br>$ pwd<br><br># 添加指定文件到暂存区<br>$ git add [file1] [file2] ...<br><br># 添加指定目录到暂存区，包括子目录<br>$ git add [dir]<br><br># 添加当前目录的所有文件到暂存区<br>$ git add .<br><br># 添加每个变化前，都会要求确认<br># 对于同一个文件的多处变化，可以实现分次提交<br>$ git add -p<br><br># 删除工作区文件，并且将这次删除放入暂存区<br>$ git rm [file1] [file2] ...<br><br># 停止追踪指定文件，但该文件会保留在工作区<br>$ git rm --cached [file]<br><br># 删除缓存<br>$ git rm -r -f cached ./<br><br># 改名文件，并且将这个改名放入暂存区<br>$ git mv [file-original] [file-renamed]<br></code></pre></td></tr></table></figure>
+
+<h3 id="4、代码提交"><a href="#4、代码提交" class="headerlink" title="4、代码提交#"></a>4、代码提交<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3874725095">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c"># 提交暂存区到仓库区<br>$ git commit -m [message]<br><br># 提交暂存区的指定文件到仓库区<br>$ git commit [file1] [file2] ... -m [message]<br><br># 提交工作区自上次commit之后的变化，直接到仓库区<br>$ git commit -a<br><br># 提交时显示所有diff信息<br>$ git commit -v<br><br># 使用一次新的commit，替代上一次提交<br># 如果代码没有任何新变化，则用来改写上一次commit的提交信息<br>$ git commit --amend -m [message]<br><br># 重做上一次commit，并包括指定文件的新变化<br>$ git commit --amend [file1] [file2] ...<br></code></pre></td></tr></table></figure>
+
+<h3 id="5、分支"><a href="#5、分支" class="headerlink" title="5、分支#"></a>5、分支<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#456183831">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs c"># 列出所有本地分支<br>$ git branch<br><br># 列出所有远程分支<br>$ git branch -r<br><br># 列出所有本地分支和远程分支<br>$ git branch -a<br><br># 新建一个分支，但依然停留在当前分支<br>$ git branch [branch-name]<br><br># 新建一个分支，并切换到该分支<br>$ git checkout -b [branch]<br><br># 新建一个分支，指向指定commit<br>$ git branch [branch] [commit]<br><br># 新建一个分支，与指定的远程分支建立追踪关系<br>$ git branch --track [branch] [remote-branch]<br><br># 切换到指定分支，并更新工作区<br>$ git checkout [branch-name]<br><br># 切换到上一个分支<br>$ git checkout -<br><br># 建立追踪关系，在现有分支与指定的远程分支之间<br>$ git branch --<span class="hljs-built_in">set</span>-upstream [branch] [remote-branch]<br><br># 合并指定分支到当前分支<br>$ git merge [branch]<br><br># 选择一个commit，合并进当前分支<br>$ git cherry-pick [commit]<br><br># 删除分支<br>$ git branch -d [branch-name]<br><br># 删除远程分支<br>$ git push origin --delete [branch-name]<br>$ git branch -dr [remote/branch]<br></code></pre></td></tr></table></figure>
+
+<h3 id="6、标签"><a href="#6、标签" class="headerlink" title="6、标签#"></a>6、标签<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2477658538">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs c"># 列出所有tag<br>$ git tag<br><br># 新建一个tag在当前commit<br>$ git tag [tag]<br><br># 新建一个tag在指定commit<br>$ git tag [tag] [commit]<br><br># 删除本地tag<br>$ git tag -d [tag]<br><br># 删除远程tag<br>$ git push origin :refs/tags/[tagName]<br><br># 查看tag信息<br>$ git show [tag]<br><br># 提交指定tag<br>$ git push [remote] [tag]<br><br># 提交所有tag<br>$ git push [remote] --tags<br><br># 新建一个分支，指向某个tag<br>$ git checkout -b [branch] [tag]<br></code></pre></td></tr></table></figure>
+
+<h3 id="7、查看信息"><a href="#7、查看信息" class="headerlink" title="7、查看信息#"></a>7、查看信息<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3949917626">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs c"># 显示有变更的文件<br>$ git status<br><br># 显示当前分支的版本历史，其中commit后黄色字体显示的是每次提交的版本号，git <span class="hljs-built_in">log</span> 命令显示从最近到最远的显示日志<br>$ git <span class="hljs-built_in">log</span><br><br># 显示commit历史，以及每次commit发生变更的文件<br>$ git <span class="hljs-built_in">log</span> --stat<br><br># 搜索提交历史，根据关键词<br>$ git <span class="hljs-built_in">log</span> -S [keyword]<br><br># 显示某个commit之后的所有变动，每个commit占据一行<br>$ git <span class="hljs-built_in">log</span> [tag] HEAD --pretty=format:%s<br><br># 显示某个commit之后的所有变动，其<span class="hljs-string">&quot;提交说明&quot;</span>必须符合搜索条件<br>$ git <span class="hljs-built_in">log</span> [tag] HEAD --grep feature<br><br># 显示某个文件的版本历史，包括文件改名<br>$ git <span class="hljs-built_in">log</span> --follow [file]<br>$ git whatchanged [file]<br><br># 显示指定文件相关的每一次diff<br>$ git <span class="hljs-built_in">log</span> -p [file]<br><br># 显示过去<span class="hljs-number">5</span>次提交<br>$ git <span class="hljs-built_in">log</span> <span class="hljs-number">-5</span> --pretty --oneline<br><br># 显示所有提交过的用户，按提交次数排序<br>$ git shortlog -sn<br><br># 显示指定文件是什么人在什么时间修改过<br>$ git blame [file]<br><br># 显示暂存区和工作区的差异<br>$ git diff<br><br># 显示暂存区和上一个commit的差异<br>$ git diff --cached [file]<br><br># 显示工作区与当前分支最新commit之间的差异<br>$ git diff HEAD<br><br># 显示两次提交之间的差异<br>$ git diff [first-branch]...[second-branch]<br><br># 显示今天你写了多少行代码<br>$ git diff --shortstat <span class="hljs-string">&quot;@&#123;0 day ago&#125;&quot;</span><br><br># 显示某次提交的元数据和内容变化<br>$ git show [commit]<br><br># 显示某次提交发生变化的文件<br>$ git show --name-only [commit]<br><br># 显示某次提交时，某个文件的内容<br>$ git show [commit]:[filename]<br><br># 显示当前分支的最近几次提交<br>$ git reflog<br></code></pre></td></tr></table></figure>
+
+<h3 id="8、远程同步"><a href="#8、远程同步" class="headerlink" title="8、远程同步#"></a>8、远程同步<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3012405926">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"># 下载远程仓库的所有变动<br>$ git fetch [remote]<br><br># 显示所有远程仓库<br>$ git remote -v<br><br># 显示某个远程仓库的信息<br>$ git remote show [remote]<br><br># 增加一个新的远程仓库，并命名<br>$ git remote add [shortname] [url]<br><br># 取回远程仓库的变化，并与本地分支合并<br>$ git pull [remote] [branch]<br><br># 上传本地指定分支到远程仓库<br>$ git push [remote] [branch]<br><br># 强行推送当前分支到远程仓库，即使有冲突<br>$ git push [remote] --force<br><br># 推送所有分支到远程仓库<br>$ git push [remote] --all<br></code></pre></td></tr></table></figure>
+
+<h3 id="9、撤销"><a href="#9、撤销" class="headerlink" title="9、撤销#"></a>9、撤销<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2386664084">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c"># 恢复暂存区的指定文件到工作区<br>$ git checkout [file]<br><br># 恢复某个commit的指定文件到暂存区和工作区<br>$ git checkout [commit] [file]<br><br># 恢复暂存区的所有文件到工作区<br>$ git checkout .<br><br># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br>$ git reset [file]<br><br># 重置暂存区与工作区，与上一次commit保持一致<br>$ git reset --hard<br><br># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变<br>$ git reset [commit]<br><br># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit版本一致<br>$ git reset --hard [commit]<br><br># 重置当前HEAD为指定commit，但保持暂存区和工作区不变<br>$ git reset --keep [commit]<br><br># 新建一个commit，用来撤销指定commit<br># 后者的所有变化都将被前者抵消，并且应用到当前分支<br>$ git revert [commit]<br><br># 暂时将未提交的变化移除，稍后再移入<br>$ git stash<br>$ git stash pop<br></code></pre></td></tr></table></figure>
+
+<h3 id="10、其他"><a href="#10、其他" class="headerlink" title="10、其他#"></a>10、其他<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1371723178">#</a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"># 生成一个可供发布的压缩包<br>$ git archive<br><br># 添加或指定远程仓库地址<br>$ git remote <span class="hljs-built_in">set</span>-url origin <span class="hljs-string">&quot;https://...&quot;</span><br>$ git config remote.origin.url <span class="hljs-string">&quot;https://...&quot;</span><br><br># 删除<br>$ git remote rm origin<br></code></pre></td></tr></table></figure>
+
+<h1 id="Hexo准备"><a href="#Hexo准备" class="headerlink" title="Hexo准备"></a>Hexo准备</h1><h2 id="node-js安装及配置"><a href="#node-js安装及配置" class="headerlink" title="node.js安装及配置#"></a>node.js安装及配置<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3287739529">#</a></h2><p><a href="https://nodejs.org/zh-cn/">node.js官网</a>下载默认安装之后<br>CMD窗口，执行命令node -v查看node版本<br>最新版的node在安装时同时也安装了npm,执行npm -v查看npm版本<br><img src="https://img-blog.csdnimg.cn/681b0165ee094cf8a76a3cab28584349.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h3 id="（可选）修改全局依赖包下载路径"><a href="#（可选）修改全局依赖包下载路径" class="headerlink" title="（可选）修改全局依赖包下载路径#"></a>（可选）修改全局依赖包下载路径<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2366280776">#</a></h3><p>默认情况下，我们在执行npm install -g XXXX下载全局包时，这个包的默认存放路径位C:\Users\用户名\AppData\Roaming\npm\node_modules下，可以通过CMD指令npm root -g查看</p>
+<p>C:\Users\liaijie\AppData\Roaming\npm\node_modules<br>但是有时候我们不想让全局包放在这里，我们可以自定义存放目录,在CMD窗口执行以下两条命令修改默认路径：</p>
+<p>npm config set prefix “C:\node\node_global”<br>npm config set cache “C:\node\node_cache”<br>或者打开c:\node\node_modules\npm.npmrc文件，修改如下：</p>
+<p>prefix &#x3D;C:\node\node_global<br>cache &#x3D; C:\node\node_cache</p>
+<p>以上操作表示，修改全局包下载目录为C:\node\node_global,缓存目录为C:\node\node_cache,并会自动创建node_global目录，而node_cache目录是缓存目录，会在你下载全局包时自动创建</p>
+<p>在这里插入图片描述<br>3、配置环境变量<br>因为我们修改了全局包的下载路径，那么自然而然，我们下载的全局包就会存放在c:\node\node_global\node_modules，而其对应的cmd指令会存放在c:\node\node_global</p>
+<p>我全局安装一个vue-cli脚手架</p>
+<p>npm install @vue&#x2F;cli -g<br>安装完成后：</p>
+<p>在这里插入图片描述</p>
+<p>在这里插入图片描述</p>
+<p>我使用CMD命令vue create myproject指令创建一个项目，显示如下<br>‘vue’ 不是内部或外部命令，也不是可运行的程序<br>或批处理文件。<br>这是因为我们在执行指令时，它会默认在node安装根目录下查找指令文件，在这里就是vue.cmd,然后还会在node安装根目录下的node_modules下查找依赖包文件夹，在这里就是@vue文件夹，因为我们修改了全局包的存放路径，所以自然找不到了，所以我们需要把我们指定的全局包存放路径添加到系统环境变量，这样就可以找到了</p>
+<p>在这里插入图片描述</p>
+<p>再次测试：</p>
+<p>C:\Users\liaijie&gt;vue create myproject<br>? Your connection to the default npm registry seems to be slow.<br>Use <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> for faster installation? (Y&#x2F;n)<br>OK,大功告成！！！！！</p>
+<h2 id="hexo安装及配置"><a href="#hexo安装及配置" class="headerlink" title="hexo安装及配置#"></a>hexo安装及配置<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3251097618">#</a></h2><p><a href="https://hexo.io/zh-cn/">Hexo官网</a><br>去官网拿到安装命令<br>npm install hexo-cli -g<br>1、安装Hexo，只需要在MyWeb目录中单击右键启动Git Bash Here，然后输入命令<br><img src="https://img-blog.csdnimg.cn/4fbd89e819f54b56bb0240ef0dbcfd80.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述">2、初始化 Hexo<br>Hexo安装完以后需要进行初始化操作。</p>
+<h3 id="一、自己创建文件夹"><a href="#一、自己创建文件夹" class="headerlink" title="一、自己创建文件夹#"></a>一、自己创建文件夹<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1169639330">#</a></h3><p>在电脑中创建一个文件夹用来存放博客，如：E:\MyWeb之后的命令行操作都在这个文件夹的目录下进行。</p>
+<p><img src="https://img-blog.csdnimg.cn/ce410396713249a9b5da848d3711a009.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>生成默认博客：hexo init<br><img src="https://img-blog.csdnimg.cn/14ce17e7b8c54082b3fe0d165033eabf.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/4be47825625147da84b3b848056bf3db.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>本地启动：hexo s</p>
+<p><img src="https://img-blog.csdnimg.cn/fd0e48e7ef80456fa278c3de1ff827fb.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>打开浏览器输入：<a href="http://localhost:4000，看到如下画面说明建站成功：">http://localhost:4000，看到如下画面说明建站成功：</a><br><img src="https://img-blog.csdnimg.cn/b2fdf663c9ed49e9a61bc3eb965a7e5e.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h4 id="提交到Gitee上"><a href="#提交到Gitee上" class="headerlink" title="提交到Gitee上#"></a>提交到Gitee上<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#4140745885">#</a></h4><p>打开E:\MyWeb下的_config.yml文件</p>
+<p>修改以下代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c">deploy:<br>  type: git<br>  repo: https:<span class="hljs-comment">//gitee.com/weizhongqin/weizhongqin.git   #将地址换成自己的地址</span><br>  branch: master<br></code></pre></td></tr></table></figure>
+
+<h4 id="安装部署插件："><a href="#安装部署插件：" class="headerlink" title="安装部署插件：#"></a>安装部署插件：<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#176754460">#</a></h4><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/e817db54ebcd451b84138826b1587785.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h4 id="清理缓存："><a href="#清理缓存：" class="headerlink" title="清理缓存：#"></a>清理缓存：<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2906081146">#</a></h4><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey">hexo clean`<br>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>生成静态文件：`hexo g<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/b2feabb4f89f4bdf8de00f13c4364308.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h4 id="推送到Gitee："><a href="#推送到Gitee：" class="headerlink" title="推送到Gitee：#"></a>推送到Gitee：<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2146625078">#</a></h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">hexo d Gitee的用户名/邮箱 密码<br>F:\blog&gt;hexo d <span class="hljs-strong">****</span><span class="hljs-strong">****</span>* <span class="hljs-strong">****</span><span class="hljs-strong">****</span><span class="hljs-strong">****</span>*<br>INFO  Validating config<br>INFO  Deploying: git<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/41febb5e2eb74785a36d4694c80422d8.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>打开Gitee仓库，可以看到我们推送成功的静态文件的目录结构：<img src="https://img-blog.csdnimg.cn/d60d0dcaf58241a79390732e0e81f0fd.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>再次修改根目录下的_config.yml文件：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"># URL<br>## Set your site url here. For example, <span class="hljs-keyword">if</span> you use GitHub Page, <span class="hljs-built_in">set</span> url as <span class="hljs-string">&#x27;https://username.github.io/project&#x27;</span><br>url: http:<span class="hljs-comment">//weizhongqin.gitee.io  #填写自己Gitee Page的网站地址</span><br>permalink: :year/:month/:day/:title/<br>permalink_defaults:<br>pretty_urls:<br>  trailing_index: <span class="hljs-literal">true</span> # Set to <span class="hljs-literal">false</span> to remove trailing <span class="hljs-string">&#x27;index.html&#x27;</span> from permalinks<br>  trailing_html: <span class="hljs-literal">true</span> # Set to <span class="hljs-literal">false</span> to remove trailing <span class="hljs-string">&#x27;.html&#x27;</span> from permalinks<br></code></pre></td></tr></table></figure>
+
+<h4 id="更新Gitee-Pages"><a href="#更新Gitee-Pages" class="headerlink" title="更新Gitee Pages#"></a>更新Gitee Pages<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3580287580">#</a></h4><p>每次修改博客内容后都需要做以下操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">hexo clean<br><br>hexo g/hexo d -g/hexo deploy -g<br><br>hexo d<br></code></pre></td></tr></table></figure>
+
+<p>更新Gitee Pages服务<br><img src="https://img-blog.csdnimg.cn/a4155b3104a747488362308c2b8c0051.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>打开浏览器输入地址：<a href="https://weizhongqin.gitee.io/%EF%BC%8C%E8%AE%BF%E9%97%AE%E6%88%90%E5%8A%9F%E5%B0%B1%E8%A1%8C%E4%BA%86">https://weizhongqin.gitee.io/，访问成功就行了</a></p>
+<hr>
+<h4 id="（可用）命令创建文件夹"><a href="#（可用）命令创建文件夹" class="headerlink" title="（可用）命令创建文件夹#"></a>（可用）命令创建文件夹<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2999893552">#</a></h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">$ hexo init [folder]<br></code></pre></td></tr></table></figure>
+
+<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br><img src="https://img-blog.csdnimg.cn/fc865c0e557146efb55767f21cba23c0.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>然后就可以使用Hexo三连了，即我们最常用的三个主要命令（依旧在上述Git Bash命令端口中）cd到新的网站文件夹里：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c">hexo clean # 清空已有hexo网站文件<br>hexo generate# 依据网页文本与新的CSS样式生成新网站文件<br>hexo server# 启动本地服务器，可以在localhost:<span class="hljs-number">4000</span>查看<br></code></pre></td></tr></table></figure>
+
+<p>网站修改效果，一般默认的是一个landscape主题，后期当提交新文章或者新的样式修改时，往往都是先从本地查看结果无误后再部署到Gitee Page<br><img src="https://img-blog.csdnimg.cn/0f74c92482704bde9b598e09649bf28c.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="三、主题下载与安装"><a href="#三、主题下载与安装" class="headerlink" title="三、主题下载与安装#"></a>三、主题下载与安装<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#2634356661">#</a></h3><p>Hexo官网上提供了丰富的<a href="https://hexo.io/themes/">主题</a>可选，你只需要打开对应的界面选择喜欢的，然后点击名称跳转到GitHub仓库选择下载或者克隆对应的zip文件到本地，并且解压到网站目录下的themes目录即可。<br><img src="https://img-blog.csdnimg.cn/951359cfd3614ee481b1bad10abdadc5.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<blockquote>
+<p>然后接下来，你需要修改两个配置文件：<br><strong>你的网站根目录下的_config.yml文件，即网站配置文件；</strong><br><strong>你选择的主题的自带配置文件_config.yml，即主题配置文件；</strong><br>网站配置文件会配置你网站的URL地址、博客名称以及与Gitee上传的方式等基本信息；而主题配置文件则会定义实际页面显示的美观效果、多媒体（声音视频等）以及评论等附加功能。</p>
+</blockquote>
+<h3 id="四、网站配置文件修改"><a href="#四、网站配置文件修改" class="headerlink" title="四、网站配置文件修改#"></a>四、网站配置文件修改<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1189914992">#</a></h3><p>制定网站采用的主题样式，这里也需要注意：主题文件解压缩后不要重命名，直接将主题文件名称复制后设置为网站主题，即</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"># Extensions<br>## Plugins: https:<span class="hljs-comment">//hexo.io/plugins/</span><br>## Themes: https:<span class="hljs-comment">//hexo.io/themes/</span><br>#<span class="hljs-meta"># theme: landscape</span><br>theme: hexo-theme-volantis<span class="hljs-number">-6.0</span> #填写自己的样式文件夹的名字<br></code></pre></td></tr></table></figure>
+
+<p>配置里还有个选项比较好玩</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"># Site<br>title: Wei Zhongqin的博客<br>subtitle: <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-string">description: &#x27;</span><span class="hljs-string">&#x27; # description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。</span><br><span class="hljs-string">keywords:</span><br><span class="hljs-string">author: Wei Zhongqin</span><br><span class="hljs-string">language: zh-Hans</span><br><span class="hljs-string">timezone: &#x27;</span>&#x27;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>主题文件下的README.md文件以根据主题特点实现自定制网站。</p>
+</blockquote>
+<blockquote>
+<p>在此之前，你还需要在网站的Git Bash中运行一次安装所有主题依赖插件包的命令：</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">npm install<br>npm install --save hexo-deployer-git   #为之后做准备，不装会报错：ERROR Deployer not found: git<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/282772904ca846e89ce92ef5cce19325.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>完成之后可以执行三行命令将本地静态资源push到码云</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c">hexo clean    #清理<br>hexo g        #生成静态资源<br>hexo d        #将本地资源提高到码云<br></code></pre></td></tr></table></figure>
+
+<p>然后去gitee上更新一下pages，然后原神–启动，就可以看到了：</p>
+<p><img src="https://img-blog.csdnimg.cn/947dc04a397f46bc9e50cf87098a2cd9.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h3 id="五、Volantis主题个性化"><a href="#五、Volantis主题个性化" class="headerlink" title="五、Volantis主题个性化#"></a>五、Volantis主题个性化<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1942518023">#</a></h3><h4 id="1、”Hello-World”特效-通用"><a href="#1、”Hello-World”特效-通用" class="headerlink" title="1、”Hello World”特效(通用)#"></a>1、”Hello World”特效(通用)<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1499027913">#</a></h4><p>修改主题配置文件里的标题</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">############################### Cover ############################### &gt; start<br>cover:<br>  ...<br>  title: <span class="hljs-string">&#x27;&lt;font&gt;&lt;span&gt;Hello&lt;/span&gt; &lt;span&gt;World&lt;/span&gt;&lt;/font&gt;&#x27;</span><br>  ...<br></code></pre></td></tr></table></figure>
+
+<p>引入以下css样式,推荐添加到hexo&#x2F;source&#x2F;css&#x2F;style.styl 里</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/* 此处调节字体大小</span><br><span class="hljs-comment">.top .title font&#123;</span><br><span class="hljs-comment">    font-size: 1em;</span><br><span class="hljs-comment">&#125;</span><br><span class="hljs-comment">*/</span><br>.top .title span&#123;<br>    transition: <span class="hljs-number">0.5</span>s;<br>&#125;<br>.top .title:hover span:nth-child(<span class="hljs-number">1</span>)&#123;<br>    margin-right: <span class="hljs-number">10</span>px;<br>&#125;<br>.top .title:hover span:nth-child(<span class="hljs-number">2</span>)&#123;<br>    margin-left: <span class="hljs-number">10</span>px;<br>&#125;<br>.top .title:hover span&#123;<br>    color: <span class="hljs-meta">#fff;</span><br>    text-shadow: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10</span>px <span class="hljs-meta">#fff,</span><br>                 <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20</span>px <span class="hljs-meta">#fff,</span><br>                 <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">40</span>px <span class="hljs-meta">#fff,</span><br>                 <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">80</span>px <span class="hljs-meta">#fff,</span><br>                 <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">120</span>px <span class="hljs-meta">#fff,</span><br>                 <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">160</span>px <span class="hljs-meta">#fff;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/b8b83f02503a4a10aa87b67ff7ec1ed3.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h4 id="2、自定义导航栏"><a href="#2、自定义导航栏" class="headerlink" title="2、自定义导航栏#"></a>2、自定义导航栏<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1725120902">#</a></h4><p>在_config.yml中放入导航栏，这里就以我的为例</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs c">############################### Cover ############################### &gt; start<br>cover:<br>  height_scheme: full <span class="hljs-meta"># full, half</span><br>  layout_scheme: dock <span class="hljs-meta"># blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)</span><br>  display:<br>    home: <span class="hljs-literal">true</span><br>    archive: <span class="hljs-literal">true</span><br>    others: <span class="hljs-literal">false</span> <span class="hljs-meta"># can be written in front-matter <span class="hljs-string">&#x27;cover: true&#x27;</span></span><br>  background: https:<span class="hljs-comment">//gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg</span><br>  <span class="hljs-meta"># background: https:<span class="hljs-comment">//bing.ioliu.cn/v1/rand?w=1920&amp;h=1200</span></span><br>  logo: <span class="hljs-meta"># https:<span class="hljs-comment">//cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png</span></span><br>  <span class="hljs-meta"># title: <span class="hljs-string">&#x27;Wei Zhongqin的博客&#x27;</span>  # <span class="hljs-string">&quot;Hello World&quot;</span>特效(通用)</span><br>  title: <span class="hljs-string">&#x27;&lt;font&gt;&lt;span&gt;Wei Zhongqin&lt;/span&gt; &lt;span&gt;的博客&lt;/span&gt;&lt;/font&gt;&#x27;</span><br>  subtitle: <span class="hljs-string">&#x27;好记性不如烂笔头&#x27;</span><br>  search: 搜一下 <span class="hljs-meta"># search bar placeholder</span><br>  features:<br>    - name: 主页<br>      icon: <span class="hljs-meta">#</span><br><span class="hljs-meta">      url: /</span><br>    - name: 标签<br>      icon: <span class="hljs-meta">#</span><br><span class="hljs-meta">      url: tags/</span><br>    - name: 关于<br>      icon: <span class="hljs-meta">#</span><br><span class="hljs-meta">      url: about/</span><br><br>############################### Cover ############################### &gt; end<br></code></pre></td></tr></table></figure>
+
+<p>对应好各个页面的url名字即可</p>
+<h4 id="3、自定义页脚"><a href="#3、自定义页脚" class="headerlink" title="3、自定义页脚#"></a>3、自定义页脚<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#198706372">#</a></h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c">site_footer:<br>  <span class="hljs-meta"># layout of footer: [aplayer, social, license, info, copyright]</span><br>  layout: [aplayer, social, license, info, copyright]<br>  social:<br>    - icon: fas fa-rss<br>      url: atom.xml<br>    - icon: fas fa-envelope<br>      url: mailto:#你的邮箱<br>    - icon: fab fa-github<br>      url: #你的github地址<br>  copyright: <span class="hljs-string">&#x27;[Copyright © 2017-2022 #版权](/)&#x27;</span><br>  # You can add your own property here. (Support markdown, <span class="hljs-keyword">for</span> example: br: <span class="hljs-string">&#x27;&lt;br&gt;&#x27;</span>)<br>  br: <span class="hljs-string">&#x27;&lt;br&gt;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="4、添加评论系统"><a href="#4、添加评论系统" class="headerlink" title="4、添加评论系统#"></a>4、添加评论系统<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#3470067019">#</a></h4><p>首先要去github创建一个公共仓库，我们就叫他comments 然后打开comments的discussion功能（在仓库的setting中，找到Features）勾选<br><img src="https://img-blog.csdnimg.cn/7d7504b147934f748f50089ad623fc25.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>然后打开<a href="https://giscus.app/zh-CN">giscus</a>，填入你的仓库<br><img src="https://img-blog.csdnimg.cn/d1fe1b4a336b4d3e8aa06c593ab1b3f4.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/de29d352b7d340c1a15148a10504ff72.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>我用的是这个模式<br><img src="https://img-blog.csdnimg.cn/0377cda67a85425c932f6d5c95c178be.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>这里会生成你需要用的参数填进主题配置文件里就行</p>
+<p><img src="https://img-blog.csdnimg.cn/cb419a0b37d1490c922441f4b081250e.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c">############################### Comments ############################### &gt; start<br>comments:<br>  service: giscus<br>  <span class="hljs-meta"># giscus</span><br>  <span class="hljs-meta"># https:<span class="hljs-comment">//giscus.app</span></span><br>  <span class="hljs-meta"># https:<span class="hljs-comment">//github.com/laymonage/giscus</span></span><br>  giscus:<br>    # 以下配置按照 yml 格式增删填写即可<br>     repo: #库的名字<br>     repo-id: #库id，标红框的第一个<br>     category: Announcements<br>     category-id: #目录id，标红框的第二个<br>     mapping: <span class="hljs-string">&quot;pathname&quot;</span><br>     reactions-enabled: <span class="hljs-string">&quot;1&quot;</span><br>     emit-metadata: <span class="hljs-string">&quot;0&quot;</span><br>     lang: <span class="hljs-string">&quot;zh-CN&quot;</span><br>  theme:<br>    light: <span class="hljs-string">&quot;light&quot;</span> <span class="hljs-meta"># https:<span class="hljs-comment">//gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css</span></span><br>    dark: <span class="hljs-string">&quot;dark&quot;</span> <span class="hljs-meta"># https:<span class="hljs-comment">//gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css</span></span><br><br><br>############################### Comments ############################### &gt; end<br></code></pre></td></tr></table></figure>
+
+<p>其他配置可以参考<a href="https://volantis.js.org/v6/getting-started/">Volantis官网文档</a></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考#"></a>参考<a href="https://www.cnblogs.com/weizhongqin-wcj/p/17554847.html#1943757881">#</a></h3><p><a href="https://hexo.io/zh-cn/docs/setup">hexo建站官方文档</a><br><a href="https://www.cnblogs.com/caituotuo/p/14602851.html">Gitee搭建个人博客 （一）前言 beacuse（事出有因）</a><br><a href="https://blog.csdn.net/qq_42661919/article/details/122453458">搭建个人博客详细教程_向光°的博客-CSDN博客</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>基于gitee+hexo搭建个人博客</div>
+      <div>http://aiyoja.github.io/20240501/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/20240502/" title="Hexo&#39;s Fluid 主题私人定制">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hexo&#39;s Fluid 主题私人定制</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/20240430/" title="MD文档排版">
+                        <span class="hidden-mobile">MD文档排版</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

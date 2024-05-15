@@ -1,0 +1,974 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="目录 一、前言 二、Markdown基本语法 2.1 标题 2.2 加粗 2.3 斜体 2.4 高亮 2.5 上标 2.6 下标 2.7 代码引用（&gt;式） [2.8 代码引用（&#96;&#96;&#96;式）](https:&#x2F;&#x2F;www.cnblogs.com&#x2F;nickchen121&#x2F;p&#x2F;10821946.html#tid-KRazcW) [2.9 代码引入（&#96;式）](https:&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown基本语法">
+<meta property="og:url" content="http://aiyoja.github.io/markdown/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="目录 一、前言 二、Markdown基本语法 2.1 标题 2.2 加粗 2.3 斜体 2.4 高亮 2.5 上标 2.6 下标 2.7 代码引用（&gt;式） [2.8 代码引用（&#96;&#96;&#96;式）](https:&#x2F;&#x2F;www.cnblogs.com&#x2F;nickchen121&#x2F;p&#x2F;10821946.html#tid-KRazcW) [2.9 代码引入（&#96;式）](https:&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg">
+<meta property="og:image" content="http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg">
+<meta property="article:published_time" content="2022-06-24T09:43:04.000Z">
+<meta property="article:modified_time" content="2022-07-01T01:51:38.000Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>markdown基本语法 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="markdown基本语法"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-06-24 17:43" pubdate>
+          2022年6月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">markdown基本语法</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h1><ul>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#%E4%B8%80%E5%89%8D%E8%A8%80">一、前言</a></li>
+<li>二、Markdown基本语法<ul>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-E5pcmm">2.1 标题</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-AzkCjz">2.2 加粗</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-HtMW8J">2.3 斜体</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-zYsfQR">2.4 高亮</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-mykKM2">2.5 上标</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-ryDYZM">2.6 下标</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-rE6FGX">2.7 代码引用（&gt;式）</a></li>
+<li>[2.8 代码引用（&#96;&#96;&#96;式）](<a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-KRazcW">https://www.cnblogs.com/nickchen121/p/10821946.html#tid-KRazcW</a>)</li>
+<li>[2.9 代码引入（&#96;式）](<a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-kjezaQ">https://www.cnblogs.com/nickchen121/p/10821946.html#tid-kjezaQ</a>)</li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-4xdcbr">2.10 插入链接（链接显示）</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-eayDT5">2.11 插入链接（链接描述显示）</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-tp735j">2.12 插入图片（链接）</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-tj85DE">2.13 插入图片（图片路径）</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-4SeY8P">2.14 有序列表</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-NmGW8F">2.15 无序列表</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-HNp5QF">2.16 分割线</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-NYDi2p">2.17 表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）：</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-DhWd2R">2.18 数学公式（行内嵌）</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#tid-4rMY8J">2.19 数学公式（块状）</a></li>
+</ul>
+</li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10821946.html#%E4%B8%89%E6%80%BB%E7%BB%93">三、总结</a></li>
+</ul>
+<p>Python从入门到放弃完整教程目录：<a href="https://www.cnblogs.com/nickchen121/p/10718112.html">https://www.cnblogs.com/nickchen121/p/10718112.html</a></p>
+<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><ul>
+<li><strong>由于有些语法无法在博客园展示，推荐使用Typora解锁全套，下载地址：<a href="https://www.typora.io/">https://www.typora.io/</a></strong></li>
+<li><strong>推荐使用jupyter，使用方法：<a href="https://www.cnblogs.com/nickchen121/p/10722733.html">https://www.cnblogs.com/nickchen121/p/10722733.html</a></strong></li>
+<li><strong>markdown数学公式大全，<a href="https://www.cnblogs.com/nickchen121/p/11746655.html">https://www.cnblogs.com/nickchen121/p/11746655.html</a></strong></li>
+</ul>
+<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。 –摘自百度百科</p>
+<p>没想到一向不太靠谱的百度百科这次竟有了如此精辟的解释。之前项目一直使用<code>word</code>撰写文档，有比较大的弊病：</p>
+<ul>
+<li>只能对纯文本文件进行版本控制，而word是二进制格式</li>
+<li>格式繁杂，经常需要中断写作来控制格式</li>
+<li>代码与文档分离，给写文档造成更大的阻力</li>
+</ul>
+<p>而假如单纯的使用txt，就没有一点格式了，用html虽然既有格式又能加入版本控制，但是需要花费较多的时间在标签上，而且标签占了文档的较大百分比，不易阅读。</p>
+<p>所以，最终的解决方案就是 <strong>Markdown</strong> ，作为一种轻量级的标记语言，能在非常短的时间内掌握。而且不仅可以用于写文档，还可以写博客、写简书、做一些随手笔记。Markdown文件以.md结尾，可以导出为html和PDF（需要使用的工具支持）。它是一种语法（个人认为是简化版的html），但是和html不同的是，各种解析器对其会有不同的表现。比如我的IDEA Markdown插件会把分割线显示成一条细灰线，Cmd Markdown则是显示一条虚线。所以建议保持使用一种Markdown工具和尽量使用标准语法。</p>
+<h1 id="二、Markdown基本语法"><a href="#二、Markdown基本语法" class="headerlink" title="二、Markdown基本语法"></a>二、Markdown基本语法</h1><h2 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 一级标题</span><br><span class="hljs-comment">## 二级标题</span><br><span class="hljs-comment">### 三级标题</span><br><span class="hljs-comment">#### 四级标题</span><br><span class="hljs-comment">##### 五级标题</span><br><span class="hljs-comment">###### 最小只有六级标题</span><br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>过于粗暴，不予以展示，你复制粘贴即知晓！！！</p>
+<h2 id="2-2-加粗"><a href="#2-2-加粗" class="headerlink" title="2.2 加粗"></a>2.2 加粗</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">**我被加粗了**<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><strong>我被加粗了</strong></p>
+<h2 id="2-3-斜体"><a href="#2-3-斜体" class="headerlink" title="2.3 斜体"></a>2.3 斜体</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">*我倾斜了了*<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><em>我倾斜了了</em></p>
+<h2 id="2-4-高亮"><a href="#2-4-高亮" class="headerlink" title="2.4 高亮"></a>2.4 高亮</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">==我高亮了==<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>我高亮了</p>
+<h2 id="2-5-上标"><a href="#2-5-上标" class="headerlink" title="2.5 上标"></a>2.5 上标</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">2</span>^<span class="hljs-number">2</span>^<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>22</p>
+<h2 id="2-6-下标"><a href="#2-6-下标" class="headerlink" title="2.6 下标"></a>2.6 下标</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">H~<span class="hljs-number">2</span>~o<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>H2o</p>
+<h2 id="2-7-代码引用（-式）"><a href="#2-7-代码引用（-式）" class="headerlink" title="2.7 代码引用（&gt;式）"></a>2.7 代码引用（&gt;式）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; hello markdown!<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>hello markdown!</p>
+</blockquote>
+<p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">&gt; hello markdown!<br>&gt;&gt; hello markdown!<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>hello markdown!</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>hello markdown!</p>
+</blockquote>
+</blockquote>
+<h2 id="2-8-代码引用（-式）"><a href="#2-8-代码引用（-式）" class="headerlink" title="2.8 代码引用（&#96;&#96;&#96;式）"></a>2.8 代码引用（&#96;&#96;&#96;式）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 不要复制这一句话，并且去掉下面的反斜杠，谢谢！</span><br>\`\`\`python<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello nick&#x27;</span>)<br>\`\`\`<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello nick&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-9-代码引入（-式）"><a href="#2-9-代码引入（-式）" class="headerlink" title="2.9 代码引入（&#96;式）"></a>2.9 代码引入（&#96;式）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 不要复制这一句话，并且去掉下面的反斜杠，谢谢！</span><br>\`<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello nick&#x27;</span>)\`<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;hello nick&#x27;</span>)</span></span><br></code></pre></td></tr></table></figure>
+
+<h2 id="2-10-插入链接（链接显示）"><a href="#2-10-插入链接（链接显示）" class="headerlink" title="2.10 插入链接（链接显示）"></a>2.10 插入链接（链接显示）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">&lt;https://www.cnblogs.com/nickchen121/p/<span class="hljs-number">10718112.</span>html&gt;<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><a href="https://www.cnblogs.com/nickchen121/p/10718112.html">https://www.cnblogs.com/nickchen121/p/10718112.html</a></p>
+<h2 id="2-11-插入链接（链接描述显示）"><a href="#2-11-插入链接（链接描述显示）" class="headerlink" title="2.11 插入链接（链接描述显示）"></a>2.11 插入链接（链接描述显示）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">[nickchen博客](https://www.cnblogs.com/nickchen121/p/<span class="hljs-number">10718112.</span>html <span class="hljs-string">&quot;nickchen博客&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>nickchen博客</p>
+<h2 id="2-12-插入图片（链接）"><a href="#2-12-插入图片（链接）" class="headerlink" title="2.12 插入图片（链接）"></a>2.12 插入图片（链接）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">![数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark](https://imgmd.oss-cn-shanghai.aliyuncs.com/Python从入门到放弃/数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark <span class="hljs-string">&#x27;描述信息&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><a href="https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg?x-oss-process=style/watermark"><img src="https://imgmd.oss-cn-shanghai.aliyuncs.com/Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg" srcset="/img/loading.gif" lazyload alt="img"></a></p>
+<h2 id="2-13-插入图片（图片路径）"><a href="#2-13-插入图片（图片路径）" class="headerlink" title="2.13 插入图片（图片路径）"></a>2.13 插入图片（图片路径）</h2><ul>
+<li>绝对路径：.md文本同目录下图片的名字，如<code>数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark</code></li>
+<li>相对路径：图片在电脑中的路径地址，如<code>\Users\nick\mac\desktop\数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark</code></li>
+</ul>
+<p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">![数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark](数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark <span class="hljs-string">&#x27;描述信息&#x27;</span>)<br><br>![数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark](\Users\nick\mac\desktop\数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark <span class="hljs-string">&#x27;描述信息&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="http://img.aiyou.ga/pg/qrcode_for_gh_d48a28881167_258.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><a href="https://www.cnblogs.com/nickchen121/p//Users/nick/mac/desktop/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93-%E6%90%9E%E7%AC%91%E7%BB%93%E6%9D%9F.jpg?x-oss-process=style/watermark">https://www.cnblogs.com/nickchen121/p/\Users\nick\mac\desktop\数据类型总结-搞笑结束.jpg?x-oss-process=style/watermark</a>)</p>
+<h2 id="2-14-有序列表"><a href="#2-14-有序列表" class="headerlink" title="2.14 有序列表"></a>2.14 有序列表</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-number">1.</span> one<br><span class="hljs-number">2.</span> two <br><span class="hljs-number">3.</span> three<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<ol>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ol>
+<h2 id="2-15-无序列表"><a href="#2-15-无序列表" class="headerlink" title="2.15 无序列表"></a>2.15 无序列表</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">* one<br>* two<br>* three<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+<h2 id="2-16-分割线"><a href="#2-16-分割线" class="headerlink" title="2.16 分割线"></a>2.16 分割线</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">---<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<hr>
+<h2 id="2-17-表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）："><a href="#2-17-表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）：" class="headerlink" title="2.17 表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）："></a>2.17 表格而且第二行必须得有，并且第二行的冒号代表对齐格式，分别为居中；右对齐；左对齐）：</h2><p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">name | age | sex <br>:-:|:-|-:<br>tony|<span class="hljs-number">20</span>|男<br>lucy|<span class="hljs-number">18</span>|女<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th align="center">name</th>
+<th align="left">age</th>
+<th align="right">sex</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">nick</td>
+<td align="left">19</td>
+<td align="right">男</td>
+</tr>
+<tr>
+<td align="center">jason</td>
+<td align="left">18</td>
+<td align="right">女</td>
+</tr>
+</tbody></table>
+<h2 id="2-18-数学公式（行内嵌）"><a href="#2-18-数学公式（行内嵌）" class="headerlink" title="2.18 数学公式（行内嵌）"></a>2.18 数学公式（行内嵌）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">内嵌数学公式$\sum_&#123;i=<span class="hljs-number">1</span>&#125;^&#123;<span class="hljs-number">10</span>&#125;f(i)\,\,\text&#123;thanks&#125;$<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>内嵌数学公式∑10i&#x3D;1f(i)thanks∑i&#x3D;110f(i)thanks</p>
+<h2 id="2-19-数学公式（块状）"><a href="#2-19-数学公式（块状）" class="headerlink" title="2.19 数学公式（块状）"></a>2.19 数学公式（块状）</h2><p>代码：</p>
+<p>python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">$$<br>\sum_&#123;i=<span class="hljs-number">1</span>&#125;^&#123;<span class="hljs-number">10</span>&#125;f(i)\,\,\text&#123;thanks&#125;<br>$$<br>PYTHON 复制 全屏<br></code></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p>∑i&#x3D;110f(i)thanks∑i&#x3D;110f(i)thanks</p>
+<h1 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h1><p>以上所述就是Markdown的基本标签，虽然不多，但是可以解决大部分情况。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>markdown基本语法</div>
+      <div>http://aiyoja.github.io/markdown/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年6月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/matery/" title="Hexo博客主题之hexo-theme-matery的介绍">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hexo博客主题之hexo-theme-matery的介绍</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/hexo-2/" title="如何用hexo新建一篇文章并编辑文章">
+                        <span class="hidden-mobile">如何用hexo新建一篇文章并编辑文章</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

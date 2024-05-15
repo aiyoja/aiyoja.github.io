@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="*文章导读* 格雷伯在书里援引了俄国作家陀思妥耶夫斯基在西伯利亚劳改营流放期间提出的一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。 陀思妥耶夫斯基发现，尽管被押送到西伯利亚的犯人所做的工作和农民相比并不显得那么辛苦， 但这些犯人却是真正意义上的“苦工”，因为“农民劳作的时候，起码有一部分是为了他们自己，但是在劳改营，苦工之所以‘苦’，是因为劳作者从这份劳作中什么也得不到”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="终日忙碌的工作，其实并没有意义">
+<meta property="og:url" content="http://aiyoja.github.io/20220818/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="*文章导读* 格雷伯在书里援引了俄国作家陀思妥耶夫斯基在西伯利亚劳改营流放期间提出的一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。 陀思妥耶夫斯基发现，尽管被押送到西伯利亚的犯人所做的工作和农民相比并不显得那么辛苦， 但这些犯人却是真正意义上的“苦工”，因为“农民劳作的时候，起码有一部分是为了他们自己，但是在劳改营，苦工之所以‘苦’，是因为劳作者从这份劳作中什么也得不到”">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavbcLiciaPjTtnSsZHY5ARATNbOlmeVgNZbOummMGRmFVVFehUbicAfSjcyQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavbfTlTySyRr1KLRVox5PjKEZXb0JQC5gibGUvveXhicse3gdg4DIz7qNLA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavb3URr4S1Jhq5C10XSt4orhcSI59LADJoZzFwvuR23icoZ9XJwo2k9h3w/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="article:published_time" content="2022-08-18T07:47:47.000Z">
+<meta property="article:modified_time" content="2022-08-18T07:52:42.000Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavbcLiciaPjTtnSsZHY5ARATNbOlmeVgNZbOummMGRmFVVFehUbicAfSjcyQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>终日忙碌的工作，其实并没有意义 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="终日忙碌的工作，其实并没有意义"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-18 15:47" pubdate>
+          2022年8月18日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          26 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">终日忙碌的工作，其实并没有意义</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><em><strong>*文章导读*</strong></em></p>
+<p><strong>格雷伯在书里援引了俄国作家陀思妥耶夫斯基在西伯利亚劳改营流放期间提出的一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。</strong></p>
+<p><strong>陀思妥耶夫斯基发现，尽管被押送到西伯利亚的犯人所做的工作和农民相比并不显得那么辛苦， 但这些犯人却是真正意义上的“苦工”，因为“农民劳作的时候，起码有一部分是为了他们自己，但是在劳改营，苦工之所以‘苦’，是因为劳作者从这份劳作中什么也得不到”。</strong></p>
+<p>这两年，当大家谈论到工作时，就会忍不住提起一个关键词——“卷”。和年轻的朋友聊天时发现，他们会把自己戏称为一颗“卷心菜”，尽管不愿参与无意义的内部竞争，但是因为害怕一旦停下，便会面临随时被淘汰的命运，又不得不深陷其中。为什么在人工智能越发普及的今天，我们却好像越来越忙碌了，工作时间也越来越长？每天投身于工作，真的为我们个人和社会创造出巨大的价值了吗？</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavbcLiciaPjTtnSsZHY5ARATNbOlmeVgNZbOummMGRmFVVFehUbicAfSjcyQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" srcset="/img/loading.gif" lazyload alt="图片"></p>
+<p><strong>1</strong></p>
+<p>面对这些疑问，伦敦政治经济学院的人类学家大卫·格雷伯在本书中犀利地指出，很多人的“整个职业生涯都耗费在那些他们其实知道并不需要的事情上。不管是道德上还是心灵上，这种状况给人造成的伤害都是深重的”，甚至可以称为“我们集体灵魂上的一道伤疤”。</p>
+<p>格雷伯在研究中发现，那些毫无意义甚至有害的工作占据了所有工作的一半以上，成为一种“狗屁工作”（bullshit jobs），而且这样的工作正在不断膨胀中。</p>
+<p>所谓“狗屁工作”，根据格雷伯的定义，指的是一份毫无意义且往往有害的定期领薪水的职业，其无意义或有害程度是如此之高，乃至从事这份职业的人都无法为其找出合适的存在理由。虽然要从事这份工作有一个条件，即从事者不得不假装这份工作的存在是完全合理的。在知道自己的工作毫无意义的同时，等级制度的工作环境更是日益让人难以忍受，上班族日常生活中的诸多苦难都直接来源于此。</p>
+<p>格雷伯在书里援引了俄国作家陀思妥耶夫斯基在西伯利亚劳改营流放期间提出的一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。陀思妥耶夫斯基发现，尽管被押送到西伯利亚的犯人所做的工作和农民相比并不显得那么辛苦， 但这些犯人却是真正意义上的“苦工”，因为“农民劳作的时候，起码有一部分是为了他们自己，但是在劳改营，苦工之所以‘苦’，是因为劳作者从这份劳作中什么也得不到”。</p>
+<p><strong>2</strong></p>
+<p>早在 100多年前，在德国社会学家马克斯·韦伯所处的时代，人们对于财富的追求到了近乎疯狂的地步。在这样的社会成功学标准之下，工厂生产变得更加有计划性，工人在工作中不断地督促自己：只有整日整夜地劳动，才能获取更多的财富。他们日复一日地在流水线上工作，已经不再是完整的人，而是异化成为机器的一部分；他们的一举一动不再由自己掌握，而是被机器掌握。同时，组织运作的制度性框架也在悄悄发生变化，人们的行为准则不再依赖传统社会中个人的魅力或者长老的权威，而是通过一整套系统化、组织化、层级化的科层制进行运作。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavbfTlTySyRr1KLRVox5PjKEZXb0JQC5gibGUvveXhicse3gdg4DIz7qNLA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" srcset="/img/loading.gif" lazyload alt="图片"></p>
+<p>这种高度分工、高度理性的组织架构无疑是与高速发展的社会经济相适应的。在科层制下，人们的职责就是处理好自己应有的分工，在科层制的每一层做着“流水线”的工作，在高度理性的组织中处理没完没了的文件，从而导致整个组织体系俨然成为一部庞大的机器。这部机器冷血无情，压抑着每个人的情感。这样的制度让初次踏入的人们时刻体验到一种被抛入湍流的迷茫和紧迫之感，让人难免呼吸急促—那种赢得一切的热情和失去一切的恐惧，把人推着不断往上爬，尽管资源有<strong>限、竞争残酷，但没有人愿意落下，人人都像打了兴奋剂一般，试图攫取更多的金钱。</strong></p>
+<p><strong>3</strong></p>
+<p>而到 20 世纪，伴随着科技的不断进步，人们盼望着能从高度异化和理性化的工作中得到解放。然而，事实上呢？格雷伯在这本书中指出，20 世纪后，工作又转变为自律和自我牺牲的一种形式，无论处于什么阶层，都会陷入永不停歇的工作境地中：</p>
+<blockquote>
+<p>我们现在很少再听到讲述富人阶层悠闲生活的故事了（并非现在没有生活悠闲的富人了，而是大家不再赞美闲散了而已）。而在 20 世纪 30 年代经济大萧条期间，穷困潦倒的人们可是很喜欢观看描绘上流社会的电影的。影片中，花花公子坐拥百万财富，浪漫不羁，胡作非为。这样的故事曾备受欢迎。现在，人们更喜欢听工作狂首席执行官的故事。大家乐此不疲地谈论着首席执行官超人般不怎么睡觉的变态工作安排。在英国，报纸和杂志甚至会刊登王室成员极为紧凑的日程。通过这些报道我们知道，王室成员每周花在准备和出席各种仪式典礼上的时间是如此之多，以至他们几乎没有一丁点儿私人时光能留给自己。</p>
+</blockquote>
+<p>经济学家凯恩斯早在 19 世纪 30 年代就曾预言，到20 世纪末， 高水准的机器自动化大生产可以取代大部分毫无价值的工作，人们一周只需要工作 15 个小时，从而拥有更多的自由时间去寻找人生的乐趣、追逐生活的梦想。然而，现实发展与凯恩斯的预言大相径庭，自动化生产并没有带来预想中的轻松和优越，反而逐渐蔓延开形成一种担心工作被机器取代的恐惧心态。在这种心理下，人们的自我评价也在慢慢地发生变化，以我们不曾想象的轨迹运行着，看似在一条平稳的轨道之上，却充满着平衡工作与生活这组矛盾关系的颠簸。</p>
+<p>格雷伯指出，人们并不会将个人的职业视作后人对自己的主要评价来源。当我们离开这个世界后，在墓地前是找不到刻着“蒸汽管装修工”“办事员”“护林员”这样的墓碑的；相反，墓碑上刻下的，是人们生前曾共度时光的伴侣和后代的姓名，而这些都是我们在世间曾经存在过的证明，是我们曾经付出和收获的爱的见证，是与生命本身息息相关的一种情感传递。但是在世俗生活中，人们相遇时并不会问对方关于爱和承诺的问题，而是问：“你是做什么工作的？”</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz/IDOYVhG0N8HElp8Mdm00O2PQEuGZKavb3URr4S1Jhq5C10XSt4orhcSI59LADJoZzFwvuR23icoZ9XJwo2k9h3w/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" srcset="/img/loading.gif" lazyload alt="图片"></p>
+<p>从 20 世纪 70 年代起，随着劳动进一步去技能化，工人越来越像机器，劳动失去了某种创造的神圣性。由此，人们逐渐不再以所从事的工作、职业来标识身份（例如教师、工人、公务员），而更多地希望以所消费的对象来表达自己，并希望将自己归属到某个亚文化部落：“你的身份可以是科幻迷，可以是爱狗人士，可以是彩蛋射击迷，可以是瘾君子，可以是芝加哥公牛队球迷，还可以是曼联球迷……但你绝不会用码头工人来定义自己，也不会用巨灾风险分析师来审视自己的存在。”</p>
+<p>在格雷伯看来，这恰恰可以称为“现代工作的悖论”：</p>
+<p>一方面，当被问及生活的意义这个问题时，人们常常会回答，是工作赋予了他们生活的终极意义，大部分人的尊严感和自我价值感都与工作谋生息息相关，一旦失业，就会给他们的心理造成毁灭性的打击。</p>
+<p>另一方面，很多人憎恨自己的工作，他们认为自己每天所忙碌的事情，不仅没有创造相应的社会价值，而且折磨着心灵，无法敞开心扉谈论真实的感受从而陷入绝望。因此，在某种程度上，我们大部分人更希望通过工作以外的东西来定义自己。</p>
+<p><strong>4</strong></p>
+<p>我们每个人都像是坐在摩天轮的座舱里，始终匀速地运转着，乘着一股惯性完成每天的规定动作，白日里循规蹈矩，夜晚的灯火通明让我们无法入眠。一旦摩天轮按下开始键，我们似乎就难以获得停下脚步的机会，加班，熬夜，日复一日，疲劳甚至倦怠成为生活的常态。城市摩天轮象征着社会的齿轮不停地转动，一旦停下，人们就担心会被抛下，宁可蜷缩在一个个封闭的小小座舱里。</p>
+<p>高耸入云的摩天轮，就这样没有根基地悬浮着。我们把在里面的生活看成理所当然，我们执着于这样的模式，以为艰难的事情才是有价值的，多吃些苦才是合理的，“996”工作制是每一个“打工人”的宿命。就好像本文开头里年轻朋友告诉我的那样，如果一定要卷，也想努力做一颗向上爬的“卷心菜”，而不是走下坡路的“卷心菜”。在得到了理想的工作和薪资福利，完成了每月 KPI（关键绩效指标）考核目标之后，今天的年轻一代依然充满惶恐和迷茫，担心现在行业里学到的、能复用的场景非常有限：“我会做数据透视表，会写日报、周报，但如果有一天我被裁员了，被迫离开互联网大厂以后，我还能做什么？”如同螺丝钉一般的存在，如果有一天换了台机器，是否就拧不上了呢？</p>
+<p>越来越多的人意识到，自己终日忙碌的工作并没有意义，而作为个体，我们的时间是有意义的，我们是需要尊重、欣赏，需要被滋养的。在摩天轮的座舱里，有一小部分人是醒着的，他们开始反思自己在系统里的困境，甚至大胆地重新审视自我，思考什么是值得的，什么是不做也是可以的，开始尝试从这样一种生活中挣脱出来。希望我们能够成为那些打开座舱窗户向外呼喊，带着大家一起唱歌的人。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>终日忙碌的工作，其实并没有意义</div>
+      <div>http://aiyoja.github.io/20220818/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/20220819/" title="hexo blog迁移致麒麟Linux的环境配置">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">hexo blog迁移致麒麟Linux的环境配置</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/20220813/" title="对中国经济今明两年做了一个深度研判">
+                        <span class="hidden-mobile">对中国经济今明两年做了一个深度研判</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,1031 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  
+  <link href="https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="弶森">
+  <meta name="keywords" content="ECNU NLP DeepLearning AntNLP 弶森 aiyoja 自然语言处理 深度学习 资源分享">
+  
+    <meta name="description" content="迁移致麒麟Linux的环境配置一、安装nodejs1、查看Linux版本 1node -v 2、安装默认的nodejs      http:&#x2F;&#x2F;archive.kylinos.cn&#x2F;kylin&#x2F;KYLIN-ALLdeb http:&#x2F;&#x2F;archive.kylinos.cn&#x2F;kylin&#x2F;KYLIN-ALL10.1-2203-updates main restricted universe multi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo blog迁移致麒麟Linux的环境配置">
+<meta property="og:url" content="http://aiyoja.github.io/20220819/index.html">
+<meta property="og:site_name" content="游颜色">
+<meta property="og:description" content="迁移致麒麟Linux的环境配置一、安装nodejs1、查看Linux版本 1node -v 2、安装默认的nodejs      http:&#x2F;&#x2F;archive.kylinos.cn&#x2F;kylin&#x2F;KYLIN-ALLdeb http:&#x2F;&#x2F;archive.kylinos.cn&#x2F;kylin&#x2F;KYLIN-ALL10.1-2203-updates main restricted universe multi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pic.wya1.com/blog/0377cb02efcf4712821c15e99474f215.jpg">
+<meta property="og:image" content="http://pic.wya1.com/blog/3b15cadb6bb14f7584f5223200354147.jpg">
+<meta property="og:image" content="http://pic.wya1.com/blog/107cf5a9bd104f95a3d9b0beac15c257.jpg">
+<meta property="og:image" content="http://pic.wya1.com/blog/6e1498de772f4917b3a5d2f8cfda1aa9.jpg">
+<meta property="og:image" content="http://pic.wya1.com/blog/d41cebe4421c4b179c3a7e53601538e4.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/d613dbc858a443c995466cb5c1927d1b.png">
+<meta property="og:image" content="http://pic.wya1.com/blog/8a19788b42f343408d65450a6fb709cf.jpg">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://common.cnblogs.com/images/copycode.gif">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723171020683-1158787398.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723174058212-1708267689.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175043826-852296007.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175426105-204393251.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175833106-707953242.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723173337793-2144135843.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723173352375-1536943860.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2018/04/nvm-ls.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6253588-67593a97c54188fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1025/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6253588-0d23ac371b5c4302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/473/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6253588-45dfd7682fffbb8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/425/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6253588-bd67bd97dfa96beb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/942/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6253588-2f7892c29b48b973.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/506/format/webp">
+<meta property="article:published_time" content="2022-08-19T06:43:38.000Z">
+<meta property="article:modified_time" content="2024-05-08T01:52:57.264Z">
+<meta property="article:author" content="弶森">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://pic.wya1.com/blog/0377cb02efcf4712821c15e99474f215.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>hexo blog迁移致麒麟Linux的环境配置 - 游颜色</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aiyoja.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>游颜色</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/contact/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>contact</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="hexo blog迁移致麒麟Linux的环境配置"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-19 14:43" pubdate>
+          2022年8月19日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          28 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">hexo blog迁移致麒麟Linux的环境配置</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <hr>
+<h1 id="迁移致麒麟Linux的环境配置"><a href="#迁移致麒麟Linux的环境配置" class="headerlink" title="迁移致麒麟Linux的环境配置"></a>迁移致麒麟Linux的环境配置</h1><h2 id="一、安装nodejs"><a href="#一、安装nodejs" class="headerlink" title="一、安装nodejs"></a>一、安装nodejs</h2><p>1、查看Linux版本</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">-v</span><br></code></pre></td></tr></table></figure>
+<p>2、安装默认的nodejs      <a href="http://archive.kylinos.cn/kylin/KYLIN-ALLdeb">http://archive.kylinos.cn/kylin/KYLIN-ALLdeb</a> <a href="http://archive.kylinos.cn/kylin/KYLIN-ALL10.1-2203-updates">http://archive.kylinos.cn/kylin/KYLIN-ALL10.1-2203-updates</a> main restricted universe multiverse</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo apt <span class="hljs-keyword">install</span> nodejs-legacy<br></code></pre></td></tr></table></figure>
+<p>3、卸载nodejs  </p>
+<p>使用</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">sudo apt <span class="hljs-built_in">auto</span>remove<br></code></pre></td></tr></table></figure>
+
+<p>来卸载它(它们)</p>
+<p>4、由于版本较低直接 <a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a> 下载合适版本<a href="https://nodejs.org/dist/v18.16.0/node-v18.16.0-darwin-arm64.tar.gz">https://nodejs.org/dist/v18.16.0/node-v18.16.0-darwin-arm64.tar.gz</a></p>
+<p>5、安装包的下载</p>
+<p>下载需要注意的是，最开始我是下载的最新版本的node，但是目前最新版本的我试过很多次都会失败，这里建议还是安装14.15.1版本，也算是比较稳定了。<br>附上地址：</p>
+<pre><code class="hljs">https://nodejs.org/en/blog/release/v14.15.1/
+</code></pre>
+<p>6、保存文件</p>
+<p><img src="http://pic.wya1.com/blog/0377cb02efcf4712821c15e99474f215.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>打开所在文件夹</p>
+<p><img src="http://pic.wya1.com/blog/3b15cadb6bb14f7584f5223200354147.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>右键，解压到此处</p>
+<p><img src="http://pic.wya1.com/blog/107cf5a9bd104f95a3d9b0beac15c257.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>在空白处打开终端</p>
+<p><img src="http://pic.wya1.com/blog/6e1498de772f4917b3a5d2f8cfda1aa9.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>7、切换到root，将node-v14.15.1-linux-arm64移动到&#x2F;opt目录</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">ll | grep <span class="hljs-keyword">node</span><br><span class="hljs-title">sudo</span> mkdir -p /opt<br>sudo mv <span class="hljs-keyword">node</span><span class="hljs-title">-v14</span>.<span class="hljs-number">15.1</span>-linux-arm64 /opt/<br><br></code></pre></td></tr></table></figure>
+
+<p><img src="http://pic.wya1.com/blog/d41cebe4421c4b179c3a7e53601538e4.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>8、配置环境变量&#x2F;etc&#x2F;profile</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">sudo <span class="hljs-keyword">vim</span> /etc/<span class="hljs-keyword">profile</span><br></code></pre></td></tr></table></figure>
+
+<p>添加一段<br>要用到vim相关编辑命令a、:wq等,<em>这里提供一个vim操作的参考</em>&gt; <a href="https://blog.csdn.net/Haikuotiankong11111/article/details/98681859">https://blog.csdn.net/Haikuotiankong11111/article/details/98681859</a></p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir">export <span class="hljs-title class_">PATH</span>=<span class="hljs-variable">$PATH</span><span class="hljs-symbol">:/opt/node-v14</span>.<span class="hljs-number">15.1</span>-linux-arm64/bin<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/d613dbc858a443c995466cb5c1927d1b.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>9、保存后，执行刷新指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> /etc/profile<br></code></pre></td></tr></table></figure>
+
+<p>10、查看安装的版本信息</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">-v</span><br>npm -v<br></code></pre></td></tr></table></figure>
+
+<p><img src="http://pic.wya1.com/blog/8a19788b42f343408d65450a6fb709cf.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>参考文献</p>
+<p><a href="https://blog.csdn.net/qq_44230067/article/details/125671995">https://blog.csdn.net/qq_44230067/article/details/125671995</a></p>
+<p><a href="http://blog.wya1.com/article/636697030/details/21566">http://blog.wya1.com/article/636697030/details/21566</a></p>
+<h2 id="二、Nodejs降低或切换使用的版本-nvm"><a href="#二、Nodejs降低或切换使用的版本-nvm" class="headerlink" title="二、Nodejs降低或切换使用的版本-nvm"></a><a href="https://www.cnblogs.com/JourneyOfFlower/p/15049226.html">二、Nodejs降低或切换使用的版本-nvm</a></h2><p>在我们的日常开发中经常会遇到这种情况：手上有好几个项目，每个项目的需求不同，进而不同项目必须依赖不同版的 NodeJS 运行环境。如果没有一个合适的工具，这个问题将非常棘手。</p>
+<p><a href="https://github.com/creationix/nvm">nvm</a> 应运而生，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果需要管理 Windows 下的 node，官方推荐使用 <a href="https://github.com/hakobera/nvmw">nvmw</a> 或 <a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a>。不过，nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系。但下面介绍的所有命令，都可以在 nvm-windows 中运行。</p>
+<hr>
+<h3 id="nvm-与-n-的区别"><a href="#nvm-与-n-的区别" class="headerlink" title="nvm 与 n 的区别"></a>nvm 与 n 的区别</h3><p>node 版本管理工具还有一个是 TJ大神的 <a href="https://github.com/tj/n">n</a> 命令，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node&#x2F;npm 的外部 shell 脚本，因此 n 命令相比 nvm 更加局限。</p>
+<p>由于 npm 安装的模块路径均为 &#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules，当使用 n 切换不同的 node 版本时，实际上会共用全局的 node&#x2F;npm 目录。 因此不能很好的满足『按不同 node 版本使用不同全局 node 模块』的需求。</p>
+<hr>
+<h3 id="卸载全局安装的-node-npm"><a href="#卸载全局安装的-node-npm" class="headerlink" title="卸载全局安装的 node&#x2F;npm"></a>卸载全局安装的 node&#x2F;npm</h3><p>在官网下载的 node 安装包，运行后会自动安装在全局目录，使用过程中经常会遇到一些<strong>权限问题</strong>，所以推荐按照以下方法卸载全局安装的 node&#x2F;npm。</p>
+<p>首先，打开你 Finder，按 shift+command+G，打开前往文件夹的窗口，分别输入下列目录进去之后删除 node 和 node_modules 相关的文件和文件夹:</p>
+<ul>
+<li>打开 &#x2F;usr&#x2F;local&#x2F;lib，删除 node 和 node_modules 相关的文件和文件夹</li>
+<li>打开 &#x2F;usr&#x2F;local&#x2F;include，删除 node 和 node_modules 相关的文件和文件夹</li>
+<li>如果你是使用的 brew install node 安装的 NodeJS，那么你还需要在终端中执行 brew uninstall node 命令来卸载</li>
+<li>检查你的个人主文件夹下面的所有的 local、lib 以及 include 文件夹，并且删除所有与 node 和 node_modules 相关的文件以及文件夹</li>
+<li>打开 &#x2F;usr&#x2F;local&#x2F;bin 并删除 node 可执行文件</li>
+</ul>
+<p>你可能还需要在你的终端中输入一些额外的指令：</p>
+<p><img src="https://common.cnblogs.com/images/copycode.gif" srcset="/img/loading.gif" lazyload alt="复制代码"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">rm</span> /usr/local/bin/npm<br>sudo <span class="hljs-built_in">rm</span> /usr/local/share/man/man1/node.1<br>sudo <span class="hljs-built_in">rm</span> /usr/local/lib/dtrace/node.d<br>sudo <span class="hljs-built_in">rm</span> -rf ~/.npm<br>sudo <span class="hljs-built_in">rm</span> -rf ~/.node-gyp<br>sudo <span class="hljs-built_in">rm</span> /opt/local/bin/node<br>sudo <span class="hljs-built_in">rm</span> /opt/local/include/node<br>sudo <span class="hljs-built_in">rm</span> -rf /opt/local/lib/node_modules<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://common.cnblogs.com/images/copycode.gif" srcset="/img/loading.gif" lazyload alt="复制代码"></p>
+<hr>
+<h3 id="Windows-安装"><a href="#Windows-安装" class="headerlink" title="Windows 安装"></a>Windows 安装</h3><p>首先最重要的是：一定要卸载已安装的 NodeJS，否则会发生冲突。然后下载 <a href="https://github.com/coreybutler/nvm-windows/releases">nvm-windows</a> 最新安装包，直接安装即可。</p>
+<p><a href="https://blog.csdn.net/weixin_44582077/article/details/110237056">windows中如何将已安装的nodejs高版本降级为低版本_Spring_zhan的博客</a></p>
+<hr>
+<h3 id="OS-X-Linux-安装"><a href="#OS-X-Linux-安装" class="headerlink" title="OS X&#x2F;Linux 安装"></a>OS X&#x2F;Linux 安装</h3><p>与 Windows 不同，我们并不一定要先卸载原有的 NodeJS。当然我们推荐还是先卸载掉比较好。另外，你还需要 C++ 编译器，Linux 发行版一般不用担心，像 Ubuntu 都可以直接用 build-essential 套件，OS X 的话，可以用 X-Code 的命令行工具。运行这个命令即可：</p>
+<p>xcode-select–install</p>
+<p>在 Linux 中：（如果是 Debian 发行版）</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> install build-essential<br></code></pre></td></tr></table></figure>
+
+<p>然后我们可以使用</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">curl -o- https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/creationix/</span>nvm<span class="hljs-regexp">/v0.33.0/i</span>nstall.sh | bash<br></code></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget -qO- https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/creationix/</span>nvm<span class="hljs-regexp">/v0.33.0/i</span>nstall.sh | bash<br></code></pre></td></tr></table></figure>
+
+<p>从远程下载 install.sh 脚本并执行。注意这个版本年数字 v0.33.0 会随着项目开发而变化。随时通过<a href="https://github.com/creationix/nvm#install-script">官方最新安装命令</a>来检查最新安装版本是有好处的。</p>
+<p>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure>
+
+
+<hr>
+<h3 id="安装多版本-node-npm"><a href="#安装多版本-node-npm" class="headerlink" title="安装多版本 node&#x2F;npm"></a>安装多版本 node&#x2F;npm</h3><p>你可以通过以下命令来列出远程服务器上所有的可用版本：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvm ls-remote</span><br></code></pre></td></tr></table></figure>
+
+<p>Windows 的话，就是：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">nvm ls available<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723171020683-1158787398.png" srcset="/img/loading.gif" lazyload></p>
+<p>例如，我们要安装12.22.1版本，可以用如下命令：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> install <span class="hljs-number">12</span>.<span class="hljs-number">22</span>.<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p>nvm 遵守<a href="http://semver.org/lang/zh-CN/">语义化版本</a>命名规则。例如，你想安装最新的 12.22 系列的最新的一个版本的话，可以运行：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> install <span class="hljs-number">12</span>.<span class="hljs-number">22</span><br></code></pre></td></tr></table></figure>
+
+<p>nvm 会寻找 12.22.x 中最高的版本来安装。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723174058212-1708267689.png" srcset="/img/loading.gif" lazyload></p>
+<p> 如上所示，在nvm安装位置 加上以下代码</p>
+<p> <img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175043826-852296007.png" srcset="/img/loading.gif" lazyload></p>
+<p> 参考：<a href="https://juejin.cn/post/6844904138325639176">https://juejin.cn/post/6844904138325639176</a></p>
+<p>完成安装 呼~</p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175426105-204393251.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723175833106-707953242.png" srcset="/img/loading.gif" lazyload></p>
+<p>可以通过删除以下两个文件夹来删除不需要的版本</p>
+<p><img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723173337793-2144135843.png" srcset="/img/loading.gif" lazyload></p>
+<p> <img src="https://img2020.cnblogs.com/blog/1295751/202107/1295751-20210723173352375-1536943860.png" srcset="/img/loading.gif" lazyload> </p>
+<hr>
+<h3 id="在不同版本间切换"><a href="#在不同版本间切换" class="headerlink" title="在不同版本间切换"></a>在不同版本间切换</h3><p>每当我们安装了一个新版本 Node 后，全局环境会自动把这个新版本设置为默认。</p>
+<p>nvm 提供了 nvm use 命令。这个命令的使用方法和 install 命令类似。</p>
+<p>例如，切换到 4.2.2：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> use4.<span class="hljs-number">2</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>切换到最新的 4.2.x：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> use4.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>切换到 iojs：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> use iojs-v3.<span class="hljs-number">2</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<p>切换到最新版：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">nvm use <span class="hljs-keyword">node</span><span class="hljs-title"></span><br></code></pre></td></tr></table></figure>
+
+<p>每次执行切换的时候，系统都会把 node 的可执行文件链接放到特定版本的文件上。</p>
+<p>我们还可以用 nvm 给不同的版本号设置别名：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> alias awesome-version <span class="hljs-number">4</span>.<span class="hljs-number">2</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>我们给 4.2.2 这个版本号起了一个名字叫做 awesome-version，然后我们可以运行：</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs openscad">nvm <span class="hljs-keyword">use</span> awesome-<span class="hljs-built_in">version</span><br></code></pre></td></tr></table></figure>
+
+<p>下面这个命令可以取消别名：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">nvm unalias awesome-<span class="hljs-built_in">version</span><br></code></pre></td></tr></table></figure>
+
+<p>另外，你还可以设置 default 这个特殊别名：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">nvm aliasdefault <span class="hljs-keyword">node</span><span class="hljs-title"></span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="列出已安装实例"><a href="#列出已安装实例" class="headerlink" title="列出已安装实例"></a>列出已安装实例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvm <span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://www.runoob.com/wp-content/uploads/2018/04/nvm-ls.png" srcset="/img/loading.gif" lazyload></p>
+<p>上面绿色箭头是当前正在使用的版本，下面列出的还有设置过的别名。</p>
+<hr>
+<h3 id="在项目中使用不同版本的-Node"><a href="#在项目中使用不同版本的-Node" class="headerlink" title="在项目中使用不同版本的 Node"></a>在项目中使用不同版本的 Node</h3><p>我们可以通过创建项目目录中的 .nvmrc 文件来指定要使用的 Node 版本。之后在项目目录中执行 nvm use 即可。.nvmrc 文件内容只需要遵守上文提到的语义化版本规则即可。另外还有个工具叫做 <a href="https://github.com/wbyoung/avn">avn</a>，可以自动化这个过程。</p>
+<hr>
+<h3 id="在多环境中，npm该如何使用呢？"><a href="#在多环境中，npm该如何使用呢？" class="headerlink" title="在多环境中，npm该如何使用呢？"></a>在多环境中，npm该如何使用呢？</h3><p>每个版本的 Node 都会自带一个不同版本的 npm，可以用 npm -v 来查看 npm 的版本。全局安装的 npm 包并不会在不同的 Node 环境中共享，因为这会引起兼容问题。它们被放在了不同版本的目录下，例如 ~&#x2F;.nvm&#x2F;versions&#x2F;node&#x2F;<version>&#x2F;lib&#x2F;node_modules</version> 这样的目录。这刚好也省去我们在 Linux 中使用 sudo 的功夫了。因为这是用户的主文件夹，并不会引起权限问题。</p>
+<p>但问题来了，我们安装过的 npm 包，都要重新再装一次？幸运的是，我们有个办法来解决我们的问题，运行下面这个命令，可以从特定版本导入到我们将要安装的新版本 Node：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> install v5.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>--reinstall-packages-from=<span class="hljs-number">4</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><p>直接运行特定版本的 Node</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> run <span class="hljs-number">4</span>.<span class="hljs-number">2</span>.<span class="hljs-number">2</span>--version<br></code></pre></td></tr></table></figure>
+
+<p>在当前终端的子进程中运行特定版本的 Node</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">nvm exec4.<span class="hljs-number">2.2</span> <span class="hljs-keyword">node</span> <span class="hljs-title">--version</span><br></code></pre></td></tr></table></figure>
+
+<p>确认某个版本Node的路径</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> which <span class="hljs-number">4</span>.<span class="hljs-number">2</span>.<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>安装 Node 的其他实现，例如 iojs（一个基于 ES6 的 Node 实现，现在已经和 Node 合并）</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> install iojs-v3.<span class="hljs-number">2</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<p>快捷命令：</p>
+<p>安装最新版 Node</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">nvm install <span class="hljs-keyword">node</span><span class="hljs-title"></span><br></code></pre></td></tr></table></figure>
+
+<p>安装最新版 iojs</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">nvm <span class="hljs-keyword">install</span> iojs <br></code></pre></td></tr></table></figure>
+
+<p>安装最新<strong>不稳定</strong>版本的 Node</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">nvm <span class="hljs-keyword">install</span> unstable<br></code></pre></td></tr></table></figure>
+
+
+<p>2.未验证的另一种办法：</p>
+<p><a href="https://www.4spaces.org/1122.html">https://www.4spaces.org/1122.html</a></p>
+<h2 id="三、git安装"><a href="#三、git安装" class="headerlink" title="三、git安装"></a>三、git安装</h2><p>为了把本地的网页文件上传到github上面去，我们需要用到分布式版本控制工具————Git<a href="https://git-scm.com/download/win">[下载地址]</a>。</p>
+<p>安装完成后在命令提示符中输入<code>git --version</code>验证是否安装成功。</p>
+<h2 id="四、Linux下使用hexo搭建个人博客并托管到github"><a href="#四、Linux下使用hexo搭建个人博客并托管到github" class="headerlink" title="四、Linux下使用hexo搭建个人博客并托管到github"></a>四、Linux下使用hexo搭建个人博客并托管到github</h2><p>(<a href="https://www.jianshu.com/u/5c7b85ab9023">https://www.jianshu.com/u/5c7b85ab9023</a>)</p>
+<h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+
+<p>npm的源在国外，没翻墙的话速度会很慢，可以改成国内的淘宝源，或者cnpmjs源，二选一即可</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">npm config set registry https:<span class="hljs-comment">//registry.npm.taobao.org</span><br>npm config set registry https:<span class="hljs-comment">//r.cnpmjs.org</span><br></code></pre></td></tr></table></figure>
+
+<p>这样就成功安装了，下面我们来发布第一篇博客：<br>新建一个目录blog(名字任选)，进入这个目录后执行初始化代码：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">hexo <span class="hljs-keyword">init</span><br></code></pre></td></tr></table></figure>
+
+<p>这样，hexo会帮你在blog目录下生成相应的各种文件<br>然后执行这俩条指令，发布本地博客</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
+
+<p>如果成功的话，就可以在本地的<a href="https://link.jianshu.com/?t=localhost:4000">localhost:4000</a>看到自己的博客了!（主题不同，没关系）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-67593a97c54188fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1025/format/webp" srcset="/img/loading.gif" lazyload></p>
+<p>本地发布成功</p>
+<p>当然这只是在本地发布成功，要想其他人能访问，你可以挂到自己的服务器上，或者托管到github上，这里主要说第二种，github会给你一个免费的地址。</p>
+<h3 id="2-部署到github"><a href="#2-部署到github" class="headerlink" title="2.部署到github"></a>2.部署到github</h3><p>首先去github注册一个账号，然后新建一个仓库</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-0d23ac371b5c4302.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/473/format/webp" srcset="/img/loading.gif" lazyload></p>
+<p>新建仓库</p>
+<p>这里的仓库名请注意，一定是 你的注册名.github.io</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-45dfd7682fffbb8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/425/format/webp" srcset="/img/loading.gif" lazyload></p>
+<p>仓库名</p>
+<p>仓库建好之后，执行这两条命令</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs csharp">git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&quot;github注册名&quot;</span><br>git config --<span class="hljs-keyword">global</span> user.eamil <span class="hljs-string">&quot;github注册邮箱&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>为了能在本地免密连接github，还需要配ssh<br>检查是否已安装ssh,如果没有则安装<br>生成ssh公钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;你注册github时用的邮箱&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>之后一路回车，成功生成ssh秘钥<br>将公钥添加到github<br>打开github，找到账户里面添加SSH，把~&#x2F;.ssh&#x2F;idrsa.pub的内容复制到key里面。这样就可以本地免密连接github了。</p>
+<p>回到 github, 依次点击：头像 -&gt; Settings -&gt; SSH and GPG keys -&gt; New SSH key -&gt; 把刚刚复制的内容粘贴到 Key 处 -&gt; Add SSH key ：</p>
+<p>回到 Shell，执行命令</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ssh</span> -T git<span class="hljs-variable">@github</span>.com<br></code></pre></td></tr></table></figure>
+
+<p>查看是否成功。</p>
+<p>接下来就是修改配置文件了，我们进到blog目录，编辑comfig.yml文件，里面有两部分需要改</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-bd67bd97dfa96beb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/942/format/webp" srcset="/img/loading.gif" lazyload></p>
+<p>更改url</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6253588-2f7892c29b48b973.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/506/format/webp" srcset="/img/loading.gif" lazyload></p>
+<p>更改deploy</p>
+<p>然后就是</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
+
+<p>之后就能访问你的博客了！一般是https:&#x2F;&#x2F;你的用户名<a href="https://link.jianshu.com/?t=http://.github.io/">.github.io&#x2F;</a></p>
+<p>原文链接：<a href="https://blog.csdn.net/Elford/article/details/123624282">https://blog.csdn.net/Elford/article/details/123624282</a></p>
+<h2 id="五、更换电脑后hexo-d-同步blog出错问题的解决"><a href="#五、更换电脑后hexo-d-同步blog出错问题的解决" class="headerlink" title="五、更换电脑后hexo d 同步blog出错问题的解决"></a>五、更换电脑后hexo d 同步blog出错问题的解决</h2><h3 id="1-错误提示-TypeError-ERR-INVALID-ARG-TYPE-The-“mode”-argument-must-be-integer-Received-an-instance-of-Object"><a href="#1-错误提示-TypeError-ERR-INVALID-ARG-TYPE-The-“mode”-argument-must-be-integer-Received-an-instance-of-Object" class="headerlink" title="1.错误提示:TypeError [ERR_INVALID_ARG_TYPE]: The “mode” argument must be integer. Received an instance of Object"></a>1.错误提示:TypeError [ERR_INVALID_ARG_TYPE]: The “mode” argument must be integer. Received an instance of Object</h3><p>原因：<br>经查阅，由于node版本太高引起的。目前hexo不支持高版本，只能通过降级解决问题。</p>
+<p>解决方式有以下几种<br>1降级node版本至  12.8.0         </p>
+<p><a href="https://www.cnblogs.com/JourneyOfFlower/p/15049226.html">https://www.cnblogs.com/JourneyOfFlower/p/15049226.html</a></p>
+<h3 id="2-解决GitHub报错You’re-using-an-RSA-key-with-SHA-1-which-is-no-longer-allowed-Please-use-a-newer-client"><a href="#2-解决GitHub报错You’re-using-an-RSA-key-with-SHA-1-which-is-no-longer-allowed-Please-use-a-newer-client" class="headerlink" title="2.解决GitHub报错You’re using an RSA key with SHA-1, which is no longer allowed. Please use a newer client"></a>2.解决GitHub报错You’re using an RSA key with <a href="https://so.csdn.net/so/search?q=SHA-1&spm=1001.2101.3001.7020">SHA-1</a>, which is no longer allowed. Please use a newer client</h3><p>原来是 GitHub 在 2022 年 3 月 15 日之后将不再支持 RSA 算法生成的密钥，原因是 RSA 不够安全，而笔者之前一直是使用如下命令生成密钥对的：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;邮箱&quot;</span><br></code></pre></td></tr></table></figure>
+<p>  可以看出，在上述命令中，实际上使用的是 RSA 算法来生成的密钥，现在只要更改加密算法即可，可以选择 ed25519。</p>
+<p>生成密钥对修正事项 1：使用 Git 生成密钥对<br>  如果喜欢使用 Git 生成密钥对，现在需要输入以下生成密钥对。然后一直按 ENTER 即可：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> 加密算法 -C <span class="hljs-string">&quot;邮箱&quot;</span><br></code></pre></td></tr></table></figure>
+<p>  其中，上面的 邮箱 要改为自己需要设置的相应值，且双引号不能丢。这里，加密算法可以使用 ed25519。即：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> <span class="hljs-symbol">ed25519</span> -C <span class="hljs-string">&quot;jiefav@sina.com&quot;</span><br></code></pre></td></tr></table></figure>
+<p>  可见，上面的命令生成了密钥对，并将其保存在了文件夹 C:\Users\Windows 用户名.ssh 中。打开该文件夹，可以看到两个文件：id_加密算法名、id_加密算法名.pub。第一个文件是私钥，第二个文件是公钥。这两个文件其实都是文本文件，都可以文本方式打开。公钥需要提供给远程平台（这里为 GitHub），因此需要复制其中的内容。这里，需要复制的公钥的内容为全文。<br>————————————————<br>版权声明：本文为CSDN博主「暗诺星刻」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/wangpaiblog/article/details/124416005">https://blog.csdn.net/wangpaiblog/article/details/124416005</a></p>
+<h3 id="3-【Hexo】-Error-Spawn-failed-at-ChildProcess"><a href="#3-【Hexo】-Error-Spawn-failed-at-ChildProcess" class="headerlink" title="3.【Hexo】 Error:Spawn failed at ChildProcess"></a>3.【Hexo】 Error:Spawn failed at ChildProcess</h3><p><code>hexo d -g</code>执行后报错：Spawn failed</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">error: </span>RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054  <br>fatal: the remote end hung up unexpectedly  <br>fatal: the remote end hung up unexpectedly  <br>Everything up-to-date  <br>FATAL Something&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html  <br><span class="hljs-keyword">Error: </span>Spawn failed  <br>    at ChildProcess.&lt;anonymous&gt; (D:\OtherFiles\blog\myblog\node_modules\hexo-util\lib\spawn.js:51:21)  <br>    at ChildProcess.emit (events.js:203:13)  <br>    at ChildProcess.cp.emit (D:\OtherFiles\blog\myblog\node_modules\cross-spawn\lib\enoent.js:34:29)  <br>    at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)  <br></code></pre></td></tr></table></figure>
+
+<p>在.git文件夹下打开config配置文件，在[core]中添加上下面两句话：  </p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">autocrlf</span> = <span class="hljs-literal">false</span>  <br><span class="hljs-attr">safecrlf</span> = <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<p>成功。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>hexo blog迁移致麒麟Linux的环境配置</div>
+      <div>http://aiyoja.github.io/20220819/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>弶森</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/20221107/" title="御璟财务2022公示">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">御璟财务2022公示</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/20220818/" title="终日忙碌的工作，其实并没有意义">
+                        <span class="hidden-mobile">终日忙碌的工作，其实并没有意义</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP证8698305号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=8698305"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>湘公网安备8698305号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
