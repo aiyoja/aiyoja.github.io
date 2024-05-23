@@ -515,14 +515,14 @@
 <h1 id="模板更换"><a href="#模板更换" class="headerlink" title="模板更换"></a>模板更换</h1><p>备份博客源文件<br>有时候我们想换一台电脑继续写博客，这时候就可以将博客目录下的所有源文件都上传到github上面。</p>
 <p>首先在github博客仓库下新建一个分支hexo，然后git clone到本地，把.git文件夹拿出来，放在博客根目录下。</p>
 <p>然后git checkout hexo切换到hexo分支，然后git add .，然后git commit -m “xxx”，最后git push origin hexo提交就行了。</p>
-<p>当然我新建了一个仓库存放了源文件，具体效果可以看我的博客源文件仓库：<a href="https://github.com/godweiyang/hexo-matery-modified%E3%80%82%E5%A4%A7%E5%AE%B6%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%85%88%E7%94%A8%E4%B8%8B%E6%96%87hexo%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%E5%AE%89%E8%A3%85%E5%AE%8Chexo%EF%BC%8C%E7%84%B6%E5%90%8E%E7%9B%B4%E6%8E%A5git">https://github.com/godweiyang/hexo-matery-modified。大家也可以先用下文hexo安装方法安装完hexo，然后直接git</a> clone <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a>:godweiyang&#x2F;hexo-matery-modified.git克隆我的所有源文件，然后这是我修改完的基本没bug的定制化的博客，就可以直接拿来用啦。</p>
+<p>当然我新建了一个仓库存放了源文件，具体效果可以看我的博客源文件仓库：<a href="https://github.com/godweiyang/hexo-matery-modified%E3%80%82%E5%A4%A7%E5%AE%B6%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%85%88%E7%94%A8%E4%B8%8B%E6%96%87hexo%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%E5%AE%89%E8%A3%85%E5%AE%8Chexo%EF%BC%8C%E7%84%B6%E5%90%8E%E7%9B%B4%E6%8E%A5git">https://github.com/godweiyang/hexo-matery-modified。大家也可以先用下文hexo安装方法安装完hexo，然后直接git</a> clone <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:godweiyang&#x2F;hexo-matery-modified.git克隆我的所有源文件，然后这是我修改完的基本没bug的定制化的博客，就可以直接拿来用啦。</p>
 <p>我这个源文件和原来的主题没有什么区别，只是我把插件都安装完了，有些小bug也修复了，所以拿来就能直接用，方便大家。</p>
 <p>博客源代码下载<br>如果大家不想这么麻烦的装一堆东西，然后还要自己修改bug，那么只需要做好上面的准备工作，然后下载我的源代码，改改个人配置就行了。</p>
 <p>源码地址：<a href="https://github.com/godweiyang/hexo-matery-modified%E3%80%82%E5%A4%A7%E5%AE%B6%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E4%B8%8B%E6%9D%A5%E4%BD%BF%E7%94%A8%EF%BC%8C%E4%BF%AE%E6%94%B9%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%BD%93%E7%84%B6%E7%8E%AF%E5%A2%83%E8%A6%81%E5%85%88%E6%90%AD%E5%A5%BD%E3%80%82">https://github.com/godweiyang/hexo-matery-modified。大家可以直接下载下来使用，修改个人配置信息即可，当然环境要先搭好。</a></p>
 <p>如果大家下载好了源代码，就可以直接使用了，基本可以跳过文章后面的部分了！喜欢的记得star并fork哦！</p>
 <h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><h1 id="文章发布选择"><a href="#文章发布选择" class="headerlink" title="文章发布选择"></a>文章发布选择</h1><h1 id="Tyler-pigco-七牛云-发布方式"><a href="#Tyler-pigco-七牛云-发布方式" class="headerlink" title="Tyler+pigco+七牛云    发布方式"></a>Tyler+pigco+七牛云    发布方式</h1><h1 id="平时常用命令"><a href="#平时常用命令" class="headerlink" title="平时常用命令"></a>平时常用命令</h1><p>hexo g # 生成博客网页文件<br>hexo s # 本地预览博客<br>hexo d # 上传网页文件到github</p>
 <p>为了减小源码的体积，我将插件目录node_modules进行了压缩，大家下载完后需要解压。另外添加水印需要的字体文件我也删除了，大家可以直接从电脑自带的字体库中拷贝。</p>
-<p>首先运行git clone <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;</a>:godweiyang&#x2F;hexo-matery-modified.git将所有文件下载到本地。<br>解压node_modules.zip，然后删除node_modules.zip和.git文件夹。<br>还缺一个字体（为图片添加水印需要用到），去C:\Windows\Fonts下找到STSong Regular，复制到hexo-matery-modified文件夹下。<br>快速搭建<br>如果你不想自己从头开始慢慢自定义主题的话，可以直接下载我的修改好的主题，然后稍微修改几个地方就好了：</p>
+<p>首先运行git clone <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a>:godweiyang&#x2F;hexo-matery-modified.git将所有文件下载到本地。<br>解压node_modules.zip，然后删除node_modules.zip和.git文件夹。<br>还缺一个字体（为图片添加水印需要用到），去C:\Windows\Fonts下找到STSong Regular，复制到hexo-matery-modified文件夹下。<br>快速搭建<br>如果你不想自己从头开始慢慢自定义主题的话，可以直接下载我的修改好的主题，然后稍微修改几个地方就好了：</p>
 <p>根目录配置文件_config.yml和主题目录配置文件_config.yml中修改个人信息。<br>根目录配置文件中修改deploy一栏的repository。<br>根目录配置文件中修改baidu_url_submit一栏的token。<br>主题配置文件中修改gitalk一栏，修改方法见正文。<br>当然前提是个性化设置章节之前的环境还是需要配置好！</p>
 <h1 id="个性化设置（matery主题）"><a href="#个性化设置（matery主题）" class="headerlink" title="个性化设置（matery主题）"></a>个性化设置（matery主题）</h1><p>这两天花时间将我的博客换了一个主题，现在这个主题看着更加的炫（zhuang）酷（bi），并且响应式更友好，点起来就很舒服，功能也多很多。</p>
 <p>主题的原地址在这里：<a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a>，它的文档写得也非常的详细，还有中英文两个版本，作者回复也很及时。效果图如下，可以看出非常合我的口味：</p>
@@ -1113,7 +1113,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://jiefav.gitee.io/yyds" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
+       <a href="https://aiyoja.github.io" target="_blank" rel="nofollow noopener"><span>jiefav</span></a> <i class="iconfont icon-love"></i> <a href="https://aiyoja.github.io" target="_blank" rel="nofollow noopener"><span>游颜色</span></a> 
     </div>
   
   
