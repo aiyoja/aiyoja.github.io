@@ -21,8 +21,8 @@
   
     <meta name="description" content="朱颜辞镜花辞树">
 <meta property="og:type" content="website">
-<meta property="og:title" content="标签 - Hexo">
-<meta property="og:url" content="http://aiyoja.github.io/tags/Hexo/index.html">
+<meta property="og:title" content="标签 - hexo">
+<meta property="og:url" content="http://aiyoja.github.io/tags/hexo/index.html">
 <meta property="og:site_name" content="游颜色">
 <meta property="og:description" content="朱颜辞镜花辞树">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>标签 - Hexo - 游颜色</title>
+  <title>标签 - hexo - 游颜色</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -218,7 +218,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="标签 - Hexo"></span>
+            <span id="subtitle" data-typed-text="标签 - hexo"></span>
           
         </div>
 
@@ -250,7 +250,7 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 7 篇文章</p>
+  <p class="h4">共计 3 篇文章</p>
   <hr>
   
   
@@ -258,45 +258,21 @@
       
       <p class="h5">2022</p>
     
-    <a href="/20220707/" class="list-group-item list-group-item-action">
-      <time>07-06</time>
-      <div class="list-group-item-title">matery主题个性化定制</div>
+    <a href="/20220705/" class="list-group-item list-group-item-action">
+      <time>07-05</time>
+      <div class="list-group-item-title">hexo常用命令</div>
     </a>
   
     
-    <a href="/20220630/" class="list-group-item list-group-item-action">
-      <time>06-30</time>
-      <div class="list-group-item-title">github博客搭建一文搞定</div>
+    <a href="/20220704/" class="list-group-item list-group-item-action">
+      <time>07-04</time>
+      <div class="list-group-item-title">[三万字教程]基于Hexo的matery主题搭建博客并深度优化一站式完全教程</div>
     </a>
   
     
-    <a href="/20220629/" class="list-group-item list-group-item-action">
-      <time>06-29</time>
-      <div class="list-group-item-title">使用git分支保存hexo博客源码到github</div>
-    </a>
-  
-    
-    <a href="/matery/" class="list-group-item list-group-item-action">
-      <time>06-24</time>
-      <div class="list-group-item-title">Hexo博客主题之hexo-theme-matery的介绍</div>
-    </a>
-  
-    
-    <a href="/hexo-2/" class="list-group-item list-group-item-action">
-      <time>06-24</time>
-      <div class="list-group-item-title">如何用hexo新建一篇文章并编辑文章</div>
-    </a>
-  
-    
-    <a href="/Typora-PicGo/" class="list-group-item list-group-item-action">
-      <time>06-24</time>
-      <div class="list-group-item-title">Typora+PicGo+七牛云 个人博客发布方案</div>
-    </a>
-  
-    
-    <a href="/Hexo/" class="list-group-item list-group-item-action">
-      <time>06-23</time>
-      <div class="list-group-item-title">Hexo博客新建文章并发布</div>
+    <a href="/Matery%20theme/" class="list-group-item list-group-item-action">
+      <time>05-04</time>
+      <div class="list-group-item-title">Matery主题自定义(一)黑夜模式</div>
     </a>
   
 </div>
@@ -436,6 +412,51 @@
     (function (window, document) {
       var typing = Fluid.plugins.typing;
       var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/enable_cardjs.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
+('subtitle');
       if (!subtitle || !typing) {
         return;
       }
